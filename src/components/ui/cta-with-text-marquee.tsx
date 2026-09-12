@@ -172,8 +172,8 @@ export default function CTAWithVerticalMarquee() {
       </section>
 
       {/* 02: Dedicated Walking Crowd Section (Separate, completely non-overlapping) */}
-      <section className="relative w-full h-[180px] sm:h-[240px] md:h-[280px] overflow-hidden bg-background pointer-events-none select-none">
-        <CrowdCanvas src="/images/peeps/all-peeps-inverted.png" rows={15} cols={7} className="w-full h-full opacity-85" />
+      <section className="relative w-full h-[180px] sm:h-[240px] md:h-[280px] overflow-hidden bg-white pointer-events-none select-none">
+        <CrowdCanvas src="/images/peeps/all-peeps.png" rows={15} cols={7} className="w-full h-full opacity-100" />
       </section>
 
       {/* 03: Last Section - Logo, numbers, location, and social links */}
