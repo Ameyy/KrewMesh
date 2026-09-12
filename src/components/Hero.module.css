@@ -1,0 +1,151 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 5% 0;
+  overflow: hidden;
+  background-color: #050505; /* Force dark mode */
+}
+
+.bgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Let events pass through to capture mousemove on hero itself, 
+     or capture on bgContainer if it's fullscreen. */
+}
+
+.baseLayer,
+.revealLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.baseLayer {
+  /* Grayscale, blurred, noisy look */
+  filter: grayscale(100%) blur(8px) contrast(140%) brightness(0.7);
+  opacity: 0.8;
+}
+
+.revealLayer {
+  /* Will be dynamically clipped via inline styles */
+  clip-path: inset(calc(var(--y, 50vh) * 1px - 150px) calc(100vw - var(--x, 50vw) * 1px - 120px) calc(100vh - var(--y, 50vh) * 1px - 150px) calc(var(--x, 50vw) * 1px - 120px));
+  filter: opacity(0.8) contrast(110%) saturate(120%);
+}
+
+.lensBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 300px;
+  border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+  pointer-events: none;
+  z-index: 3;
+  transform: translate(calc(var(--x, 50vw) * 1px - 120px), calc(var(--y, 50vh) * 1px - 150px));
+}
+
+.crosshair {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 4;
+  transform: translate(calc(var(--x, 50vw) * 1px - 10px), calc(var(--y, 50vh) * 1px - 10px));
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: '';
+  position: absolute;
+  background: var(--foreground);
+}
+
+.crosshair::before {
+  top: 9px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+}
+
+.crosshair::after {
+  top: 0;
+  left: 9px;
+  width: 1px;
+  height: 20px;
+}
+
+/* Original Content Styles */
+.content {
+  max-width: 800px;
+  position: relative;
+  z-index: 10;
+  pointer-events: none; /* let mouse pass through to container */
+}
+
+.content h1 {
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  pointer-events: auto;
+  color: #FFFFFF !important; /* Force white text */
+}
+
+.supportText {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7); /* Light gray text for dark mode */
+  margin-bottom: 3rem;
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.primaryCta {
+  background: var(--primary);
+  color: var(--background);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+}
+
+.primaryCta:hover {
+  opacity: 0.9;
+}
+
+.secondaryCta {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.secondaryCta:hover {
+  border-color: #FFFFFF;
+}

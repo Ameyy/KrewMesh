@@ -1,0 +1,131 @@
+.portfolioSection {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 15vh 5% 2%;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.headline {
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1;
+}
+
+.scrollWrapper {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  height: 60vh;
+  padding-left: 5%;
+}
+
+.panel {
+  flex: 0 0 70vw;
+  height: 100%;
+  margin-right: 5vw;
+  display: flex;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.panelInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--foreground) 5%, transparent);
+  transition: transform 0.5s ease;
+}
+
+.panel:hover .panelInner {
+  transform: translateZ(30px) rotateY(-2deg);
+  border-color: color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.imagePlaceholder {
+  flex: 1;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, color-mix(in srgb, var(--background) 80%, transparent) 100%);
+  z-index: 1;
+}
+
+.projectId {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projectInfo {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--surface);
+}
+
+.projectMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.projectName {
+  font-size: 2.5rem;
+  font-family: var(--font-outfit), sans-serif;
+}
+
+.projectDesc {
+  color: color-mix(in srgb, var(--foreground) 60%, transparent);
+  font-size: 1.1rem;
+}
+
+.viewBtn {
+  margin-top: 1rem;
+  align-self: flex-start;
+  background: var(--foreground);
+  color: var(--background);
+  border: 1px solid var(--foreground);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewBtn:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+}

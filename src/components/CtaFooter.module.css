@@ -1,0 +1,121 @@
+.ctaSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.ctaBg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent);
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+.ctaContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline {
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.supportText {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  color: color-mix(in srgb, var(--foreground) 90%, transparent);
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.primaryCta {
+  background: white;
+  color: var(--accent);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.primaryCta:hover {
+  opacity: 0.9;
+}
+
+.secondaryCta {
+  background: transparent;
+  color: white;
+  padding: 1rem 2rem;
+  border: 1px solid var(--foreground);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.secondaryCta:hover {
+  background: color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+/* Footer */
+.footer {
+  background: var(--background);
+  padding: 5rem 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.footerLogoWrapper {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.footerLogoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footerDesc {
+  color: color-mix(in srgb, var(--foreground) 60%, transparent);
+}
+
+.linksCol, .socialCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linksCol a, .socialCol a {
+  color: color-mix(in srgb, var(--foreground) 80%, transparent);
+  transition: color 0.3s ease;
+}
+
+.linksCol a:hover, .socialCol a:hover {
+  color: var(--primary);
+}
+
+.bottomBar {
+  border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  padding-top: 2rem;
+  text-align: center;
+  color: color-mix(in srgb, var(--foreground) 40%, transparent);
+  font-size: 0.85rem;
+}

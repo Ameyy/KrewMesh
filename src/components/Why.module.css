@@ -1,0 +1,49 @@
+.whySection {
+  background: var(--background);
+  position: relative;
+  z-index: 10;
+  padding: 15vh 0;
+}
+
+.intro {
+  margin-bottom: 5rem;
+}
+
+.headline {
+  font-size: clamp(4rem, 7vw, 7rem);
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.copy {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--foreground) 70%, transparent);
+  max-width: 600px;
+}
+
+.principles {
+  display: flex;
+  flex-direction: column;
+}
+
+.principle {
+  padding: 3rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.principle:first-child {
+  border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.pNum {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.pDesc {
+  font-size: 1.5rem;
+  color: color-mix(in srgb, var(--foreground) 90%, transparent);
+}
