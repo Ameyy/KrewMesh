@@ -18,7 +18,7 @@
 .copy {
   font-size: 1.5rem;
   line-height: 1.5;
-  color: color-mix(in srgb, var(--foreground) 70%, transparent);
+  color: rgba(255, 255, 255, 0.7);
   max-width: 600px;
 }
 
@@ -29,11 +29,11 @@
 
 .principle {
   padding: 3rem 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .principle:first-child {
-  border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pNum {
@@ -45,5 +45,5 @@
 
 .pDesc {
   font-size: 1.5rem;
-  color: color-mix(in srgb, var(--foreground) 90%, transparent);
+  color: rgba(255, 255, 255, 0.9);
 }

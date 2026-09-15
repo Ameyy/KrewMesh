@@ -5,6 +5,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { X, ArrowUpRight, Sparkles } from 'lucide-react';
+import { RainbowButton } from './ui/rainbow-button';
 import styles from './Portfolio.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,7 +27,8 @@ const projects = [
     year: '2026',
     desc: 'High-converting online store & seamless shopping experience',
     details: 'A fast, conversion-optimized e-commerce storefront engineered with fluid product catalog filtering, interactive cart drawers, quick-view modals, and secure, frictionless checkout.',
-    tags: ['E-Commerce', 'Online Store', 'Fast Checkout', 'Product Catalog']
+    tags: ['E-Commerce', 'Online Store', 'Fast Checkout', 'Product Catalog'],
+    demoUrl: '/demo/ecommerce'
   },
   {
     id: '03',
@@ -108,14 +110,25 @@ export default function Portfolio() {
                     <h3 className={styles.projectName}>{project.name}</h3>
                     <p className={styles.projectDesc}>{project.desc}</p>
                     
-                    <button 
-                      className={styles.viewBtn}
-                      onClick={() => setSelectedProject(project)}
-                      data-cursor="VIEW"
-                      aria-label={`View ${project.name} details`}
-                    >
-                      View Project
-                    </button>
+                    {'demoUrl' in project && project.demoUrl ? (
+                      <RainbowButton
+                        href={project.demoUrl}
+                        className="mt-4 self-start rounded-full h-10 px-6 text-xs font-bold"
+                        data-cursor="DEMO"
+                        aria-label={`Open ${project.name} demo`}
+                      >
+                        Details
+                      </RainbowButton>
+                    ) : (
+                      <RainbowButton 
+                        className="mt-4 self-start rounded-full h-10 px-6 text-xs font-bold"
+                        onClick={() => setSelectedProject(project)}
+                        data-cursor="VIEW"
+                        aria-label={`View ${project.name} details`}
+                      >
+                        Details
+                      </RainbowButton>
+                    )}
                   </div>
                 </div>
               </div>
@@ -181,20 +194,21 @@ export default function Portfolio() {
 
             {/* Actions */}
             <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-end gap-3">
-              <button 
+              <RainbowButton 
                 onClick={() => setSelectedProject(null)}
-                className="w-full sm:w-auto px-5 py-2.5 rounded-full border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition-colors"
+                className="w-full sm:w-auto rounded-full h-11 px-6 text-sm font-semibold [animation-delay:-1s]"
               >
                 Back to Projects
-              </button>
-              <Link 
+              </RainbowButton>
+              <RainbowButton 
                 href={`/contact?service=${encodeURIComponent(selectedProject.category.toLowerCase())}`}
                 onClick={() => setSelectedProject(null)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-white/90 transition-all hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full h-11 px-6 text-sm font-semibold"
                 data-cursor="DISCUSS"
               >
-                Inquire About Similar Project <ArrowUpRight size={16} />
-              </Link>
+                <span>Inquire About Similar Project</span>
+                <ArrowUpRight size={16} />
+              </RainbowButton>
             </div>
           </div>
         </div>

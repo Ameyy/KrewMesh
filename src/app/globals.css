@@ -6,10 +6,17 @@
   --background: #000000; /* Pitch black */
   --foreground: #FFFFFF; /* White for all texts */
   --primary: #FFFFFF; /* White for headings */
+  --primary-foreground: #FFFFFF;
   --secondary: #222222; /* Very dark grey */
   --accent: #444444; /* Dark grey */
   --surface: rgba(255, 255, 255, 0.03);
   --surface-hover: rgba(255, 255, 255, 0.08);
+
+  --color-1: 0 100% 63%;
+  --color-2: 270 100% 63%;
+  --color-3: 210 100% 63%;
+  --color-4: 195 100% 63%;
+  --color-5: 90 100% 63%;
 }
 
 h1, h2, h3, h4, h5, h6 {

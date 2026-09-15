@@ -20,74 +20,98 @@ export function IntegrationsGrid() {
     { 
       icon: Monitor, 
       delay: 0.1, 
-      color: "group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.85)]",
-      bgHover: "hover:border-cyan-500/50 hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-blue-600/10 hover:shadow-[0_0_25px_rgba(6,182,212,0.35)]"
+      iconColor: "text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.7)]",
+      gradient: "bg-gradient-to-br from-cyan-500/20 to-blue-600/10",
+      borderDefault: "border-cyan-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(6,182,212,0.3)]"
     },
     { 
       icon: Phone, 
       delay: 0.2, 
-      color: "group-hover:text-fuchsia-400 group-hover:drop-shadow-[0_0_12px_rgba(232,121,249,0.85)]",
-      bgHover: "hover:border-fuchsia-500/50 hover:bg-gradient-to-br hover:from-fuchsia-500/20 hover:to-pink-600/10 hover:shadow-[0_0_25px_rgba(217,70,239,0.35)]"
+      iconColor: "text-fuchsia-400 drop-shadow-[0_0_10px_rgba(232,121,249,0.7)]",
+      gradient: "bg-gradient-to-br from-fuchsia-500/20 to-pink-600/10",
+      borderDefault: "border-fuchsia-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(217,70,239,0.3)]"
     },
     { 
       icon: Tablet, 
       delay: 0.15, 
-      color: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_12px_rgba(251,191,36,0.85)]",
-      bgHover: "hover:border-amber-500/50 hover:bg-gradient-to-br hover:from-amber-500/20 hover:to-orange-600/10 hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]"
+      iconColor: "text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]",
+      gradient: "bg-gradient-to-br from-amber-500/20 to-orange-600/10",
+      borderDefault: "border-amber-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(245,158,11,0.3)]"
     },
     { 
       icon: Laptop, 
       delay: 0.25, 
-      color: "group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_12px_rgba(52,211,153,0.85)]",
-      bgHover: "hover:border-emerald-500/50 hover:bg-gradient-to-br hover:from-emerald-500/20 hover:to-teal-600/10 hover:shadow-[0_0_25px_rgba(16,185,129,0.35)]"
+      iconColor: "text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.7)]",
+      gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-600/10",
+      borderDefault: "border-emerald-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(16,185,129,0.3)]"
     },
     { 
       icon: Watch, 
       delay: 0.3, 
-      color: "group-hover:text-rose-400 group-hover:drop-shadow-[0_0_12px_rgba(251,113,133,0.85)]",
-      bgHover: "hover:border-rose-500/50 hover:bg-gradient-to-br hover:from-rose-500/20 hover:to-red-600/10 hover:shadow-[0_0_25px_rgba(244,63,94,0.35)]"
+      iconColor: "text-rose-400 drop-shadow-[0_0_10px_rgba(251,113,133,0.7)]",
+      gradient: "bg-gradient-to-br from-rose-500/20 to-red-600/10",
+      borderDefault: "border-rose-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(244,63,94,0.3)]"
     },
     { 
       icon: Tv, 
       delay: 0.2, 
-      color: "group-hover:text-blue-400 group-hover:drop-shadow-[0_0_12px_rgba(96,165,250,0.85)]",
-      bgHover: "hover:border-blue-500/50 hover:bg-gradient-to-br hover:from-blue-500/20 hover:to-indigo-600/10 hover:shadow-[0_0_25px_rgba(59,130,246,0.35)]"
+      iconColor: "text-blue-400 drop-shadow-[0_0_10px_rgba(96,165,250,0.7)]",
+      gradient: "bg-gradient-to-br from-blue-500/20 to-indigo-600/10",
+      borderDefault: "border-blue-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(59,130,246,0.3)]"
     },
     { 
       icon: Speaker, 
       delay: 0.4, 
-      color: "group-hover:text-violet-400 group-hover:drop-shadow-[0_0_12px_rgba(167,139,250,0.85)]",
-      bgHover: "hover:border-violet-500/50 hover:bg-gradient-to-br hover:from-violet-500/20 hover:to-purple-600/10 hover:shadow-[0_0_25px_rgba(139,92,246,0.35)]"
+      iconColor: "text-violet-400 drop-shadow-[0_0_10px_rgba(167,139,250,0.7)]",
+      gradient: "bg-gradient-to-br from-violet-500/20 to-purple-600/10",
+      borderDefault: "border-violet-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(139,92,246,0.3)]"
     },
     { 
       icon: Headphones, 
       delay: 0.35, 
-      color: "group-hover:text-pink-400 group-hover:drop-shadow-[0_0_12px_rgba(244,114,182,0.85)]",
-      bgHover: "hover:border-pink-500/50 hover:bg-gradient-to-br hover:from-pink-500/20 hover:to-rose-600/10 hover:shadow-[0_0_25px_rgba(236,72,153,0.35)]"
+      iconColor: "text-pink-400 drop-shadow-[0_0_10px_rgba(244,114,182,0.7)]",
+      gradient: "bg-gradient-to-br from-pink-500/20 to-rose-600/10",
+      borderDefault: "border-pink-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(236,72,153,0.3)]"
     },
     { 
       icon: Cpu, 
       delay: 0.45, 
-      color: "group-hover:text-teal-400 group-hover:drop-shadow-[0_0_12px_rgba(45,212,191,0.85)]",
-      bgHover: "hover:border-teal-500/50 hover:bg-gradient-to-br hover:from-teal-500/20 hover:to-cyan-600/10 hover:shadow-[0_0_25px_rgba(20,184,166,0.35)]"
+      iconColor: "text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.7)]",
+      gradient: "bg-gradient-to-br from-teal-500/20 to-cyan-600/10",
+      borderDefault: "border-teal-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(20,184,166,0.3)]"
     },
     { 
       icon: HardDrive, 
       delay: 0.5, 
-      color: "group-hover:text-orange-400 group-hover:drop-shadow-[0_0_12px_rgba(251,146,60,0.85)]",
-      bgHover: "hover:border-orange-500/50 hover:bg-gradient-to-br hover:from-orange-500/20 hover:to-amber-600/10 hover:shadow-[0_0_25px_rgba(249,115,22,0.35)]"
+      iconColor: "text-orange-400 drop-shadow-[0_0_10px_rgba(251,146,60,0.7)]",
+      gradient: "bg-gradient-to-br from-orange-500/20 to-amber-600/10",
+      borderDefault: "border-orange-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(249,115,22,0.3)]"
     },
     { 
       icon: Mouse, 
       delay: 0.4, 
-      color: "group-hover:text-indigo-400 group-hover:drop-shadow-[0_0_12px_rgba(129,140,248,0.85)]",
-      bgHover: "hover:border-indigo-500/50 hover:bg-gradient-to-br hover:from-indigo-500/20 hover:to-violet-600/10 hover:shadow-[0_0_25px_rgba(99,102,241,0.35)]"
+      iconColor: "text-indigo-400 drop-shadow-[0_0_10px_rgba(129,140,248,0.7)]",
+      gradient: "bg-gradient-to-br from-indigo-500/20 to-violet-600/10",
+      borderDefault: "border-indigo-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(99,102,241,0.3)]"
     },
     { 
       icon: Keyboard, 
       delay: 0.55, 
-      color: "group-hover:text-lime-400 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.85)]",
-      bgHover: "hover:border-lime-500/50 hover:bg-gradient-to-br hover:from-lime-500/20 hover:to-emerald-600/10 hover:shadow-[0_0_25px_rgba(132,204,22,0.35)]"
+      iconColor: "text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.7)]",
+      gradient: "bg-gradient-to-br from-lime-500/20 to-emerald-600/10",
+      borderDefault: "border-lime-500/40",
+      shadowDefault: "shadow-[0_0_25px_rgba(132,204,22,0.3)]"
     },
   ]
 
@@ -102,16 +126,24 @@ export function IntegrationsGrid() {
         animate={controls}
         variants={{ visible: { opacity: 1, scale: 1, y: 0, transition: { delay: item.delay, duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
         className={cn(
-          "group relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl border border-white/5 bg-[#0a0a0a] cursor-pointer transition-all duration-300",
-          "hover:scale-105",
-          item.bgHover
+          "group relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl border cursor-pointer transition-all duration-300 overflow-hidden",
+          item.borderDefault,
+          item.shadowDefault,
+          "hover:border-white/15 hover:shadow-none hover:scale-95"
         )}
       >
+        {/* Colors always visible gradient background */}
+        <div className={cn("absolute inset-0 transition-opacity duration-300", item.gradient, "group-hover:opacity-0")} />
+        
+        {/* Black background that appears on hover */}
+        <div className="absolute inset-0 bg-[#080808] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/* Icon: colored by default, dim on hover */}
         <Icon 
           className={cn(
-            "w-6 h-6 sm:w-8 sm:h-8 opacity-60 text-white transition-all duration-300",
-            "group-hover:opacity-100 group-hover:scale-110 group-hover:fill-current/30",
-            item.color
+            "relative z-10 w-6 h-6 sm:w-8 sm:h-8 transition-all duration-300",
+            item.iconColor,
+            "group-hover:text-neutral-500 group-hover:drop-shadow-none group-hover:scale-90"
           )} 
           strokeWidth={1.5} 
         />

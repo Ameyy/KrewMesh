@@ -108,7 +108,170 @@
   opacity: 1;
 }
 
-/* Action Button */
+/* Vintage Ringing Phone Action Button */
+.vintagePhoneButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: none;
+  z-index: 10;
+}
+
+/* Vibrating Phone Badge Container */
+.phoneBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(10, 10, 10, 0.75);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.vintagePhoneButton:hover .phoneBadge {
+  background: rgba(25, 25, 25, 0.95);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Exact Silhouette Vintage Phone from User Image */
+.vintagePhoneImg {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  animation: tringTring 2.4s infinite ease-in-out;
+  transform-origin: 50% 85%;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+}
+
+/* Comic-Style Speech Bubble Floating on the Right */
+.comicBubbleRight {
+  position: relative;
+  background: #FFE500;
+  color: #000000;
+  padding: 3px 9px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(255, 229, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.5);
+  border: 1.5px solid #000000;
+  animation: comicFloatRight 2.2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 20;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Comic speech bubble tail pointing LEFT towards the phone */
+.comicBubbleRight::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 5px 6px 5px 0;
+  border-style: solid;
+  border-color: transparent #000000 transparent transparent;
+}
+
+.comicBubbleRight::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 1.5px);
+  transform: translateY(-50%);
+  border-width: 4px 5px 4px 0;
+  border-style: solid;
+  border-color: transparent #FFE500 transparent transparent;
+  z-index: 1;
+}
+
+.vintagePhoneButton:hover .comicBubbleRight {
+  transform: scale(1.08) translateX(2px);
+  box-shadow: 0 6px 18px rgba(255, 229, 0, 0.55);
+}
+
+/* Minimal 'Tring-Tring' vibration keyframes */
+@keyframes tringTring {
+  0% { transform: rotate(0deg); }
+  2% { transform: rotate(-2.5deg) scale(1.015); }
+  4% { transform: rotate(2.5deg) scale(1.015); }
+  6% { transform: rotate(-3deg) scale(1.02); }
+  8% { transform: rotate(3deg) scale(1.02); }
+  10% { transform: rotate(-2.5deg); }
+  12% { transform: rotate(2.5deg); }
+  14% { transform: rotate(-1.5deg); }
+  16% { transform: rotate(1.5deg); }
+  18% { transform: rotate(-0.8deg); }
+  20% { transform: rotate(0.8deg); }
+  22% { transform: rotate(0deg); }
+
+  /* Second gentle micro-burst */
+  26% { transform: rotate(-2.5deg) scale(1.015); }
+  28% { transform: rotate(2.5deg) scale(1.015); }
+  30% { transform: rotate(-3deg) scale(1.02); }
+  32% { transform: rotate(3deg) scale(1.02); }
+  34% { transform: rotate(-2deg); }
+  36% { transform: rotate(2deg); }
+  38% { transform: rotate(-1deg); }
+  40% { transform: rotate(1deg); }
+  42% { transform: rotate(0deg); }
+
+  /* Relaxed pause between gentle rings */
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes soundWave {
+  0%, 23%, 25%, 47%, 100% {
+    opacity: 0;
+  }
+  2%, 8%, 14%, 20%, 26%, 32%, 38%, 44% {
+    opacity: 0.95;
+  }
+  5%, 11%, 17%, 29%, 35%, 41% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes soundWaveOuter {
+  0%, 23%, 25%, 47%, 100% {
+    opacity: 0;
+  }
+  4%, 10%, 16%, 28%, 34%, 40% {
+    opacity: 0.85;
+  }
+  7%, 13%, 19%, 31%, 37%, 43% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes comicBubbleFloat {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-2px) rotate(-1.5deg);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-1px) rotate(1.5deg);
+  }
+}
+
+/* Previous Action Button (FallBack / Legacy) */
 .ctaButton {
   display: flex;
   align-items: center;
@@ -248,7 +411,8 @@
   .desktopNav {
     display: none;
   }
-  .ctaButton {
+  .ctaButton,
+  .vintagePhoneButton {
     display: none;
   }
   .mobileToggle {

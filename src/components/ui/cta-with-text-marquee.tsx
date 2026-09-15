@@ -5,6 +5,8 @@ import { ReactNode, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CrowdCanvas } from "@/components/ui/crowd-canvas";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import Footer4 from "@/components/ui/footer-section-4";
 
 interface VerticalMarqueeProps {
   children: ReactNode;
@@ -69,13 +71,13 @@ function VerticalMarquee({
 }
 
 const marqueeItems = [
-  "Branding",
-  "Graphic Design",
-  "UI/UX Design",
-  "Web Development",
-  "3D Experiences",
-  "AI Products",
-  "SaaS Platforms"
+  { text: "Branding", color: "#FF1493" },
+  { text: "Graphic Design", color: "#00E5FF" },
+  { text: "UI/UX Design", color: "#FFEA00" },
+  { text: "Web Development", color: "#00FF66" },
+  { text: "3D Experiences", color: "#BD00FF" },
+  { text: "AI Products", color: "#00B4D8" },
+  { text: "SaaS Platforms", color: "#FF5400" },
 ];
 
 export default function CTAWithVerticalMarquee() {
@@ -128,12 +130,14 @@ export default function CTAWithVerticalMarquee() {
                   From concept to deployment, we build digital products that scale and stand out.
                 </p>
                 <div className="pt-4 flex flex-col sm:flex-row gap-4 animate-fade-in-up [animation-delay:600ms]">
-                  <Link href="/contact" className="group relative px-8 py-4 bg-foreground text-background rounded-full font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,103,75,0.3)] text-center">
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      Start a project <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Link>
-                  <Link 
+                  <RainbowButton 
+                    href="/contact" 
+                    className="h-14 px-8 rounded-full text-base sm:text-lg font-bold"
+                  >
+                    <span>Start a project</span>
+                    <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  </RainbowButton>
+                  <RainbowButton 
                     href="/#work" 
                     onClick={(e) => {
                       const el = document.getElementById('work');
@@ -142,10 +146,10 @@ export default function CTAWithVerticalMarquee() {
                         el.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="group relative px-8 py-4 bg-transparent text-foreground rounded-full font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-foreground/10 border border-foreground/40 text-center"
+                    className="h-14 px-8 rounded-full text-base sm:text-lg font-bold [animation-delay:-1s]"
                   >
-                    View our work
-                  </Link>
+                    <span>View our work</span>
+                  </RainbowButton>
                 </div>
               </div>
             </div>
@@ -154,16 +158,19 @@ export default function CTAWithVerticalMarquee() {
             <div className="flex-1 w-full lg:w-auto mt-12 lg:mt-0 relative z-10">
               <div ref={marqueeRef} className="relative h-[600px] lg:h-[700px] flex items-center justify-center animate-fade-in-up [animation-delay:400ms] text-foreground">
                 <div className="relative w-full h-full" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)', WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)' }}>
-                  <VerticalMarquee speed={30} className="h-full">
-                    {marqueeItems.map((item, idx) => (
-                      <div
-                        key={idx}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight py-6 marquee-item text-foreground uppercase text-center md:text-left"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </VerticalMarquee>
+                    <VerticalMarquee speed={30} className="h-full">
+                      {marqueeItems.map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight py-6 marquee-item uppercase text-center md:text-left transition-opacity select-none"
+                          style={{
+                            color: item.color,
+                          }}
+                        >
+                          {item.text}
+                        </div>
+                      ))}
+                    </VerticalMarquee>
                 </div>
               </div>
             </div>
@@ -176,27 +183,8 @@ export default function CTAWithVerticalMarquee() {
         <CrowdCanvas src="/images/peeps/all-peeps.png" rows={15} cols={7} className="w-full h-full opacity-100" />
       </section>
 
-      {/* 03: Last Section - Logo, numbers, location, and social links */}
-      <footer className="w-full bg-background border-t border-foreground/20 py-10 relative z-10">
-        <div className="container max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-foreground/80 text-sm font-medium">
-          <div className="mb-4 md:mb-0">
-            <span className="inline-flex items-center gap-2">
-              India <img src="https://flagcdn.com/w20/in.png" srcSet="https://flagcdn.com/w40/in.png 2x" width="20" alt="India" className="inline-block" />
-            </span>
-          </div>
-          <div className="w-48 h-16 md:w-64 md:h-20 opacity-80 hover:opacity-100 transition-opacity">
-            <img src="/logo-footer.png" alt="KM Shuriken Logo" className="w-full h-full object-contain" />
-          </div>
-          <div className="flex gap-6 mt-4 md:mt-0 items-center">
-            <a href="tel:+919209839142" className="hover:text-primary transition-colors block">+91 920 983 9142</a>
-            <div className="hidden md:flex gap-6">
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LINKEDIN</a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">INSTAGRAM</a>
-              <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">BEHANCE</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* 03: Footer Section */}
+      <Footer4 />
     </>
   );
 }

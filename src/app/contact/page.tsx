@@ -5,6 +5,7 @@ import GlobalCanvas from "@/components/GlobalCanvas";
 import Header from "@/components/Header";
 import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
 import { ContactCard } from "@/components/ui/contact-card";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MapPin, Phone, Mail, CheckCircle2, Loader2 } from "lucide-react";
 
 export default function Contact() {
@@ -101,13 +102,13 @@ export default function Contact() {
                         Thank you, {formData.name}. We&apos;ve received your note and will be in touch shortly.
                       </p>
                     </div>
-                    <button 
+                    <RainbowButton 
                       type="button"
                       onClick={handleReset}
-                      className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-foreground text-background hover:bg-foreground/90 h-10 px-4 py-2 mt-4"
+                      className="h-11 px-6 rounded-xl text-sm font-semibold mt-4"
                     >
                       Send Another Message
-                    </button>
+                    </RainbowButton>
                   </div>
                 ) : (
                   <form className="flex flex-col gap-4 w-full mx-auto" onSubmit={handleSubmit}>
@@ -175,19 +176,21 @@ export default function Contact() {
                         className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" 
                       />
                     </div>
-                    <button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-foreground text-background hover:bg-foreground/90 h-10 px-4 py-2 mt-4"
-                    >
-                      {isSubmitting ? (
-                        <span className="flex items-center gap-2">
-                          <Loader2 size={16} className="animate-spin" /> Sending...
-                        </span>
-                      ) : (
-                        "Send Message"
-                      )}
-                    </button>
+                    <div className="pt-2">
+                      <RainbowButton 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className="w-full sm:w-auto h-11 px-7 rounded-xl text-sm font-semibold mt-3"
+                      >
+                        {isSubmitting ? (
+                          <span className="flex items-center gap-2">
+                            <Loader2 size={16} className="animate-spin text-white" /> Sending...
+                          </span>
+                        ) : (
+                          "Send Message"
+                        )}
+                      </RainbowButton>
+                    </div>
                   </form>
                 )}
               </ContactCard>

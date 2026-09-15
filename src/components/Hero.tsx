@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
+import { RainbowButton } from './ui/rainbow-button';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -36,7 +37,7 @@ export default function Hero() {
     }
   }, []);
 
-  const handleScrollToWork = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleScrollToWork = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     const workEl = document.getElementById('work');
     if (workEl) {
@@ -68,8 +69,21 @@ export default function Hero() {
           Krew / Mesh is a creative-tech studio building brands, digital experiences, websites, AI products and software for ambitious businesses.
         </p>
         <div className={styles.actions}>
-          <a href="#work" onClick={handleScrollToWork} className={styles.primaryCta} data-cursor="EXPLORE">Explore our work →</a>
-          <Link href="/contact" className={styles.secondaryCta} data-cursor="START">Start a project</Link>
+          <RainbowButton 
+            href="#work" 
+            onClick={handleScrollToWork} 
+            className="text-sm font-semibold rounded-full h-12 px-7"
+            data-cursor="EXPLORE"
+          >
+            Explore our work &rarr;
+          </RainbowButton>
+          <RainbowButton 
+            href="/contact" 
+            className="text-sm font-semibold rounded-full h-12 px-7"
+            data-cursor="START"
+          >
+            Start a project
+          </RainbowButton>
         </div>
       </div>
     </section>

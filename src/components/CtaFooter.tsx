@@ -2,6 +2,7 @@
 
 import styles from './CtaFooter.module.css';
 import { CrowdCanvas } from './ui/crowd-canvas';
+import { RainbowButton } from './ui/rainbow-button';
 
 export default function CtaFooter() {
   return (
@@ -18,8 +19,12 @@ export default function CtaFooter() {
               Tell us what you're building. We'll figure out the rest.
             </p>
             <div className={styles.actions}>
-              <a href="tel:+919209839142" className={styles.primaryCta}>Start a project &rarr;</a>
-              <a href="#work" className={styles.secondaryCta}>View our work</a>
+              <RainbowButton href="tel:+919209839142" className="text-sm font-semibold rounded-full h-12 px-7">
+                Start a project &rarr;
+              </RainbowButton>
+              <RainbowButton href="#work" className="text-sm font-semibold rounded-full h-12 px-7 [animation-delay:-1s]">
+                View our work
+              </RainbowButton>
             </div>
           </div>
         </div>
@@ -38,6 +43,7 @@ export default function CtaFooter() {
             <a href="#work">Work</a>
             <a href="#services">Services</a>
             <a href="#about">About</a>
+            <a href="/careers">Careers</a>
             <a href="/contact">Contact</a>
           </div>
           

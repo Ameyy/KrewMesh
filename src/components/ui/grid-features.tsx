@@ -5,31 +5,37 @@ import { FeatureCard } from '@/components/ui/grid-feature-cards';
 
 const features = [
 	{
+		slug: 'branding',
 		title: 'Branding',
 		icon: Target,
 		description: 'Identity systems, logos, visual language and brand experiences.',
 	},
 	{
+		slug: 'design',
 		title: 'Design',
 		icon: PenTool,
 		description: 'Graphic design, communication design and creative direction.',
 	},
 	{
+		slug: 'digital',
 		title: 'Digital',
 		icon: Monitor,
 		description: 'Websites, interfaces and immersive digital experiences.',
 	},
 	{
+		slug: 'development',
 		title: 'Development',
 		icon: Code,
 		description: 'High performance websites, web applications and software.',
 	},
 	{
+		slug: 'ai',
 		title: 'AI',
 		icon: Sparkles,
 		description: 'AI-powered products, automation and intelligent experiences.',
 	},
 	{
+		slug: 'saas',
 		title: 'SaaS',
 		icon: Cloud,
 		description: 'Product strategy, UI/UX and scalable SaaS platforms.',
@@ -48,7 +54,7 @@ export function GridFeatures() {
 
 				<AnimatedContainer
 					delay={0.4}
-					className="grid grid-cols-1 divide-x divide-y divide-dashed border border-dashed border-white/20 divide-white/20 sm:grid-cols-2 md:grid-cols-3"
+					className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
 				>
 					{features.map((feature, i) => (
 						<FeatureCard key={i} feature={feature} />

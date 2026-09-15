@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Layers, Sparkles, Users, Mail, Menu, X, ArrowUpRight, LucideIcon } from 'lucide-react';
+import { Home, Layers, Sparkles, Users, Mail, Menu, X, ArrowUpRight, LucideIcon, Briefcase } from 'lucide-react';
 import styles from './Header.module.css';
 
 interface NavItem {
@@ -17,6 +17,7 @@ const navItems: NavItem[] = [
   { title: 'Services', icon: Sparkles, href: '/#services' },
   { title: 'Work', icon: Layers, href: '/#work' },
   { title: 'About', icon: Users, href: '/#about' },
+  { title: 'Careers', icon: Briefcase, href: '/careers' },
 ];
 
 export default function Header() {
@@ -109,7 +110,9 @@ export default function Header() {
               const isActive =
                 href === '/'
                   ? pathname === '/' && !activeHash
-                  : href === `/${activeHash}`;
+                  : href.startsWith('/#')
+                    ? href === `/${activeHash}`
+                    : pathname === href;
 
               return (
                 <Link
@@ -128,15 +131,27 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Contact Button */}
+          {/* Vintage Ringing Phone Contact Button with Comic Speech Bubble on the Right */}
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className={styles.ctaButton}
-            data-cursor="CONTACT"
+            className={styles.vintagePhoneButton}
+            data-cursor="LET'S TALK"
+            aria-label="Let's Talk - Contact Us"
           >
-            <span>Let&apos;s Talk</span>
-            <ArrowUpRight size={16} />
+            {/* Vibrating Phone Badge */}
+            <div className={styles.phoneBadge}>
+              <img
+                src="/vintage-phone-white.png"
+                alt="Vintage Antique Telephone"
+                className={styles.vintagePhoneImg}
+              />
+            </div>
+
+            {/* Comic Style Speech Bubble Floating on Right */}
+            <div className={styles.comicBubbleRight}>
+              <span>LET&apos;S TALK!</span>
+            </div>
           </Link>
 
           {/* Mobile Menu Toggle Button */}

@@ -330,7 +330,7 @@ export default function Services({
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
           overflow: hidden;
-          border-top: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
           border-radius: 18px;
           background: var(--surface);
           isolation: isolate;
@@ -341,12 +341,12 @@ export default function Services({
           min-width: 0;
           min-height: clamp(250px, 25vw, 350px);
           padding: clamp(28px, 4vw, 52px);
-          border-left: 1px dashed color-mix(in srgb, var(--foreground) 10%, transparent);
-          border-bottom: 1px dashed color-mix(in srgb, var(--foreground) 10%, transparent);
+          border-left: 1px dashed rgba(255, 255, 255, 0.1);
+          border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
           outline: none;
           overflow: hidden;
           background: transparent;
-          color: color-mix(in srgb, var(--foreground) 70%, transparent);
+          color: rgba(255, 255, 255, 0.7);
           transition:
             color 500ms ease,
             transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -434,7 +434,7 @@ export default function Services({
           .liquid-grid-cell {
             min-height: 200px;
             border-left: 0 !important;
-            border-bottom: 1px dashed color-mix(in srgb, var(--foreground) 10%, transparent) !important;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
           }
 
           .liquid-grid-cell:last-child {
