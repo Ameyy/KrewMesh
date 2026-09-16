@@ -1,0 +1,2627 @@
+{
+  "crawledAt": "2026-09-16T06:52:11.178Z",
+  "totalUrls": 52,
+  "errors": 18,
+  "warnings": 2,
+  "redirects": 0,
+  "canonicalIssues": 34,
+  "results": [
+    {
+      "url": "http://localhost:3000",
+      "status": 200,
+      "time": 190,
+      "redirectLocation": null,
+      "title": "KREW / MESH | Creative Technology Studio",
+      "metaDescription": "Krew / Mesh is a modern creative-tech agency combining Branding, Graphic Design, UI/UX, Web Development, 3D Experiences, AI, SaaS and Digital Products.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "WE BUILDDIGITAL WORLDS."
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/hero-bg.jpg",
+          "alt": "Background Texture",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/hero-bg.jpg",
+          "alt": "Reveal Texture",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Faizen.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fbatmaaanji.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fjohan.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fshinji.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fandha-aizen.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fpinky-aizen.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "https://krewmesh.com/",
+      "status": 500,
+      "time": 57
+    },
+    {
+      "url": "https://krewmesh.com/careers",
+      "status": 500,
+      "time": 5
+    },
+    {
+      "url": "https://krewmesh.com/contact",
+      "status": 500,
+      "time": 2
+    },
+    {
+      "url": "https://krewmesh.com/sitemap",
+      "status": 500,
+      "time": 6
+    },
+    {
+      "url": "https://krewmesh.com/services/branding",
+      "status": 500,
+      "time": 5
+    },
+    {
+      "url": "https://krewmesh.com/services/design",
+      "status": 500,
+      "time": 5
+    },
+    {
+      "url": "https://krewmesh.com/services/digital",
+      "status": 500,
+      "time": 6
+    },
+    {
+      "url": "https://krewmesh.com/services/development",
+      "status": 500,
+      "time": 5
+    },
+    {
+      "url": "https://krewmesh.com/services/ai",
+      "status": 500,
+      "time": 5
+    },
+    {
+      "url": "https://krewmesh.com/services/saas",
+      "status": 500,
+      "time": 5
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce",
+      "status": 500,
+      "time": 4
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce/shop",
+      "status": 500,
+      "time": 5
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce/about",
+      "status": 500,
+      "time": 4
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce/product/chrono-x99",
+      "status": 500,
+      "time": 3
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce/product/neural-ring-v4",
+      "status": 500,
+      "time": 4
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce/product/aether-vision-hud",
+      "status": 500,
+      "time": 4
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce/product/orbital-zero-g",
+      "status": 500,
+      "time": 4
+    },
+    {
+      "url": "https://krewmesh.com/demo/ecommerce/product/nanoweave-exo-jacket",
+      "status": 500,
+      "time": 4
+    },
+    {
+      "url": "http://localhost:3000/",
+      "status": 200,
+      "time": 212,
+      "redirectLocation": null,
+      "title": "KREW / MESH | Creative Technology Studio",
+      "metaDescription": "Krew / Mesh is a modern creative-tech agency combining Branding, Graphic Design, UI/UX, Web Development, 3D Experiences, AI, SaaS and Digital Products.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "WE BUILDDIGITAL WORLDS."
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/hero-bg.jpg",
+          "alt": "Background Texture",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/hero-bg.jpg",
+          "alt": "Reveal Texture",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Faizen.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fbatmaaanji.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fjohan.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fshinji.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fandha-aizen.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/_next/image?url=%2Favatars%2Fpinky-aizen.jpg&w=3840&q=75",
+          "alt": "team member",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/careers",
+      "status": 200,
+      "time": 203,
+      "redirectLocation": null,
+      "title": "Careers | KREW / MESH",
+      "metaDescription": "Join our team of creative technologists. View open positions in design, development, and digital marketing at Krew / Mesh.",
+      "canonical": "https://krewmesh.com/careers",
+      "robots": "index, follow",
+      "h1": [
+        "Build the Future of Creative Tech."
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/careers#open-positions",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/contact",
+      "status": 200,
+      "time": 160,
+      "redirectLocation": null,
+      "title": "Contact Us | KREW / MESH",
+      "metaDescription": "Get in touch with Krew / Mesh. We are a creative technology studio building digital products, brands, and SaaS platforms.",
+      "canonical": "https://krewmesh.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "Get in Touch"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "tel:+919209839142",
+        "mailto:hello@krewmesh.com",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/services/branding",
+      "status": 200,
+      "time": 275,
+      "redirectLocation": null,
+      "title": "Brand Identity Design & Strategy Studio | Krew / Mesh",
+      "metaDescription": "Build a memorable brand that stands out. We design professional logos, colors, fonts, and complete brand guidelines that build immediate trust with your customers.",
+      "canonical": "https://krewmesh.com/services/branding",
+      "robots": "index, follow",
+      "h1": [
+        "Brand Strategy & Visual Identity"
+      ],
+      "jsonLdCount": 2,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/contact?service=branding",
+        "http://localhost:3000/services/branding#deliverables",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/services/design",
+      "status": 200,
+      "time": 155,
+      "redirectLocation": null,
+      "title": "UI/UX & Website Design Studio | Krew / Mesh",
+      "metaDescription": "Beautiful, user-friendly UI/UX design for websites, web applications, and mobile apps. We design intuitive interfaces that turn visitors into happy customers.",
+      "canonical": "https://krewmesh.com/services/design",
+      "robots": "index, follow",
+      "h1": [
+        "UI/UX & Website Design"
+      ],
+      "jsonLdCount": 2,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/contact?service=design",
+        "http://localhost:3000/services/design#deliverables",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/services/digital",
+      "status": 200,
+      "time": 176,
+      "redirectLocation": null,
+      "title": "Interactive Websites & 3D Web Design Agency | Krew / Mesh",
+      "metaDescription": "Stand out with memorable interactive websites, smooth scroll animations, and 3D product previews that load fast on phones and computers.",
+      "canonical": "https://krewmesh.com/services/digital",
+      "robots": "index, follow",
+      "h1": [
+        "Interactive Websites & 3D Experiences"
+      ],
+      "jsonLdCount": 2,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/contact?service=digital",
+        "http://localhost:3000/services/digital#deliverables",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/services/development",
+      "status": 200,
+      "time": 154,
+      "redirectLocation": null,
+      "title": "Modern Web & App Development Agency | Krew / Mesh",
+      "metaDescription": "Fast, reliable websites and custom web applications. Built with modern technology for sub-second speeds, top Google SEO rankings, and 100% full ownership.",
+      "canonical": "https://krewmesh.com/services/development",
+      "robots": "index, follow",
+      "h1": [
+        "Web & App Development"
+      ],
+      "jsonLdCount": 2,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/contact?service=development",
+        "http://localhost:3000/services/development#deliverables",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/services/ai",
+      "status": 200,
+      "time": 155,
+      "redirectLocation": null,
+      "title": "AI Solutions & Smart Business Automation Studio | Krew / Mesh",
+      "metaDescription": "Automate repetitive tasks and improve customer support with smart AI tools. Custom 24/7 AI chat assistants, automated workflows, and private data search.",
+      "canonical": "https://krewmesh.com/services/ai",
+      "robots": "index, follow",
+      "h1": [
+        "AI Solutions & Smart Automation"
+      ],
+      "jsonLdCount": 2,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/contact?service=ai",
+        "http://localhost:3000/services/ai#deliverables",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/services/saas",
+      "status": 200,
+      "time": 170,
+      "redirectLocation": null,
+      "title": "Custom SaaS & Subscription Web Software Studio | Krew / Mesh",
+      "metaDescription": "Turn your software idea into a profitable subscription platform. We build complete SaaS platforms with user logins, Stripe billing, and customer dashboards.",
+      "canonical": "https://krewmesh.com/services/saas",
+      "robots": "index, follow",
+      "h1": [
+        "SaaS & Custom Web Software"
+      ],
+      "jsonLdCount": 2,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/contact?service=saas",
+        "http://localhost:3000/services/saas#deliverables",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce",
+      "status": 200,
+      "time": 89,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Artifacts for the Post-Human Horizon."
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce#warranty-terms",
+        "http://localhost:3000/demo/ecommerce#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80",
+          "alt": "Neural Wear",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
+          "alt": "Spatial Optics",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+          "alt": "Quantum Chronometry",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
+          "alt": "Spatial Audio",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "ORBITAL // ZERO-G",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/sitemap",
+      "status": 200,
+      "time": 232,
+      "redirectLocation": null,
+      "title": "Sitemap & Website Directory | Krew / Mesh",
+      "metaDescription": "Explore the complete website architecture and sitemap for Krew / Mesh. Browse our services, portfolio case studies, career openings, e-commerce demos, and Google Search Console indexing feeds.",
+      "canonical": "https://krewmesh.com/sitemap",
+      "robots": "index, follow",
+      "h1": [
+        "Site Map & Page Directory"
+      ],
+      "jsonLdCount": 2,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/sitemap.xml",
+        "http://localhost:3000/robots.txt",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/contact?service=branding",
+      "status": 200,
+      "time": 159,
+      "redirectLocation": null,
+      "title": "Contact Us | KREW / MESH",
+      "metaDescription": "Get in touch with Krew / Mesh. We are a creative technology studio building digital products, brands, and SaaS platforms.",
+      "canonical": "https://krewmesh.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "Get in Touch"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "tel:+919209839142",
+        "mailto:hello@krewmesh.com",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/contact?service=design",
+      "status": 200,
+      "time": 159,
+      "redirectLocation": null,
+      "title": "Contact Us | KREW / MESH",
+      "metaDescription": "Get in touch with Krew / Mesh. We are a creative technology studio building digital products, brands, and SaaS platforms.",
+      "canonical": "https://krewmesh.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "Get in Touch"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "tel:+919209839142",
+        "mailto:hello@krewmesh.com",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/contact?service=digital",
+      "status": 200,
+      "time": 160,
+      "redirectLocation": null,
+      "title": "Contact Us | KREW / MESH",
+      "metaDescription": "Get in touch with Krew / Mesh. We are a creative technology studio building digital products, brands, and SaaS platforms.",
+      "canonical": "https://krewmesh.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "Get in Touch"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "tel:+919209839142",
+        "mailto:hello@krewmesh.com",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/contact?service=development",
+      "status": 200,
+      "time": 160,
+      "redirectLocation": null,
+      "title": "Contact Us | KREW / MESH",
+      "metaDescription": "Get in touch with Krew / Mesh. We are a creative technology studio building digital products, brands, and SaaS platforms.",
+      "canonical": "https://krewmesh.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "Get in Touch"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "tel:+919209839142",
+        "mailto:hello@krewmesh.com",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/contact?service=ai",
+      "status": 200,
+      "time": 158,
+      "redirectLocation": null,
+      "title": "Contact Us | KREW / MESH",
+      "metaDescription": "Get in touch with Krew / Mesh. We are a creative technology studio building digital products, brands, and SaaS platforms.",
+      "canonical": "https://krewmesh.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "Get in Touch"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "tel:+919209839142",
+        "mailto:hello@krewmesh.com",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/contact?service=saas",
+      "status": 200,
+      "time": 84,
+      "redirectLocation": null,
+      "title": "Contact Us | KREW / MESH",
+      "metaDescription": "Get in touch with Krew / Mesh. We are a creative technology studio building digital products, brands, and SaaS platforms.",
+      "canonical": "https://krewmesh.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "Get in Touch"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/contact",
+        "tel:+919209839142",
+        "mailto:hello@krewmesh.com",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/",
+        "https://x.com/",
+        "https://linkedin.com/",
+        "https://facebook.com/",
+        "https://instagram.com/",
+        "https://youtube.com/",
+        "https://github.com/",
+        "http://localhost:3000/",
+        "http://localhost:3000/#services",
+        "http://localhost:3000/#work",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/sitemap",
+        "http://localhost:3000/services/branding",
+        "http://localhost:3000/services/design",
+        "http://localhost:3000/services/digital",
+        "http://localhost:3000/services/development",
+        "http://localhost:3000/services/ai",
+        "http://localhost:3000/services/saas",
+        "http://localhost:3000/#about",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/contact",
+        "mailto:hello@krewmesh.com",
+        "tel:+919209839142",
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://www.behance.net/",
+        "https://x.com/",
+        "https://github.com/"
+      ],
+      "images": [
+        {
+          "src": "http://localhost:3000/logo.png",
+          "alt": "KREW / MESH Logo",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/vintage-phone-white.png",
+          "alt": "Vintage Antique Telephone",
+          "loading": null
+        },
+        {
+          "src": "http://localhost:3000/krewmesh-logo-white.png",
+          "alt": "Krew / Mesh Logo",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/shop",
+      "status": 200,
+      "time": 131,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Hardware Catalog"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/shop#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/shop#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/shop#privacy",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "ORBITAL // ZERO-G",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+          "alt": "EXO // NANO-WEAVE 01",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+      "status": 200,
+      "time": 135,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Hardware Catalog"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear#privacy",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/about",
+      "status": 200,
+      "time": 88,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Engineering the physical artifacts of the post-human era."
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/about#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/about#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/about#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80",
+          "alt": "AETHER Hardware Laboratory",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+      "status": 200,
+      "time": 180,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "CHRONO // X-99"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99#reviews",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 1",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 2",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 3",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "ORBITAL // ZERO-G",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+      "status": 200,
+      "time": 75,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Hardware Catalog"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics#privacy",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+      "status": 200,
+      "time": 76,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Hardware Catalog"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry#privacy",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+      "status": 200,
+      "time": 84,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Hardware Catalog"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio#privacy",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "ORBITAL // ZERO-G",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+      "status": 200,
+      "time": 199,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "NEURAL // RING-4"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural%20Wear",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4#reviews",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 1",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 2",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "ORBITAL // ZERO-G",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+      "status": 200,
+      "time": 95,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "AETHER // VISION-16K"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud#reviews",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 1",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 2",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "ORBITAL // ZERO-G",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/product/orbital-zero-g",
+      "status": 200,
+      "time": 93,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "ORBITAL // ZERO-G"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial%20Audio",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g#reviews",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/product/orbital-zero-g#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "ORBITAL // ZERO-G",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 1",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 2",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+      "status": 200,
+      "time": 108,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Hardware Catalog"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton#privacy",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+          "alt": "EXO // NANO-WEAVE 01",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/cart",
+      "status": 200,
+      "time": 144,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "Shopping Bag (1)"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/cart#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/cart#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/cart#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/checkout",
+      "status": 200,
+      "time": 160,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/checkout#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/checkout#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/checkout#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3000/sitemap.xml",
+      "status": 200,
+      "time": 22,
+      "redirectLocation": null,
+      "title": "",
+      "h1": [],
+      "jsonLdCount": 0,
+      "links": [],
+      "images": []
+    },
+    {
+      "url": "http://localhost:3000/robots.txt",
+      "status": 200,
+      "time": 35,
+      "redirectLocation": null,
+      "title": "",
+      "h1": [],
+      "jsonLdCount": 0,
+      "links": [],
+      "images": []
+    },
+    {
+      "url": "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket",
+      "status": 200,
+      "time": 189,
+      "redirectLocation": null,
+      "title": "AETHER // 2099 - Futuristic Spatial Hardware & Neural Artifacts",
+      "metaDescription": "Experience the next era of e-commerce. High-precision post-human wearable technology, tachyon chronometry, and 16K spatial optics.",
+      "canonical": "https://krewmesh.com/",
+      "robots": "index, follow",
+      "h1": [
+        "EXO // NANO-WEAVE 01"
+      ],
+      "jsonLdCount": 1,
+      "links": [
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket#reviews",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/product/chrono-x99",
+        "http://localhost:3000/demo/ecommerce/product/neural-ring-v4",
+        "http://localhost:3000/demo/ecommerce/product/aether-vision-hud",
+        "http://localhost:3000/demo/ecommerce",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Chronometry",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Neural+Wear",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Optics",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Spatial+Audio",
+        "http://localhost:3000/demo/ecommerce/shop?cat=Exoskeleton",
+        "http://localhost:3000/demo/ecommerce/shop",
+        "http://localhost:3000/demo/ecommerce/about",
+        "http://localhost:3000/demo/ecommerce/about#technology",
+        "http://localhost:3000/careers",
+        "http://localhost:3000/",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/demo/ecommerce/cart",
+        "http://localhost:3000/demo/ecommerce/checkout",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket#orbital-shipping",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket#warranty-terms",
+        "http://localhost:3000/demo/ecommerce/product/nanoweave-exo-jacket#privacy"
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+          "alt": "EXO // NANO-WEAVE 01",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 1",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Angle 2",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+          "alt": "CHRONO // X-99",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "NEURAL // RING-4",
+          "loading": null
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=80",
+          "alt": "AETHER // VISION-16K",
+          "loading": null
+        }
+      ]
+    }
+  ]
+}
