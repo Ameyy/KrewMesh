@@ -611,8 +611,8 @@ export default function CareersPage() {
 
                 <p className="text-[11px] text-center text-neutral-500 pt-1">
                   Prefer direct email? Send your resume &amp; details to{" "}
-                  <a href="mailto:careers@krewmesh.com" className="text-neutral-300 underline hover:text-white">
-                    careers@krewmesh.com
+                  <a href="mailto:careers@krewmesh.agency" className="text-neutral-300 underline hover:text-white">
+                    careers@krewmesh.agency
                   </a>
                 </p>
               </form>

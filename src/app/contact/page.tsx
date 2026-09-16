@@ -41,8 +41,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@krewmesh.com",
-      href: "mailto:hello@krewmesh.com",
+      value: "hello@krewmesh.agency",
+      href: "mailto:hello@krewmesh.agency",
     },
     {
       icon: MapPin,

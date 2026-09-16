@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   description:
     "Explore the complete website architecture and sitemap for Krew / Mesh. Browse our services, portfolio case studies, career openings, e-commerce demos, and Google Search Console indexing feeds.",
   alternates: {
-    canonical: "https://krewmesh.com/sitemap",
+    canonical: "https://krewmesh.agency/sitemap",
   },
   openGraph: {
     title: "Sitemap & Website Directory | Krew / Mesh",
     description:
       "Explore the complete website architecture and sitemap for Krew / Mesh. Browse our services, portfolio case studies, career openings, and search engine indexing feeds.",
-    url: "https://krewmesh.com/sitemap",
+    url: "https://krewmesh.agency/sitemap",
     siteName: "Krew / Mesh",
     type: "website",
   },
@@ -115,8 +115,8 @@ export default function SitemapPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://krewmesh.com/#website",
-        url: "https://krewmesh.com",
+        "@id": "https://krewmesh.agency/#website",
+        url: "https://krewmesh.agency",
         name: "Krew / Mesh",
         description:
           "Creative Technology Studio specializing in Branding, UI/UX, Web & Mobile Development, AI Systems, and SaaS Engineering.",
@@ -128,25 +128,25 @@ export default function SitemapPage() {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://krewmesh.com",
+            item: "https://krewmesh.agency",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Sitemap",
-            item: "https://krewmesh.com/sitemap",
+            item: "https://krewmesh.agency/sitemap",
           },
         ],
       },
       {
         "@type": "CollectionPage",
-        "@id": "https://krewmesh.com/sitemap#webpage",
-        url: "https://krewmesh.com/sitemap",
+        "@id": "https://krewmesh.agency/sitemap#webpage",
+        url: "https://krewmesh.agency/sitemap",
         name: "Website Sitemap & Architecture Directory | Krew / Mesh",
         description:
           "Complete index of public pages, services, case studies, and search engine crawling feeds.",
         isPartOf: {
-          "@id": "https://krewmesh.com/#website",
+          "@id": "https://krewmesh.agency/#website",
         },
       },
     ],

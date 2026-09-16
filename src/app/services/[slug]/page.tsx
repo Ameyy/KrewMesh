@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const siteUrl = "https://krewmesh.com";
+  const siteUrl = "https://krewmesh.agency";
   const pageUrl = `${siteUrl}/services/${service.slug}`;
 
   return {
@@ -128,9 +128,9 @@ export default async function ServicePage({ params }: PageProps) {
         provider: {
           "@type": "Organization",
           name: "Krew / Mesh",
-          url: "https://krewmesh.com",
+          url: "https://krewmesh.agency",
           telephone: "+919209839142",
-          email: "hello@krewmesh.com",
+          email: "hello@krewmesh.agency",
         },
         areaServed: "Global",
         hasOfferCatalog: {
@@ -154,19 +154,19 @@ export default async function ServicePage({ params }: PageProps) {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://krewmesh.com",
+            item: "https://krewmesh.agency",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Services",
-            item: "https://krewmesh.com/#services",
+            item: "https://krewmesh.agency/#services",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: service.shortTitle,
-            item: `https://krewmesh.com/services/${service.slug}`,
+            item: `https://krewmesh.agency/services/${service.slug}`,
           },
         ],
       },

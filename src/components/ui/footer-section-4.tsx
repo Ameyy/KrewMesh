@@ -68,7 +68,7 @@ export default function Footer4() {
         { label: "About Us", href: "/#about" },
         { label: "Careers", href: "/careers" },
         { label: "Start a Project", href: "/contact" },
-        { label: "hello@krewmesh.com", href: "mailto:hello@krewmesh.com" },
+        { label: "hello@krewmesh.agency", href: "mailto:hello@krewmesh.agency" },
         { label: "+91 920 983 9142", href: "tel:+919209839142" },
       ],
     },

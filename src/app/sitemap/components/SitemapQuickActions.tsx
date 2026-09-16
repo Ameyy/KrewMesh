@@ -6,7 +6,7 @@ import { Check, Copy, ExternalLink, FileCode, Shield } from "lucide-react";
 
 export function SitemapQuickActions() {
   const [copied, setCopied] = useState(false);
-  const sitemapUrl = "https://krewmesh.com/sitemap.xml";
+  const sitemapUrl = "https://krewmesh.agency/sitemap.xml";
 
   const handleCopy = async () => {
     try {

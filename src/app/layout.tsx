@@ -12,7 +12,7 @@ const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
 });
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -47,7 +47,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         "telephone": "+91-920-983-9142",
         "contactType": "customer service",
-        "email": "hello@krewmesh.com",
+        "email": "hello@krewmesh.agency",
         "availableLanguage": "en"
       },
       "sameAs": [

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
 
 export const metadata: Metadata = {
   title: "Careers | KREW / MESH",
