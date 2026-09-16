@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Home, Layers, Sparkles, Users, Mail, Menu, X, ArrowUpRight, LucideIcon, Briefcase } from 'lucide-react';
 import styles from './Header.module.css';
 
@@ -25,49 +25,7 @@ export default function Header() {
   const [activeHash, setActiveHash] = useState('');
   const pathname = usePathname();
 
-  // Listen to hash updates and handle smooth scrolling on mount / route change
-  useEffect(() => {
-    const checkScrollTarget = () => {
-      if (pathname !== '/') {
-        setActiveHash('');
-        return;
-      }
 
-      const storedTarget = typeof window !== 'undefined' ? sessionStorage.getItem('km_scroll_target') : null;
-      const hashTarget = typeof window !== 'undefined' && window.location.hash ? window.location.hash.replace('#', '') : null;
-      const targetId = storedTarget || hashTarget;
-
-      if (targetId) {
-        if (typeof window !== 'undefined' && storedTarget) {
-          sessionStorage.removeItem('km_scroll_target');
-        }
-
-        let attempts = 0;
-        const maxAttempts = 30;
-
-        const tryScroll = () => {
-          const el = document.getElementById(targetId);
-          if (el) {
-            const navOffset = 90;
-            const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-            setActiveHash(`#${targetId}`);
-          } else if (attempts < maxAttempts) {
-            attempts++;
-            setTimeout(tryScroll, 50);
-          }
-        };
-
-        setTimeout(tryScroll, 80);
-      } else {
-        setActiveHash('');
-      }
-    };
-
-    checkScrollTarget();
-    window.addEventListener('hashchange', checkScrollTarget);
-    return () => window.removeEventListener('hashchange', checkScrollTarget);
-  }, [pathname]);
 
   // Lock body scroll when mobile drawer is open
   useEffect(() => {
@@ -81,36 +39,8 @@ export default function Header() {
     };
   }, [isOpen]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = () => {
     setIsOpen(false);
-
-    if (href === '/' && pathname === '/') {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      window.history.pushState(null, '', '/');
-      setActiveHash('');
-      return;
-    }
-
-    if (href.startsWith('/#')) {
-      const targetId = href.replace('/#', '');
-      if (pathname === '/') {
-        e.preventDefault();
-        const el = document.getElementById(targetId);
-        if (el) {
-          const navOffset = 90;
-          const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-          window.history.pushState(null, '', `/#${targetId}`);
-          setActiveHash(`#${targetId}`);
-        }
-      } else {
-        // Navigating from a sub-page (e.g. /careers, /services/branding, /contact)
-        if (typeof window !== 'undefined') {
-          sessionStorage.setItem('km_scroll_target', targetId);
-        }
-      }
-    }
   };
 
   return (
@@ -120,7 +50,7 @@ export default function Header() {
           {/* Brand Logo (Icon Only) */}
           <Link
             href="/"
-            onClick={(e) => handleNavClick(e, '/')}
+            onClick={handleNavClick}
             className={styles.logoWrapper}
             data-cursor="HOME"
             aria-label="KREW / MESH Home"
@@ -147,9 +77,8 @@ export default function Header() {
                   key={title}
                   href={href}
                   className={`${styles.navLink} ${isActive ? styles.active : ''}`}
-                  onClick={(e) => handleNavClick(e, href)}
+                  onClick={handleNavClick}
                   data-cursor={title.toUpperCase()}
-                  scroll={false}
                 >
                   <span className={styles.linkIcon}>
                     <Icon size={16} />
@@ -216,8 +145,7 @@ export default function Header() {
               <Link
                 href={href}
                 className={styles.mobileLink}
-                onClick={(e) => handleNavClick(e, href)}
-                scroll={false}
+                onClick={handleNavClick}
               >
                 <Icon size={20} />
                 <span>{title}</span>

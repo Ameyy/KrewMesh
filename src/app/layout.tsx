@@ -3,8 +3,10 @@ import Script from "next/script";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
-
-
+import Preloader from "@/components/Preloader";
+import GlobalCanvas from "@/components/GlobalCanvas";
+import Header from "@/components/Header";
+import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
 
 const outfit = Outfit({ 
   subsets: ["latin"],
@@ -81,6 +83,9 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <GlobalCanvas />
+        <Preloader />
+        <Header />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-CLVB54FXXP" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -92,6 +97,7 @@ export default function RootLayout({
         </Script>
         <CustomCursor />
         <main>{children}</main>
+        <CTAWithVerticalMarquee />
       </body>
     </html>
   );

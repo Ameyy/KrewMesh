@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
-import GlobalCanvas from "@/components/GlobalCanvas";
-import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
 import { SitemapQuickActions } from "./components/SitemapQuickActions";
 import { servicesData } from "@/data/services";
 import { ECOM_PRODUCTS } from "../demo/ecommerce/data/products";
@@ -161,8 +158,6 @@ export default function SitemapPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <GlobalCanvas />
-      <Header />
 
       <main className="relative min-h-screen bg-[#050505] text-white pt-28 pb-16 overflow-hidden">
         {/* Background ambient lighting */}
@@ -436,8 +431,6 @@ export default function SitemapPage() {
           </section>
         </div>
 
-        {/* Global CTA & Footer */}
-        <CTAWithVerticalMarquee />
       </main>
     </>
   );

@@ -1,9 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
-import GlobalCanvas from "@/components/GlobalCanvas";
-import Header from "@/components/Header";
-import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { ServiceFaqAccordion } from "./components/ServiceFaqAccordion";
 import {
@@ -194,9 +191,6 @@ export default async function ServicePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      <GlobalCanvas />
-      <Header />
 
       <main className="relative z-10 min-h-screen bg-background text-foreground selection:bg-white/20">
         {/* HERO SECTION */}
@@ -602,8 +596,6 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* GLOBAL CTA & FOOTER */}
-        <CTAWithVerticalMarquee />
       </main>
     </>
   );

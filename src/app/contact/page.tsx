@@ -1,9 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import GlobalCanvas from "@/components/GlobalCanvas";
-import Header from "@/components/Header";
-import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
 import { ContactCard } from "@/components/ui/contact-card";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MapPin, Phone, Mail, CheckCircle2, Loader2 } from "lucide-react";
@@ -38,7 +35,7 @@ export default function Contact() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 920 983 9142",
+      value: "+91 92098 39142",
       href: "tel:+919209839142",
     },
     {
@@ -49,22 +46,15 @@ export default function Contact() {
     },
     {
       icon: MapPin,
-      label: "Location",
-      value: "India",
-    }
+      label: "Office",
+      value: "Nagpur, India",
+      href: "https://maps.app.goo.gl/B2rDStGkXQ8Z9JdJ6",
+    },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setErrorMessage("");
-
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      setErrorMessage("Please fill in your name, email, and message.");
-      return;
-    }
-
     setIsSubmitting(true);
-
     // Simulate sending message
     setTimeout(() => {
       setIsSubmitting(false);
@@ -80,8 +70,6 @@ export default function Contact() {
 
   return (
     <>
-      <GlobalCanvas />
-      <Header />
       
       <div style={{ position: 'relative', zIndex: 1, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <div style={{ flex: 1, paddingTop: '150px' }} className="px-6 md:px-12 pb-24">
@@ -195,8 +183,7 @@ export default function Contact() {
                 )}
               </ContactCard>
             </div>
-        </div>
-        <CTAWithVerticalMarquee />
+          </div>
       </div>
     </>
   );

@@ -1,9 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import GlobalCanvas from "@/components/GlobalCanvas";
-import Header from "@/components/Header";
-import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { 
   Briefcase, 
@@ -195,9 +192,6 @@ export default function CareersPage() {
 
   return (
     <>
-      <GlobalCanvas />
-      <Header />
-
       <div style={{ position: "relative", zIndex: 1, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         
         {/* Main Content Area */}
@@ -465,9 +459,6 @@ export default function CareersPage() {
           </section>
 
         </main>
-
-        {/* Unified Bottom Footer */}
-        <CTAWithVerticalMarquee />
       </div>
 
       {/* Application Modal */}
