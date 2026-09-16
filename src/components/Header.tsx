@@ -27,23 +27,46 @@ export default function Header() {
 
   // Listen to hash updates and handle smooth scrolling on mount / route change
   useEffect(() => {
-    const handleHash = () => {
-      const hash = window.location.hash;
-      setActiveHash(hash);
-      if (hash) {
-        const targetId = hash.replace('#', '');
-        const el = document.getElementById(targetId);
-        if (el) {
-          const navOffset = 90;
-          const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
+    const checkScrollTarget = () => {
+      if (pathname !== '/') {
+        setActiveHash('');
+        return;
+      }
+
+      const storedTarget = typeof window !== 'undefined' ? sessionStorage.getItem('km_scroll_target') : null;
+      const hashTarget = typeof window !== 'undefined' && window.location.hash ? window.location.hash.replace('#', '') : null;
+      const targetId = storedTarget || hashTarget;
+
+      if (targetId) {
+        if (typeof window !== 'undefined' && storedTarget) {
+          sessionStorage.removeItem('km_scroll_target');
         }
+
+        let attempts = 0;
+        const maxAttempts = 30;
+
+        const tryScroll = () => {
+          const el = document.getElementById(targetId);
+          if (el) {
+            const navOffset = 90;
+            const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            setActiveHash(`#${targetId}`);
+          } else if (attempts < maxAttempts) {
+            attempts++;
+            setTimeout(tryScroll, 50);
+          }
+        };
+
+        setTimeout(tryScroll, 80);
+      } else {
+        setActiveHash('');
       }
     };
 
-    handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+    checkScrollTarget();
+    window.addEventListener('hashchange', checkScrollTarget);
+    return () => window.removeEventListener('hashchange', checkScrollTarget);
   }, [pathname]);
 
   // Lock body scroll when mobile drawer is open
@@ -80,6 +103,11 @@ export default function Header() {
           window.scrollTo({ top: y, behavior: 'smooth' });
           window.history.pushState(null, '', `/#${targetId}`);
           setActiveHash(`#${targetId}`);
+        }
+      } else {
+        // Navigating from a sub-page (e.g. /careers, /services/branding, /contact)
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('km_scroll_target', targetId);
         }
       }
     }
@@ -121,6 +149,7 @@ export default function Header() {
                   className={`${styles.navLink} ${isActive ? styles.active : ''}`}
                   onClick={(e) => handleNavClick(e, href)}
                   data-cursor={title.toUpperCase()}
+                  scroll={false}
                 >
                   <span className={styles.linkIcon}>
                     <Icon size={16} />
@@ -188,6 +217,7 @@ export default function Header() {
                 href={href}
                 className={styles.mobileLink}
                 onClick={(e) => handleNavClick(e, href)}
+                scroll={false}
               >
                 <Icon size={20} />
                 <span>{title}</span>

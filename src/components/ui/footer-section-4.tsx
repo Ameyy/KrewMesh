@@ -1,12 +1,42 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, Variants } from "motion/react";
 import { SocialCloud } from "@/components/ui/footer-section-4-utils/social-cloud";
 
 const FOOTER_TITLE = "Shaping Ideas Into Experiences";
 
 export default function Footer4() {
+  const pathname = usePathname();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === "/" && pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.history.pushState(null, "", "/");
+      return;
+    }
+
+    if (href.startsWith("/#")) {
+      const targetId = href.replace("/#", "");
+      if (pathname === "/") {
+        e.preventDefault();
+        const el = document.getElementById(targetId);
+        if (el) {
+          const navOffset = 90;
+          const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          window.history.pushState(null, "", `/#${targetId}`);
+        }
+      } else {
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("km_scroll_target", targetId);
+        }
+      }
+    }
+  };
+
   const footerLinks = [
     {
       title: "Navigation",
@@ -14,20 +44,22 @@ export default function Footer4() {
         { label: "Home", href: "/" },
         { label: "Services", href: "/#services" },
         { label: "Work", href: "/#work" },
+        { label: "E-Commerce Demo", href: "/demo/ecommerce" },
         { label: "About", href: "/#about" },
         { label: "Careers", href: "/careers" },
         { label: "Contact", href: "/contact" },
+        { label: "Sitemap", href: "/sitemap" },
       ],
     },
     {
       title: "Services",
       links: [
-        { label: "Branding", href: "/#services" },
-        { label: "Design", href: "/#services" },
-        { label: "Digital", href: "/#services" },
-        { label: "Development", href: "/#services" },
-        { label: "AI Products", href: "/#services" },
-        { label: "SaaS Platforms", href: "/#services" },
+        { label: "Branding", href: "/services/branding" },
+        { label: "Design", href: "/services/design" },
+        { label: "Digital", href: "/services/digital" },
+        { label: "Development", href: "/services/development" },
+        { label: "AI Products", href: "/services/ai" },
+        { label: "SaaS Platforms", href: "/services/saas" },
       ],
     },
     {
@@ -36,6 +68,7 @@ export default function Footer4() {
         { label: "About Us", href: "/#about" },
         { label: "Careers", href: "/careers" },
         { label: "Start a Project", href: "/contact" },
+        { label: "hello@krewmesh.com", href: "mailto:hello@krewmesh.com" },
         { label: "+91 920 983 9142", href: "tel:+919209839142" },
       ],
     },
@@ -143,17 +176,18 @@ export default function Footer4() {
                   <ul className="flex flex-col space-y-3 text-neutral-600 dark:text-neutral-400 font-medium">
                     {section.links.map((link, linkIdx) => {
                       const isExternal =
-                        link.href.startsWith("http") || link.href.startsWith("tel:");
+                        link.href.startsWith("http") ||
+                        link.href.startsWith("tel:") ||
+                        link.href.startsWith("mailto:");
+                      const isNewTab = link.href.startsWith("http");
                       return (
                         <li key={linkIdx}>
                           <Link
                             href={link.href}
-                            target={
-                              isExternal && !link.href.startsWith("tel:")
-                                ? "_blank"
-                                : undefined
-                            }
-                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            target={isNewTab ? "_blank" : undefined}
+                            rel={isNewTab ? "noopener noreferrer" : undefined}
+                            onClick={(e) => handleLinkClick(e, link.href)}
+                            scroll={false}
                             className="hover:text-black dark:hover:text-white transition-colors"
                           >
                             {link.label}

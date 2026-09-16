@@ -40,9 +40,10 @@ export default function CtaFooter() {
           </div>
           
           <div className={styles.linksCol}>
-            <a href="#work">Work</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
+            <a href="/#work">Work</a>
+            <a href="/#services">Services</a>
+            <a href="/demo/ecommerce">Demo</a>
+            <a href="/#about">About</a>
             <a href="/careers">Careers</a>
             <a href="/contact">Contact</a>
           </div>
