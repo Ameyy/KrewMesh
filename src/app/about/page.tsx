@@ -37,27 +37,15 @@ const PHILOSOPHY_PILLARS = [
 const TEAM_ROSTER = [
   {
     id: "01",
-    name: "Dinesh K.",
-    role: "Founder & Creative Director",
-    focus: "Brand Architecture, Art Direction & Spatial UI",
+    name: "Amey Kulkarni",
+    role: "Founder & CEO",
+    focus: "Studio Leadership, Strategic Vision & Client Partnership",
   },
   {
     id: "02",
-    name: "Elena Vance",
-    role: "Head of UI/UX & Spatial Design",
-    focus: "Design Systems, Micro-Interactions & Experience Architecture",
-  },
-  {
-    id: "03",
-    name: "Aarav Sharma",
-    role: "Lead Systems Architect & Tech Lead",
-    focus: "Next.js 16, Cloud Infrastructure & High-Performance Web",
-  },
-  {
-    id: "04",
-    name: "Marcus Sterling",
-    role: "3D Visual Artist & Creative Developer",
-    focus: "Three.js, WebGL & GLSL Shaders, Blender Motion",
+    name: "Dinesh Kulkarni",
+    role: "Senior Web Developer",
+    focus: "Full-Stack Web Architecture, Next.js Engineering & Scalable Code",
   },
 ];
 

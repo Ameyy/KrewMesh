@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
+import { createPortal } from "react-dom";
 
 type Photo = {
   id: number;
@@ -14,35 +15,19 @@ type Photo = {
 const INITIAL_PHOTOS: Photo[] = [
   {
     id: 1,
-    title: "Dinesh K.",
-    place: "Founder & Creative Director",
+    title: "Amey Kulkarni",
+    place: "Founder & CEO",
     year: "01",
-    src: "/team/founder.jpg",
-    tone: "#141414",
+    src: "/team/amey.jpg",
+    tone: "#101010",
   },
   {
     id: 2,
-    title: "Elena Vance",
-    place: "Head of UI/UX & Spatial Design",
+    title: "Dinesh Kulkarni",
+    place: "Senior Web Developer",
     year: "02",
-    src: "/team/design_lead.jpg",
-    tone: "#221727",
-  },
-  {
-    id: 3,
-    title: "Aarav Sharma",
-    place: "Lead Systems Architect",
-    year: "03",
-    src: "/team/tech_lead.jpg",
-    tone: "#141f26",
-  },
-  {
-    id: 4,
-    title: "Marcus Sterling",
-    place: "3D Visual Artist & Creative Dev",
-    year: "04",
-    src: "/team/artist.jpg",
-    tone: "#241920",
+    src: "/team/dinesh.jpg",
+    tone: "#141414",
   },
 ];
 
@@ -93,9 +78,29 @@ export function KineticPhotoStack() {
   const [thrown, setThrown] = useState<"left" | "right" | null>(null);
   const [focus, setFocus] = useState<Photo | null>(null);
   const [shufflePulse, setShufflePulse] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const start = useRef({ x: 0, y: 0 });
   const moved = useRef(false);
   const top = photos[0];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (focus) {
+      const prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") setFocus(null);
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.body.style.overflow = prevOverflow;
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, [focus]);
 
   const rotateDeck = (direction: "left" | "right") => {
     if (thrown || mode === "fan") return;
@@ -144,14 +149,8 @@ export function KineticPhotoStack() {
     window.setTimeout(() => {
       setPhotos((current) => [...current.slice(1), current[0]]);
       setThrown(null);
-    }, settleDelay + 340);
-
-    window.setTimeout(() => setThrown("left"), settleDelay + 440);
-    window.setTimeout(() => {
-      setPhotos((current) => [...current.slice(1), current[0]]);
-      setThrown(null);
       setShufflePulse(false);
-    }, settleDelay + 780);
+    }, settleDelay + 360);
   };
 
   return (
@@ -194,11 +193,11 @@ export function KineticPhotoStack() {
             {[...photos].reverse().map((photo, reverseIndex) => {
               const index = photos.length - 1 - reverseIndex;
               const isTop = index === 0;
-              const stackRotate = [-2.5, 2.2, -1.4, 3.5, -3][index] ?? 0;
+              const stackRotate = [-2.5, 3.2][index] ?? 0;
               const fanCenter = (photos.length - 1) / 2;
-              const fanX = (index - fanCenter) * 88;
-              const fanY = Math.abs(index - fanCenter) * 18;
-              const fanRotate = (index - fanCenter) * 6;
+              const fanX = (index - fanCenter) * 110;
+              const fanY = Math.abs(index - fanCenter) * 10;
+              const fanRotate = (index - fanCenter) * 8;
               const topTransform =
                 isTop && mode === "stack"
                   ? `translate3d(${drag.x}px,${drag.y}px,0) rotate(${drag.x * 0.045}deg)`
@@ -257,7 +256,7 @@ export function KineticPhotoStack() {
           )}
         </div>
 
-        {focus && (
+        {mounted && focus && createPortal(
           <div
             className="kps-lightbox"
             role="dialog"
@@ -278,7 +277,8 @@ export function KineticPhotoStack() {
                 <em>{focus.year}</em>
               </figcaption>
             </figure>
-          </div>
+          </div>,
+          document.body
         )}
       </section>
     </div>
@@ -327,16 +327,16 @@ const STYLES = `
 .kps-nav button:first-child{transform:rotate(180deg)}
 .kps-nav button:first-child:active{transform:rotate(180deg) scale(.95)}
 .kps-nav button:hover{background:var(--soft)}
-.kps-lightbox{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:40px;background:rgba(10,10,10,.88);backdrop-filter:blur(16px);animation:kps-fade .25s}
-.kps-lightbox figure{width:min(640px,85vw);margin:0;animation:kps-focus .36s cubic-bezier(.2,.8,.2,1);border:1px solid rgba(255,255,255,.15);border-radius:12px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.8)}
+.kps-lightbox{position:fixed;inset:0;z-index:999999!important;display:grid;place-items:center;padding:24px;background:rgba(0,0,0,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);animation:kps-fade .25s ease-out}
+.kps-lightbox figure{position:relative;z-index:999999!important;width:min(640px,90vw);margin:0;animation:kps-focus .36s cubic-bezier(.2,.8,.2,1);border:1px solid rgba(255,255,255,.15);border-radius:12px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.85)}
 .kps-lightbox figure>img{width:100%;height:min(65vh,540px);display:block;object-fit:cover;border-radius:12px 12px 0 0}
 .kps-lightbox figcaption{height:64px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;background:#141413;color:#f1f0eb;border-top:1px solid rgba(255,255,255,.08)}
 .kps-lightbox figcaption div{display:grid;gap:2px}
 .kps-lightbox figcaption b{font-size:14px;color:#fff}
 .kps-lightbox figcaption span{font-size:11px;color:#9e9c96;font-family:monospace}
 .kps-lightbox figcaption em{font:11px monospace;color:#737068;font-style:normal}
-.kps-close{position:fixed;top:22px;right:22px;width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff}
-.kps-close:hover{background:rgba(255,255,255,.18)}
+.kps-close{position:fixed;top:24px;right:24px;width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:rgba(20,20,20,.85);color:#fff;z-index:1000000!important;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .2s,transform .2s}
+.kps-close:hover{background:rgba(255,255,255,.2);transform:scale(1.05)}
 @keyframes kps-throw-right{0%{transform:translate3d(0,0,0) rotate(-2.5deg);opacity:1}45%{transform:translate3d(58%,2px,0) rotate(11deg);opacity:1}100%{transform:translate3d(18%,20px,0) rotate(3deg) scale(.97);opacity:0}}
 @keyframes kps-throw-left{0%{transform:translate3d(0,0,0) rotate(-2.5deg);opacity:1}45%{transform:translate3d(-58%,2px,0) rotate(-11deg);opacity:1}100%{transform:translate3d(-18%,20px,0) rotate(-3deg) scale(.97);opacity:0}}
 @keyframes kps-fade{from{opacity:0}}

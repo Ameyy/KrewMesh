@@ -34,6 +34,17 @@ export default function Footer4() {
           sessionStorage.setItem("km_scroll_target", targetId);
         }
       }
+      return;
+    }
+
+    // For external / new tab links, allow standard browser navigation
+    if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:") || href === "/demo/ecommerce") {
+      return;
+    }
+
+    // For any page routes on the current site, ensure we start at the top
+    if (typeof window !== "undefined" && href !== pathname) {
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
   };
 
@@ -185,7 +196,7 @@ export default function Footer4() {
                         link.href.startsWith("http") ||
                         link.href.startsWith("tel:") ||
                         link.href.startsWith("mailto:");
-                      const isNewTab = link.href.startsWith("http");
+                      const isNewTab = link.href.startsWith("http") || link.href === "/demo/ecommerce";
                       return (
                         <li key={linkIdx}>
                           <Link
@@ -193,10 +204,15 @@ export default function Footer4() {
                             target={isNewTab ? "_blank" : undefined}
                             rel={isNewTab ? "noopener noreferrer" : undefined}
                             onClick={(e) => handleLinkClick(e, link.href)}
-                            scroll={false}
-                            className="hover:text-black dark:hover:text-white transition-colors"
+                            scroll={link.href.startsWith("/#") ? false : true}
+                            className="hover:text-black dark:hover:text-white transition-colors inline-flex items-center gap-1.5"
                           >
-                            {link.label}
+                            <span>{link.label}</span>
+                            {link.href === "/demo/ecommerce" && (
+                              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 uppercase tracking-wider font-semibold">
+                                Live
+                              </span>
+                            )}
                           </Link>
                         </li>
                       );
