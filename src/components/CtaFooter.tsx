@@ -42,7 +42,7 @@ export default function CtaFooter() {
           <div className={styles.linksCol}>
             <a href="/#work">Work</a>
             <a href="/#services">Services</a>
-            <a href="/demo/ecommerce">Demo</a>
+            <a href="/demo/ecommerce" target="_blank" rel="noopener noreferrer">E-Commerce Demo</a>
             <a href="/about">About</a>
             <a href="/careers">Careers</a>
             <a href="/contact">Contact</a>

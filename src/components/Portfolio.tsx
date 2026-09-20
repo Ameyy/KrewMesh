@@ -200,6 +200,18 @@ export default function Portfolio() {
               >
                 Back to Projects
               </RainbowButton>
+              {'demoUrl' in selectedProject && selectedProject.demoUrl && (
+                <a
+                  href={selectedProject.demoUrl as string}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full h-11 px-6 text-sm font-semibold bg-white text-black hover:bg-white/90 transition-colors"
+                  data-cursor="DEMO"
+                >
+                  <span>Launch Live Demo</span>
+                  <ArrowUpRight size={16} />
+                </a>
+              )}
               <RainbowButton 
                 href={`/contact?service=${encodeURIComponent(selectedProject.category.toLowerCase())}`}
                 onClick={() => setSelectedProject(null)}
