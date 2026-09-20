@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './CtaFooter.module.css';
+import Link from 'next/link';
 import { CrowdCanvas } from './ui/crowd-canvas';
 import { RainbowButton } from './ui/rainbow-button';
 
@@ -13,17 +14,14 @@ export default function CtaFooter() {
           <div className={styles.ctaContent}>
             <h2 className={`display-font ${styles.headline}`}>
               HAVE AN IDEA?<br />
-              LET'S MAKE IT REAL.
+              LET&apos;S BUILD IT.
             </h2>
-            <p className={styles.supportText}>
-              Tell us what you're building. We'll figure out the rest.
+            <p className={styles.subline}>
+              We partner with ambitious brands and founders to create digital products that leave a mark.
             </p>
-            <div className={styles.actions}>
-              <RainbowButton href="tel:+919209839142" className="text-sm font-semibold rounded-full h-12 px-7">
-                Start a project &rarr;
-              </RainbowButton>
-              <RainbowButton href="#work" className="text-sm font-semibold rounded-full h-12 px-7 [animation-delay:-1s]">
-                View our work
+            <div className={styles.ctaActions}>
+              <RainbowButton href="/contact">
+                Start a Project
               </RainbowButton>
             </div>
           </div>
@@ -34,7 +32,9 @@ export default function CtaFooter() {
         <div className={`container ${styles.footerGrid}`}>
           <div className={styles.brandCol}>
             <div className={styles.footerLogoWrapper}>
-              <img src="/logo.png" alt="KREW / MESH Logo" className={styles.footerLogoImg} />
+              <Link href="/" aria-label="KREW / MESH Home" title="KREW / MESH Home">
+                <img src="/logo.png" alt="KREW / MESH Logo" className={styles.footerLogoImg} />
+              </Link>
             </div>
             <p className={styles.footerDesc}>Creative Technology Studio</p>
           </div>
@@ -43,7 +43,7 @@ export default function CtaFooter() {
             <a href="/#work">Work</a>
             <a href="/#services">Services</a>
             <a href="/demo/ecommerce">Demo</a>
-            <a href="/#about">About</a>
+            <a href="/about">About</a>
             <a href="/careers">Careers</a>
             <a href="/contact">Contact</a>
           </div>

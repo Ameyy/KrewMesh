@@ -1,0 +1,98 @@
+/* Floating Scroll-to-Top Button */
+.scrollTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: rgba(15, 15, 15, 0.75);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.scrollTopButton:hover {
+  background: rgba(28, 28, 28, 0.9);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7),
+              0 0 20px rgba(255, 255, 255, 0.12),
+              inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.scrollTopButton:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.scrollTopButton:hover .iconWrapper {
+  transform: translateY(-2px);
+}
+
+/* Tooltip on hover */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 50%;
+  transform: translateX(50%) translateY(4px);
+  background: rgba(10, 10, 10, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: var(--font-outfit), sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ededed;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.scrollTopButton:hover .tooltip {
+  opacity: 1;
+  transform: translateX(50%) translateY(0);
+}
+
+@media (max-width: 640px) {
+  .scrollTopButton {
+    bottom: 1.5rem;
+    right: 1.25rem;
+    width: 42px;
+    height: 42px;
+  }
+}

@@ -45,7 +45,7 @@ export default function Footer4() {
         { label: "Services", href: "/#services" },
         { label: "Work", href: "/#work" },
         { label: "E-Commerce Demo", href: "/demo/ecommerce" },
-        { label: "About", href: "/#about" },
+        { label: "About", href: "/about" },
         { label: "Careers", href: "/careers" },
         { label: "Contact", href: "/contact" },
         { label: "Sitemap", href: "/sitemap" },
@@ -65,7 +65,7 @@ export default function Footer4() {
     {
       title: "Company",
       links: [
-        { label: "About Us", href: "/#about" },
+        { label: "About Us", href: "/about" },
         { label: "Careers", href: "/careers" },
         { label: "Start a Project", href: "/contact" },
         { label: "hello@krewmesh.agency", href: "mailto:hello@krewmesh.agency" },
@@ -140,7 +140,13 @@ export default function Footer4() {
 
             {/* Top Logo */}
             <div className="relative z-10">
-              <Link href="/" className="inline-block group">
+              <Link
+                href="/"
+                onClick={(e) => handleLinkClick(e, "/")}
+                className="inline-block group"
+                aria-label="Krew / Mesh Home"
+                title="Krew / Mesh Home"
+              >
                 <img
                   src="/krewmesh-logo-white.png"
                   alt="Krew / Mesh Logo"

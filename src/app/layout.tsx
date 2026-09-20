@@ -6,7 +6,10 @@ import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
 import GlobalCanvas from "@/components/GlobalCanvas";
 import Header from "@/components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const outfit = Outfit({ 
   subsets: ["latin"],
@@ -98,6 +101,9 @@ export default function RootLayout({
         <CustomCursor />
         <main>{children}</main>
         <CTAWithVerticalMarquee />
+        <ScrollToTop />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

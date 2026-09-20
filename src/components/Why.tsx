@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import Container from '@/components/container';
 import WhyUsBento from './WhyUsBento';
 
@@ -18,9 +20,17 @@ export default function Why() {
         <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white uppercase max-w-3xl leading-[1.1] mb-4">
           Small Krew. <span className="text-neutral-500">Bold Design.</span>
         </h2>
-        <p className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
+        <p className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed mb-6">
           We combine graphic design, branding, and modern web development to craft memorable visual identities and high-impact digital experiences that make brands impossible to ignore.
         </p>
+        <Link
+          href="/about"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white text-xs sm:text-sm font-medium tracking-wide transition-all backdrop-blur-md hover:border-white/30 group"
+          data-cursor="ABOUT"
+        >
+          <span>Meet the Team &amp; Explore Our Story</span>
+          <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+        </Link>
       </Container>
 
       <WhyUsBento />

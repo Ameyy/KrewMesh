@@ -16,7 +16,7 @@ const navItems: NavItem[] = [
   { title: 'Home', icon: Home, href: '/' },
   { title: 'Services', icon: Sparkles, href: '/#services' },
   { title: 'Work', icon: Layers, href: '/#work' },
-  { title: 'About', icon: Users, href: '/#about' },
+  { title: 'About', icon: Users, href: '/about' },
   { title: 'Careers', icon: Briefcase, href: '/careers' },
 ];
 
@@ -39,21 +39,42 @@ export default function Header() {
     };
   }, [isOpen]);
 
-  const handleNavClick = () => {
+  const handleNavClick = (href?: string) => (e?: React.MouseEvent) => {
     setIsOpen(false);
+    if (href === '/' && pathname === '/') {
+      if (e) e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.location.hash) {
+        window.history.pushState(null, '', '/');
+        setActiveHash('');
+      }
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setIsOpen(false);
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.location.hash) {
+        window.history.pushState(null, '', '/');
+        setActiveHash('');
+      }
+    }
   };
 
   return (
     <>
       <header className={styles.navContainer}>
         <div className={styles.navInner}>
-          {/* Brand Logo (Icon Only) */}
+          {/* Brand Logo (Home Button) */}
           <Link
             href="/"
-            onClick={handleNavClick}
+            onClick={handleLogoClick}
             className={styles.logoWrapper}
             data-cursor="HOME"
             aria-label="KREW / MESH Home"
+            title="KREW / MESH Home"
           >
             <img
               src="/logo.png"
@@ -77,7 +98,7 @@ export default function Header() {
                   key={title}
                   href={href}
                   className={`${styles.navLink} ${isActive ? styles.active : ''}`}
-                  onClick={handleNavClick}
+                  onClick={handleNavClick(href)}
                   data-cursor={title.toUpperCase()}
                 >
                   <span className={styles.linkIcon}>
@@ -145,7 +166,7 @@ export default function Header() {
               <Link
                 href={href}
                 className={styles.mobileLink}
-                onClick={handleNavClick}
+                onClick={handleNavClick(href)}
               >
                 <Icon size={20} />
                 <span>{title}</span>
