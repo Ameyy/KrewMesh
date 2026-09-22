@@ -3,7 +3,7 @@ import Script from "next/script";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
-import Preloader from "@/components/Preloader";
+import CookieSettings from "@/components/CookieSettings";
 import GlobalCanvas from "@/components/GlobalCanvas";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -54,8 +54,8 @@ const jsonLd = {
         "availableLanguage": "en"
       },
       "sameAs": [
+        "https://www.instagram.com/krewmesh/",
         "https://www.linkedin.com/",
-        "https://www.instagram.com/",
         "https://x.com/",
         "https://github.com/"
       ]
@@ -85,9 +85,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body className={outfit.className}>
         <GlobalCanvas />
-        <Preloader />
         <Header />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-CLVB54FXXP" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -102,6 +101,7 @@ export default function RootLayout({
         <main>{children}</main>
         <CTAWithVerticalMarquee />
         <ScrollToTop />
+        <CookieSettings />
         <Analytics />
         <SpeedInsights />
       </body>

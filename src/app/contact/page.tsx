@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ContactCard } from "@/components/ui/contact-card";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MapPin, Phone, Mail, CheckCircle2, Loader2 } from "lucide-react";
+import { InstagramIcon } from "@/components/ui/footer-section-4-utils/social-cloud";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -43,6 +44,12 @@ export default function Contact() {
       label: "Email",
       value: "hello@krewmesh.agency",
       href: "mailto:hello@krewmesh.agency",
+    },
+    {
+      icon: InstagramIcon,
+      label: "Instagram",
+      value: "@krewmesh",
+      href: "https://www.instagram.com/krewmesh/",
     },
     {
       icon: MapPin,

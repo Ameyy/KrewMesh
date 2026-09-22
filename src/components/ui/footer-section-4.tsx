@@ -38,7 +38,7 @@ export default function Footer4() {
     }
 
     // For external / new tab links, allow standard browser navigation
-    if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:") || href === "/demo/ecommerce") {
+    if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:")) {
       return;
     }
 
@@ -48,18 +48,29 @@ export default function Footer4() {
     }
   };
 
+  const [subscribed, setSubscribed] = React.useState(false);
+  const [newsletterEmail, setNewsletterEmail] = React.useState("");
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newsletterEmail.trim()) {
+      setSubscribed(true);
+    }
+  };
+
   const footerLinks = [
     {
-      title: "Navigation",
+      title: "Sitemap",
       links: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/#services" },
         { label: "Work", href: "/#work" },
-        { label: "E-Commerce Demo", href: "/demo/ecommerce" },
-        { label: "About", href: "/about" },
+        { label: "Packages & Pricing", href: "/#packages" },
+        { label: "About Studio", href: "/about" },
         { label: "Careers", href: "/careers" },
-        { label: "Contact", href: "/contact" },
-        { label: "Sitemap", href: "/sitemap" },
+        { label: "Contact Us", href: "/contact" },
+        { label: "FAQ", href: "/faq" },
+        { label: "Full Sitemap Directory", href: "/sitemap" },
       ],
     },
     {
@@ -79,6 +90,7 @@ export default function Footer4() {
         { label: "About Us", href: "/about" },
         { label: "Careers", href: "/careers" },
         { label: "Start a Project", href: "/contact" },
+        { label: "Cookie Settings", href: "#cookie-settings" },
         { label: "hello@krewmesh.agency", href: "mailto:hello@krewmesh.agency" },
         { label: "+91 920 983 9142", href: "tel:+919209839142" },
       ],
@@ -86,8 +98,8 @@ export default function Footer4() {
     {
       title: "Connect",
       links: [
+        { label: "Instagram (@krewmesh)", href: "https://www.instagram.com/krewmesh/" },
         { label: "LinkedIn", href: "https://www.linkedin.com" },
-        { label: "Instagram", href: "https://www.instagram.com" },
         { label: "Behance", href: "https://www.behance.net" },
         { label: "X (Twitter)", href: "https://x.com" },
         { label: "GitHub", href: "https://github.com" },
@@ -192,11 +204,26 @@ export default function Footer4() {
                   </h4>
                   <ul className="flex flex-col space-y-3 text-neutral-600 dark:text-neutral-400 font-medium">
                     {section.links.map((link, linkIdx) => {
-                      const isExternal =
-                        link.href.startsWith("http") ||
-                        link.href.startsWith("tel:") ||
-                        link.href.startsWith("mailto:");
-                      const isNewTab = link.href.startsWith("http") || link.href === "/demo/ecommerce";
+                      if (link.href === "#cookie-settings") {
+                        return (
+                          <li key={linkIdx}>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                if (typeof window !== "undefined") {
+                                  window.dispatchEvent(new CustomEvent("open-cookie-settings"));
+                                }
+                              }}
+                              style={{ border: 'none', outline: 'none', background: 'transparent', padding: 0 }}
+                              className="hover:text-black dark:hover:text-white transition-colors inline-flex items-center gap-1.5 cursor-pointer text-left text-neutral-600 dark:text-neutral-400 font-medium"
+                            >
+                              <span>{link.label}</span>
+                            </button>
+                          </li>
+                        );
+                      }
+
+                      const isNewTab = link.href.startsWith("http");
                       return (
                         <li key={linkIdx}>
                           <Link
@@ -208,11 +235,6 @@ export default function Footer4() {
                             className="hover:text-black dark:hover:text-white transition-colors inline-flex items-center gap-1.5"
                           >
                             <span>{link.label}</span>
-                            {link.href === "/demo/ecommerce" && (
-                              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 uppercase tracking-wider font-semibold">
-                                Live
-                              </span>
-                            )}
                           </Link>
                         </li>
                       );
@@ -227,16 +249,25 @@ export default function Footer4() {
               <h4 className="text-lg font-bold text-black dark:text-white">
                 Newsletter
               </h4>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md w-full">
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  className="flex-1 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white bg-transparent text-black dark:text-white border border-neutral-300 dark:border-neutral-700"
-                />
-                <button className="rounded-md bg-black text-white dark:bg-white dark:text-black px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
-                  Submit
-                </button>
-              </div>
+              {subscribed ? (
+                <div className="p-3 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+                  ✓ Thank you for subscribing to Krew / Mesh insights.
+                </div>
+              ) : (
+                <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md w-full">
+                  <input
+                    type="email"
+                    required
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    placeholder="Enter Your Email"
+                    className="flex-1 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white bg-transparent text-black dark:text-white border border-neutral-300 dark:border-neutral-700"
+                  />
+                  <button type="submit" className="rounded-md bg-black text-white dark:bg-white dark:text-black px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                    Submit
+                  </button>
+                </form>
+              )}
             </div>
           </motion.div>
         </div>

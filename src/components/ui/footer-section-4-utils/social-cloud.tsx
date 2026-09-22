@@ -25,7 +25,7 @@ const FacebookIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const InstagramIcon = ({ className }: { className?: string }) => (
+export const InstagramIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -47,10 +47,10 @@ const GithubIcon = ({ className }: { className?: string }) => (
 
 export function SocialCloud({ className }: SocialCloudProps) {
   const socials = [
-    { icon: XIcon, href: "https://x.com", label: "X" },
+    { icon: InstagramIcon, href: "https://www.instagram.com/krewmesh/", label: "Instagram" },
     { icon: LinkedInIcon, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: XIcon, href: "https://x.com", label: "X" },
     { icon: FacebookIcon, href: "https://facebook.com", label: "Facebook" },
-    { icon: InstagramIcon, href: "https://instagram.com", label: "Instagram" },
     { icon: YoutubeIcon, href: "https://youtube.com", label: "YouTube" },
     { icon: GithubIcon, href: "https://github.com", label: "GitHub" },
   ];

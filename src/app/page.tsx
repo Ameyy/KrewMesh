@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import { GridFeatures } from "@/components/ui/grid-features";
 import { IntegrationsGrid } from "@/components/ui/integrations-4-2";
 import Portfolio from "@/components/Portfolio";
+import WebBuildsPricing from "@/components/WebBuildsPricing";
 import Why from "@/components/Why";
 
 export default function Home() {
@@ -22,6 +23,11 @@ export default function Home() {
           <Portfolio />
         </div>
         
+        {/* Web Builds Packages & Pricing Section */}
+        <div className="scroll-mt-24">
+          <WebBuildsPricing />
+        </div>
+
         <div id="about" className="scroll-mt-24">
           <Why />
         </div>

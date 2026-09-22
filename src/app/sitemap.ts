@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { servicesData } from "@/data/services";
-import { ECOM_PRODUCTS } from "./demo/ecommerce/data/products";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.com";
 
@@ -20,7 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${BASE_URL}/about`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/careers`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/faq`,
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.8,
@@ -49,42 +60,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  // E-Commerce interactive demo ecosystem
-  const demoStaticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE_URL}/demo/ecommerce`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/demo/ecommerce/shop`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/demo/ecommerce/about`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-  ];
-
-  // E-Commerce product pages
-  const demoProductRoutes: MetadataRoute.Sitemap = ECOM_PRODUCTS.map(
-    (product) => ({
-      url: `${BASE_URL}/demo/ecommerce/product/${product.id}`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    })
-  );
+  // Active Demo showcase pages
+  const demoSlugs = ["clinic", "business", "cafe", "interior-design"];
+  const demoRoutes: MetadataRoute.Sitemap = demoSlugs.map((slug) => ({
+    url: `${BASE_URL}/demo/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
 
   return [
     ...coreRoutes,
     ...serviceRoutes,
-    ...demoStaticRoutes,
-    ...demoProductRoutes,
+    ...demoRoutes,
   ];
 }

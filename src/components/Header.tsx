@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Home, Layers, Sparkles, Users, Mail, Menu, X, ArrowUpRight, LucideIcon, Briefcase } from 'lucide-react';
+import { Home, Layers, Sparkles, Users, Mail, Menu, X, ArrowUpRight, LucideIcon, Briefcase, Zap, HelpCircle } from 'lucide-react';
 import styles from './Header.module.css';
 
 interface NavItem {
@@ -16,8 +16,10 @@ const navItems: NavItem[] = [
   { title: 'Home', icon: Home, href: '/' },
   { title: 'Services', icon: Sparkles, href: '/#services' },
   { title: 'Work', icon: Layers, href: '/#work' },
+  { title: 'Builds', icon: Zap, href: '/#packages' },
   { title: 'About', icon: Users, href: '/about' },
   { title: 'Careers', icon: Briefcase, href: '/careers' },
+  { title: 'FAQ', icon: HelpCircle, href: '/faq' },
 ];
 
 export default function Header() {
@@ -39,14 +41,85 @@ export default function Header() {
     };
   }, [isOpen]);
 
+  // Handle hash scrolling on page load/transition & scroll spy for active nav item
+  useEffect(() => {
+    if (pathname !== '/') {
+      setActiveHash('');
+      return;
+    }
+
+    // Check for hash on mount or page transition
+    const hash = window.location.hash.replace('#', '') || (typeof window !== 'undefined' ? sessionStorage.getItem('km_scroll_target') : null);
+    if (hash) {
+      if (typeof window !== 'undefined') {
+        sessionStorage.removeItem('km_scroll_target');
+      }
+      const timer = setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          const navOffset = 90;
+          const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          setActiveHash(hash);
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+
+    // Scroll spy for sections: packages, work, services
+    const handleScroll = () => {
+      const scrollY = window.pageYOffset;
+      if (scrollY < 200) {
+        setActiveHash('');
+        return;
+      }
+      const sections = ['packages', 'work', 'services'];
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop - 160;
+          if (scrollY >= top) {
+            setActiveHash(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [pathname]);
+
   const handleNavClick = (href?: string) => (e?: React.MouseEvent) => {
     setIsOpen(false);
+    if (!href) return;
+
     if (href === '/' && pathname === '/') {
       if (e) e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       if (window.location.hash) {
         window.history.pushState(null, '', '/');
         setActiveHash('');
+      }
+      return;
+    }
+
+    if (href.startsWith('/#')) {
+      const targetId = href.replace('/#', '');
+      if (pathname === '/') {
+        if (e) e.preventDefault();
+        const el = document.getElementById(targetId);
+        if (el) {
+          const navOffset = 90;
+          const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          window.history.pushState(null, '', `/#${targetId}`);
+          setActiveHash(targetId);
+        }
+      } else {
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('km_scroll_target', targetId);
+        }
       }
     }
   };
@@ -90,7 +163,7 @@ export default function Header() {
                 href === '/'
                   ? pathname === '/' && !activeHash
                   : href.startsWith('/#')
-                    ? href === `/${activeHash}`
+                    ? activeHash === href.replace('/#', '')
                     : pathname === href;
 
               return (

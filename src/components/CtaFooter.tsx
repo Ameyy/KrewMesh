@@ -42,16 +42,29 @@ export default function CtaFooter() {
           <div className={styles.linksCol}>
             <a href="/#work">Work</a>
             <a href="/#services">Services</a>
-            <a href="/demo/ecommerce" target="_blank" rel="noopener noreferrer">E-Commerce Demo</a>
+            <a href="/#packages">Builds &amp; Pricing</a>
             <a href="/about">About</a>
             <a href="/careers">Careers</a>
+            <a href="/faq">FAQ</a>
             <a href="/contact">Contact</a>
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("open-cookie-settings"));
+                }
+              }}
+              style={{ border: 'none', outline: 'none', background: 'transparent', padding: 0, color: 'inherit', font: 'inherit', cursor: 'pointer', textAlign: 'left' }}
+            >
+              Cookie Settings
+            </button>
+            <a href="/sitemap">Sitemap</a>
           </div>
           
           <div className={styles.socialCol}>
-            <a href="#">Instagram</a>
-            <a href="#">Behance</a>
-            <a href="#">LinkedIn</a>
+            <a href="https://www.instagram.com/krewmesh/" target="_blank" rel="noopener noreferrer">Instagram (@krewmesh)</a>
+            <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="tel:+919209839142">+91 920 983 9142</a>
           </div>
         </div>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SitemapQuickActions } from "./components/SitemapQuickActions";
 import { servicesData } from "@/data/services";
-import { ECOM_PRODUCTS } from "../demo/ecommerce/data/products";
 import {
   Compass,
   ArrowRight,
@@ -15,7 +14,9 @@ import {
   ExternalLink,
   ChevronRight,
   CheckCircle2,
+  Share2,
 } from "lucide-react";
+import { InstagramIcon } from "@/components/ui/footer-section-4-utils/social-cloud";
 
 export const metadata: Metadata = {
   title: "Sitemap & Website Directory | Krew / Mesh",
@@ -86,26 +87,71 @@ export default function SitemapPage() {
       priority: "0.8",
       changefreq: "Monthly",
     },
+    {
+      title: "Frequently Asked Questions (FAQ)",
+      href: "/faq",
+      desc: "Comprehensive guide to our studio philosophy, web build pricing packages, process timelines, Next.js tech stack, and 100% IP code ownership.",
+      badge: "Knowledge Base",
+      priority: "0.8",
+      changefreq: "Weekly",
+    },
   ];
 
   const demoPages = [
     {
-      title: "E-Commerce Concept Store",
-      href: "/demo/ecommerce",
-      desc: "High-performance headless e-commerce demonstration featuring interactive 3D elements, rapid cart flow, and product filtering.",
-      badge: "Interactive Demo",
+      title: "Clinic Website Architecture",
+      href: "/demo/clinic",
+      desc: "Modern healthcare practice & patient appointment platform with online scheduling and specialist directories.",
+      badge: "Healthcare",
     },
     {
-      title: "Demo Product Catalog (Shop)",
-      href: "/demo/ecommerce/shop",
-      desc: "Filterable product grid with category selectors, search filters, dynamic pricing, and real-time inventory indicators.",
-      badge: "Catalog",
+      title: "Business Enterprise Portal",
+      href: "/demo/business",
+      desc: "High-credibility corporate presence with kinetic interactions, case studies, and enterprise inquiry pipelines.",
+      badge: "Enterprise",
     },
     {
-      title: "Demo Brand Story & Tech Spec",
-      href: "/demo/ecommerce/about",
-      desc: "Narrative overview illustrating modern brand storytelling and product showcase methodologies.",
-      badge: "Brand Demo",
+      title: "Cafe & Culinary Landing Page",
+      href: "/demo/cafe",
+      desc: "Atmospheric storytelling, artisan menus, table reservation sync, and local ordering workflows.",
+      badge: "Hospitality",
+    },
+    {
+      title: "Interior Design Showcase",
+      href: "/demo/interior-design",
+      desc: "Editorial-grade spatial design portfolio with gallery reveals, material libraries, and client lead funnels.",
+      badge: "Architecture",
+    },
+  ];
+
+  const socialChannels = [
+    {
+      title: "Instagram",
+      handle: "@krewmesh",
+      href: "https://www.instagram.com/krewmesh/",
+      desc: "Official visual feed, branding releases, 3D explorations, and creative technology showcases.",
+      badge: "Official Channel",
+    },
+    {
+      title: "LinkedIn",
+      handle: "krewmesh",
+      href: "https://www.linkedin.com",
+      desc: "Corporate updates, case studies, technology insights, and studio announcements.",
+      badge: "Corporate",
+    },
+    {
+      title: "Behance",
+      handle: "krewmesh",
+      href: "https://www.behance.net",
+      desc: "Full portfolio case studies, branding design systems, and identity showcases.",
+      badge: "Portfolio",
+    },
+    {
+      title: "X (Twitter)",
+      handle: "@krewmesh",
+      href: "https://x.com",
+      desc: "Real-time updates, engineering dispatches, design commentary, and tech insights.",
+      badge: "Dispatches",
     },
   ];
 
@@ -319,15 +365,15 @@ export default function SitemapPage() {
               </div>
               <div>
                 <h2 id="demos-heading" className="text-xl font-bold text-white">
-                  Interactive Demos & E-Commerce Sandbox
+                  Interactive Demos &amp; Website Showcases
                 </h2>
                 <p className="text-xs text-neutral-400">
-                  Live proof-of-concept storefront demonstrating our full-stack capabilities
+                  Concept architectures and interactive live demos illustrating our digital production capabilities
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {demoPages.map((demo) => (
                 <Link
                   key={demo.href}
@@ -352,46 +398,57 @@ export default function SitemapPage() {
                 </Link>
               ))}
             </div>
+          </section>
 
-            {/* Featured Demo Products List */}
-            <div className="rounded-xl border border-white/10 bg-white/[0.015] p-5">
-              <div className="flex items-center justify-between mb-4">
-                <h4 className="text-sm font-semibold text-neutral-200 flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-purple-400" />
-                  <span>Individual Demo Product Showcases</span>
-                </h4>
-                <Link
-                  href="/demo/ecommerce/shop"
-                  className="text-xs text-neutral-400 hover:text-white flex items-center gap-1 transition-colors"
+          {/* Section 4: Official Social Channels & Connect */}
+          <section className="my-16" aria-labelledby="social-channels-heading">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-pink-500/10 border border-pink-500/20 text-pink-400">
+                <InstagramIcon className="h-4 w-4" />
+              </div>
+              <div>
+                <h2 id="social-channels-heading" className="text-xl font-bold text-white">
+                  Official Channels &amp; Social Network
+                </h2>
+                <p className="text-xs text-neutral-400">
+                  Verified social profiles, visual showcases, and community dispatches
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {socialChannels.map((ch) => (
+                <a
+                  key={ch.title}
+                  href={ch.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05] hover:shadow-lg"
                 >
-                  <span>View All in Catalog</span>
-                  <ChevronRight className="h-3 w-3" />
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-                {ECOM_PRODUCTS.map((prod) => (
-                  <Link
-                    key={prod.id}
-                    href={`/demo/ecommerce/product/${prod.id}`}
-                    className="group rounded-lg border border-white/5 bg-white/[0.02] p-3 transition-colors hover:border-white/20 hover:bg-white/[0.05]"
-                  >
-                    <div className="text-[11px] font-mono text-neutral-500 uppercase">
-                      {prod.category}
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2.5">
+                      <span className="inline-flex items-center rounded-md bg-white/5 px-2 py-0.5 text-[11px] font-medium text-neutral-300 border border-white/10">
+                        {ch.badge}
+                      </span>
+                      <ExternalLink className="h-3.5 w-3.5 text-neutral-500 group-hover:text-white transition-colors" />
                     </div>
-                    <div className="text-xs font-semibold text-white group-hover:text-purple-300 transition-colors mt-0.5 truncate">
-                      {prod.name}
-                    </div>
-                    <div className="text-[11px] text-neutral-400 mt-1">
-                      ${prod.price.toLocaleString()} USD
-                    </div>
-                  </Link>
-                ))}
-              </div>
+                    <h3 className="text-base font-semibold text-white group-hover:text-pink-400 transition-colors flex items-center justify-between">
+                      <span>{ch.title}</span>
+                      <span className="text-xs text-neutral-400 font-normal">{ch.handle}</span>
+                    </h3>
+                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                      {ch.desc}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-neutral-500 truncate">
+                    {ch.href}
+                  </div>
+                </a>
+              ))}
             </div>
           </section>
 
-          {/* Section 4: Google Search Console Technical Information */}
+          {/* Section 5: Google Search Console Technical Information */}
           <section
             className="my-16 rounded-2xl border border-blue-500/20 bg-blue-950/10 p-6 md:p-8"
             aria-labelledby="gsc-info-heading"

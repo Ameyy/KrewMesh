@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 type ContactInfoProps = React.ComponentProps<'div'> & {
-	icon: LucideIcon;
+	icon: LucideIcon | React.ComponentType<{ className?: string; size?: number | string }>;
 	label: string;
 	value: string;
 	href?: string;
@@ -89,8 +89,14 @@ function ContactInfo({
 	);
 
 	if (href) {
+		const isExternal = href.startsWith('http');
 		return (
-			<a href={href} className="block transition-opacity hover:opacity-90">
+			<a 
+				href={href} 
+				target={isExternal ? '_blank' : undefined} 
+				rel={isExternal ? 'noopener noreferrer' : undefined}
+				className="block transition-opacity hover:opacity-90"
+			>
 				{content}
 			</a>
 		);
