@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-outfit)", "sans-serif"],
+        mono: ["var(--font-outfit)", "sans-serif"],
+        serif: ["var(--font-outfit)", "sans-serif"],
+        display: ["var(--font-outfit)", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
