@@ -68,10 +68,10 @@ const DEMOS: DemoItem[] = [
     event: "WATCH ANYTIME",
     venue: "PATIENT APPOINTMENTS",
     dates: "WATCH ANYTIME",
-    stubText: "COMING SOON",
+    stubText: "LIVE NOW",
     watermark: "CLINIC",
-    url: "/demo/clinic",
-    isLive: false,
+    url: "https://clinic.krewmesh.agency",
+    isLive: true,
     texture: {
       ...TICKET_TEXTURE,
       shape: "wave",
