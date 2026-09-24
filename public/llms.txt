@@ -1,0 +1,53 @@
+# Krew / Mesh — Creative Technology Studio
+> Independent creative-technology studio combining bold brand identity, spatial UI/UX design, high-performance Next.js web development, 3D WebGL experiences, AI solutions, and SaaS platforms.
+
+## Core Studio Information
+- **Name**: Krew / Mesh (also referred to as KrewMesh)
+- **Website**: https://krewmesh.agency
+- **Telephone**: +91 920 983 9142
+- **Email**: hello@krewmesh.agency
+- **Headquarters**: Nagpur, Maharashtra, India
+- **Key Regional Delivery Hubs**: Indore (Madhya Pradesh, India), Pune (Maharashtra, India)
+- **Primary Specializations**:
+  - Brand Strategy & Visual Identity Design
+  - UI/UX Design & Spatial Systems
+  - High-Speed Next.js & React Web Development (Sub-second page speeds, 99+ Core Web Vitals)
+  - 3D Interactive WebGL & Three.js Experiences
+  - Framer Website Design & Motion Development
+  - Production AI Integrations & Autonomous Workflow Solutions
+  - Full-Stack SaaS Platform Architecture & MVP Development
+
+## Transparent Web Build Packages
+- **FASTFORWARD (₹9,999)**: Rapid high-conversion landing page built in Next.js, launch in 48-72 hours.
+- **DEEPWEB (₹19,999)**: Multi-page web architecture (up to 10 pages) with custom kinetic animations, blog/CMS integration, and SEO schema.
+- **ECOM (₹29,999)**: Full-featured modern e-commerce storefront with cart drawer, UPI/Stripe checkout, and inventory CMS.
+- **FULL SEND (₹49,999+)**: Bespoke enterprise web platform, 3D WebGL experiences, custom backend, and AI workflows.
+- **Code Ownership**: 100% intellectual property ownership transfer upon completion. No vendor lock-in.
+
+## Key Service Pages
+- [Brand Strategy & Visual Identity](https://krewmesh.agency/services/branding): Comprehensive logo systems, typography, color architecture, and brand guidelines.
+- [UI/UX & Spatial Product Design](https://krewmesh.agency/services/design): User research, wireframing, high-fidelity prototypes in Figma, and design systems.
+- [High-Performance Web Development](https://krewmesh.agency/services/development): Next.js, React, Tailwind CSS, TypeScript, and edge hosting.
+- [Digital Marketing & Conversion Systems](https://krewmesh.agency/services/digital): SEO optimization, performance marketing funnels, and analytics.
+- [AI Automation & Custom Intelligence](https://krewmesh.agency/services/ai): Custom LLM integrations, conversational agents, and internal tooling.
+- [SaaS Platforms & Web Applications](https://krewmesh.agency/services/saas): Scalable multi-tenant web apps, authentication, databases, and billing.
+
+## Regional Local Hubs (India)
+- [Website Design Indore](https://krewmesh.agency/website-design-indore): Elite website design for businesses, D2C brands, and startups in Indore, MP.
+- [Website Development Indore](https://krewmesh.agency/website-development-indore): High-performance Next.js and custom web development in Indore.
+- [Framer Agency Indore](https://krewmesh.agency/framer-agency-indore): Interactive, kinetic Framer design and rapid production for Indore enterprises.
+- [Website Design Pune](https://krewmesh.agency/website-design-pune): World-class web design for tech startups, IT firms, and enterprises in Pune.
+- [Website Development Pune](https://krewmesh.agency/website-development-pune): Enterprise-grade React & Next.js full-stack development in Pune.
+- [UI/UX Design Pune](https://krewmesh.agency/ui-ux-design-pune): High-conversion product design, design systems, and mobile/web UI/UX for Pune tech companies.
+
+## Live Showcase Demos
+- [WedTale Photography Portfolio](https://wedtale.krewmesh.agency/): High-resolution visual archive, proofing galleries, and print ordering.
+- [3D Print Studio Portal](https://3dprint.krewmesh.agency/): Instant CAD/STL file quoting and additive manufacturing tracking.
+- [Interior Design Architecture](https://inter.krewmesh.agency/): Spatial showcase with interactive before/after sliders.
+- [E-Commerce Storefront](https://ecomm.krewmesh.agency/): High-speed D2C checkout and interactive cart drawer.
+- [Medical Clinic Portal](https://clinic.krewmesh.agency): Frictionless patient booking and specialist practitioner directories.
+- [Artisan Cafe & Roastery](https://cafe.krewmesh.agency): Interactive digital menu and table reservations.
+
+## Leadership & Founders
+- **Amey Kulkarni**: Co-Founder & Creative Director (Brand Strategy, Spatial UI/UX, Creative Direction)
+- **Dinesh Kulkarni**: Co-Founder & Technical Lead (Full-Stack Engineering, WebGL, Next.js Architecture)
