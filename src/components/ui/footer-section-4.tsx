@@ -37,6 +37,14 @@ export default function Footer4() {
       return;
     }
 
+    if (href === "#cookie-settings") {
+      e.preventDefault();
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent("open-cookie-settings"));
+      }
+      return;
+    }
+
     // For external / new tab links, allow standard browser navigation
     if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:")) {
       return;
@@ -50,27 +58,43 @@ export default function Footer4() {
 
   const [subscribed, setSubscribed] = React.useState(false);
   const [newsletterEmail, setNewsletterEmail] = React.useState("");
+  const [newsletterError, setNewsletterError] = React.useState("");
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (newsletterEmail.trim()) {
-      setSubscribed(true);
+    setNewsletterError("");
+    if (!newsletterEmail.trim() || !newsletterEmail.includes("@")) {
+      setNewsletterError("Please enter a valid email address.");
+      return;
     }
+    setSubscribed(true);
   };
 
   const footerLinks = [
     {
-      title: "Sitemap",
+      title: "Navigation",
       links: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/#services" },
-        { label: "Work", href: "/#work" },
+        { label: "Work & Demos", href: "/#work" },
         { label: "Packages & Pricing", href: "/#packages" },
         { label: "About Studio", href: "/about" },
         { label: "Careers", href: "/careers" },
         { label: "Contact Us", href: "/contact" },
+        { label: "Blog & Insights", href: "/blog" },
         { label: "FAQ", href: "/faq" },
-        { label: "Full Sitemap Directory", href: "/sitemap" },
+        { label: "Full Sitemap", href: "/sitemap" },
+      ],
+    },
+    {
+      title: "Live Demos",
+      links: [
+        { label: "E-Commerce", href: "https://ecomm.krewmesh.agency/" },
+        { label: "Photography", href: "https://wedtale.krewmesh.agency/" },
+        { label: "3D Print Studio", href: "https://3dprint.krewmesh.agency/" },
+        { label: "Interior Design", href: "https://inter.krewmesh.agency/" },
+        { label: "Medical Clinic", href: "https://clinic.krewmesh.agency" },
+        { label: "Cafe & Roastery", href: "https://cafe.krewmesh.agency" },
       ],
     },
     {
@@ -93,16 +117,6 @@ export default function Footer4() {
         { label: "Cookie Settings", href: "#cookie-settings" },
         { label: "hello@krewmesh.agency", href: "mailto:hello@krewmesh.agency" },
         { label: "+91 920 983 9142", href: "tel:+919209839142" },
-      ],
-    },
-    {
-      title: "Connect",
-      links: [
-        { label: "Instagram (@krewmesh)", href: "https://www.instagram.com/krewmesh/" },
-        { label: "LinkedIn", href: "https://www.linkedin.com" },
-        { label: "Behance", href: "https://www.behance.net" },
-        { label: "X (Twitter)", href: "https://x.com" },
-        { label: "GitHub", href: "https://github.com" },
       ],
     },
   ];
@@ -254,18 +268,26 @@ export default function Footer4() {
                   ✓ Thank you for subscribing to Krew / Mesh insights.
                 </div>
               ) : (
-                <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md w-full">
-                  <input
-                    type="email"
-                    required
-                    value={newsletterEmail}
-                    onChange={(e) => setNewsletterEmail(e.target.value)}
-                    placeholder="Enter Your Email"
-                    className="flex-1 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white bg-transparent text-black dark:text-white border border-neutral-300 dark:border-neutral-700"
-                  />
-                  <button type="submit" className="rounded-md bg-black text-white dark:bg-white dark:text-black px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
-                    Submit
-                  </button>
+                <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-2 max-w-md w-full">
+                  <div className="flex flex-col sm:flex-row gap-4 w-full">
+                    <input
+                      type="email"
+                      required
+                      value={newsletterEmail}
+                      onChange={(e) => {
+                        setNewsletterEmail(e.target.value);
+                        if (newsletterError) setNewsletterError("");
+                      }}
+                      placeholder="Enter Your Email"
+                      className="flex-1 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white bg-transparent text-black dark:text-white border border-neutral-300 dark:border-neutral-700"
+                    />
+                    <button type="submit" className="rounded-md bg-black text-white dark:bg-white dark:text-black px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                      Submit
+                    </button>
+                  </div>
+                  {newsletterError && (
+                    <p className="text-xs text-red-500 font-medium">{newsletterError}</p>
+                  )}
                 </form>
               )}
             </div>

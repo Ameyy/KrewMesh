@@ -50,10 +50,10 @@ export default function Hero() {
       {/* Background Interactive Reveal Layer */}
       <div className={styles.bgContainer}>
         {/* Grayscale Blurred Base */}
-        <img src="/hero-bg.jpg" alt="Background Texture" className={styles.baseLayer} />
+        <img src="/hero-bg.jpg" alt="KREW / MESH Creative Technology Studio Background Visual" className={styles.baseLayer} />
         
         {/* Full Color Masked Reveal */}
-        <img src="/hero-bg.jpg" alt="Reveal Texture" className={styles.revealLayer} />
+        <img src="/hero-bg.jpg" alt="KREW / MESH Creative Tech Studio Interactive Color Reveal Visual" className={styles.revealLayer} />
         
         {/* Lens Box and Crosshair */}
         <div className={styles.lensBorder}></div>

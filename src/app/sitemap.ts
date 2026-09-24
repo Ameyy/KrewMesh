@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 import { servicesData } from "@/data/services";
+import { allLocalSeoSlugs } from "@/data/local-seo";
+import { allBlogSlugs } from "@/data/blog";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
 
 /**
  * Generates XML sitemap conforming to the Sitemaps XML protocol (sitemaps.org)
@@ -43,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/sitemap`,
       lastModified: currentDate,
       changeFrequency: "weekly",
@@ -60,8 +68,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
+  // Local SEO Regional Landing Pages (Indore & Pune)
+  const localSeoRoutes: MetadataRoute.Sitemap = allLocalSeoSlugs.map((slug) => ({
+    url: `${BASE_URL}/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  // Blog Posts (LLM GEO & Educational Authority)
+  const blogRoutes: MetadataRoute.Sitemap = allBlogSlugs.map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
   // Active Demo showcase pages
-  const demoSlugs = ["clinic", "business", "cafe", "interior-design"];
+  const demoSlugs = ["ecomm", "clinic", "business", "cafe", "interior-design", "photography", "3d-print-studio"];
   const demoRoutes: MetadataRoute.Sitemap = demoSlugs.map((slug) => ({
     url: `${BASE_URL}/demo/${slug}`,
     lastModified: currentDate,
@@ -72,6 +96,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...coreRoutes,
     ...serviceRoutes,
+    ...localSeoRoutes,
+    ...blogRoutes,
     ...demoRoutes,
   ];
 }

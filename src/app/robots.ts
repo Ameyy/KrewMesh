@@ -11,7 +11,18 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
       {
-        userAgent: "Googlebot",
+        userAgent: [
+          "Googlebot",
+          "Bingbot",
+          "GPTBot",
+          "ChatGPT-User",
+          "Google-Extended",
+          "PerplexityBot",
+          "ClaudeBot",
+          "Applebot",
+          "CCBot",
+          "anthropic-ai"
+        ],
         allow: "/",
       },
     ],

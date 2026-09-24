@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   title: 'Frequently Asked Questions (FAQ) | Krew / Mesh Studio',
   description:
     'Answers to common questions about Krew / Mesh web development, UI/UX design, FASTFORWARD & DEEPWEB pricing packages, Next.js tech stack, delivery timelines, and project ownership.',
+  keywords: [
+    'Krew Mesh FAQ',
+    'web development questions',
+    'website pricing FAQ',
+    'UI UX design process',
+    'Next.js development studio',
+    'website deliverables and ownership'
+  ],
   alternates: {
     canonical: `${baseUrl}/faq`,
   },
@@ -18,7 +26,7 @@ export const metadata: Metadata = {
     description:
       'Direct answers about our design craft, transparent packages starting at ₹9,999, Next.js architecture, and 100% IP code ownership.',
     url: `${baseUrl}/faq`,
-    siteName: 'Krew / Mesh',
+    siteName: 'KREW / MESH',
     type: 'website',
   },
 };
@@ -26,15 +34,38 @@ export const metadata: Metadata = {
 // Generate Schema.org FAQPage structured data for Google Rich Results
 const faqJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQ_ITEMS.map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.summaryAnswer,
+  '@graph': [
+    {
+      '@type': 'FAQPage',
+      '@id': `${baseUrl}/faq#faq`,
+      mainEntity: FAQ_ITEMS.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.summaryAnswer,
+        },
+      })),
     },
-  })),
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${baseUrl}/faq#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: baseUrl,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'FAQ',
+          item: `${baseUrl}/faq`,
+        },
+      ],
+    },
+  ],
 };
 
 export default function FAQPage() {

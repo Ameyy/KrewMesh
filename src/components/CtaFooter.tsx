@@ -63,13 +63,13 @@ export default function CtaFooter() {
           
           <div className={styles.socialCol}>
             <a href="https://www.instagram.com/krewmesh/" target="_blank" rel="noopener noreferrer">Instagram (@krewmesh)</a>
-            <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:hello@krewmesh.agency">hello@krewmesh.agency</a>
             <a href="tel:+919209839142">+91 920 983 9142</a>
           </div>
         </div>
         <div className={`container ${styles.bottomBar}`}>
-          <p>&copy; 2026 Krew / Mesh. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Krew / Mesh. All rights reserved.</p>
         </div>
       </footer>
     </>

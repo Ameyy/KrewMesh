@@ -194,7 +194,7 @@ export function WhyUsBento({
                 >
                   <Image
                     src={src}
-                    alt="team member"
+                    alt={`KREW / MESH senior team specialist ${i + 1}`}
                     fill
                     sizes="36px"
                     className="object-cover object-top"

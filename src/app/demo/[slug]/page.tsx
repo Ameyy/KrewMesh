@@ -14,14 +14,39 @@ interface DemoDetail {
   features: string[];
   deliverables: string[];
   estimatedLaunch: string;
+  liveUrl?: string;
 }
 
 const DEMO_DATA: Record<string, DemoDetail> = {
+  ecomm: {
+    slug: "ecomm",
+    title: "E-Commerce Storefront Demo",
+    category: "Retail & Direct-to-Consumer",
+    tagline: "High-conversion digital storefront & frictionless checkout",
+    liveUrl: "https://ecomm.krewmesh.agency/",
+    description:
+      "A high-performance modern e-commerce storefront engineered for direct-to-consumer brands and boutique retailers. Featuring sub-second page loads, responsive interactive cart drawer, product variation selectors, and seamless payment gateway integrations.",
+    features: [
+      "Instant slide-out cart drawer with free shipping threshold progress bar",
+      "Dynamic product variants, size guides, and high-res image zoom",
+      "One-click UPI, Apple Pay, Google Pay, and Stripe checkout integration",
+      "SEO-optimized product catalog schema & rich snippet ratings",
+      "Sub-second mobile navigation designed for peak checkout conversion"
+    ],
+    deliverables: [
+      "Custom Next.js & React E-Commerce Architecture",
+      "Complete Product & Inventory CMS Integration",
+      "Automated Order Confirmation & Tracking Emails",
+      "Full Commercial IP Ownership"
+    ],
+    estimatedLaunch: "Coming Soon • Q2 2026"
+  },
   clinic: {
     slug: "clinic",
     title: "Clinic Website Demo",
     category: "Healthcare & Patient Care",
     tagline: "Modern healthcare practice & patient appointment platform",
+    liveUrl: "https://clinic.krewmesh.agency",
     description:
       "A modern, accessible digital experience engineered for medical practices, multi-specialty clinics, and wellness providers. Features friction-free online booking, specialist doctor directories, treatment pricing calculators, and patient-first UX.",
     features: [
@@ -37,7 +62,7 @@ const DEMO_DATA: Record<string, DemoDetail> = {
       "Integrated WhatsApp & SMS Booking Alerts",
       "Local Clinic SEO & Google Business Optimization"
     ],
-    estimatedLaunch: "Coming Soon • Q2 2026"
+    estimatedLaunch: "Live Now"
   },
   business: {
     slug: "business",
@@ -66,6 +91,7 @@ const DEMO_DATA: Record<string, DemoDetail> = {
     title: "Cafe Landing Page Demo",
     category: "Hospitality & Specialty Food",
     tagline: "Atmospheric storytelling, artisan menu & table reservations",
+    liveUrl: "https://cafe.krewmesh.agency",
     description:
       "An immersive, sensory digital storefront designed for specialty coffee roasters, boutique cafes, and fine culinary spaces. Combines rich visual storytelling, dynamic seasonal menus, table reservations, and coffee subscription ordering.",
     features: [
@@ -81,13 +107,14 @@ const DEMO_DATA: Record<string, DemoDetail> = {
       "Table Reservation & OpenTable / Resy Sync",
       "Square / Stripe Payment Integration Ready"
     ],
-    estimatedLaunch: "Coming Soon • Q2 2026"
+    estimatedLaunch: "Live Now"
   },
   "interior-design": {
     slug: "interior-design",
     title: "Interior Design Website Demo",
     category: "Architecture & Spatial Design",
     tagline: "Editorial visual portfolio & bespoke project showcase",
+    liveUrl: "https://inter.krewmesh.agency/",
     description:
       "An editorial-grade spatial design portfolio designed for architects, luxury interior decorators, and bespoke staging studios. Highlighting full-bleed gallery reveals, before-and-after slider comparisons, material libraries, and client consultation funnels.",
     features: [
@@ -103,7 +130,53 @@ const DEMO_DATA: Record<string, DemoDetail> = {
       "Custom Before/After Interactive Comparison Sliders",
       "High-Ticket Client Lead Generation Flow"
     ],
-    estimatedLaunch: "Coming Soon • Q2 2026"
+    estimatedLaunch: "Live Now"
+  },
+  photography: {
+    slug: "photography",
+    title: "Photography Portfolio Demo",
+    category: "Visual Arts & Photography",
+    tagline: "High-resolution visual archive, proofing galleries & print orders",
+    liveUrl: "https://wedtale.krewmesh.agency/",
+    description:
+      "A cinematic, high-aesthetic portfolio platform engineered for commercial photographers, fashion directors, and visual artists. Features ultra-responsive full-bleed masonry grids, client proofing portals, EXIF metadata overlays, and print fulfillment integration.",
+    features: [
+      "Ultra-responsive masonry and lightbox gallery with zero image compression loss",
+      "Private client proofing portal with digital watermark protection and selection approvals",
+      "Integrated print lab store & custom framing checkout flow",
+      "Exif camera telemetry & shooting condition data overlays",
+      "Lightning-fast responsive image delivery via edge CDN"
+    ],
+    deliverables: [
+      "Bespoke High-Resolution Next.js Photography Portfolio",
+      "Private Client Proofing & Download Gallery CMS",
+      "Digital Print Storefront & Stripe Payment Integration",
+      "Commercial Image Protection & Watermark Automation"
+    ],
+    estimatedLaunch: "Live Now"
+  },
+  "3d-print-studio": {
+    slug: "3d-print-studio",
+    title: "3D Print Studio Demo",
+    category: "Additive Manufacturing & Prototyping",
+    tagline: "Instant STL/CAD file quoting, additive manufacturing & engineering lab",
+    liveUrl: "https://3dprint.krewmesh.agency/",
+    description:
+      "A modern additive manufacturing and rapid prototyping studio portal. Equipped with an interactive 3D file viewer (STL, OBJ, STEP), automated volumetric material slicing calculations, instant pricing estimation, and production batch tracking.",
+    features: [
+      "Interactive 3D model viewer with rotation, bounding box measurement & wireframe inspection",
+      "Real-time volume calculation & instant material quoting (Resin, PLA, Nylon, SLS)",
+      "Automated order intake with manufacturing tolerances and infill presets",
+      "Live order status tracker from slicing to print bed to quality inspection",
+      "Industrial & enterprise bulk order RFP inquiry flow"
+    ],
+    deliverables: [
+      "WebGL / Three.js Interactive 3D Model Viewer",
+      "Automated Volumetric Slicing & Price Estimator Engine",
+      "Production Batch Tracking & Client Order Portal",
+      "Secure Enterprise NDA & CAD File Upload Pipeline"
+    ],
+    estimatedLaunch: "Live Now"
   }
 };
 
@@ -236,6 +309,17 @@ export default async function DemoComingSoonPage({
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {demo.liveUrl && (
+            <Link
+              href={demo.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#ef671c] hover:bg-[#ff8533] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 hover:scale-105 shadow-lg shadow-[#ef671c]/25"
+            >
+              <span>Launch Live Website</span>
+              <ArrowUpRight size={16} />
+            </Link>
+          )}
           <Link
             href="/contact?service=web-development"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold uppercase tracking-wider transition-all duration-200 hover:scale-105"

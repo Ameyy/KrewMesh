@@ -38,7 +38,7 @@ function FloatingShapes() {
 
 export default function GlobalCanvas({ children }: { children?: ReactNode }) {
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none' }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', overflow: 'hidden', zIndex: -1, pointerEvents: 'none' }}>
       <Canvas
         camera={{ position: [0, 0, 8], fov: 45 }}
         dpr={[1, 2]}

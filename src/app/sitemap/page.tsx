@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SitemapQuickActions } from "./components/SitemapQuickActions";
 import { servicesData } from "@/data/services";
+import { localSeoPagesData } from "@/data/local-seo";
+import { blogPosts } from "@/data/blog";
 import {
   Compass,
   ArrowRight,
@@ -15,6 +17,8 @@ import {
   ChevronRight,
   CheckCircle2,
   Share2,
+  MapPin,
+  BookOpen,
 } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/footer-section-4-utils/social-cloud";
 
@@ -22,6 +26,13 @@ export const metadata: Metadata = {
   title: "Sitemap & Website Directory | Krew / Mesh",
   description:
     "Explore the complete website architecture and sitemap for Krew / Mesh. Browse our services, portfolio case studies, career openings, e-commerce demos, and Google Search Console indexing feeds.",
+  keywords: [
+    "Krew Mesh sitemap",
+    "website directory",
+    "creative tech agency index",
+    "Google search console sitemap",
+    "services directory"
+  ],
   alternates: {
     canonical: "https://krewmesh.agency/sitemap",
   },
@@ -30,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Explore the complete website architecture and sitemap for Krew / Mesh. Browse our services, portfolio case studies, career openings, and search engine indexing feeds.",
     url: "https://krewmesh.agency/sitemap",
-    siteName: "Krew / Mesh",
+    siteName: "KREW / MESH",
     type: "website",
   },
 };
@@ -95,12 +106,28 @@ export default function SitemapPage() {
       priority: "0.8",
       changefreq: "Weekly",
     },
+    {
+      title: "Blog & Engineering Dispatches",
+      href: "/blog",
+      desc: "In-depth articles on Next.js web engineering, Generative Engine Optimization (LLM GEO), and UI/UX design systems.",
+      badge: "Dispatches",
+      priority: "0.8",
+      changefreq: "Weekly",
+    },
   ];
 
   const demoPages = [
     {
+      title: "E-Commerce Storefront Architecture",
+      href: "/demo/ecomm",
+      liveUrl: "https://ecomm.krewmesh.agency/",
+      desc: "High-performance digital retail storefront with responsive interactive cart drawer, product variants, and frictionless checkout.",
+      badge: "Retail & D2C",
+    },
+    {
       title: "Clinic Website Architecture",
       href: "/demo/clinic",
+      liveUrl: "https://clinic.krewmesh.agency",
       desc: "Modern healthcare practice & patient appointment platform with online scheduling and specialist directories.",
       badge: "Healthcare",
     },
@@ -113,14 +140,30 @@ export default function SitemapPage() {
     {
       title: "Cafe & Culinary Landing Page",
       href: "/demo/cafe",
+      liveUrl: "https://cafe.krewmesh.agency",
       desc: "Atmospheric storytelling, artisan menus, table reservation sync, and local ordering workflows.",
       badge: "Hospitality",
     },
     {
       title: "Interior Design Showcase",
       href: "/demo/interior-design",
+      liveUrl: "https://inter.krewmesh.agency/",
       desc: "Editorial-grade spatial design portfolio with gallery reveals, material libraries, and client lead funnels.",
       badge: "Architecture",
+    },
+    {
+      title: "Photography Portfolio Archive",
+      href: "/demo/photography",
+      liveUrl: "https://wedtale.krewmesh.agency/",
+      desc: "Cinematic high-aesthetic photography platform with client proofing portals, EXIF overlays, and print orders.",
+      badge: "Visual Arts",
+    },
+    {
+      title: "3D Print Studio & Prototyping Portal",
+      href: "/demo/3d-print-studio",
+      liveUrl: "https://3dprint.krewmesh.agency/",
+      desc: "Additive manufacturing studio portal with WebGL 3D model viewer, automated slicing estimation, and order tracking.",
+      badge: "Prototyping",
     },
   ];
 
@@ -375,32 +418,157 @@ export default function SitemapPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {demoPages.map((demo) => (
-                <Link
+                <div
                   key={demo.href}
-                  href={demo.href}
                   className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05]"
                 >
                   <div>
-                    <span className="inline-flex items-center rounded-md bg-purple-500/10 px-2 py-0.5 text-[11px] font-medium text-purple-300 border border-purple-500/20 mb-2.5">
-                      {demo.badge}
-                    </span>
-                    <h3 className="text-base font-semibold text-white group-hover:text-purple-400 transition-colors flex items-center justify-between">
-                      <span>{demo.title}</span>
-                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-purple-400" />
-                    </h3>
+                    <div className="flex items-center justify-between gap-2 mb-2.5">
+                      <span className="inline-flex items-center rounded-md bg-purple-500/10 px-2 py-0.5 text-[11px] font-medium text-purple-300 border border-purple-500/20">
+                        {demo.badge}
+                      </span>
+                      {demo.liveUrl && (
+                        <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                          Live Demo Available
+                        </span>
+                      )}
+                    </div>
+                    <Link href={demo.href} className="block group/link">
+                      <h3 className="text-base font-semibold text-white group-hover/link:text-purple-400 transition-colors flex items-center justify-between">
+                        <span>{demo.title}</span>
+                        <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all text-purple-400" />
+                      </h3>
+                    </Link>
                     <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
                       {demo.desc}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-neutral-500 font-mono">
-                    {demo.href}
+
+                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                    <Link href={demo.href} className="hover:text-purple-300 transition-colors">
+                      {demo.href}
+                    </Link>
+                    {demo.liveUrl && (
+                      <Link
+                        href={demo.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-sans font-semibold text-[#ffc691] hover:text-white transition-colors"
+                      >
+                        <span>Launch Live</span>
+                        <ExternalLink className="h-3 w-3" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 4: Local SEO & Regional Creative Tech Hubs */}
+          <section className="my-16" aria-labelledby="local-hubs-heading">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/10 border border-orange-500/20 text-[#ef671c]">
+                <MapPin className="h-4 w-4" />
+              </div>
+              <div>
+                <h2 id="local-hubs-heading" className="text-xl font-bold text-white">
+                  Regional Tech &amp; Design Hubs (Local SEO)
+                </h2>
+                <p className="text-xs text-neutral-400">
+                  Specialized regional landing pages tailored for startups, D2C brands, and tech enterprises in Indore and Pune
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {Object.values(localSeoPagesData).map((localPage) => (
+                <Link
+                  key={localPage.slug}
+                  href={`/${localPage.slug}`}
+                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05]"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2.5">
+                      <span className="inline-flex items-center rounded-md bg-orange-500/10 px-2 py-0.5 text-[11px] font-medium text-orange-300 border border-orange-500/20">
+                        {localPage.city}, {localPage.state}
+                      </span>
+                      <span className="text-[10px] font-mono text-neutral-500">
+                        Priority 0.85
+                      </span>
+                    </div>
+                    <h3 className="text-base font-semibold text-white group-hover:text-orange-400 transition-colors flex items-center justify-between">
+                      <span>{localPage.title}</span>
+                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-orange-400" />
+                    </h3>
+                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                      {localPage.tagline}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                    <span>/{localPage.slug}</span>
+                    <span className="text-emerald-400 flex items-center gap-1">
+                      <CheckCircle2 className="h-3 w-3" /> Indexed
+                    </span>
                   </div>
                 </Link>
               ))}
             </div>
           </section>
 
-          {/* Section 4: Official Social Channels & Connect */}
+          {/* Section 5: Blog & Engineering Dispatches */}
+          <section className="my-16" aria-labelledby="blog-heading">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                <BookOpen className="h-4 w-4" />
+              </div>
+              <div>
+                <h2 id="blog-heading" className="text-xl font-bold text-white">
+                  Blog &amp; Technical Dispatches (LLM GEO)
+                </h2>
+                <p className="text-xs text-neutral-400">
+                  Authoritative engineering articles, comparisons, and Generative Engine Optimization guides
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {blogPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05]"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2.5">
+                      <span className="inline-flex items-center rounded-md bg-emerald-500/10 px-2 py-0.5 text-[11px] font-medium text-emerald-300 border border-emerald-500/20">
+                        {post.category}
+                      </span>
+                      <span className="text-[10px] font-mono text-neutral-500">
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 className="text-base font-semibold text-white group-hover:text-emerald-400 transition-colors flex items-center justify-between">
+                      <span>{post.title}</span>
+                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-emerald-400" />
+                    </h3>
+                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                    <span>/blog/{post.slug}</span>
+                    <span className="text-emerald-400 flex items-center gap-1">
+                      <CheckCircle2 className="h-3 w-3" /> Indexed
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 6: Official Social Channels & Connect */}
           <section className="my-16" aria-labelledby="social-channels-heading">
             <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-pink-500/10 border border-pink-500/20 text-pink-400">

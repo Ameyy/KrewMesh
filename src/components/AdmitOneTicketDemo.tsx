@@ -36,10 +36,10 @@ const DEMOS: DemoItem[] = [
     event: "WATCH ANYTIME",
     venue: "LIVE ONLINE STORE",
     dates: "WATCH ANYTIME",
-    stubText: "COMING SOON",
+    stubText: "LIVE NOW",
     watermark: "ECOMM",
-    url: "#",
-    isLive: false,
+    url: "https://ecomm.krewmesh.agency/",
+    isLive: true,
     texture: {
       ...TICKET_TEXTURE,
       shape: "warp",
@@ -132,10 +132,10 @@ const DEMOS: DemoItem[] = [
     event: "WATCH ANYTIME",
     venue: "SPATIAL ARCHITECTURE",
     dates: "WATCH ANYTIME",
-    stubText: "COMING SOON",
+    stubText: "LIVE NOW",
     watermark: "DESIGN",
-    url: "/demo/interior-design",
-    isLive: false,
+    url: "https://inter.krewmesh.agency/",
+    isLive: true,
     texture: {
       ...TICKET_TEXTURE,
       shape: "swirl",
@@ -154,6 +154,70 @@ const DEMOS: DemoItem[] = [
       ...TICKET_LAYOUT,
       inkColor: "#3d1c05",
       watermarkColor: "#fff4d4"
+    }
+  },
+  {
+    id: 5,
+    label: "Photography Portfolio",
+    name: "DEMO WEBSITE IS LIVE NOW",
+    presenter: "KREW / MESH • PHOTOGRAPHY",
+    event: "WATCH ANYTIME",
+    venue: "EDITORIAL & VISUAL ARCHIVE",
+    dates: "WATCH ANYTIME",
+    stubText: "LIVE NOW",
+    watermark: "PHOTO",
+    url: "https://wedtale.krewmesh.agency/",
+    isLive: true,
+    texture: {
+      ...TICKET_TEXTURE,
+      shape: "wave",
+      colorBack: "#e07a5f",
+      colorFront: "#f4a261",
+      colorHighlight: "#fef3c7",
+      speed: 0.35
+    },
+    gradient: {
+      ...TICKET_GRADIENT,
+      colorLight: "#fef3c7",
+      colorMid: "#fcd34d",
+      colorDark: "#e07a5f"
+    },
+    layout: {
+      ...TICKET_LAYOUT,
+      inkColor: "#260e04",
+      watermarkColor: "#fff7ed"
+    }
+  },
+  {
+    id: 6,
+    label: "3D Print Studio",
+    name: "DEMO WEBSITE IS LIVE NOW",
+    presenter: "KREW / MESH • 3D PRINT STUDIO",
+    event: "WATCH ANYTIME",
+    venue: "PROTOTYPING & ADDITIVE MFG",
+    dates: "WATCH ANYTIME",
+    stubText: "LIVE NOW",
+    watermark: "3D PRINT",
+    url: "https://3dprint.krewmesh.agency/",
+    isLive: true,
+    texture: {
+      ...TICKET_TEXTURE,
+      shape: "ripple",
+      colorBack: "#4338ca",
+      colorFront: "#818cf8",
+      colorHighlight: "#c7d2fe",
+      speed: 0.4
+    },
+    gradient: {
+      ...TICKET_GRADIENT,
+      colorLight: "#c7d2fe",
+      colorMid: "#818cf8",
+      colorDark: "#4338ca"
+    },
+    layout: {
+      ...TICKET_LAYOUT,
+      inkColor: "#1e1b4b",
+      watermarkColor: "#e0e7ff"
     }
   }
 ];
@@ -230,11 +294,6 @@ export default function AdmitOneTicketDemo() {
           href={currentDemo.url}
           target={currentDemo.url.startsWith("http") ? "_blank" : undefined}
           rel={currentDemo.url.startsWith("http") ? "noopener noreferrer" : undefined}
-          onClick={(e) => {
-            if (currentDemo.url === "#") {
-              e.preventDefault();
-            }
-          }}
           className="group block relative focus:outline-none transition-transform duration-300 hover:scale-[1.015] cursor-pointer"
           aria-label={`Open ${currentDemo.label} - ${currentDemo.isLive ? "Live Demo" : "Coming Soon"}`}
           title={`Click to open ${currentDemo.label}`}
@@ -261,19 +320,12 @@ export default function AdmitOneTicketDemo() {
             href={currentDemo.url}
             target={currentDemo.url.startsWith("http") ? "_blank" : undefined}
             rel={currentDemo.url.startsWith("http") ? "noopener noreferrer" : undefined}
-            onClick={(e) => {
-              if (currentDemo.url === "#") {
-                e.preventDefault();
-              }
-            }}
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#ffc691]/40 bg-black/40 hover:bg-[#ffc691] text-[#ffc691] hover:text-[#281d14] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-[#ffc691]/25 hover:scale-105"
           >
             <span>
-              {currentDemo.url === "#"
-                ? `${currentDemo.label} (Coming Soon)`
-                : currentDemo.isLive
+              {currentDemo.isLive
                 ? `Launch Live ${currentDemo.label} Demo`
-                : `Open ${currentDemo.label} (Coming Soon)`}
+                : `Explore ${currentDemo.label} Architecture`}
             </span>
             <ArrowUpRight size={14} />
           </Link>

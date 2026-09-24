@@ -6,8 +6,30 @@ import { KineticPhotoStack } from "@/components/KineticPhotoStack";
 import { ArrowLeft, ArrowRight, Sparkles, Compass, Zap, Layers, Users2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us // Our Story | KREW / MESH",
-  description: "Learn the story, philosophy, and meet the creative team behind Krew / Mesh — an independent creative technology studio.",
+  title: "About Us | Creative Technology Studio | KREW / MESH",
+  description:
+    "Learn the story, core philosophy, and meet the senior creative team behind Krew / Mesh — an independent studio combining bold branding, spatial UI/UX design, and Next.js engineering.",
+  keywords: [
+    "About Krew Mesh",
+    "creative studio team",
+    "digital agency founders",
+    "creative technology philosophy",
+    "Amey Kulkarni",
+    "Dinesh Kulkarni",
+    "design code convergence"
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | KREW / MESH Studio",
+    description:
+      "A tight-knit collective of master craftspeople—brand strategists, spatial UI/UX designers, 3D WebGL creators, and full-stack software architects.",
+    url: "https://krewmesh.agency/about",
+    siteName: "KREW / MESH",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 const PHILOSOPHY_PILLARS = [
@@ -49,9 +71,61 @@ const TEAM_ROSTER = [
   },
 ];
 
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://krewmesh.agency/about/#aboutpage",
+      "url": "https://krewmesh.agency/about",
+      "name": "About Krew / Mesh Studio",
+      "description": "Learn the story, core philosophy, and meet the senior creative team behind Krew / Mesh — an independent studio combining bold branding, spatial UI/UX design, and Next.js engineering.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Krew / Mesh",
+        "url": "https://krewmesh.agency",
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Amey Kulkarni",
+            "jobTitle": "Founder & CEO"
+          },
+          {
+            "@type": "Person",
+            "name": "Dinesh Kulkarni",
+            "jobTitle": "Senior Web Developer"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://krewmesh.agency"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://krewmesh.agency/about"
+        }
+      ]
+    }
+  ]
+};
+
 export default function AboutPage() {
   return (
-    <div className="relative min-h-screen bg-black text-white pt-32 sm:pt-40 pb-24 overflow-hidden selection:bg-white/20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
+      <div className="relative min-h-screen bg-black text-white pt-32 sm:pt-40 pb-24 overflow-hidden selection:bg-white/20">
       {/* Subtle Ambient Radial Glow in background (matching services pages) */}
       <div
         className="pointer-events-none absolute -top-28 left-1/2 -translate-x-1/2 w-[750px] h-[480px] blur-[150px] opacity-25 rounded-full"
@@ -257,5 +331,6 @@ export default function AboutPage() {
         </Container>
       </section>
     </div>
+    </>
   );
 }

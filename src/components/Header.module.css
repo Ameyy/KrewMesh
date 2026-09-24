@@ -348,6 +348,9 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1.5rem;
   padding: 1.5rem;
+  max-height: calc(100vh - 6.5rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   z-index: 95;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
   transform: translateY(-20px) scale(0.96);

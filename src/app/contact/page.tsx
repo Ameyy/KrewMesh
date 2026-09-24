@@ -17,17 +17,32 @@ export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Check URL query params for prefilled service (e.g. ?service=ai)
+  // Check URL query params for prefilled service or package (e.g. ?service=ai or ?package=deepweb)
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const serviceParam = params.get("service");
+      const packageParam = params.get("package");
+
       if (serviceParam) {
         const validServices = ["branding", "design", "digital", "development", "ai", "saas"];
         const matched = validServices.find(s => serviceParam.toLowerCase().includes(s));
         if (matched) {
           setFormData(prev => ({ ...prev, service: matched }));
         }
+      } else if (packageParam) {
+        const pkgNames: Record<string, string> = {
+          fastforward: "FASTFORWARD (₹9,999)",
+          deepweb: "DEEPWEB (₹19,999)",
+          ecom: "ECOM (₹29,999)",
+          fullsend: "FULL SEND (₹49,999+)",
+        };
+        const selectedPkg = pkgNames[packageParam.toLowerCase()] || packageParam.toUpperCase();
+        setFormData(prev => ({
+          ...prev,
+          service: "development",
+          message: prev.message || `Hi, I am interested in the ${selectedPkg} package for our website.`,
+        }));
       }
     }
   }, []);
@@ -61,6 +76,23 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage("");
+
+    if (!formData.name.trim()) {
+      setErrorMessage("Please enter your name.");
+      return;
+    }
+
+    if (!formData.email.trim() || !formData.email.includes("@")) {
+      setErrorMessage("Please provide a valid email address.");
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      setErrorMessage("Please enter a short message describing your project.");
+      return;
+    }
+
     setIsSubmitting(true);
     // Simulate sending message
     setTimeout(() => {

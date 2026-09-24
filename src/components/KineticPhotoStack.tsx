@@ -227,7 +227,7 @@ export function KineticPhotoStack() {
                   type="button"
                 >
                   <span className="kps-photo">
-                    <img alt={photo.title} draggable="false" src={photo.src} />
+                    <img alt={`${photo.title} — ${photo.place} at Krew / Mesh`} draggable="false" src={photo.src} />
                     <span className="kps-shine" />
                   </span>
                   <span className="kps-card-copy">
@@ -268,7 +268,7 @@ export function KineticPhotoStack() {
               <Icon name="close" />
             </button>
             <figure onClick={(event) => event.stopPropagation()}>
-              <img alt={focus.title} src={focus.src} />
+              <img alt={`${focus.title} — ${focus.place} at Krew / Mesh`} src={focus.src} />
               <figcaption>
                 <div>
                   <b>{focus.title}</b>

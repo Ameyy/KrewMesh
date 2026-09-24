@@ -259,11 +259,9 @@ export default async function ServicePage({ params }: PageProps) {
 
               {/* CTAs */}
               <div className="pt-4 flex flex-wrap items-center gap-4">
-                <Link href={`/contact?service=${service.slug}`}>
-                  <RainbowButton className="px-8 py-3.5 text-sm font-medium tracking-wide">
-                    Start a Project in {service.shortTitle}
-                  </RainbowButton>
-                </Link>
+                <RainbowButton href={`/contact?service=${service.slug}`} className="px-8 py-3.5 text-sm font-medium tracking-wide">
+                  Start a Project in {service.shortTitle}
+                </RainbowButton>
                 <a
                   href="#deliverables"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium border border-white/10 hover:border-white/20 bg-white/[0.02] hover:bg-white/[0.06] text-neutral-300 hover:text-white transition-all"
@@ -544,6 +542,27 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
 
             <ServiceFaqAccordion faqs={service.faqs} accentColor={service.accentColor} />
+
+            <div className="mt-12 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <p className="text-sm font-semibold text-white">Have specific questions on web builds or pricing?</p>
+                <p className="text-xs text-neutral-400 mt-1">Explore our FASTFORWARD and DEEPWEB packages or read answers in our FAQ.</p>
+              </div>
+              <div className="flex items-center gap-3 shrink-0">
+                <Link
+                  href="/#packages"
+                  className="px-4 py-2 rounded-lg text-xs font-semibold bg-white/10 hover:bg-white/20 text-white transition-colors"
+                >
+                  View Web Packages
+                </Link>
+                <Link
+                  href="/faq"
+                  className="px-4 py-2 rounded-lg text-xs font-semibold border border-white/20 hover:border-white/40 text-neutral-300 hover:text-white transition-colors"
+                >
+                  Read FAQ
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
