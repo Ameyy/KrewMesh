@@ -255,7 +255,249 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     ]
+  },
+
+  {
+    slug: "ai-agents-for-enterprise-workflows-2026",
+    title: "Autonomous AI Agents in Production: Beyond Simple Chatbots to Real Business Automation",
+    excerpt: "Why forward-looking enterprises are replacing static chatbots with autonomous multi-agent pipelines that execute database actions, triage support tickets, and automate revenue operations.",
+    category: "AI & Search Strategy",
+    tags: ["AI Agents", "Autonomous Systems", "Enterprise AI", "LangChain", "Automation"],
+    publishedAt: "2026-03-25",
+    author: {
+      name: "Dinesh Kulkarni",
+      role: "Technical Co-Founder & Architecture Lead",
+      avatar: "/krewmesh-logo-white.png"
+    },
+    readTime: "8 min read",
+    relatedServices: [
+      { title: "AI Automation & Custom Intelligence", href: "/services/ai" },
+      { title: "SaaS Platforms & Web Applications", href: "/services/saas" },
+      { title: "Digital Solutions & Integrations", href: "/services/digital" }
+    ],
+    tableOfContents: [
+      { id: "beyond-chatbots", title: "1. The Shift From Reactive Chatbots to Action-Oriented Agents" },
+      { id: "multi-agent-orchestration", title: "2. Multi-Agent Orchestration & Deterministic Guardrails" },
+      { id: "enterprise-rag-accuracy", title: "3. Enterprise RAG & Zero-Hallucination Architectures" },
+      { id: "security-compliance", title: "4. Data Privacy, Encryption & Self-Hosted Models" },
+      { id: "production-blueprint", title: "5. Production Deployment Blueprint" }
+    ],
+    faqs: [
+      { q: "What is an autonomous AI agent?", a: "Unlike static chatbots that only output text, autonomous AI agents are software systems powered by LLMs equipped with tool-calling capabilities. They can inspect databases, trigger API webhooks, verify results, and complete end-to-end workflows autonomously." },
+      { q: "How do you prevent AI hallucinations in critical workflows?", a: "By using deterministic schema validation (Zod / JSON Schema), strict vector database grounding (RAG), and human-in-the-loop review thresholds for irreversible actions like payments or deletions." },
+      { q: "Can we run AI agents on our own private infrastructure?", a: "Yes. We engineer solutions that run on private VPCs using open-weights models (Llama 3, Mistral, DeepSeek) or private enterprise endpoints with zero data retention." }
+    ],
+    content: [
+      {
+        sectionId: "beyond-chatbots",
+        heading: "1. The Shift From Reactive Chatbots to Action-Oriented Agents",
+        paragraphs: [
+          "For years, customer-facing AI was limited to keyword-based widgets that offered rigid FAQ menus. Today's generative foundation models enable a completely different paradigm: agents that understand high-level business goals and execute multi-step tool calls to achieve them.",
+          "Rather than simply telling a customer where their invoice is, an autonomous agent can authenticate the user, query Stripe, generate a secure PDF link, and update the CRM record in real time."
+        ],
+        keyTakeaway: "Modern AI systems have evolved from passive conversationalists to active, tool-wielding software workers."
+      },
+      {
+        sectionId: "multi-agent-orchestration",
+        heading: "2. Multi-Agent Orchestration & Deterministic Guardrails",
+        paragraphs: [
+          "Monolithic prompts that attempt to do everything fail in enterprise environments. The gold standard in 2026 is multi-agent specialization: a Router Agent triages user intent, a Retriever Agent fetches accurate verified docs, and an Executor Agent validates inputs before calling external APIs.",
+          "Deterministic guardrails ensure that language models only produce structured JSON that passes runtime type validation before any action takes place."
+        ]
+      },
+      {
+        sectionId: "enterprise-rag-accuracy",
+        heading: "3. Enterprise RAG & Zero-Hallucination Architectures",
+        paragraphs: [
+          "Hallucination is unacceptable when quoting contract terms or pricing. By combining hybrid search (dense semantic vector search + sparse BM25 lexical search) with cross-encoder re-ranking, enterprise systems achieve 99.4% context retrieval accuracy.",
+          "If the relevant context cannot be located with sufficient statistical confidence, the agent gracefully defaults to human escalation rather than guessing."
+        ],
+        keyTakeaway: "Hybrid retrieval combined with cross-encoder re-ranking virtually eliminates factual hallucinations."
+      },
+      {
+        sectionId: "security-compliance",
+        heading: "4. Data Privacy, Encryption & Self-Hosted Models",
+        paragraphs: [
+          "Enterprise adoption demands rigorous security compliance. At Krew / Mesh, we architect solutions that strictly enforce zero-retention API policies, end-to-end payload encryption, and row-level database access controls.",
+          "For highly regulated industries like FinTech and Healthcare, we deploy private model endpoints within sovereign cloud boundaries, ensuring proprietary customer data never trains public models."
+        ]
+      },
+      {
+        sectionId: "production-blueprint",
+        heading: "5. Production Deployment Blueprint",
+        paragraphs: [
+          "1. Audit repetitive manual workflows with high ticket volumes or manual data entry.",
+          "2. Define structured tool definitions and input schemas with strict runtime validations.",
+          "3. Establish deterministic evaluation benchmarks to test accuracy against edge cases.",
+          "4. Deploy with comprehensive latency logging, token cost tracking, and human override controls."
+        ],
+        keyTakeaway: "A disciplined deployment blueprint ensures high ROI and immediate operational savings."
+      }
+    ]
+  },
+
+  {
+    slug: "3d-webgl-creative-tech-for-luxury-brands",
+    title: "WebGL & Three.js in Modern Commerce: Why Luxury Brands Use Interactive 3D",
+    excerpt: "How real-time 3D configurators, WebGL physics, and GPU-accelerated motion experiences elevate average order value and brand prestige without hurting load times.",
+    category: "Creative Technology",
+    tags: ["Three.js", "WebGL", "Interactive 3D", "Creative Tech", "eCommerce"],
+    publishedAt: "2026-03-27",
+    author: {
+      name: "Amey Kulkarni",
+      role: "Creative Director & Brand Strategist",
+      avatar: "/krewmesh-logo-white.png"
+    },
+    readTime: "6 min read",
+    relatedServices: [
+      { title: "Creative Technology & 3D Systems", href: "/services/digital" },
+      { title: "Brand Strategy & Visual Identity", href: "/services/branding" },
+      { title: "UI/UX & Spatial Product Design", href: "/services/design" }
+    ],
+    tableOfContents: [
+      { id: "why-flat-ecommerce-is-dying", title: "1. Why Static 2D Product Imagery is Falling Behind" },
+      { id: "performance-budget-secrets", title: "2. The 60 FPS Performance Budget: GLTF Compression & Draco" },
+      { id: "interactive-customizers", title: "3. Interactive Customizers That Double Conversion" },
+      { id: "mobile-optimization", title: "4. Smooth Mobile Degradation & Touch Physics" },
+      { id: "building-interactive-brands", title: "5. How to Integrate 3D into Your Existing Web Platform" }
+    ],
+    faqs: [
+      { q: "Does WebGL or Three.js slow down page loading speeds?", a: "Not when engineered correctly. Using Draco mesh compression, KTX2 texture streaming, and lazy initialization off the main thread, 3D models load progressively in sub-500ms without blocking critical rendering." },
+      { q: "Do 3D websites work smoothly on entry-level smartphones?", a: "Yes. We implement automated GPU tier detection (via WebGL renderer capabilities) to adjust shadow resolutions, polygon levels, and anti-aliasing dynamically based on the user device hardware." },
+      { q: "Can 3D configurators connect to Shopify or WooCommerce?", a: "Yes. Our 3D viewers integrate directly with standard cart APIs, passing exact customized SKU parameters and variant options to checkout seamlessly." }
+    ],
+    content: [
+      {
+        sectionId: "why-flat-ecommerce-is-dying",
+        heading: "1. Why Static 2D Product Imagery is Falling Behind",
+        paragraphs: [
+          "Consumers buying luxury goods, architectural hardware, custom jewelry, or technical gear hesitate when they can only see flat 2D studio photography. They want to inspect material textures under dynamic lighting, view hidden seams, and understand physical proportions.",
+          "Real-time WebGL interactive viewers remove customer uncertainty, leading to verified 40% reductions in product return rates and measurable boosts in checkout velocity."
+        ],
+        keyTakeaway: "Allowing customers to manipulate products in 3D dramatically closes the gap between digital and physical shopping."
+      },
+      {
+        sectionId: "performance-budget-secrets",
+        heading: "2. The 60 FPS Performance Budget: GLTF Compression & Draco",
+        paragraphs: [
+          "The common mistake in WebGL implementations is exporting unoptimized CAD models directly into browser canvases. At Krew / Mesh, we apply aggressive decimation, Draco geometry compression, and GPU-ready texture baking.",
+          "A 50MB raw asset is compressed down to under 1.2MB, allowing instantaneous delivery over standard mobile connections while maintaining hardware-accelerated 60 FPS animation."
+        ]
+      },
+      {
+        sectionId: "interactive-customizers",
+        heading: "3. Interactive Customizers That Double Conversion",
+        paragraphs: [
+          "When a customer can switch finishes from brushed brass to matte obsidian and see physical light refraction change in real time, purchase intent spikes. Interactive 3D creates emotional ownership before the customer even submits payment.",
+          "By connecting Three.js materials to live reactive UI state, every customization step feels tactile, immediate, and premium."
+        ],
+        keyTakeaway: "Real-time material customization transforms passive browsing into an engaging, tactile experience."
+      },
+      {
+        sectionId: "mobile-optimization",
+        heading: "4. Smooth Mobile Degradation & Touch Physics",
+        paragraphs: [
+          "Mobile touch gestures require gentle inertia damping rather than rigid cursor controls. When a mobile visitor pinches or rotates a model, the physics must feel as natural as holding the object in hand.",
+          "We implement intelligent frame-rate throttling when the canvas is idle, preserving mobile battery life and keeping the interface responsive."
+        ]
+      },
+      {
+        sectionId: "building-interactive-brands",
+        heading: "5. How to Integrate 3D into Your Existing Web Platform",
+        paragraphs: [
+          "You do not need to rebuild your entire store to take advantage of 3D. We engineer modular React Three Fiber / WebGL canvas micro-components that embed smoothly into existing Next.js, Shopify, or custom headless frontends.",
+          "The outcome is an ultra-premium visual differentiator that elevates brand stature and commands higher price points."
+        ]
+      }
+    ]
+  },
+
+  {
+    slug: "saas-architecture-scaling-multi-tenant-2026",
+    title: "Scaling SaaS from 0 to 100k Users: Next.js, Edge Functions & Tenant Isolation",
+    excerpt: "A tactical guide to architecting resilient, multi-tenant cloud platforms with database tenancy models, sub-second auth, and automated Stripe billing portals.",
+    category: "Web Engineering",
+    tags: ["SaaS Architecture", "Next.js", "Multi-Tenancy", "PostgreSQL", "Cloud Scale"],
+    publishedAt: "2026-03-29",
+    author: {
+      name: "Dinesh Kulkarni",
+      role: "Technical Co-Founder & Architecture Lead",
+      avatar: "/krewmesh-logo-white.png"
+    },
+    readTime: "7 min read",
+    relatedServices: [
+      { title: "SaaS Platforms & Web Applications", href: "/services/saas" },
+      { title: "High-Performance Web Development", href: "/services/development" },
+      { title: "Digital Solutions & Integrations", href: "/services/digital" }
+    ],
+    tableOfContents: [
+      { id: "tenant-isolation-models", title: "1. Choosing the Right Tenant Isolation Model" },
+      { id: "edge-auth-performance", title: "2. Sub-50ms Authentication at the Edge" },
+      { id: "database-connection-pooling", title: "3. Connection Pooling & Zero-Downtime Schema Migrations" },
+      { id: "stripe-billing-lifecycle", title: "4. Automated Billing Lifecycle & Webhook Reliability" },
+      { id: "observability-stack", title: "5. Production Monitoring & Error Budgets" }
+    ],
+    faqs: [
+      { q: "Row-Level Security (RLS) vs Separate Schemas for Multi-Tenancy?", a: "For 90% of early to growth-stage SaaS applications, PostgreSQL Row-Level Security (RLS) combined with tenant ID foreign keys provides the best balance of strict data isolation, cost efficiency, and straightforward schema migrations." },
+      { q: "How do you handle heavy background jobs in Next.js?", a: "We decouple long-running jobs (video processing, PDF generation, AI batch runs) using background queues like Inngest, BullMQ, or AWS SQS, keeping Next.js API routes snappy and lightweight." },
+      { q: "What is the best way to handle custom domains for SaaS users?", a: "By combining Next.js middleware with edge routing and automated SSL certificates via platforms like Cloudflare for SaaS or Vercel Domains API, custom tenant domains configure in seconds." }
+    ],
+    content: [
+      {
+        sectionId: "tenant-isolation-models",
+        heading: "1. Choosing the Right Tenant Isolation Model",
+        paragraphs: [
+          "Building a scalable SaaS requires selecting an architecture that protects tenant data without ballooning infrastructure costs. A shared database with PostgreSQL Row-Level Security (RLS) offers ironclad isolation at the database kernel level while avoiding the operational nightmare of spinning up hundreds of isolated instances.",
+          "Every database query automatically verifies the tenant identifier, preventing cross-organization data leaks even in the event of an application-layer bug."
+        ],
+        keyTakeaway: "Row-Level Security guarantees cross-tenant isolation directly inside the database engine."
+      },
+      {
+        sectionId: "edge-auth-performance",
+        heading: "2. Sub-50ms Authentication at the Edge",
+        paragraphs: [
+          "Users expect SaaS dashboards to load instantaneously. Traditional architectures make multiple round-trips to central auth servers on every page request, adding 200-400ms of latency.",
+          "By verifying signed JWT session cookies at global edge compute nodes, user access permissions are validated in under 30ms before the dashboard even begins rendering."
+        ]
+      },
+      {
+        sectionId: "database-connection-pooling",
+        heading: "3. Connection Pooling & Zero-Downtime Schema Migrations",
+        paragraphs: [
+          "Serverless architectures can easily overwhelm traditional relational databases during traffic spikes by opening thousands of concurrent connections. Implementing connection poolers (like PgBouncer or Supabase connection pooling) keeps connection counts stable and latency flat.",
+          "Combined with forward-compatible database migrations (expand-and-contract pattern), engineering teams deploy schema updates with zero user interruption."
+        ],
+        keyTakeaway: "Serverless architectures require connection pooling to prevent database exhaustion under load."
+      },
+      {
+        sectionId: "stripe-billing-lifecycle",
+        heading: "4. Automated Billing Lifecycle & Webhook Reliability",
+        paragraphs: [
+          "A brittle billing setup causes revenue leakage and support tickets. Robust SaaS platforms rely on idempotent Stripe webhook processors with automatic retries and dead-letter queues.",
+          "Self-serve customer portals enable users to upgrade tiers, swap payment methods, and download VAT-compliant invoices without needing human support intervention."
+        ]
+      },
+      {
+        sectionId: "observability-stack",
+        heading: "5. Production Monitoring & Error Budgets",
+        paragraphs: [
+          "1. Configure centralized telemetry (OpenTelemetry, Sentry, Datadog) to capture unhandled exceptions with full user session replay.",
+          "2. Track p95 and p99 server response times across critical API endpoints.",
+          "3. Establish automated health checks with instantaneous alerts to engineering on Slack/PagerDuty.",
+          "4. Run daily automated backups with automated point-in-time recovery verification."
+        ],
+        keyTakeaway: "Proactive telemetry catches performance regressions before your customers ever notice."
+      }
+    ]
   }
 ];
 
 export const allBlogSlugs = blogPosts.map((post) => post.slug);
+
+export const allBlogCategories = Array.from(
+  new Set(blogPosts.map((post) => post.category))
+);
+
+export const allBlogTags = Array.from(
+  new Set(blogPosts.flatMap((post) => post.tags))
+);

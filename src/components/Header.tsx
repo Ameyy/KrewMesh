@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Home, Layers, Sparkles, Users, Mail, Menu, X, ArrowUpRight, LucideIcon, Briefcase, Zap, HelpCircle } from 'lucide-react';
+import { Home, Layers, Sparkles, Users, Mail, Menu, X, ArrowUpRight, LucideIcon, Briefcase, Zap, HelpCircle, BookOpen } from 'lucide-react';
 import styles from './Header.module.css';
 
 interface NavItem {
@@ -17,6 +17,7 @@ const navItems: NavItem[] = [
   { title: 'Services', icon: Sparkles, href: '/#services' },
   { title: 'Work', icon: Layers, href: '/#work' },
   { title: 'Builds', icon: Zap, href: '/#packages' },
+  { title: 'Blogs', icon: BookOpen, href: '/blog' },
   { title: 'About', icon: Users, href: '/about' },
   { title: 'Careers', icon: Briefcase, href: '/careers' },
   { title: 'FAQ', icon: HelpCircle, href: '/faq' },
