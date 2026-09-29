@@ -180,6 +180,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   }
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
+
 export async function generateStaticParams() {
   return Object.keys(DEMO_DATA).map((slug) => ({ slug }));
 }
@@ -194,9 +196,33 @@ export async function generateMetadata({
   if (!demo) {
     return { title: "Demo Coming Soon | Krew / Mesh" };
   }
+  const pageUrl = `${baseUrl}/demo/${slug}`;
   return {
-    title: `${demo.title} — Coming Soon | Krew / Mesh`,
-    description: demo.description
+    title: `${demo.title} — Architecture & Showcase | Krew / Mesh`,
+    description: demo.description,
+    keywords: [
+      demo.title,
+      `${demo.category} demo`,
+      "Krew Mesh web architecture",
+      "interactive website showcase",
+      "Next.js web development",
+      "digital product design"
+    ],
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title: `${demo.title} — Architecture & Showcase | Krew / Mesh`,
+      description: demo.description,
+      url: pageUrl,
+      siteName: "KREW / MESH",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${demo.title} — Architecture & Showcase | Krew / Mesh`,
+      description: demo.description,
+    },
   };
 }
 
@@ -212,8 +238,63 @@ export default async function DemoComingSoonPage({
     notFound();
   }
 
+  const pageUrl = `${baseUrl}/demo/${slug}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        "url": pageUrl,
+        "name": `${demo.title} — Architecture & Showcase | Krew / Mesh`,
+        "description": demo.description,
+        "isPartOf": {
+          "@id": `${baseUrl}/#website`
+        },
+        "about": {
+          "@type": "Service",
+          "name": demo.title,
+          "category": demo.category,
+          "description": demo.description,
+          "provider": {
+            "@id": `${baseUrl}/#organization`
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": baseUrl
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Showcase & Demos",
+            "item": `${baseUrl}/#work`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": demo.title,
+            "item": pageUrl
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ffc691] selection:text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main className="relative pt-32 pb-24 px-4 sm:px-6 md:px-8 max-w-5xl mx-auto">

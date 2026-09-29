@@ -63,7 +63,8 @@ export default function CtaFooter() {
           
           <div className={styles.socialCol}>
             <a href="https://www.instagram.com/krewmesh/" target="_blank" rel="noopener noreferrer">Instagram (@krewmesh)</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://linkedin.com/company/krew-mesh-agency" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://x.com/KrewMesh" target="_blank" rel="noopener noreferrer">X (@KrewMesh)</a>
             <a href="mailto:hello@krewmesh.agency">hello@krewmesh.agency</a>
             <a href="tel:+919209839142">+91 920 983 9142</a>
           </div>

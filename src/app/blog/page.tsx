@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/data/blog";
-import { BookOpen, Clock, Calendar, ArrowRight, ArrowLeft, Tag, Sparkles } from "lucide-react";
+import { blogPosts, allBlogCategories, allBlogTags } from "@/data/blog";
+import { BookOpen, ArrowLeft } from "lucide-react";
+import { BlogFilterClient } from "./components/BlogFilterClient";
 
 export const metadata: Metadata = {
   title: "Blog & Engineering Dispatches | Krew / Mesh",
   description:
-    "Insights on modern web development, Next.js architecture, UI/UX design systems, and Generative Engine Optimization (LLM GEO) from the Krew / Mesh studio team.",
+    "Insights on modern web development, Next.js architecture, UI/UX design systems, AI search optimization (LLM GEO), and autonomous agents from the Krew / Mesh studio team.",
   keywords: [
     "Krew Mesh blog",
     "Next.js vs WordPress",
     "LLM GEO guide",
     "design systems ROI",
+    "AI agents enterprise",
+    "WebGL Three.js eCommerce",
+    "SaaS architecture multi-tenant",
     "web development insights",
     "creative tech articles"
   ],
@@ -108,61 +112,21 @@ export default function BlogIndexPage() {
           </div>
 
           {/* Heading */}
-          <div className="mb-14 space-y-4">
+          <div className="mb-12 space-y-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-tight text-white leading-tight">
               Engineering &amp; Design Dispatches
             </h1>
             <p className="text-lg sm:text-xl text-neutral-300 max-w-2xl font-light leading-relaxed">
-              In-depth articles on high-speed web architecture, AI search optimization (LLM GEO), and scalable UI/UX systems.
+              In-depth articles on high-speed web architecture, AI search optimization (LLM GEO), autonomous systems, and interactive WebGL experiences.
             </p>
           </div>
 
-          {/* Blog Post Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {blogPosts.map((post) => (
-              <article
-                key={post.slug}
-                className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 transition-all duration-300 hover:border-white/25 hover:bg-white/[0.04] hover:shadow-xl hover:shadow-orange-500/5"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="inline-flex items-center rounded-md bg-[#ef671c]/10 px-2.5 py-1 text-xs font-medium text-[#ffc691] border border-[#ef671c]/25">
-                      {post.category}
-                    </span>
-                    <span className="text-xs font-mono text-neutral-400 flex items-center gap-1">
-                      <Clock className="size-3" />
-                      {post.readTime}
-                    </span>
-                  </div>
-
-                  <Link href={`/blog/${post.slug}`} className="block group/title">
-                    <h2 className="text-xl sm:text-2xl font-bold text-white group-hover/title:text-[#ffc691] transition-colors leading-snug">
-                      {post.title}
-                    </h2>
-                  </Link>
-
-                  <p className="text-sm text-neutral-400 mt-3 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                </div>
-
-                <div className="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
-                    <Calendar className="size-3 text-neutral-500" />
-                    <span>{post.publishedAt}</span>
-                  </div>
-
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:text-[#ffc691] transition-colors"
-                  >
-                    <span>Read Article</span>
-                    <ArrowRight className="size-3.5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+          {/* Dynamic Filter, Search, Sort & Post Grid */}
+          <BlogFilterClient
+            posts={blogPosts}
+            categories={allBlogCategories}
+            tags={allBlogTags}
+          />
         </div>
       </main>
     </>

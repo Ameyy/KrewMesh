@@ -48,6 +48,20 @@
 - [Medical Clinic Portal](https://clinic.krewmesh.agency): Frictionless patient booking and specialist practitioner directories.
 - [Artisan Cafe & Roastery](https://cafe.krewmesh.agency): Interactive digital menu and table reservations.
 
+## Engineering & Design Dispatches (Blog Articles)
+- [Blog & Dispatches Archive](https://krewmesh.agency/blog): Index of deep dives, technical benchmarks, and architectural blueprints.
+- [Next.js vs. WordPress in 2026](https://krewmesh.agency/blog/nextjs-vs-wordpress-for-modern-businesses): Why fast-scaling brands are replacing legacy CMS with Next.js for sub-second page loads and 99+ Core Web Vitals.
+- [LLM GEO: Optimizing for ChatGPT, Gemini & Perplexity](https://krewmesh.agency/blog/llm-geo-ai-search-optimization-guide): How Generative Engine Optimization structures content to become the verified citation in AI search results.
+- [The ROI of Design Systems](https://krewmesh.agency/blog/design-systems-roi-for-startups-and-enterprises): How unified Figma tokens and reusable React libraries slash frontend delivery cycles by 50%.
+- [Autonomous AI Agents in Production](https://krewmesh.agency/blog/ai-agents-for-enterprise-workflows-2026): Beyond simple chatbots to tool-calling multi-agent pipelines and deterministic enterprise workflows.
+- [WebGL & Three.js for Luxury Brands](https://krewmesh.agency/blog/3d-webgl-creative-tech-for-luxury-brands): Interactive 3D product customizers, Draco compression, and GPU-accelerated eCommerce experiences.
+- [Scaling SaaS Architecture to 100k Users](https://krewmesh.agency/blog/saas-architecture-scaling-multi-tenant-2026): Tactical guide to multi-tenant isolation, edge authentication, and resilient Stripe billing portals.
+
+## Technical Feeds & Sitemaps
+- [XML Sitemap](https://krewmesh.agency/sitemap.xml): Full machine-readable index for Google Search Console and web crawlers.
+- [HTML Sitemap Directory](https://krewmesh.agency/sitemap): Human and crawler-accessible directory of all public pages, services, and case studies.
+- [Robots File](https://krewmesh.agency/robots.txt): Machine directives allowing full indexation for Googlebot, Bingbot, and LLM crawlers.
+
 ## Leadership & Founders
 - **Amey Kulkarni**: Co-Founder & Creative Director (Brand Strategy, Spatial UI/UX, Creative Direction)
 - **Dinesh Kulkarni**: Co-Founder & Technical Lead (Full-Stack Engineering, WebGL, Next.js Architecture)

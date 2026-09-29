@@ -76,7 +76,7 @@ export default function SitemapPage() {
     },
     {
       title: "About Krew / Mesh",
-      href: "/#about",
+      href: "/about",
       desc: "Our mission, philosophy, culture, and collaborative approach to engineering modern digital products.",
       badge: "Agency",
       priority: "0.8",
@@ -177,8 +177,8 @@ export default function SitemapPage() {
     },
     {
       title: "LinkedIn",
-      handle: "krewmesh",
-      href: "https://www.linkedin.com",
+      handle: "krew-mesh-agency",
+      href: "https://linkedin.com/company/krew-mesh-agency",
       desc: "Corporate updates, case studies, technology insights, and studio announcements.",
       badge: "Corporate",
     },
@@ -191,8 +191,8 @@ export default function SitemapPage() {
     },
     {
       title: "X (Twitter)",
-      handle: "@krewmesh",
-      href: "https://x.com",
+      handle: "@KrewMesh",
+      href: "https://x.com/KrewMesh",
       desc: "Real-time updates, engineering dispatches, design commentary, and tech insights.",
       badge: "Dispatches",
     },

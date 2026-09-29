@@ -88,8 +88,8 @@ const jsonLd = {
       },
       "sameAs": [
         "https://www.instagram.com/krewmesh/",
-        "https://www.linkedin.com/",
-        "https://x.com/",
+        "https://linkedin.com/company/krew-mesh-agency",
+        "https://x.com/KrewMesh",
         "https://github.com/"
       ]
     },

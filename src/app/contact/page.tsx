@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { ContactCard } from "@/components/ui/contact-card";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MapPin, Phone, Mail, CheckCircle2, Loader2 } from "lucide-react";
-import { InstagramIcon } from "@/components/ui/footer-section-4-utils/social-cloud";
+import { InstagramIcon, LinkedInIcon, XIcon } from "@/components/ui/footer-section-4-utils/social-cloud";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -67,6 +67,18 @@ export default function Contact() {
       href: "https://www.instagram.com/krewmesh/",
     },
     {
+      icon: LinkedInIcon,
+      label: "LinkedIn",
+      value: "krew-mesh-agency",
+      href: "https://linkedin.com/company/krew-mesh-agency",
+    },
+    {
+      icon: XIcon,
+      label: "X",
+      value: "@KrewMesh",
+      href: "https://x.com/KrewMesh",
+    },
+    {
       icon: MapPin,
       label: "Office",
       value: "Nagpur, India",
@@ -94,11 +106,23 @@ export default function Contact() {
     }
 
     setIsSubmitting(true);
-    // Simulate sending message
+
+    const subject = encodeURIComponent(
+      `New Project Inquiry from ${formData.name.trim()}${formData.service ? ` - ${formData.service.toUpperCase()}` : ""}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name.trim()}\nEmail: ${formData.email.trim()}\nService Needed: ${formData.service || "General Inquiry"}\n\nMessage:\n${formData.message.trim()}`
+    );
+
+    const mailtoUrl = `mailto:ameykulkarni1993@gmail.com?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 700);
+      if (typeof window !== "undefined") {
+        window.location.href = mailtoUrl;
+      }
+    }, 400);
   };
 
   const handleReset = () => {
