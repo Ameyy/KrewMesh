@@ -85,7 +85,7 @@ export function LocalSeoPageComponent({ page }: { page: LocalSeoPageData }) {
         description: page.metaDescription,
         url: pageUrl,
         telephone: "+919209839142",
-        email: "hello@krewmesh.agency",
+        email: "ameykulkarni1993@gmail.com",
         priceRange: "₹₹",
         image: `${siteUrl}/krewmesh-logo.png`,
         address: {

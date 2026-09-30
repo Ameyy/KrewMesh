@@ -7,9 +7,9 @@ import WebBuildsPricing from "@/components/WebBuildsPricing";
 import Why from "@/components/Why";
 
 export const metadata: Metadata = {
-  title: "KREW / MESH | Creative Technology Studio — Branding, UI/UX, Web & AI",
+  title: "Creative Technology Studio | KREW / MESH",
   description:
-    "Krew / Mesh is an independent creative-technology studio specializing in Brand Identity, UI/UX Design, High-Performance Web Development, 3D Experiences, AI Solutions, and SaaS Platforms.",
+    "Independent creative technology studio specializing in brand identity, UI/UX design, Next.js web development, 3D experiences, and AI solutions.",
   keywords: [
     "creative technology studio",
     "branding agency",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "Krew Mesh"
   ],
   alternates: {
-    canonical: "/",
+    canonical: "https://krewmesh.agency",
   },
   openGraph: {
     title: "KREW / MESH | Creative Technology Studio",
@@ -84,7 +84,7 @@ export default function Home() {
           <Portfolio />
         </div>
         
-        {/* Web Builds Packages & Pricing Section */}
+        {/* Pricing & Packages Section */}
         <div className="scroll-mt-24">
           <WebBuildsPricing />
         </div>

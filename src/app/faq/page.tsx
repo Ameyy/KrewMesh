@@ -7,9 +7,9 @@ import FAQContent from './components/FAQContent';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://krewmesh.agency';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions (FAQ) | Krew / Mesh Studio',
+  title: 'Frequently Asked Questions (FAQ) | Krew / Mesh',
   description:
-    'Answers to common questions about Krew / Mesh web development, UI/UX design, FASTFORWARD & DEEPWEB pricing packages, Next.js tech stack, delivery timelines, and project ownership.',
+    'Find clear answers to common questions about Krew / Mesh web development, UI/UX design packages, delivery timelines, and full code ownership.',
   keywords: [
     'Krew Mesh FAQ',
     'web development questions',
@@ -104,7 +104,7 @@ export default function FAQPage() {
           </h1>
 
           <p className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-            Direct, transparent answers about our web builds, pricing packages, Next.js architecture, and studio workflow.
+            Direct, transparent answers about our website packages, transparent pricing, Next.js architecture, and studio workflow.
           </p>
         </div>
 

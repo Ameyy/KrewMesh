@@ -85,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Active Demo showcase pages
-  const demoSlugs = ["ecomm", "clinic", "business", "cafe", "interior-design", "photography", "3d-print-studio"];
+  const demoSlugs = ["ecomm", "clinic", "business", "cafe", "interior-design", "photography", "3d-print-studio", "gym"];
   const demoRoutes: MetadataRoute.Sitemap = demoSlugs.map((slug) => ({
     url: `${BASE_URL}/demo/${slug}`,
     lastModified: currentDate,

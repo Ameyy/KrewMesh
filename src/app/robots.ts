@@ -8,6 +8,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: [
+          "/api/",
+          "/_next/",
+          "/private/",
+          "/*?*package=", // Prevent duplicate search console indexing on parameter queries
+        ],
       },
       {
         userAgent: [

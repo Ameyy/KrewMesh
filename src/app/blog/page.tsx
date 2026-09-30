@@ -7,7 +7,7 @@ import { BlogFilterClient } from "./components/BlogFilterClient";
 export const metadata: Metadata = {
   title: "Blog & Engineering Dispatches | Krew / Mesh",
   description:
-    "Insights on modern web development, Next.js architecture, UI/UX design systems, AI search optimization (LLM GEO), and autonomous agents from the Krew / Mesh studio team.",
+    "Insights on modern web development, Next.js architecture, UI/UX design systems, AI search optimization (LLM GEO), and scalable digital platforms.",
   keywords: [
     "Krew Mesh blog",
     "Next.js vs WordPress",

@@ -16,11 +16,12 @@ const navItems: NavItem[] = [
   { title: 'Home', icon: Home, href: '/' },
   { title: 'Services', icon: Sparkles, href: '/#services' },
   { title: 'Work', icon: Layers, href: '/#work' },
-  { title: 'Builds', icon: Zap, href: '/#packages' },
+  { title: 'Pricing', icon: Zap, href: '/#packages' },
   { title: 'Blogs', icon: BookOpen, href: '/blog' },
   { title: 'About', icon: Users, href: '/about' },
   { title: 'Careers', icon: Briefcase, href: '/careers' },
   { title: 'FAQ', icon: HelpCircle, href: '/faq' },
+  { title: 'Contact', icon: Mail, href: '/contact' },
 ];
 
 export default function Header() {
@@ -152,7 +153,11 @@ export default function Header() {
           >
             <img
               src="/logo.png"
-              alt="KREW / MESH Logo"
+              alt="KREW / MESH — Creative Technology Studio Vector Wordmark"
+              width={1024}
+              height={374}
+              loading="eager"
+              decoding="async"
               className={styles.logoImg}
             />
           </Link>
@@ -184,28 +189,25 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Vintage Ringing Phone Contact Button with Comic Speech Bubble on the Right */}
-          <Link
-            href="/contact"
-            onClick={() => setIsOpen(false)}
-            className={styles.vintagePhoneButton}
-            data-cursor="LET'S TALK"
-            aria-label="Let's Talk - Contact Us"
+          {/* Floating WhatsApp Action Button */}
+          <a
+            href="https://wa.me/919209839142?text=Hi%20Krew%20Mesh%2C%20I%20would%20like%20to%20discuss%20a%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.whatsappButton}
+            aria-label="Chat with Krew / Mesh on WhatsApp"
+            title="Chat on WhatsApp"
+            data-cursor="WHATSAPP"
           >
-            {/* Vibrating Phone Badge */}
-            <div className={styles.phoneBadge}>
-              <img
-                src="/vintage-phone-white.png"
-                alt="Vintage Antique Telephone"
-                className={styles.vintagePhoneImg}
-              />
-            </div>
-
-            {/* Comic Style Speech Bubble Floating on Right */}
-            <div className={styles.comicBubbleRight}>
-              <span>LET&apos;S TALK!</span>
-            </div>
-          </Link>
+            <svg
+              className={styles.whatsappIcon}
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.2 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z" />
+            </svg>
+          </a>
 
           {/* Mobile Menu Toggle Button */}
           <button
@@ -247,16 +249,6 @@ export default function Header() {
               </Link>
             </li>
           ))}
-          <li>
-            <Link
-              href="/contact"
-              className={styles.mobileLink}
-              onClick={() => setIsOpen(false)}
-            >
-              <Mail size={20} />
-              <span>Contact Us</span>
-            </Link>
-          </li>
         </ul>
 
         <Link

@@ -50,9 +50,6 @@ export function SocialCloud({ className }: SocialCloudProps) {
     { icon: InstagramIcon, href: "https://www.instagram.com/krewmesh/", label: "Instagram" },
     { icon: LinkedInIcon, href: "https://linkedin.com/company/krew-mesh-agency", label: "LinkedIn" },
     { icon: XIcon, href: "https://x.com/KrewMesh", label: "X" },
-    { icon: FacebookIcon, href: "https://facebook.com", label: "Facebook" },
-    { icon: YoutubeIcon, href: "https://youtube.com", label: "YouTube" },
-    { icon: GithubIcon, href: "https://github.com", label: "GitHub" },
   ];
 
   return (

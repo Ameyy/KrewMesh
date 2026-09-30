@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "SaaS platforms"
   ],
   alternates: {
-    canonical: "/",
+    canonical: baseUrl,
   },
   openGraph: {
     type: "website",
@@ -43,10 +43,34 @@ export const metadata: Metadata = {
     title: "KREW / MESH | Creative Technology Studio",
     description: "Krew / Mesh is a modern creative-tech studio combining Branding, Graphic Design, UI/UX, Web Development, 3D Experiences, AI, SaaS and Digital Products.",
     siteName: "KREW / MESH",
+    locale: "en_US",
+    images: [
+      {
+        url: `${baseUrl}/krewmesh-logo.png`,
+        width: 1200,
+        height: 630,
+        alt: "KREW / MESH — Creative Technology Studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KREW / MESH | Creative Technology Studio",
+    description: "Creative-tech studio building brands, digital experiences, ultra-fast Next.js websites, AI products, and software.",
+    site: "@KrewMesh",
+    creator: "@KrewMesh",
+    images: [`${baseUrl}/krewmesh-logo.png`],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -63,12 +87,13 @@ const jsonLd = {
       "image": `${baseUrl}/krewmesh-logo.png`,
       "description": "Independent creative-technology studio specializing in Brand Identity, UI/UX Design, High-Performance Web Development, 3D Experiences, AI Solutions, and SaaS Platforms.",
       "telephone": "+91-920-983-9142",
-      "email": "hello@krewmesh.agency",
+      "email": "ameykulkarni1993@gmail.com",
       "priceRange": "₹₹",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Nagpur",
-        "addressRegion": "Maharashtra",
+        "streetAddress": "Bhawarkunwa",
+        "addressLocality": "Indore",
+        "addressRegion": "Madhya Pradesh",
         "addressCountry": "IN"
       },
       "areaServed": [
@@ -83,7 +108,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         "telephone": "+91-920-983-9142",
         "contactType": "customer service",
-        "email": "hello@krewmesh.agency",
+        "email": "ameykulkarni1993@gmail.com",
         "availableLanguage": ["English", "Hindi"]
       },
       "sameAs": [

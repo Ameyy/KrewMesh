@@ -130,7 +130,7 @@ export default async function ServicePage({ params }: PageProps) {
           name: "Krew / Mesh",
           url: "https://krewmesh.agency",
           telephone: "+919209839142",
-          email: "hello@krewmesh.agency",
+          email: "ameykulkarni1993@gmail.com",
         },
         areaServed: "Global",
         hasOfferCatalog: {

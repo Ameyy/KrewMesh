@@ -25,7 +25,7 @@ import { InstagramIcon } from "@/components/ui/footer-section-4-utils/social-clo
 export const metadata: Metadata = {
   title: "Sitemap & Website Directory | Krew / Mesh",
   description:
-    "Explore the complete website architecture and sitemap for Krew / Mesh. Browse our services, portfolio case studies, career openings, e-commerce demos, and Google Search Console indexing feeds.",
+    "Explore the complete website architecture for Krew / Mesh. Browse our services, portfolio case studies, career openings, and e-commerce demos.",
   keywords: [
     "Krew Mesh sitemap",
     "website directory",
@@ -101,7 +101,7 @@ export default function SitemapPage() {
     {
       title: "Frequently Asked Questions (FAQ)",
       href: "/faq",
-      desc: "Comprehensive guide to our studio philosophy, web build pricing packages, process timelines, Next.js tech stack, and 100% IP code ownership.",
+      desc: "Comprehensive guide to our studio philosophy, website pricing packages, process timelines, Next.js tech stack, and 100% IP code ownership.",
       badge: "Knowledge Base",
       priority: "0.8",
       changefreq: "Weekly",
@@ -164,6 +164,13 @@ export default function SitemapPage() {
       liveUrl: "https://3dprint.krewmesh.agency/",
       desc: "Additive manufacturing studio portal with WebGL 3D model viewer, automated slicing estimation, and order tracking.",
       badge: "Prototyping",
+    },
+    {
+      title: "Gym & Fitness Club Architecture",
+      href: "/demo/gym",
+      liveUrl: "https://gym.krewmesh.agency",
+      desc: "High-energy fitness club platform featuring interactive class schedules, trainer rosters, and membership conversion funnels.",
+      badge: "Fitness & Sports",
     },
   ];
 

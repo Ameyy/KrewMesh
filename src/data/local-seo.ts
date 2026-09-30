@@ -59,9 +59,9 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     title: "Website Design Company in Indore",
     shortTitle: "Web Design Indore",
     badge: "Indore Design Studio",
-    seoTitle: "Best Website Design Company in Indore | UI/UX & Web Design | Krew / Mesh",
+    seoTitle: "Website Design Company in Indore | Krew / Mesh",
     metaDescription:
-      "Leading website design company in Indore. We craft high-conversion, modern websites, custom UI/UX, and mobile-responsive digital experiences for Indore businesses, D2C brands, and startups.",
+      "Leading website design company in Indore. We craft high-conversion, mobile-responsive websites and custom UI/UX design for ambitious brands.",
     seoKeywords: [
       "website design indore",
       "web design company in indore",
@@ -157,9 +157,9 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     title: "Website Development Company in Indore",
     shortTitle: "Web Development Indore",
     badge: "Full-Stack Web Engineering",
-    seoTitle: "Top Website Development Company in Indore | Next.js & Full-Stack | Krew / Mesh",
+    seoTitle: "Website Development Company in Indore | Krew / Mesh",
     metaDescription:
-      "Looking for the best website development company in Indore? Krew / Mesh builds ultra-fast Next.js websites, web apps, SaaS platforms, and custom digital portals with 99+ Core Web Vitals.",
+      "Looking for top website development in Indore? Krew / Mesh builds ultra-fast Next.js websites, SaaS platforms, and custom digital portals.",
     seoKeywords: [
       "website development indore",
       "web development company in indore",
@@ -255,9 +255,9 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     title: "Framer Agency in Indore",
     shortTitle: "Framer Agency Indore",
     badge: "Framer Motion & No-Code Specialists",
-    seoTitle: "Top Framer Agency in Indore | Framer Design & Development | Krew / Mesh",
+    seoTitle: "Framer Agency & Design in Indore | Krew / Mesh",
     metaDescription:
-      "Looking for an expert Framer agency in Indore? Krew / Mesh creates interactive, kinetic Framer websites with smooth animations, CMS, and lightning-fast turnaround for modern brands.",
+      "Looking for an expert Framer agency in Indore? Krew / Mesh creates interactive, kinetic Framer websites with silky animations and rapid launch.",
     seoKeywords: [
       "framer agency indore",
       "framer website design indore",
@@ -353,9 +353,9 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     title: "Website Design Company in Pune",
     shortTitle: "Web Design Pune",
     badge: "Pune Creative Tech Studio",
-    seoTitle: "Best Website Design Company in Pune | UI/UX & Web Design | Krew / Mesh",
+    seoTitle: "Website Design Company in Pune | Krew / Mesh",
     metaDescription:
-      "Premier website design company in Pune. We build custom, conversion-driven websites, sophisticated UI/UX design, and Next.js digital platforms for Pune's tech startups, IT firms, and modern brands.",
+      "Premier website design company in Pune. We build custom, conversion-driven websites and UI/UX digital platforms for Pune tech startups and brands.",
     seoKeywords: [
       "website design pune",
       "web design company in pune",
@@ -451,9 +451,9 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     title: "Website Development Company in Pune",
     shortTitle: "Web Development Pune",
     badge: "Full-Stack Web Engineering",
-    seoTitle: "Top Website Development Company in Pune | Next.js & Full-Stack | Krew / Mesh",
+    seoTitle: "Website Development Company in Pune | Krew / Mesh",
     metaDescription:
-      "Premier website development company in Pune. We engineer high-speed Next.js websites, complex SaaS applications, and enterprise web solutions for Pune IT leaders and startups.",
+      "Premier website development company in Pune. We engineer high-speed Next.js websites, complex SaaS apps, and enterprise solutions for IT leaders.",
     seoKeywords: [
       "website development pune",
       "web development company in pune",
@@ -549,9 +549,9 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     title: "UI/UX Design Studio in Pune",
     shortTitle: "UI/UX Design Pune",
     badge: "Spatial Product & UI/UX Design",
-    seoTitle: "Best UI/UX Design Studio in Pune | Product Design & Design Systems | Krew / Mesh",
+    seoTitle: "UI/UX Design Studio in Pune | Krew / Mesh",
     metaDescription:
-      "Top UI/UX design studio in Pune. We design intuitive digital products, mobile apps, SaaS dashboards, and design systems for ambitious tech companies in Pune.",
+      "Leading UI/UX design studio in Pune. We design intuitive digital products, mobile apps, SaaS dashboards, and design systems for ambitious brands.",
     seoKeywords: [
       "ui ux design pune",
       "ui ux designer in pune",

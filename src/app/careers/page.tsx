@@ -39,13 +39,13 @@ interface JobPosition {
 const jobPositions: JobPosition[] = [
   {
     id: "sales-executive-telecalling",
-    title: "Sales Executive (Telecalling)",
+    title: "Sales Executive & Client Outreach (Telecalling)",
     department: "Sales",
     type: "Full-Time",
     openings: "2 Openings",
     location: "India / Hybrid / Remote",
     experience: "0 - 2 Years",
-    description: "Drive agency business growth through outbound telecalling, client outreach, lead qualification, and pitching creative tech solutions (branding, web development, UI/UX, AI products).",
+    description: "Drive agency business growth through outbound client outreach, telecalling, lead qualification, and pitching modern creative technology solutions.",
     responsibilities: [
       "Conduct outbound calling to potential clients, businesses, and startups to pitch agency services",
       "Qualify incoming leads, understand client digital requirements, and schedule discovery calls",

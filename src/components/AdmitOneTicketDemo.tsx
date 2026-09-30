@@ -219,6 +219,38 @@ const DEMOS: DemoItem[] = [
       inkColor: "#1e1b4b",
       watermarkColor: "#e0e7ff"
     }
+  },
+  {
+    id: 7,
+    label: "Gym & Fitness",
+    name: "DEMO WEBSITE IS LIVE NOW",
+    presenter: "KREW / MESH • GYM & FITNESS",
+    event: "WATCH ANYTIME",
+    venue: "TRAINING & CLUB SCHEDULE",
+    dates: "WATCH ANYTIME",
+    stubText: "LIVE NOW",
+    watermark: "FITNESS",
+    url: "https://gym.krewmesh.agency",
+    isLive: true,
+    texture: {
+      ...TICKET_TEXTURE,
+      shape: "dots",
+      colorBack: "#dc2626",
+      colorFront: "#f87171",
+      colorHighlight: "#fecaca",
+      speed: 0.45
+    },
+    gradient: {
+      ...TICKET_GRADIENT,
+      colorLight: "#fecaca",
+      colorMid: "#f87171",
+      colorDark: "#dc2626"
+    },
+    layout: {
+      ...TICKET_LAYOUT,
+      inkColor: "#450a0a",
+      watermarkColor: "#fee2e2"
+    }
   }
 ];
 
@@ -259,11 +291,11 @@ export default function AdmitOneTicketDemo() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffc691] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ef671c]"></span>
           </span>
-          Watch Demo Live On This Ticket
+          Watch Live Demo On This Ticket
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#ffc691] uppercase display-font leading-tight">
-          Watch Demo Live On This Ticket
+          Watch Live Demo On This Ticket
         </h2>
 
         {/* Demo selector buttons */}

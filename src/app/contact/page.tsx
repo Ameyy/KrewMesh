@@ -31,13 +31,24 @@ export default function Contact() {
           setFormData(prev => ({ ...prev, service: matched }));
         }
       } else if (packageParam) {
-        const pkgNames: Record<string, string> = {
-          fastforward: "FASTFORWARD (₹9,999)",
-          deepweb: "DEEPWEB (₹19,999)",
-          ecom: "ECOM (₹29,999)",
-          fullsend: "FULL SEND (₹49,999+)",
+        const currencyParam = (params.get("currency") || "INR").toUpperCase();
+        const priceMap: Record<string, Record<string, string>> = {
+          INR: { fastforward: "₹9,999", deepweb: "₹19,999", ecom: "₹29,999", fullsend: "₹49,999+" },
+          USD: { fastforward: "$149", deepweb: "$299", ecom: "$449", fullsend: "$749+" },
+          EUR: { fastforward: "€139", deepweb: "€279", ecom: "€419", fullsend: "€699+" },
+          GBP: { fastforward: "£119", deepweb: "£239", ecom: "£359", fullsend: "£599+" },
+          AED: { fastforward: "AED 549", deepweb: "AED 1,099", ecom: "AED 1,649", fullsend: "AED 2,749+" },
         };
-        const selectedPkg = pkgNames[packageParam.toLowerCase()] || packageParam.toUpperCase();
+        const activePrices = priceMap[currencyParam] || priceMap.INR;
+        const key = packageParam.toLowerCase();
+        const priceDisplay = activePrices[key] ? ` (${activePrices[key]})` : "";
+        const pkgNames: Record<string, string> = {
+          fastforward: `FASTFORWARD${priceDisplay}`,
+          deepweb: `DEEPWEB${priceDisplay}`,
+          ecom: `ECOM${priceDisplay}`,
+          fullsend: `FULL SEND${priceDisplay}`,
+        };
+        const selectedPkg = pkgNames[key] || packageParam.toUpperCase();
         setFormData(prev => ({
           ...prev,
           service: "development",
@@ -57,8 +68,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@krewmesh.agency",
-      href: "mailto:hello@krewmesh.agency",
+      value: "ameykulkarni1993@gmail.com",
+      href: "mailto:ameykulkarni1993@gmail.com",
     },
     {
       icon: InstagramIcon,
@@ -81,8 +92,8 @@ export default function Contact() {
     {
       icon: MapPin,
       label: "Office",
-      value: "Nagpur, India",
-      href: "https://maps.app.goo.gl/B2rDStGkXQ8Z9JdJ6",
+      value: "Bhawarkunwa, Indore, India",
+      href: "https://maps.google.com/?q=Bhawarkua,+Indore,+Madhya+Pradesh,+India",
     },
   ];
 

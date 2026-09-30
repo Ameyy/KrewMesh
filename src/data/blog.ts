@@ -1,6 +1,8 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  seoTitle?: string;
+  metaDescription?: string;
   excerpt: string;
   category: string;
   tags: string[];
@@ -26,6 +28,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nextjs-vs-wordpress-for-modern-businesses",
     title: "Next.js vs. WordPress: Why Modern Businesses Are Migrating In 2026",
+    seoTitle: "Next.js vs WordPress: Why Modern Businesses Migrate | Krew",
+    metaDescription: "Discover why businesses replace legacy WordPress with Next.js to achieve sub-second speeds, 99+ Core Web Vitals, and eliminate plugins.",
     excerpt: "Discover why fast-scaling brands are replacing legacy WordPress sites with high-performance Next.js architectures to cut bounce rates, achieve 99+ Core Web Vitals, and eliminate plugin vulnerabilities.",
     category: "Web Engineering",
     tags: ["Next.js", "WordPress", "Core Web Vitals", "Web Development", "PageSpeed"],
@@ -103,6 +107,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "llm-geo-ai-search-optimization-guide",
     title: "LLM GEO: How to Optimize Your Website for ChatGPT, Gemini & Perplexity",
+    seoTitle: "LLM GEO: Optimize for ChatGPT & Perplexity | Krew",
+    metaDescription: "Learn how Generative Engine Optimization (GEO) works and how to structure your brand to be cited and recommended by AI search engines.",
     excerpt: "Learn how Generative Engine Optimization (GEO) works and how to structure your brand's digital presence to be cited and recommended by AI search engines.",
     category: "AI & Search Strategy",
     tags: ["LLM GEO", "AI Search", "ChatGPT", "Perplexity", "Semantic SEO", "JSON-LD"],
@@ -184,6 +190,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "design-systems-roi-for-startups-and-enterprises",
     title: "The ROI of Design Systems: Why Fast-Growing Tech Brands Invest Early",
+    seoTitle: "ROI of Design Systems for Tech Brands | Krew / Mesh",
+    metaDescription: "Explore how unified Figma design tokens and component libraries slash frontend dev time by 50% and keep brand consistency across apps.",
     excerpt: "Explore how unified Figma design tokens and reusable component libraries slash frontend development time by 50% and maintain brand consistency across web and mobile products.",
     category: "UI/UX & Product Design",
     tags: ["Design Systems", "Figma", "UI/UX Design", "Frontend Engineering", "Product Design"],
@@ -259,7 +267,9 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "ai-agents-for-enterprise-workflows-2026",
-    title: "Autonomous AI Agents in Production: Beyond Simple Chatbots to Real Business Automation",
+    title: "Autonomous AI Agents in Production: Enterprise Automation",
+    seoTitle: "Autonomous AI Agents for Enterprises | Krew / Mesh",
+    metaDescription: "Why enterprises replace static chatbots with multi-agent workflows that run database actions, triage support tickets, and automate operations.",
     excerpt: "Why forward-looking enterprises are replacing static chatbots with autonomous multi-agent pipelines that execute database actions, triage support tickets, and automate revenue operations.",
     category: "AI & Search Strategy",
     tags: ["AI Agents", "Autonomous Systems", "Enterprise AI", "LangChain", "Automation"],
@@ -338,7 +348,9 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "3d-webgl-creative-tech-for-luxury-brands",
-    title: "WebGL & Three.js in Modern Commerce: Why Luxury Brands Use Interactive 3D",
+    title: "WebGL & Three.js in Modern Commerce: Interactive 3D",
+    seoTitle: "WebGL & Three.js in Modern Commerce | Krew / Mesh",
+    metaDescription: "Learn how real-time 3D configurators, WebGL physics, and GPU motion elevate average order value and brand prestige without hurting speeds.",
     excerpt: "How real-time 3D configurators, WebGL physics, and GPU-accelerated motion experiences elevate average order value and brand prestige without hurting load times.",
     category: "Creative Technology",
     tags: ["Three.js", "WebGL", "Interactive 3D", "Creative Tech", "eCommerce"],
@@ -414,7 +426,9 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "saas-architecture-scaling-multi-tenant-2026",
-    title: "Scaling SaaS from 0 to 100k Users: Next.js, Edge Functions & Tenant Isolation",
+    title: "Scaling SaaS from 0 to 100k Users: Next.js & Edge",
+    seoTitle: "Scaling SaaS Architecture: Next.js & Edge | Krew",
+    metaDescription: "A tactical guide to architecting resilient, multi-tenant cloud platforms with database tenancy models, sub-second auth, and automated Stripe billing.",
     excerpt: "A tactical guide to architecting resilient, multi-tenant cloud platforms with database tenancy models, sub-second auth, and automated Stripe billing portals.",
     category: "Web Engineering",
     tags: ["SaaS Architecture", "Next.js", "Multi-Tenancy", "PostgreSQL", "Cloud Scale"],

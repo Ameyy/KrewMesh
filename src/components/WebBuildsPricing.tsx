@@ -11,11 +11,84 @@ import {
   Sparkles
 } from 'lucide-react';
 
+export type CurrencyCode = 'INR' | 'USD' | 'EUR' | 'GBP' | 'AED';
+
+export interface CurrencyConfig {
+  code: CurrencyCode;
+  symbol: string;
+  label: string;
+  flag: string;
+  prices: Record<string, string>; // package id -> formatted price
+}
+
+export const CURRENCIES: Record<CurrencyCode, CurrencyConfig> = {
+  INR: {
+    code: 'INR',
+    symbol: '₹',
+    label: 'INR (₹)',
+    flag: '🇮🇳',
+    prices: {
+      fastforward: '₹9,999',
+      deepweb: '₹19,999',
+      ecom: '₹29,999',
+      fullsend: '₹49,999+',
+    },
+  },
+  USD: {
+    code: 'USD',
+    symbol: '$',
+    label: 'USD ($)',
+    flag: '🇺🇸',
+    prices: {
+      fastforward: '$149',
+      deepweb: '$299',
+      ecom: '$449',
+      fullsend: '$749+',
+    },
+  },
+  EUR: {
+    code: 'EUR',
+    symbol: '€',
+    label: 'EUR (€)',
+    flag: '🇪🇺',
+    prices: {
+      fastforward: '€139',
+      deepweb: '€279',
+      ecom: '€419',
+      fullsend: '€699+',
+    },
+  },
+  GBP: {
+    code: 'GBP',
+    symbol: '£',
+    label: 'GBP (£)',
+    flag: '🇬🇧',
+    prices: {
+      fastforward: '£119',
+      deepweb: '£239',
+      ecom: '£359',
+      fullsend: '£599+',
+    },
+  },
+  AED: {
+    code: 'AED',
+    symbol: 'AED ',
+    label: 'AED',
+    flag: '🇦🇪',
+    prices: {
+      fastforward: 'AED 549',
+      deepweb: 'AED 1,099',
+      ecom: 'AED 1,649',
+      fullsend: 'AED 2,749+',
+    },
+  },
+};
+
 type PackageItem = {
   id: string;
   number: string;
   name: string;
-  price: string;
+  priceINR: string;
   priceLabel: string;
   whatItMeans: string;
   description: string;
@@ -32,7 +105,7 @@ const PACKAGES: PackageItem[] = [
     id: 'fastforward',
     number: '01',
     name: 'FASTFORWARD',
-    price: '₹9,999',
+    priceINR: '₹9,999',
     priceLabel: 'Starting',
     whatItMeans: 'Get online. Fast.',
     description: 'For businesses that need a clean, high-converting presence without a long turnaround.',
@@ -54,7 +127,7 @@ const PACKAGES: PackageItem[] = [
     id: 'deepweb',
     number: '02',
     name: 'DEEPWEB',
-    price: '₹19,999',
+    priceINR: '₹19,999',
     priceLabel: 'Starting',
     whatItMeans: 'More depth. More control.',
     description: 'A serious multi-page business website built for brand authority and lead conversion.',
@@ -78,7 +151,7 @@ const PACKAGES: PackageItem[] = [
     id: 'ecom',
     number: '03',
     name: 'ECOM',
-    price: '₹29,999',
+    priceINR: '₹29,999',
     priceLabel: 'Starting',
     whatItMeans: 'Digital storefront.',
     description: 'Engineered for seamless transactions, product storytelling, and frictionless checkout.',
@@ -100,7 +173,7 @@ const PACKAGES: PackageItem[] = [
     id: 'fullsend',
     number: '04',
     name: 'FULL SEND',
-    price: '₹49,999+',
+    priceINR: '₹49,999+',
     priceLabel: 'Starting',
     whatItMeans: 'Bespoke digital craft.',
     description: 'Zero templates. Fully bespoke interactive experience built around your brand identity.',
@@ -137,6 +210,7 @@ const COMPARISON_ROWS = [
 ];
 
 export default function WebBuildsPricing() {
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
   const [showComparison, setShowComparison] = useState(false);
 
@@ -146,6 +220,8 @@ export default function WebBuildsPricing() {
       [id]: !prev[id],
     }));
   };
+
+  const activeCurrencyConfig = CURRENCIES[currency] || CURRENCIES.INR;
 
   return (
     <section id="packages" className="relative py-24 sm:py-32 bg-black text-white overflow-hidden scroll-mt-20">
@@ -158,9 +234,9 @@ export default function WebBuildsPricing() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20 space-y-3">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/[0.02] text-[11px] font-medium tracking-[0.2em] text-neutral-400 uppercase">
-            <span>Web Builds &amp; Engineering</span>
+            <span>Pricing &amp; Engineering</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white uppercase leading-[1.08]">
@@ -170,6 +246,40 @@ export default function WebBuildsPricing() {
           <p className="text-neutral-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
             Transparent, fixed-scope web engineering. Predictable delivery timelines with zero hidden retainers.
           </p>
+
+          {/* Currency Converter Switcher */}
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+            <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400">
+              Currency:
+            </span>
+            <div 
+              role="radiogroup" 
+              aria-label="Select currency for pricing"
+              className="inline-flex p-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md"
+            >
+              {(Object.keys(CURRENCIES) as CurrencyCode[]).map((code) => {
+                const isSelected = currency === code;
+                const item = CURRENCIES[code];
+                return (
+                  <button
+                    key={code}
+                    type="button"
+                    role="radio"
+                    aria-checked={isSelected}
+                    onClick={() => setCurrency(code)}
+                    className={`relative px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
+                      isSelected
+                        ? 'bg-white text-black shadow-md scale-[1.02]'
+                        : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
+                    }`}
+                  >
+                    <span className="text-xs leading-none">{item.flag}</span>
+                    <span>{code}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Minimal 4-Cards Grid with Laser-Aligned Baselines */}
@@ -220,8 +330,8 @@ export default function WebBuildsPricing() {
                   {/* 2. Price Row: Exact h-[64px] */}
                   <div className="h-[64px] flex flex-col justify-center">
                     <div className="flex items-baseline gap-1.5 leading-none">
-                      <span className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-                        {pkg.price}
+                      <span className="text-3xl sm:text-4xl font-bold tracking-tight text-white tabular-nums">
+                        {activeCurrencyConfig.prices[pkg.id] || pkg.priceINR}
                       </span>
                       <span className="text-xs text-neutral-500 uppercase tracking-wider">
                         / {pkg.priceLabel}
@@ -249,7 +359,7 @@ export default function WebBuildsPricing() {
                 {/* Actions: Direct CTA + Polished Deliverables Toggle Button (Laser Aligned) */}
                 <div className="mt-5 pt-5 border-t border-white/[0.08] space-y-2.5">
                   <Link
-                    href={`/contact?package=${pkg.id}`}
+                    href={`/contact?package=${pkg.id}&currency=${currency}`}
                     onClick={(e) => e.stopPropagation()}
                     className={`w-full h-11 px-4 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2 ${
                       isFeatured

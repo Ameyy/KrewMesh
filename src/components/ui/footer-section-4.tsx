@@ -95,6 +95,7 @@ export default function Footer4() {
         { label: "Interior Design", href: "https://inter.krewmesh.agency/" },
         { label: "Medical Clinic", href: "https://clinic.krewmesh.agency" },
         { label: "Cafe & Roastery", href: "https://cafe.krewmesh.agency" },
+        { label: "Gym & Fitness", href: "https://gym.krewmesh.agency" },
       ],
     },
     {
@@ -115,7 +116,7 @@ export default function Footer4() {
         { label: "Careers", href: "/careers" },
         { label: "Start a Project", href: "/contact" },
         { label: "Cookie Settings", href: "#cookie-settings" },
-        { label: "hello@krewmesh.agency", href: "mailto:hello@krewmesh.agency" },
+        { label: "ameykulkarni1993@gmail.com", href: "mailto:ameykulkarni1993@gmail.com" },
         { label: "+91 920 983 9142", href: "tel:+919209839142" },
       ],
     },
@@ -186,7 +187,11 @@ export default function Footer4() {
               >
                 <img
                   src="/krewmesh-logo-white.png"
-                  alt="Krew / Mesh Logo"
+                  alt="Krew / Mesh — White Vector Studio Emblem"
+                  width={1024}
+                  height={177}
+                  loading="lazy"
+                  decoding="async"
                   className="h-9 md:h-11 w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
                 />
               </Link>

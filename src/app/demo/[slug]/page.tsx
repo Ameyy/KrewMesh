@@ -8,6 +8,8 @@ import FooterSection from "@/components/ui/footer-section-4";
 interface DemoDetail {
   slug: string;
   title: string;
+  seoTitle?: string;
+  metaDescription?: string;
   category: string;
   tagline: string;
   description: string;
@@ -21,6 +23,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   ecomm: {
     slug: "ecomm",
     title: "E-Commerce Storefront Demo",
+    seoTitle: "E-Commerce Storefront Demo | Krew / Mesh",
+    metaDescription: "A high-performance modern e-commerce storefront with sub-second page loads, interactive cart drawer, and frictionless checkout integrations.",
     category: "Retail & Direct-to-Consumer",
     tagline: "High-conversion digital storefront & frictionless checkout",
     liveUrl: "https://ecomm.krewmesh.agency/",
@@ -44,6 +48,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   clinic: {
     slug: "clinic",
     title: "Clinic Website Demo",
+    seoTitle: "Clinic Website Demo | Krew / Mesh",
+    metaDescription: "An accessible digital experience for medical clinics and healthcare practices with online booking, doctor profiles, and patient-first UX.",
     category: "Healthcare & Patient Care",
     tagline: "Modern healthcare practice & patient appointment platform",
     liveUrl: "https://clinic.krewmesh.agency",
@@ -67,6 +73,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   business: {
     slug: "business",
     title: "Business Website Demo",
+    seoTitle: "Business Enterprise Website Demo | Krew / Mesh",
+    metaDescription: "A sleek, conversion-focused enterprise web architecture for consulting firms and B2B technology companies with interactive trust funnels.",
     category: "Corporate & Enterprise",
     tagline: "High-credibility corporate presence & commercial showcase",
     description:
@@ -89,6 +97,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   cafe: {
     slug: "cafe",
     title: "Cafe Landing Page Demo",
+    seoTitle: "Cafe & Hospitality Landing Page Demo | Krew / Mesh",
+    metaDescription: "An immersive digital storefront for specialty coffee roasters and cafes with dynamic seasonal menus and table reservation workflows.",
     category: "Hospitality & Specialty Food",
     tagline: "Atmospheric storytelling, artisan menu & table reservations",
     liveUrl: "https://cafe.krewmesh.agency",
@@ -112,6 +122,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   "interior-design": {
     slug: "interior-design",
     title: "Interior Design Website Demo",
+    seoTitle: "Interior Design Showcase Demo | Krew / Mesh",
+    metaDescription: "An editorial-grade spatial design portfolio for architects and interior decorators featuring full-bleed galleries and project showcases.",
     category: "Architecture & Spatial Design",
     tagline: "Editorial visual portfolio & bespoke project showcase",
     liveUrl: "https://inter.krewmesh.agency/",
@@ -135,6 +147,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   photography: {
     slug: "photography",
     title: "Photography Portfolio Demo",
+    seoTitle: "Photography Portfolio Demo | Krew / Mesh",
+    metaDescription: "A cinematic portfolio platform for photographers and visual artists featuring responsive masonry grids, client proofing, and print store.",
     category: "Visual Arts & Photography",
     tagline: "High-resolution visual archive, proofing galleries & print orders",
     liveUrl: "https://wedtale.krewmesh.agency/",
@@ -158,6 +172,8 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   "3d-print-studio": {
     slug: "3d-print-studio",
     title: "3D Print Studio Demo",
+    seoTitle: "3D Print Studio & Prototyping Demo | Krew / Mesh",
+    metaDescription: "A modern rapid prototyping portal with interactive 3D model viewer, automated volume calculation, instant quoting, and batch tracking.",
     category: "Additive Manufacturing & Prototyping",
     tagline: "Instant STL/CAD file quoting, additive manufacturing & engineering lab",
     liveUrl: "https://3dprint.krewmesh.agency/",
@@ -175,6 +191,31 @@ const DEMO_DATA: Record<string, DemoDetail> = {
       "Automated Volumetric Slicing & Price Estimator Engine",
       "Production Batch Tracking & Client Order Portal",
       "Secure Enterprise NDA & CAD File Upload Pipeline"
+    ],
+    estimatedLaunch: "Live Now"
+  },
+  gym: {
+    slug: "gym",
+    title: "Gym & Fitness Club Demo",
+    seoTitle: "Gym & Fitness Club Web Demo | Krew / Mesh",
+    metaDescription: "High-energy gym and fitness club web demo with class scheduling, personal trainer profiles, membership tier comparisons, and trial booking.",
+    category: "Fitness, Wellness & Sports",
+    tagline: "High-energy fitness club platform, class scheduling & member funnels",
+    liveUrl: "https://gym.krewmesh.agency",
+    description:
+      "A high-energy, conversion-engineered digital platform built for premium gymnasiums, fitness clubs, and boutique training studios. Features interactive class schedules, trainer rosters, membership plan comparison funnels, and frictionless free-pass trials.",
+    features: [
+      "Interactive weekly class calendar with trainer tags and difficulty filters",
+      "Tiered membership pricing matrix with monthly vs annual billing toggle",
+      "Certified coach and personal trainer roster with specialty bios",
+      "Free 1-day pass booking funnel with automated SMS & calendar confirmation",
+      "Sub-second mobile speed with mobile-first locker room & club schedule UX"
+    ],
+    deliverables: [
+      "Custom Next.js Fitness Club & Gym Architecture",
+      "Live Class Schedule & Trainer Management CMS",
+      "Stripe / Razorpay Membership Subscription Pipeline",
+      "Local Gym SEO & Google Business Profile Schema"
     ],
     estimatedLaunch: "Live Now"
   }
@@ -197,9 +238,12 @@ export async function generateMetadata({
     return { title: "Demo Coming Soon | Krew / Mesh" };
   }
   const pageUrl = `${baseUrl}/demo/${slug}`;
+  const demoTitle = demo.seoTitle || `${demo.title} — Architecture & Showcase | Krew / Mesh`;
+  const demoDescription = demo.metaDescription || demo.description;
+
   return {
-    title: `${demo.title} — Architecture & Showcase | Krew / Mesh`,
-    description: demo.description,
+    title: demoTitle,
+    description: demoDescription,
     keywords: [
       demo.title,
       `${demo.category} demo`,
@@ -212,16 +256,16 @@ export async function generateMetadata({
       canonical: pageUrl,
     },
     openGraph: {
-      title: `${demo.title} — Architecture & Showcase | Krew / Mesh`,
-      description: demo.description,
+      title: demoTitle,
+      description: demoDescription,
       url: pageUrl,
       siteName: "KREW / MESH",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${demo.title} — Architecture & Showcase | Krew / Mesh`,
-      description: demo.description,
+      title: demoTitle,
+      description: demoDescription,
     },
   };
 }
@@ -351,7 +395,7 @@ export default async function DemoComingSoonPage({
           <div className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-neutral-950/60 backdrop-blur-sm space-y-6">
             <div className="flex items-center gap-2 text-white font-bold text-lg">
               <Zap size={18} className="text-[#ffc691]" />
-              <h3>What&apos;s Included In This Architecture</h3>
+              <h2 className="text-lg font-bold text-white">What&apos;s Included In This Architecture</h2>
             </div>
             <ul className="space-y-3.5">
               {demo.features.map((feat, idx) => (
@@ -367,7 +411,7 @@ export default async function DemoComingSoonPage({
           <div className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-neutral-950/60 backdrop-blur-sm space-y-6">
             <div className="flex items-center gap-2 text-white font-bold text-lg">
               <ShieldCheck size={18} className="text-[#ffc691]" />
-              <h3>Production Scope &amp; Tech Stack</h3>
+              <h2 className="text-lg font-bold text-white">Production Scope &amp; Tech Stack</h2>
             </div>
             <ul className="space-y-3.5">
               {demo.deliverables.map((deliv, idx) => (

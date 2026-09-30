@@ -227,7 +227,15 @@ export function KineticPhotoStack() {
                   type="button"
                 >
                   <span className="kps-photo">
-                    <img alt={`${photo.title} — ${photo.place} at Krew / Mesh`} draggable="false" src={photo.src} />
+                    <img
+                      alt={`${photo.title} — ${photo.place} at Krew / Mesh`}
+                      draggable="false"
+                      src={photo.src}
+                      width={photo.src.includes('dinesh') ? 1024 : 682}
+                      height={1024}
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <span className="kps-shine" />
                   </span>
                   <span className="kps-card-copy">
@@ -268,7 +276,14 @@ export function KineticPhotoStack() {
               <Icon name="close" />
             </button>
             <figure onClick={(event) => event.stopPropagation()}>
-              <img alt={`${focus.title} — ${focus.place} at Krew / Mesh`} src={focus.src} />
+              <img
+                alt={`${focus.title} — ${focus.place} at Krew / Mesh`}
+                src={focus.src}
+                width={focus.src.includes('dinesh') ? 1024 : 682}
+                height={1024}
+                loading="lazy"
+                decoding="async"
+              />
               <figcaption>
                 <div>
                   <b>{focus.title}</b>

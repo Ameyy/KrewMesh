@@ -122,10 +122,10 @@ export default function CTAWithVerticalMarquee() {
             {/* Left Content */}        
             <div className="flex-1 w-full lg:w-auto relative z-10">
               <div className="space-y-8 max-w-xl text-foreground">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-fade-in-up [animation-delay:200ms] text-foreground">
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-fade-in-up [animation-delay:200ms] text-foreground">
                   HAVE AN IDEA?<br />
-                  <span className="text-secondary">LET'S MAKE IT REAL.</span>
-                </h2>
+                  <span className="text-secondary">LET&apos;S MAKE IT REAL.</span>
+                </h3>
                 <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
                   From concept to deployment, we build digital products that scale and stand out.
                 </p>

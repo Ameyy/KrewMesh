@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const postUrl = `${siteUrl}/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | Krew / Mesh`,
-    description: post.excerpt,
+    title: post.seoTitle || `${post.title} | Krew / Mesh`,
+    description: post.metaDescription || post.excerpt,
     keywords: post.tags,
     alternates: {
       canonical: postUrl,

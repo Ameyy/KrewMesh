@@ -8,7 +8,7 @@ import { ArrowLeft, ArrowRight, Sparkles, Compass, Zap, Layers, Users2 } from "l
 export const metadata: Metadata = {
   title: "About Us | Creative Technology Studio | KREW / MESH",
   description:
-    "Learn the story, core philosophy, and meet the senior creative team behind Krew / Mesh — an independent studio combining bold branding, spatial UI/UX design, and Next.js engineering.",
+    "Meet the team behind Krew / Mesh. We unite brand strategy, spatial UI/UX design, and Next.js engineering to craft world-class digital experiences.",
   keywords: [
     "About Krew Mesh",
     "creative studio team",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "design code convergence"
   ],
   alternates: {
-    canonical: "/about",
+    canonical: "https://krewmesh.agency/about",
   },
   openGraph: {
     title: "About Us | KREW / MESH Studio",

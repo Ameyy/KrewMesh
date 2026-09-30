@@ -109,6 +109,7 @@ export default function FAQContent() {
       </div>
 
       {/* Accordion — Completely Borderless & Box-Free */}
+      <h2 className="sr-only">General Agency Questions &amp; Answers</h2>
       <div className="max-w-3xl mx-auto space-y-1">
         {filteredFAQs.length === 0 ? (
           <div className="text-center py-16 px-4">
@@ -183,9 +184,9 @@ export default function FAQContent() {
 
       {/* Bottom Section — Completely Borderless */}
       <div className="max-w-xl mx-auto mt-24 text-center space-y-4">
-        <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
           Still have a question?
-        </h3>
+        </h2>
         <p className="text-sm text-neutral-400 leading-relaxed">
           Need details on pricing, custom features, or project scheduling? Reach out directly and we will help you plan your next steps.
         </p>

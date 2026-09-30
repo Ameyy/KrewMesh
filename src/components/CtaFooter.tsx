@@ -33,7 +33,15 @@ export default function CtaFooter() {
           <div className={styles.brandCol}>
             <div className={styles.footerLogoWrapper}>
               <Link href="/" aria-label="KREW / MESH Home" title="KREW / MESH Home">
-                <img src="/logo.png" alt="KREW / MESH Logo" className={styles.footerLogoImg} />
+                <img
+                  src="/logo.png"
+                  alt="KREW / MESH — Creative Technology Studio Vector Wordmark"
+                  width={1024}
+                  height={374}
+                  loading="lazy"
+                  decoding="async"
+                  className={styles.footerLogoImg}
+                />
               </Link>
             </div>
             <p className={styles.footerDesc}>Creative Technology Studio</p>
@@ -42,7 +50,7 @@ export default function CtaFooter() {
           <div className={styles.linksCol}>
             <a href="/#work">Work</a>
             <a href="/#services">Services</a>
-            <a href="/#packages">Builds &amp; Pricing</a>
+            <a href="/#packages">Pricing</a>
             <a href="/about">About</a>
             <a href="/careers">Careers</a>
             <a href="/faq">FAQ</a>
@@ -65,7 +73,7 @@ export default function CtaFooter() {
             <a href="https://www.instagram.com/krewmesh/" target="_blank" rel="noopener noreferrer">Instagram (@krewmesh)</a>
             <a href="https://linkedin.com/company/krew-mesh-agency" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://x.com/KrewMesh" target="_blank" rel="noopener noreferrer">X (@KrewMesh)</a>
-            <a href="mailto:hello@krewmesh.agency">hello@krewmesh.agency</a>
+            <a href="mailto:ameykulkarni1993@gmail.com">ameykulkarni1993@gmail.com</a>
             <a href="tel:+919209839142">+91 920 983 9142</a>
           </div>
         </div>

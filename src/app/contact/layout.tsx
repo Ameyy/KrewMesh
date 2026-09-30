@@ -5,7 +5,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
 export const metadata: Metadata = {
   title: "Contact Us | Start a Project | KREW / MESH",
   description:
-    "Get in touch with Krew / Mesh to start a branding, UI/UX design, Next.js web build, or AI development project. Contact us via phone, email, or send a project inquiry.",
+    "Connect with Krew / Mesh to start your next branding, UI/UX design, or Next.js web build. Get in touch for a tailored proposal within 24 hours.",
   keywords: [
     "Contact Krew Mesh",
     "hire web development agency",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Nagpur web agency"
   ],
   alternates: {
-    canonical: "/contact",
+    canonical: `${baseUrl}/contact`,
   },
   openGraph: {
     title: "Contact Us | Start a Project | KREW / MESH",
@@ -42,12 +42,13 @@ const contactJsonLd = {
         "@type": ["Organization", "ProfessionalService"],
         "name": "Krew / Mesh",
         "telephone": "+91-920-983-9142",
-        "email": "hello@krewmesh.agency",
+        "email": "ameykulkarni1993@gmail.com",
         "url": baseUrl,
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Nagpur",
-          "addressRegion": "Maharashtra",
+          "streetAddress": "Bhawarkunwa",
+          "addressLocality": "Indore",
+          "addressRegion": "Madhya Pradesh",
           "addressCountry": "IN"
         }
       }

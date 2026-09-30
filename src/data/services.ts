@@ -55,7 +55,7 @@ export const servicesData: Record<string, ServiceData> = {
     badge: "Brand Identity & Design",
     seoTitle: "Brand Identity Design & Strategy Studio | Krew / Mesh",
     metaDescription:
-      "Build a memorable brand that stands out. We design professional logos, colors, fonts, and complete brand guidelines that build immediate trust with your customers.",
+      "Build a distinctive brand that stands out. We design professional logos, colors, typography, and guidelines that establish instant buyer trust.",
     seoKeywords: [
       "Brand identity design",
       "Logo design agency",
@@ -213,7 +213,7 @@ export const servicesData: Record<string, ServiceData> = {
     badge: "UI/UX & Product Design",
     seoTitle: "UI/UX & Website Design Studio | Krew / Mesh",
     metaDescription:
-      "Beautiful, user-friendly UI/UX design for websites, web applications, and mobile apps. We design intuitive interfaces that turn visitors into happy customers.",
+      "Modern, user-friendly UI/UX design for web and mobile. We design intuitive, high-converting interfaces that turn visitors into loyal customers.",
     seoKeywords: [
       "UI UX design studio",
       "Website design agency",
@@ -685,9 +685,9 @@ export const servicesData: Record<string, ServiceData> = {
     title: "AI Solutions & Smart Automation",
     shortTitle: "AI",
     badge: "AI & Smart Automation",
-    seoTitle: "AI Solutions & Smart Business Automation Studio | Krew / Mesh",
+    seoTitle: "AI Solutions & Business Automation Studio | Krew / Mesh",
     metaDescription:
-      "Automate repetitive tasks and improve customer support with smart AI tools. Custom 24/7 AI chat assistants, automated workflows, and private data search.",
+      "Automate repetitive tasks and elevate customer support with smart AI tools. Custom 24/7 AI chat assistants, automated workflows, and search.",
     seoKeywords: [
       "AI solutions for business",
       "Custom AI chat assistant",
@@ -843,9 +843,9 @@ export const servicesData: Record<string, ServiceData> = {
     title: "SaaS & Custom Web Software",
     shortTitle: "SaaS",
     badge: "SaaS Platforms & Software",
-    seoTitle: "Custom SaaS & Subscription Web Software Studio | Krew / Mesh",
+    seoTitle: "Custom SaaS & Web Software Development | Krew / Mesh",
     metaDescription:
-      "Turn your software idea into a profitable subscription platform. We build complete SaaS platforms with user logins, Stripe billing, and customer dashboards.",
+      "Transform your product idea into a profitable SaaS platform. We build complete cloud software with user auth, billing, and custom dashboards.",
     seoKeywords: [
       "SaaS development agency",
       "Custom SaaS software build",

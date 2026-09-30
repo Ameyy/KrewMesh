@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
 
 export const metadata: Metadata = {
-  title: "Careers | Join The Krew | KREW / MESH Studio",
+  title: "Careers & Open Positions | KREW / MESH Studio",
   description:
-    "Join an ambitious creative technology studio. Explore open full-time and remote roles in sales, telecalling, UI/UX design, Next.js web engineering, and vibecoding.",
+    "Join our creative technology studio. Explore open full-time and remote roles in sales, telecalling, UI/UX design, and Next.js web engineering.",
   keywords: [
     "Krew Mesh careers",
     "creative studio jobs",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "remote tech jobs"
   ],
   alternates: {
-    canonical: "/careers",
+    canonical: `${baseUrl}/careers`,
   },
   openGraph: {
     title: "Careers | Join The Krew | KREW / MESH Studio",
