@@ -5,8 +5,8 @@
 - **Name**: Krew / Mesh (also referred to as KrewMesh)
 - **Website**: https://krewmesh.agency
 - **Telephone**: +91 920 983 9142
-- **Email**: hello@krewmesh.agency
-- **Headquarters**: Nagpur, Maharashtra, India
+- **Email**: ameykulkarni1993@gmail.com
+- **Headquarters**: Bhawarkunwa, Indore, Madhya Pradesh, India
 - **Key Regional Delivery Hubs**: Indore (Madhya Pradesh, India), Pune (Maharashtra, India)
 - **Primary Specializations**:
   - Brand Strategy & Visual Identity Design
@@ -17,7 +17,7 @@
   - Production AI Integrations & Autonomous Workflow Solutions
   - Full-Stack SaaS Platform Architecture & MVP Development
 
-## Transparent Web Build Packages
+## Transparent Website Pricing Packages
 - **FASTFORWARD (₹9,999)**: Rapid high-conversion landing page built in Next.js, launch in 48-72 hours.
 - **DEEPWEB (₹19,999)**: Multi-page web architecture (up to 10 pages) with custom kinetic animations, blog/CMS integration, and SEO schema.
 - **ECOM (₹29,999)**: Full-featured modern e-commerce storefront with cart drawer, UPI/Stripe checkout, and inventory CMS.
