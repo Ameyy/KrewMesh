@@ -178,6 +178,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('config', 'G-CLVB54FXXP');
           `}
         </Script>
+        {/* Google AdSense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8386320818344791"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <CustomCursor />
         <main>{children}</main>
         <CTAWithVerticalMarquee />
