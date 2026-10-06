@@ -171,10 +171,27 @@ export default function CareersPage() {
     }
 
     setIsSubmitting(true);
+
+    const targetRole = formData.role || applyingForRole || "General Application";
+    const subject = encodeURIComponent(`Job Application: ${targetRole} - ${formData.name.trim()}`);
+    const body = encodeURIComponent(
+      `Role: ${targetRole}\n` +
+      `Name: ${formData.name.trim()}\n` +
+      `Email: ${formData.email.trim()}\n` +
+      `Portfolio / Profile / Resume Link: ${formData.portfolio.trim()}\n` +
+      `Phone: ${formData.resume?.trim() || "Not provided"}\n\n` +
+      `Note / Message:\n${formData.message?.trim() || "None"}`
+    );
+
+    const mailtoUrl = `mailto:ameykulkarni1993@gmail.com?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 750);
+      if (typeof window !== "undefined") {
+        window.location.href = mailtoUrl;
+      }
+    }, 400);
   };
 
   const handleResetForm = () => {
@@ -611,8 +628,8 @@ export default function CareersPage() {
 
                 <p className="text-[11px] text-center text-neutral-500 pt-1">
                   Prefer direct email? Send your resume &amp; details to{" "}
-                  <a href="mailto:careers@krewmesh.agency" className="text-neutral-300 underline hover:text-white">
-                    careers@krewmesh.agency
+                  <a href="mailto:ameykulkarni1993@gmail.com" className="text-neutral-300 underline hover:text-white">
+                    ameykulkarni1993@gmail.com
                   </a>
                 </p>
               </form>
