@@ -72,6 +72,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "google-adsense-account": "ca-pub-8386320818344791",
+  },
 };
 
 const jsonLd = {
@@ -149,6 +152,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
+        <meta name="google-adsense-account" content="ca-pub-8386320818344791" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="author" href="https://krewmesh.agency/about" />
         <script

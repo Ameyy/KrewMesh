@@ -17,6 +17,9 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: [
+          "Mediapartners-Google",
+          "AdsBot-Google",
+          "AdsBot-Google-Mobile",
           "Googlebot",
           "Googlebot-Image",
           "Googlebot-News",
