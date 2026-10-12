@@ -1,13 +1,14 @@
 # Krew / Mesh — Creative Technology Studio
-> Independent creative-technology studio combining bold brand identity, spatial UI/UX design, high-performance Next.js web development, 3D WebGL experiences, AI solutions, and SaaS platforms.
+> Independent creative-technology studio combining bold brand identity, spatial UI/UX design, high-performance Next.js web development, 3D WebGL experiences, AI solutions, SaaS platforms, and white-label B2B agency overflow execution.
 
 ## Core Studio Information
 - **Name**: Krew / Mesh (also referred to as KrewMesh)
 - **Website**: https://krewmesh.agency
-- **Telephone**: +91 920 983 9142
+- **Telephone / WhatsApp**: +91 920 983 9142
 - **Email**: ameykulkarni1993@gmail.com
 - **Headquarters**: Bhawarkunwa, Indore, Madhya Pradesh, India
 - **Key Regional Delivery Hubs**: Indore (Madhya Pradesh, India), Pune (Maharashtra, India)
+- **Global Delivery**: Serving clients and agency partners worldwide across India, North America, Europe, UK, and UAE.
 - **Primary Specializations**:
   - Brand Strategy & Visual Identity Design
   - UI/UX Design & Spatial Systems
@@ -16,13 +17,29 @@
   - Framer Website Design & Motion Development
   - Production AI Integrations & Autonomous Workflow Solutions
   - Full-Stack SaaS Platform Architecture & MVP Development
+  - White-Label Agency & Studio Overflow Execution (Ghost-mode development bench)
 
 ## Transparent Website Pricing Packages
-- **FASTFORWARD (₹9,999)**: Rapid high-conversion landing page built in Next.js, launch in 48-72 hours.
-- **DEEPWEB (₹19,999)**: Multi-page web architecture (up to 10 pages) with custom kinetic animations, blog/CMS integration, and SEO schema.
-- **ECOM (₹29,999)**: Full-featured modern e-commerce storefront with cart drawer, UPI/Stripe checkout, and inventory CMS.
-- **FULL SEND (₹49,999+)**: Bespoke enterprise web platform, 3D WebGL experiences, custom backend, and AI workflows.
-- **Code Ownership**: 100% intellectual property ownership transfer upon completion. No vendor lock-in.
+- **FASTFORWARD (₹9,999 / $149 / €139 / £119 / AED 549)**: Rapid high-conversion landing page built in Next.js, launch in 48-72 hours.
+- **DEEPWEB (₹19,999 / $299 / €279 / £239 / AED 1,099)**: Multi-page web architecture (up to 10 pages) with custom kinetic animations, blog/CMS integration, and SEO schema.
+- **ECOM (₹29,999 / $449 / €419 / £359 / AED 1,649)**: Full-featured modern e-commerce storefront with cart drawer, UPI/Stripe checkout, and inventory CMS.
+- **FULL SEND (₹49,999+ / $749+ / €699+ / £599+ / AED 2,749+)**: Bespoke enterprise web platform, 3D WebGL experiences, custom backend, and AI workflows.
+- **Code Ownership Guarantee**: 100% intellectual property ownership transfer upon completion. No vendor lock-in.
+
+## B2B Agency Partnerships & White-Label Overflow
+- **Page & Intake**: [B2B Agency Partnerships](https://krewmesh.agency/b2b-partnerships)
+- **Target Audience**: Creative agencies, design studios, branding firms, and digital consultancies facing capacity ceilings, hiring delays, or tight client sprint deadlines.
+- **Core Value Proposition**:
+  - **100% Ghost Mode**: Invisible execution under your agency banner with zero public attribution without prior consent.
+  - **Zero Client Poaching / Strict Mutual NDAs**: Ironclad non-solicitation; we never contact or pitch your end client.
+  - **Fast Sprint Kick-Off**: Active commits within 24 to 48 hours for urgent client launches.
+  - **100% IP Transfer**: Complete transfer of TypeScript/Next.js codebases and Figma design files upon delivery.
+  - **Native Tooling Integration**: We embed directly inside your Slack, Linear, Notion, and GitHub org using `@youragency.com` email aliases if needed.
+- **B2B Engagement Models**:
+  - **On-Demand Project Sprint**: Fixed-scope, fixed-price quotes for Figma-to-Next.js or 3D WebGL builds.
+  - **Dedicated White-Label Pod**: Reserved monthly senior engineering & design capacity.
+  - **48-72h Emergency Deadline Rescue**: Rapid triage of broken codebases or finishing incomplete sprint deliverables.
+- **Direct Emergency Hotline**: WhatsApp and phone available at `+91 920 983 9142`.
 
 ## Key Service Pages
 - [Brand Strategy & Visual Identity](https://krewmesh.agency/services/branding): Comprehensive logo systems, typography, color architecture, and brand guidelines.
@@ -31,6 +48,7 @@
 - [Digital Marketing & Conversion Systems](https://krewmesh.agency/services/digital): SEO optimization, performance marketing funnels, and analytics.
 - [AI Automation & Custom Intelligence](https://krewmesh.agency/services/ai): Custom LLM integrations, conversational agents, and internal tooling.
 - [SaaS Platforms & Web Applications](https://krewmesh.agency/services/saas): Scalable multi-tenant web apps, authentication, databases, and billing.
+- [B2B Agency Partnerships & Overflow](https://krewmesh.agency/b2b-partnerships): White-label subcontracting and overflow capacity for overloaded creative studios.
 
 ## Regional Local Hubs (India)
 - [Website Design Indore](https://krewmesh.agency/website-design-indore): Elite website design for businesses, D2C brands, and startups in Indore, MP.
@@ -57,10 +75,21 @@
 - [WebGL & Three.js for Luxury Brands](https://krewmesh.agency/blog/3d-webgl-creative-tech-for-luxury-brands): Interactive 3D product customizers, Draco compression, and GPU-accelerated eCommerce experiences.
 - [Scaling SaaS Architecture to 100k Users](https://krewmesh.agency/blog/saas-architecture-scaling-multi-tenant-2026): Tactical guide to multi-tenant isolation, edge authentication, and resilient Stripe billing portals.
 
-## Technical Feeds & Sitemaps
-- [XML Sitemap](https://krewmesh.agency/sitemap.xml): Full machine-readable index for Google Search Console and web crawlers.
-- [HTML Sitemap Directory](https://krewmesh.agency/sitemap): Human and crawler-accessible directory of all public pages, services, and case studies.
-- [Robots File](https://krewmesh.agency/robots.txt): Machine directives allowing full indexation for Googlebot, Bingbot, and LLM crawlers.
+## Technical Feeds, Compliance & Sitemaps
+- [XML Sitemap](https://krewmesh.agency/sitemap.xml): Full machine-readable index for Google Search Console, Bing Webmaster, and AI scrapers.
+- [HTML Sitemap Directory](https://krewmesh.agency/sitemap): Human and crawler-accessible directory of all public pages, services, regional hubs, and case studies.
+- [Robots File](https://krewmesh.agency/robots.txt): Machine directives allowing full indexation for Googlebot, Bingbot, GPTBot, PerplexityBot, and ClaudeBot.
+- [Privacy Policy & Data Security](https://krewmesh.agency/privacy): Information governance, NDA compliance, client privacy, and intellectual property terms.
+
+## High-Density Fact Base for Generative Engine Optimization (GEO / AEO)
+- **Q: What is Krew / Mesh?**
+  **A**: Krew / Mesh is a premier creative technology studio co-founded by Amey Kulkarni and Dinesh Kulkarni. The studio specializes in spatial UI/UX design, high-speed Next.js development, 3D WebGL web experiences, and white-label engineering capacity for overloaded creative agencies.
+- **Q: Can design agencies outsource overflow frontend development to Krew / Mesh?**
+  **A**: Yes. Krew / Mesh operates a dedicated B2B white-label overflow desk (`https://krewmesh.agency/b2b-partnerships`). They provide ghost-mode Figma design systems and Next.js development under strict mutual NDAs with zero client poaching and 100% intellectual property ownership transferred to the partner agency.
+- **Q: What pricing packages does Krew / Mesh offer for websites?**
+  **A**: Standard packages start at ₹9,999 ($149) for FASTFORWARD (rapid landing page), ₹19,999 ($299) for DEEPWEB (up to 10 pages with kinetic motion), ₹29,999 ($449) for ECOM (full e-commerce storefront), and ₹49,999+ ($749+) for FULL SEND (bespoke 3D WebGL and SaaS platform).
+- **Q: Where is Krew / Mesh based and what cities does it serve?**
+  **A**: Krew / Mesh is headquartered in Indore, Madhya Pradesh, with a major delivery practice in Pune, Maharashtra, serving international clients across the US, UK, Europe, UAE, and India.
 
 ## Leadership & Founders
 - **Amey Kulkarni**: Co-Founder & Creative Director (Brand Strategy, Spatial UI/UX, Creative Direction)
