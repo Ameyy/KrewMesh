@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import SubpageHeaderBanner from "@/components/SubpageHeaderBanner";
 import { ServiceFaqAccordion } from "@/app/services/[slug]/components/ServiceFaqAccordion";
 import { localSeoPagesData, allLocalSeoSlugs, LocalSeoPageData } from "@/data/local-seo";
 import {
@@ -168,68 +169,46 @@ export function LocalSeoPageComponent({ page }: { page: LocalSeoPageData }) {
 
       <main className="relative z-10 min-h-screen bg-background text-foreground selection:bg-white/20">
         {/* HERO SECTION */}
-        <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden border-b border-white/[0.08]">
+        <section className="relative pt-10 pb-16 md:pt-14 md:pb-24 overflow-hidden border-b border-[#101010]/15">
           {/* Subtle Ambient Radial Glow */}
           <div
-            className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[750px] h-[480px] blur-[150px] opacity-25 rounded-full"
-            style={{ background: page.accentColor }}
+            className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[750px] h-[480px] blur-[150px] opacity-15 rounded-full"
+            style={{ background: "#D5360C" }}
           />
 
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            {/* Breadcrumbs & Badge */}
-            <div className="flex flex-wrap items-center gap-3 mb-8">
-              <Link
-                href="/#services"
-                className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-neutral-400 hover:text-white transition-colors"
-              >
-                <ArrowLeft className="size-3.5" />
-                <span>All Services</span>
-              </Link>
-              <span className="text-neutral-600">/</span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-white/[0.05] border border-white/10 text-white">
-                <MapPin className="size-3 text-[#ffc691]" />
-                <span>{page.city}, {page.state}</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-white/[0.05] border border-white/10 text-white">
-                <span
-                  className="size-1.5 rounded-full animate-pulse"
-                  style={{ backgroundColor: page.accentColor }}
-                />
-                {page.badge}
-              </span>
-            </div>
 
             {/* Title & Tagline */}
             <div className="max-w-4xl space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/10 text-white shadow-inner">
-                  <Building2 className="size-8 text-[#ffc691]" strokeWidth={1.5} />
+                <div className="p-3 rounded-2xl bg-[#101010]/[0.05] border border-[#101010]/15 text-[#101010] shadow-inner">
+                  <Building2 className="size-8 text-[#D5360C]" strokeWidth={1.5} />
                 </div>
-                <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight uppercase leading-[1.1]">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-[#101010]">
                   {page.title}
                 </h1>
               </div>
 
-              <p className="text-xl sm:text-2xl text-neutral-300 font-light leading-relaxed">
+              <p className="text-xl sm:text-2xl text-[#101010]/80 font-light leading-relaxed">
                 {page.tagline}
               </p>
 
-              <p className="text-base sm:text-lg text-neutral-400 leading-relaxed max-w-3xl">
+              <p className="text-base sm:text-lg text-[#101010]/75 leading-relaxed max-w-3xl font-medium">
                 {page.heroDescription}
               </p>
 
               {/* Target Audience Badges */}
               <div className="pt-2">
-                <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 mb-2.5">
+                <p className="text-xs font-mono uppercase tracking-wider text-[#101010]/70 mb-2.5 font-semibold">
                   Serving Ambitious Businesses Across {page.city}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {page.targetAudience.map((audience, idx) => (
                     <span
                       key={idx}
-                      className="text-xs px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.08] text-neutral-300 flex items-center gap-1.5"
+                      className="text-xs px-3 py-1.5 rounded-lg bg-[#101010]/[0.04] border border-[#101010]/15 text-[#101010] flex items-center gap-1.5 font-medium"
                     >
-                      <CheckCircle2 className="size-3 text-[#ffc691]" />
+                      <CheckCircle2 className="size-3 text-[#D5360C]" />
                       <span>{audience}</span>
                     </span>
                   ))}
@@ -245,7 +224,7 @@ export function LocalSeoPageComponent({ page }: { page: LocalSeoPageData }) {
                 </Link>
                 <Link
                   href="/#packages"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#101010]/20 bg-[#101010]/5 hover:bg-[#D5360C] hover:border-[#D5360C] hover:text-[#E6D5BD] text-[#101010] text-xs font-mono uppercase tracking-wider transition-all"
                 >
                   <span>View Pricing Packages</span>
                   <ArrowRight className="size-4" />
@@ -540,21 +519,21 @@ export function LocalSeoPageComponent({ page }: { page: LocalSeoPageData }) {
 
             <ServiceFaqAccordion faqs={page.faqs} accentColor={page.accentColor} />
 
-            <div className="mt-12 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="mt-12 p-6 rounded-2xl bg-[#101010] text-[#E6D5BD] border border-[#101010] flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <p className="text-sm font-semibold text-white">Have specific project requirements or custom scope?</p>
-                <p className="text-xs text-neutral-400 mt-1">Chat directly with our founding engineering and design leads.</p>
+                <p className="text-sm font-bold text-[#E6D5BD]">Have specific project requirements or custom scope?</p>
+                <p className="text-xs text-[#E6D5BD]/80 mt-1">Chat directly with our founding engineering and design leads.</p>
               </div>
               <div className="flex items-center gap-3 shrink-0">
                 <Link
                   href="/contact"
-                  className="px-4 py-2 rounded-lg text-xs font-semibold bg-white text-black hover:bg-neutral-200 transition-colors"
+                  className="px-4 py-2 rounded-full text-xs font-bold bg-[#D5360C] text-[#E6D5BD] hover:bg-[#b82d09] transition-colors"
                 >
                   Start Project Inquiry
                 </Link>
                 <Link
                   href="/faq"
-                  className="px-4 py-2 rounded-lg text-xs font-semibold border border-white/20 hover:border-white/40 text-neutral-300 hover:text-white transition-colors"
+                  className="px-4 py-2 rounded-full text-xs font-bold border border-[#E6D5BD]/20 hover:border-[#E6D5BD] text-[#E6D5BD] transition-colors"
                 >
                   Read Full FAQ
                 </Link>
@@ -564,20 +543,20 @@ export function LocalSeoPageComponent({ page }: { page: LocalSeoPageData }) {
         </section>
 
         {/* OTHER LOCAL REGIONAL HUBS */}
-        <section className="py-20 md:py-28 border-b border-white/[0.08] bg-black/30">
+        <section className="py-20 md:py-28 border-b border-[#101010]/15 bg-[#101010]/[0.02]">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="flex items-center justify-between mb-10">
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#D5360C] font-bold">
                   Regional Expertise
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-white mt-1">
+                <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-[#101010] mt-1">
                   Explore Other Local Specialized Hubs
                 </h3>
               </div>
               <Link
                 href="/sitemap"
-                className="hidden sm:inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors"
+                className="hidden sm:inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-[#101010]/70 hover:text-[#D5360C] transition-colors"
               >
                 <span>View All Locations</span>
                 <ArrowRight className="size-3.5" />
@@ -589,18 +568,18 @@ export function LocalSeoPageComponent({ page }: { page: LocalSeoPageData }) {
                 <Link
                   key={other.slug}
                   href={`/${other.slug}`}
-                  className="group p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/20 hover:bg-white/[0.04] transition-all flex flex-col justify-between h-44"
+                  className="group p-5 rounded-2xl bg-[#101010] text-[#E6D5BD] border border-[#101010] hover:border-[#D5360C] transition-all flex flex-col justify-between h-44"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <MapPin className="size-4 text-[#ffc691] group-hover:text-white transition-colors" />
-                      <ArrowRight className="size-3.5 text-neutral-500 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+                      <MapPin className="size-4 text-[#D5360C] group-hover:text-[#E6D5BD] transition-colors" />
+                      <ArrowRight className="size-3.5 text-[#E6D5BD]/70 group-hover:text-[#D5360C] group-hover:translate-x-0.5 transition-all" />
                     </div>
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+                    <h4 className="text-sm font-bold uppercase tracking-wider text-[#E6D5BD]">
                       {other.shortTitle}
                     </h4>
                   </div>
-                  <p className="text-xs text-neutral-400 line-clamp-2 leading-snug">
+                  <p className="text-xs text-[#E6D5BD]/75 line-clamp-2 leading-snug">
                     {other.tagline}
                   </p>
                 </Link>

@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${BASE_URL}/services`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
       url: `${BASE_URL}/about`,
       lastModified: currentDate,
       changeFrequency: "monthly",
@@ -56,6 +62,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/b2b-partnerships`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
   ];
 
   // Dynamic Service pages (SEO targeted)
@@ -84,20 +102,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Active Demo showcase pages
-  const demoSlugs = ["ecomm", "clinic", "business", "cafe", "interior-design", "photography", "3d-print-studio", "gym"];
-  const demoRoutes: MetadataRoute.Sitemap = demoSlugs.map((slug) => ({
-    url: `${BASE_URL}/demo/${slug}`,
-    lastModified: currentDate,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
   return [
     ...coreRoutes,
     ...serviceRoutes,
     ...localSeoRoutes,
     ...blogRoutes,
-    ...demoRoutes,
   ];
 }

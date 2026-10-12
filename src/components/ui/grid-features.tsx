@@ -44,7 +44,7 @@ const features = [
 
 export function GridFeatures() {
 	return (
-		<section className="py-16 md:py-32 section bg-background">
+		<section className="py-16 md:py-32 section bg-transparent">
 			<div className="mx-auto w-full max-w-6xl space-y-12 px-4">
 				<AnimatedContainer className="max-w-3xl">
 					<h2 className="text-4xl md:text-6xl font-bold tracking-tight uppercase">

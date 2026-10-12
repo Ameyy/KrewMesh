@@ -55,13 +55,12 @@ export default function FAQContent() {
 
   return (
     <div className="w-full">
-      {/* Search Bar — Completely Borderless & Box-Free */}
+      {/* Search Bar */}
       <div className="max-w-xl mx-auto mb-12">
         <div 
-          className="relative flex items-center bg-neutral-900/70 rounded-full px-4 py-1 backdrop-blur-md transition-colors border-none"
-          style={{ border: 'none', outline: 'none' }}
+          className="relative flex items-center bg-[#101010]/[0.05] border border-[#101010]/15 rounded-full px-4 py-1 backdrop-blur-md transition-colors"
         >
-          <Search className="h-4 w-4 text-neutral-500 pointer-events-none shrink-0" />
+          <Search className="h-4 w-4 text-[#101010]/60 pointer-events-none shrink-0" />
           <input
             id="faq-search-input"
             type="text"
@@ -69,7 +68,7 @@ export default function FAQContent() {
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search questions (e.g. cost, timeline, mobile, SEO, updates)..."
             style={{ border: 'none', outline: 'none', boxShadow: 'none', background: 'transparent' }}
-            className="w-full pl-3 pr-8 py-3 bg-transparent rounded-full text-white placeholder-neutral-500 text-sm border-none outline-none focus:outline-none focus:ring-0 transition-colors"
+            className="w-full pl-3 pr-8 py-3 bg-transparent rounded-full text-[#101010] placeholder:text-[#101010]/60 placeholder:opacity-100 text-sm font-medium border-none outline-none focus:outline-none focus:ring-0 transition-colors"
             aria-label="Search questions"
           />
           {searchTerm && (
@@ -77,7 +76,7 @@ export default function FAQContent() {
               type="button"
               onClick={() => setSearchTerm('')}
               style={{ border: 'none', outline: 'none', background: 'transparent', boxShadow: 'none' }}
-              className="absolute right-3.5 p-1 rounded-full text-neutral-400 hover:text-white transition-colors cursor-pointer border-none outline-none bg-transparent"
+              className="absolute right-3.5 p-1 rounded-full text-[#101010]/60 hover:text-[#D5360C] transition-colors cursor-pointer border-none outline-none bg-transparent"
               aria-label="Clear search"
             >
               <X size={14} />
@@ -86,21 +85,20 @@ export default function FAQContent() {
         </div>
       </div>
 
-      {/* Header Info & Single Smart Toggle — Completely Borderless */}
+      {/* Header Info & Toggle */}
       <div 
-        className="max-w-3xl mx-auto flex items-center justify-between text-xs text-neutral-500 pb-3 mb-4 px-1 border-none"
-        style={{ border: 'none', outline: 'none' }}
+        className="max-w-3xl mx-auto flex items-center justify-between text-xs text-[#101010]/70 pb-3 mb-4 px-1 font-semibold"
       >
         <div>
           <span>{filteredFAQs.length} {filteredFAQs.length === 1 ? 'question' : 'questions'}</span>
-          {searchTerm && <span className="text-neutral-400"> for &ldquo;{searchTerm}&rdquo;</span>}
+          {searchTerm && <span className="text-[#D5360C]"> for &ldquo;{searchTerm}&rdquo;</span>}
         </div>
         {filteredFAQs.length > 0 && (
           <button
             type="button"
             onClick={toggleAll}
             style={{ border: 'none', outline: 'none', background: 'transparent', boxShadow: 'none' }}
-            className="text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors cursor-pointer flex items-center gap-1.5 border-none outline-none bg-transparent p-0"
+            className="text-xs font-mono uppercase tracking-wider text-[#101010]/70 hover:text-[#D5360C] transition-colors cursor-pointer flex items-center gap-1.5 border-none outline-none bg-transparent p-0 font-bold"
             aria-label={allExpanded ? 'Collapse all questions' : 'Expand all questions'}
           >
             <span>{allExpanded ? 'Collapse All' : 'Expand All'}</span>
@@ -108,21 +106,21 @@ export default function FAQContent() {
         )}
       </div>
 
-      {/* Accordion — Completely Borderless & Box-Free */}
+      {/* Accordion */}
       <h2 className="sr-only">General Agency Questions &amp; Answers</h2>
-      <div className="max-w-3xl mx-auto space-y-1">
+      <div className="max-w-3xl mx-auto space-y-2">
         {filteredFAQs.length === 0 ? (
           <div className="text-center py-16 px-4">
-            <HelpCircle size={32} className="mx-auto text-neutral-600 mb-3" />
-            <h3 className="text-base font-semibold text-white mb-1">No matching questions</h3>
-            <p className="text-sm text-neutral-400 max-w-sm mx-auto mb-6">
+            <HelpCircle size={32} className="mx-auto text-[#101010]/50 mb-3" />
+            <h3 className="text-base font-bold text-[#101010] mb-1">No matching questions</h3>
+            <p className="text-sm text-[#101010]/75 max-w-sm mx-auto mb-6 font-medium">
               We couldn&apos;t find anything matching &ldquo;{searchTerm}&rdquo;. Try another keyword or clear your search.
             </p>
             <button
               type="button"
               onClick={() => setSearchTerm('')}
               style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 text-xs text-white transition-all cursor-pointer border-none outline-none"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#101010] text-xs text-[#E6D5BD] hover:bg-[#D5360C] transition-all cursor-pointer font-bold border-none outline-none"
             >
               <RotateCcw size={12} />
               <span>Clear Search</span>
@@ -136,8 +134,7 @@ export default function FAQContent() {
             return (
               <div 
                 key={item.id} 
-                className="py-3 px-2 sm:px-3 rounded-lg transition-colors border-none"
-                style={{ border: 'none', outline: 'none' }}
+                className="py-3.5 px-4 sm:px-5 rounded-xl border border-[#101010]/12 bg-[#101010]/[0.03] hover:border-[#101010]/25 transition-all"
               >
                 <button
                   type="button"
@@ -149,14 +146,14 @@ export default function FAQContent() {
                   className="w-full py-1.5 flex items-start justify-between gap-6 text-left group cursor-pointer border-none outline-none bg-transparent p-0 focus:outline-none select-none"
                 >
                   <div className="flex items-start gap-4 pr-2">
-                    <span className="text-xs font-mono text-neutral-500 pt-1 shrink-0">
+                    <span className="text-xs font-mono font-bold text-[#D5360C] pt-1 shrink-0">
                       {questionNumber}
                     </span>
-                    <span className={`text-base sm:text-lg transition-colors ${isOpen ? 'text-white font-semibold' : 'text-neutral-300 font-medium group-hover:text-white'}`}>
+                    <span className={`text-base sm:text-lg transition-colors ${isOpen ? 'text-[#101010] font-bold' : 'text-[#101010] font-semibold group-hover:text-[#D5360C]'}`}>
                       {item.question}
                     </span>
                   </div>
-                  <div className="shrink-0 pt-1 text-neutral-500 group-hover:text-white transition-colors">
+                  <div className="shrink-0 pt-1 text-[#101010]/60 group-hover:text-[#D5360C] transition-colors">
                     {isOpen ? (
                       <Minus size={18} />
                     ) : (
@@ -170,8 +167,7 @@ export default function FAQContent() {
                     id={`faq-answer-${item.id}`}
                     role="region"
                     aria-labelledby={`faq-btn-${item.id}`}
-                    className="pt-3 pb-3 pl-8 sm:pl-9 pr-2 text-sm sm:text-base leading-relaxed text-neutral-400 border-none outline-none"
-                    style={{ border: 'none', outline: 'none' }}
+                    className="pt-3 pb-3 pl-8 sm:pl-9 pr-2 text-sm sm:text-base leading-relaxed text-[#101010]/80 font-medium"
                   >
                     {item.answer}
                   </div>
@@ -182,18 +178,18 @@ export default function FAQContent() {
         )}
       </div>
 
-      {/* Bottom Section — Completely Borderless */}
-      <div className="max-w-xl mx-auto mt-24 text-center space-y-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+      {/* Bottom Section */}
+      <div className="max-w-xl mx-auto mt-20 text-center space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#101010] tracking-tight">
           Still have a question?
         </h2>
-        <p className="text-sm text-neutral-400 leading-relaxed">
+        <p className="text-sm text-[#101010]/80 leading-relaxed font-medium">
           Need details on pricing, custom features, or project scheduling? Reach out directly and we will help you plan your next steps.
         </p>
         <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-semibold uppercase tracking-wider transition-all"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#101010] text-[#E6D5BD] hover:bg-[#D5360C] text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
           >
             <span>Let&apos;s Talk</span>
             <ArrowUpRight size={14} />
@@ -202,7 +198,7 @@ export default function FAQContent() {
             href="https://wa.me/919209839142"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold uppercase tracking-wider transition-all"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#101010]/20 bg-[#101010]/[0.05] hover:bg-[#101010] hover:text-[#E6D5BD] text-[#101010] text-xs font-bold uppercase tracking-wider transition-all"
           >
             <span>WhatsApp Us</span>
             <ArrowUpRight size={14} />

@@ -74,7 +74,7 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     tagline: "World-class digital aesthetics and high-conversion web design for Indore's top brands & startups.",
     heroDescription:
       "From Vijay Nagar to Palasia, Super Corridor tech hubs to Pithampur industrial leaders, Krew / Mesh designs modern, high-speed websites that elevate Indore businesses. We replace outdated templates with bespoke UI/UX, conversion funnels, and sub-second Next.js architecture.",
-    accentColor: "#ef671c",
+    accentColor: "#D5360C",
     stats: [
       { label: "Core Web Vitals", value: "99+" },
       { label: "Design Turnaround", value: "1-2 Wks" },
@@ -172,7 +172,7 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     tagline: "High-performance Next.js engineering and scalable web systems built in Indore for global scale.",
     heroDescription:
       "Krew / Mesh is a premier engineering-led studio in Indore. We engineer blazing-fast Next.js and React web applications, custom CMS integrations, e-commerce storefronts, and cloud-native software for progressive companies across Indore, Central India, and global markets.",
-    accentColor: "#3bbad4",
+    accentColor: "#D5360C",
     stats: [
       { label: "Performance Score", value: "99/100" },
       { label: "Page Load Time", value: "< 0.7s" },
@@ -270,7 +270,7 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     tagline: "Kinetic, award-winning Framer websites crafted in days, not months, for Indore's innovators.",
     heroDescription:
       "Framer is the fastest way for visionary companies to launch world-class, kinetic digital experiences. Krew / Mesh is Indore's specialized Framer agency, crafting slick visual interactions, silky-smooth scroll effects, and visual CMS setups that empower marketing teams to publish without developers.",
-    accentColor: "#db7a21",
+    accentColor: "#D5360C",
     stats: [
       { label: "Turnaround Time", value: "3-5 Days" },
       { label: "Interaction Fidelity", value: "60 FPS" },
@@ -368,7 +368,7 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     tagline: "Bold, modern web design and spatial UI/UX engineered for Pune's tech ecosystem.",
     heroDescription:
       "From Hinjewadi IT Park to Baner, Kalyani Nagar to Koregaon Park, Krew / Mesh partners with visionary Pune companies to design high-impact digital experiences. We combine Silicon Valley-grade aesthetics with conversion science and sub-second Next.js technology.",
-    accentColor: "#36ad64",
+    accentColor: "#D5360C",
     stats: [
       { label: "Core Web Vitals", value: "99+" },
       { label: "Design Quality", value: "Top 1%" },
@@ -466,7 +466,7 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     tagline: "Scalable Next.js engineering and modern web applications built for Pune's global tech leaders.",
     heroDescription:
       "Pune is India's premier engineering and SaaS capital. Krew / Mesh matches that pedigree by engineering cutting-edge Next.js, React, and TypeScript web platforms. We build lightning-fast corporate websites, client portals, and SaaS dashboards with sub-second speeds and bulletproof code.",
-    accentColor: "#4338ca",
+    accentColor: "#D5360C",
     stats: [
       { label: "Core Web Vitals", value: "99+" },
       { label: "TypeScript Typing", value: "100%" },
@@ -564,7 +564,7 @@ export const localSeoPagesData: Record<string, LocalSeoPageData> = {
     tagline: "Intuitive product design and spatial UI/UX systems that transform complex tech into elegant experiences.",
     heroDescription:
       "Krew / Mesh is an elite UI/UX product design studio serving Pune's tech ecosystem. We translate complex product requirements, multi-step workflows, and SaaS data architectures into intuitive, beautiful interfaces that delight users and drive conversion.",
-    accentColor: "#db7a21",
+    accentColor: "#D5360C",
     stats: [
       { label: "Usability Score", value: "98/100" },
       { label: "Design Systems", value: "100% Atomic" },

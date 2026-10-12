@@ -17,21 +17,21 @@
 .dot {
   width: 10px;
   height: 10px;
-  background-color: white;
+  background-color: #D5360C;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
 .cursor.active .dot {
   transform: scale(4);
-  background-color: var(--accent);
-  opacity: 0.5;
+  background-color: #D5360C;
+  opacity: 0.85;
   mix-blend-mode: normal;
 }
 
 .label {
   position: absolute;
-  color: white;
+  color: #E6D5BD;
   font-size: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -43,11 +43,3 @@
   opacity: 1;
 }
 
-/* Hide default cursor on body when hovering */
-:global(body:hover a),
-:global(body:hover button) {
-  cursor: none;
-}
-:global(body) {
-  cursor: none;
-}

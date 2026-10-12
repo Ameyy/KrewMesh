@@ -11,25 +11,25 @@ function FloatingShapes() {
       <Float speed={1.5} rotationIntensity={1.5} floatIntensity={2} position={[-4, 2, -5]}>
         <mesh>
           <icosahedronGeometry args={[1.2, 0]} />
-          <meshStandardMaterial color="#333333" wireframe transparent opacity={0.6} />
+          <meshStandardMaterial color="#D5360C" wireframe transparent opacity={0.25} />
         </mesh>
       </Float>
       <Float speed={2} rotationIntensity={2} floatIntensity={2} position={[5, -2, -8]}>
         <mesh>
           <torusGeometry args={[1.5, 0.4, 16, 32]} />
-          <meshStandardMaterial color="#444444" wireframe transparent opacity={0.5} />
+          <meshStandardMaterial color="#101010" wireframe transparent opacity={0.2} />
         </mesh>
       </Float>
       <Float speed={1} rotationIntensity={1} floatIntensity={1.5} position={[-6, -3, -10]}>
         <mesh>
           <octahedronGeometry args={[2, 0]} />
-          <meshStandardMaterial color="#222222" wireframe transparent opacity={0.8} />
+          <meshStandardMaterial color="#D5360C" wireframe transparent opacity={0.25} />
         </mesh>
       </Float>
       <Float speed={2.5} rotationIntensity={1} floatIntensity={2.5} position={[4, 3, -12]}>
         <mesh>
           <dodecahedronGeometry args={[1.8, 0]} />
-          <meshStandardMaterial color="#555555" wireframe transparent opacity={0.4} />
+          <meshStandardMaterial color="#101010" wireframe transparent opacity={0.2} />
         </mesh>
       </Float>
     </>

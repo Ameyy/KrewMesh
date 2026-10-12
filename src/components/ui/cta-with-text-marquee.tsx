@@ -3,8 +3,8 @@
 import { cn } from "@/lib/utils";
 import { ReactNode, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { CrowdCanvas } from "@/components/ui/crowd-canvas";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import Footer4 from "@/components/ui/footer-section-4";
 
@@ -71,17 +71,18 @@ function VerticalMarquee({
 }
 
 const marqueeItems = [
-  { text: "Branding", color: "#FF1493" },
-  { text: "Graphic Design", color: "#00E5FF" },
-  { text: "UI/UX Design", color: "#FFEA00" },
-  { text: "Web Development", color: "#00FF66" },
-  { text: "3D Experiences", color: "#BD00FF" },
-  { text: "AI Products", color: "#00B4D8" },
-  { text: "SaaS Platforms", color: "#FF5400" },
+  { text: "Branding", color: "#D5360C" },
+  { text: "Graphic Design", color: "#101010" },
+  { text: "UI/UX Design", color: "#D5360C" },
+  { text: "Web Development", color: "#101010" },
+  { text: "3D Experiences", color: "#D5360C" },
+  { text: "AI Products", color: "#101010" },
+  { text: "SaaS Platforms", color: "#D5360C" },
 ];
 
 export default function CTAWithVerticalMarquee() {
   const marqueeRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const marqueeContainer = marqueeRef.current;
@@ -116,7 +117,7 @@ export default function CTAWithVerticalMarquee() {
   return (
     <>
       {/* 01: CTA Section */}
-      <section id="contact" className="relative min-h-[60vh] flex items-center justify-center px-6 py-16 overflow-hidden bg-background scroll-mt-24">
+      <section id="contact" className="relative min-h-[60vh] flex items-center justify-center px-6 py-16 overflow-hidden bg-transparent scroll-mt-24">
         <div className="w-full max-w-7xl animate-fade-in-up">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             {/* Left Content */}        
@@ -140,10 +141,19 @@ export default function CTAWithVerticalMarquee() {
                   <RainbowButton 
                     href="/#work" 
                     onClick={(e) => {
-                      const el = document.getElementById('work');
-                      if (el) {
-                        e.preventDefault();
-                        el.scrollIntoView({ behavior: 'smooth' });
+                      if (pathname === '/') {
+                        const el = document.getElementById('work');
+                        if (el) {
+                          e.preventDefault();
+                          const navOffset = 90;
+                          const y = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+                          window.scrollTo({ top: y, behavior: 'smooth' });
+                          window.history.pushState(null, '', '/#work');
+                        }
+                      } else {
+                        if (typeof window !== 'undefined') {
+                          sessionStorage.setItem('km_scroll_target', 'work');
+                        }
                       }
                     }}
                     className="h-14 px-8 rounded-full text-base sm:text-lg font-bold [animation-delay:-1s]"
@@ -178,12 +188,7 @@ export default function CTAWithVerticalMarquee() {
         </div>
       </section>
 
-      {/* 02: Dedicated Walking Crowd Section (Separate, completely non-overlapping) */}
-      <section className="relative w-full h-[180px] sm:h-[240px] md:h-[280px] overflow-hidden bg-white pointer-events-none select-none">
-        <CrowdCanvas src="/images/peeps/all-peeps.png" rows={15} cols={7} className="w-full h-full opacity-100" />
-      </section>
-
-      {/* 03: Footer Section */}
+      {/* 02: Footer Section */}
       <Footer4 />
     </>
   );

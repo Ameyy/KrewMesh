@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SubpageHeaderBanner from "@/components/SubpageHeaderBanner";
 import { SitemapQuickActions } from "./components/SitemapQuickActions";
 import { servicesData } from "@/data/services";
 import { localSeoPagesData } from "@/data/local-seo";
@@ -60,9 +61,25 @@ export default function SitemapPage() {
     },
     {
       title: "Services & Capabilities",
-      href: "/#services",
+      href: "/services",
       desc: "Overview of our core practices across brand strategy, product design, marketing, full-stack engineering, AI, and SaaS.",
       badge: "Practices",
+      priority: "0.95",
+      changefreq: "Weekly",
+    },
+    {
+      title: "Packages & Pricing",
+      href: "/#packages",
+      desc: "Transparent website and digital product packages across INR, USD, EUR, GBP, and AED with full feature breakdown.",
+      badge: "Commercial",
+      priority: "0.9",
+      changefreq: "Weekly",
+    },
+    {
+      title: "Interactive & Industry Demos",
+      href: "/#work",
+      desc: "Interactive portfolio ticket showcase featuring client partnerships and live industry prototypes.",
+      badge: "Demos & Work",
       priority: "0.9",
       changefreq: "Weekly",
     },
@@ -114,19 +131,35 @@ export default function SitemapPage() {
       priority: "0.8",
       changefreq: "Weekly",
     },
+    {
+      title: "B2B Agency Partnerships & Overflow",
+      href: "/b2b-partnerships",
+      desc: "White-label design and full-stack Next.js engineering overflow capacity for agencies and creative studios at max capacity.",
+      badge: "B2B Partner",
+      priority: "0.85",
+      changefreq: "Weekly",
+    },
+    {
+      title: "Privacy Policy & Data Protection",
+      href: "/privacy",
+      desc: "Our commitment to user privacy, data security, cookie preferences, client confidentiality, and 100% IP code ownership.",
+      badge: "Legal & Privacy",
+      priority: "0.6",
+      changefreq: "Monthly",
+    },
   ];
 
   const demoPages = [
     {
       title: "E-Commerce Storefront Architecture",
-      href: "/demo/ecomm",
+      href: "https://ecomm.krewmesh.agency/",
       liveUrl: "https://ecomm.krewmesh.agency/",
       desc: "High-performance digital retail storefront with responsive interactive cart drawer, product variants, and frictionless checkout.",
       badge: "Retail & D2C",
     },
     {
       title: "Clinic Website Architecture",
-      href: "/demo/clinic",
+      href: "https://clinic.krewmesh.agency",
       liveUrl: "https://clinic.krewmesh.agency",
       desc: "Modern healthcare practice & patient appointment platform with online scheduling and specialist directories.",
       badge: "Healthcare",
@@ -139,38 +172,44 @@ export default function SitemapPage() {
     },
     {
       title: "Cafe & Culinary Landing Page",
-      href: "/demo/cafe",
+      href: "https://cafe.krewmesh.agency",
       liveUrl: "https://cafe.krewmesh.agency",
       desc: "Atmospheric storytelling, artisan menus, table reservation sync, and local ordering workflows.",
       badge: "Hospitality",
     },
     {
       title: "Interior Design Showcase",
-      href: "/demo/interior-design",
+      href: "https://inter.krewmesh.agency/",
       liveUrl: "https://inter.krewmesh.agency/",
       desc: "Editorial-grade spatial design portfolio with gallery reveals, material libraries, and client lead funnels.",
       badge: "Architecture",
     },
     {
       title: "Photography Portfolio Archive",
-      href: "/demo/photography",
+      href: "https://wedtale.krewmesh.agency/",
       liveUrl: "https://wedtale.krewmesh.agency/",
       desc: "Cinematic high-aesthetic photography platform with client proofing portals, EXIF overlays, and print orders.",
       badge: "Visual Arts",
     },
     {
       title: "3D Print Studio & Prototyping Portal",
-      href: "/demo/3d-print-studio",
+      href: "https://3dprint.krewmesh.agency/",
       liveUrl: "https://3dprint.krewmesh.agency/",
       desc: "Additive manufacturing studio portal with WebGL 3D model viewer, automated slicing estimation, and order tracking.",
       badge: "Prototyping",
     },
     {
       title: "Gym & Fitness Club Architecture",
-      href: "/demo/gym",
+      href: "https://gym.krewmesh.agency",
       liveUrl: "https://gym.krewmesh.agency",
       desc: "High-energy fitness club platform featuring interactive class schedules, trainer rosters, and membership conversion funnels.",
       badge: "Fitness & Sports",
+    },
+    {
+      title: "ASCII Wake Interactive Matrix",
+      href: "/demo/background-ascii-wake",
+      desc: "Interactive full-bleed monospace character comet field with real-time velocity stamp decay and density controls.",
+      badge: "Creative Tech",
     },
   ];
 
@@ -255,36 +294,24 @@ export default function SitemapPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="relative min-h-screen bg-[#050505] text-white pt-28 pb-16 overflow-hidden">
+      <main className="relative min-h-screen bg-background text-[#101010] pt-8 sm:pt-12 pb-16 overflow-hidden selection:bg-[#101010]/10">
         {/* Background ambient lighting */}
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-blue-600/10 blur-[130px] rounded-full" />
-          <div className="absolute top-96 right-10 w-[500px] h-[400px] bg-indigo-600/10 blur-[150px] rounded-full" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#D5360C]/[0.04] blur-[130px] rounded-full" />
         </div>
 
         <div className="container mx-auto max-w-6xl px-4 sm:px-6">
-          {/* Breadcrumbs */}
-          <nav
-            aria-label="Breadcrumb"
-            className="flex items-center space-x-2 text-xs text-neutral-400 mb-8"
-          >
-            <Link href="/" className="hover:text-white transition-colors">
-              Home
-            </Link>
-            <ChevronRight className="h-3 w-3 text-neutral-600" />
-            <span className="text-neutral-200 font-medium">Sitemap</span>
-          </nav>
 
           {/* Hero Header */}
           <header className="mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3.5 py-1 text-xs font-medium text-blue-400 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D5360C]/30 bg-[#D5360C]/10 px-3.5 py-1 text-xs font-bold text-[#D5360C] mb-4">
               <Compass className="h-3.5 w-3.5" />
               <span>Website Architecture & Indexing</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#101010] mb-4 uppercase">
               Site Map & Page Directory
             </h1>
-            <p className="max-w-2xl text-sm sm:text-base text-neutral-400 leading-relaxed">
+            <p className="max-w-2xl text-sm sm:text-base text-[#101010]/80 leading-relaxed font-medium">
               This directory provides an organized overview of every public page across Krew / Mesh.
               Built in alignment with Google Search Console standards to ensure transparent navigation
               for both human visitors and automated search crawlers.
@@ -296,15 +323,15 @@ export default function SitemapPage() {
 
           {/* Section 1: Main Pages */}
           <section className="mt-14 mb-16" aria-labelledby="main-pages-heading">
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-[#101010]/12">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#101010]/[0.06] border border-[#101010]/15 text-[#101010]">
                 <Globe className="h-4 w-4" />
               </div>
               <div>
-                <h2 id="main-pages-heading" className="text-xl font-bold text-white">
+                <h2 id="main-pages-heading" className="text-xl font-bold text-[#101010] uppercase">
                   Main Studio Pages
                 </h2>
-                <p className="text-xs text-neutral-400">
+                <p className="text-xs text-[#101010]/70 font-medium">
                   Primary landing areas, studio information, and inquiry channels
                 </p>
               </div>
@@ -315,28 +342,28 @@ export default function SitemapPage() {
                 <Link
                   key={page.href}
                   href={page.href}
-                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05] hover:shadow-lg hover:shadow-blue-500/5"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#101010]/12 bg-[#101010]/[0.03] p-5 transition-all duration-200 hover:border-[#D5360C]/40 hover:bg-[#101010]/[0.05]"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2.5">
-                      <span className="inline-flex items-center rounded-md bg-white/5 px-2 py-0.5 text-[11px] font-medium text-neutral-300 border border-white/10">
+                      <span className="inline-flex items-center rounded-md bg-[#101010]/[0.06] px-2 py-0.5 text-[11px] font-bold text-[#101010] border border-[#101010]/15">
                         {page.badge}
                       </span>
-                      <span className="text-[10px] font-mono text-neutral-500">
+                      <span className="text-[10px] font-mono text-[#101010]/50 font-semibold">
                         Priority {page.priority}
                       </span>
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-blue-400 transition-colors flex items-center justify-between">
+                    <h3 className="text-base font-bold text-[#101010] group-hover:text-[#D5360C] transition-colors flex items-center justify-between">
                       <span>{page.title}</span>
-                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-blue-400" />
+                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#D5360C]" />
                     </h3>
-                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                    <p className="text-xs text-[#101010]/75 mt-2 leading-relaxed font-medium">
                       {page.desc}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                  <div className="mt-4 pt-3 border-t border-[#101010]/10 flex items-center justify-between text-[11px] text-[#101010]/60 font-mono font-semibold">
                     <span className="truncate">{page.href}</span>
-                    <span className="text-neutral-400">{page.changefreq}</span>
+                    <span className="text-[#101010]/70">{page.changefreq}</span>
                   </div>
                 </Link>
               ))}
@@ -345,15 +372,15 @@ export default function SitemapPage() {
 
           {/* Section 2: Studio Practices / Services */}
           <section className="my-16" aria-labelledby="services-heading">
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-[#101010]/12">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#D5360C]/10 border border-[#D5360C]/20 text-[#D5360C]">
                 <Layers className="h-4 w-4" />
               </div>
               <div>
-                <h2 id="services-heading" className="text-xl font-bold text-white">
+                <h2 id="services-heading" className="text-xl font-bold text-[#101010] uppercase">
                   Studio Practices & Services
                 </h2>
-                <p className="text-xs text-neutral-400">
+                <p className="text-xs text-[#101010]/70 font-medium">
                   Dedicated service pages detailing our strategy, deliverables, timelines, and FAQs
                 </p>
               </div>
@@ -364,40 +391,40 @@ export default function SitemapPage() {
                 <Link
                   key={svc.slug}
                   href={`/services/${svc.slug}`}
-                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05] hover:shadow-lg hover:shadow-indigo-500/5"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#101010]/12 bg-[#101010]/[0.03] p-5 transition-all duration-200 hover:border-[#D5360C]/40 hover:bg-[#101010]/[0.05]"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2.5">
-                      <span className="inline-flex items-center rounded-md bg-blue-500/10 px-2 py-0.5 text-[11px] font-medium text-blue-300 border border-blue-500/20">
+                      <span className="inline-flex items-center rounded-md bg-[#D5360C]/10 px-2 py-0.5 text-[11px] font-bold text-[#D5360C] border border-[#D5360C]/20">
                         {svc.badge}
                       </span>
-                      <span className="text-[10px] font-mono text-neutral-500">
+                      <span className="text-[10px] font-mono text-[#101010]/50 font-semibold">
                         Priority 0.9
                       </span>
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-blue-400 transition-colors flex items-center justify-between">
+                    <h3 className="text-base font-bold text-[#101010] group-hover:text-[#D5360C] transition-colors flex items-center justify-between">
                       <span>{svc.title}</span>
-                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-blue-400" />
+                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#D5360C]" />
                     </h3>
-                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                    <p className="text-xs text-[#101010]/75 mt-2 leading-relaxed font-medium">
                       {svc.metaDescription}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-white/5">
+                  <div className="mt-4 pt-3 border-t border-[#101010]/10">
                     <div className="flex flex-wrap gap-1.5 mb-2.5">
                       {svc.deliverables.slice(0, 3).map((d) => (
                         <span
                           key={d.title}
-                          className="text-[10px] rounded bg-white/5 px-2 py-0.5 text-neutral-400"
+                          className="text-[10px] rounded bg-[#101010]/[0.06] px-2 py-0.5 text-[#101010]/80 font-semibold"
                         >
                           {d.title}
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                    <div className="flex items-center justify-between text-[11px] text-[#101010]/60 font-mono font-semibold">
                       <span>/services/{svc.slug}</span>
-                      <span className="text-emerald-400 flex items-center gap-1">
+                      <span className="text-emerald-700 font-bold flex items-center gap-1">
                         <CheckCircle2 className="h-3 w-3" /> Indexed
                       </span>
                     </div>
@@ -409,15 +436,15 @@ export default function SitemapPage() {
 
           {/* Section 3: Interactive Experiences & Demos */}
           <section className="my-16" aria-labelledby="demos-heading">
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-[#101010]/12">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#D5360C]/10 border border-[#D5360C]/20 text-[#D5360C]">
                 <ShoppingBag className="h-4 w-4" />
               </div>
               <div>
-                <h2 id="demos-heading" className="text-xl font-bold text-white">
+                <h2 id="demos-heading" className="text-xl font-bold text-[#101010] uppercase">
                   Interactive Demos &amp; Website Showcases
                 </h2>
-                <p className="text-xs text-neutral-400">
+                <p className="text-xs text-[#101010]/70 font-medium">
                   Concept architectures and interactive live demos illustrating our digital production capabilities
                 </p>
               </div>
@@ -426,34 +453,34 @@ export default function SitemapPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {demoPages.map((demo) => (
                 <div
-                  key={demo.href}
-                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05]"
+                  key={demo.title}
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#101010]/12 bg-[#101010]/[0.03] p-5 transition-all duration-200 hover:border-[#D5360C]/40 hover:bg-[#101010]/[0.05]"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2.5">
-                      <span className="inline-flex items-center rounded-md bg-purple-500/10 px-2 py-0.5 text-[11px] font-medium text-purple-300 border border-purple-500/20">
+                      <span className="inline-flex items-center rounded-md bg-[#D5360C]/10 px-2 py-0.5 text-[11px] font-bold text-[#D5360C] border border-[#D5360C]/20">
                         {demo.badge}
                       </span>
                       {demo.liveUrl && (
-                        <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
                           Live Demo Available
                         </span>
                       )}
                     </div>
                     <Link href={demo.href} className="block group/link">
-                      <h3 className="text-base font-semibold text-white group-hover/link:text-purple-400 transition-colors flex items-center justify-between">
+                      <h3 className="text-base font-bold text-[#101010] group-hover/link:text-[#D5360C] transition-colors flex items-center justify-between">
                         <span>{demo.title}</span>
-                        <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all text-purple-400" />
+                        <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all text-[#D5360C]" />
                       </h3>
                     </Link>
-                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                    <p className="text-xs text-[#101010]/75 mt-2 leading-relaxed font-medium">
                       {demo.desc}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
-                    <Link href={demo.href} className="hover:text-purple-300 transition-colors">
+                  <div className="mt-4 pt-3 border-t border-[#101010]/10 flex items-center justify-between text-[11px] text-[#101010]/60 font-mono font-semibold">
+                    <Link href={demo.href} className="hover:text-[#D5360C] transition-colors truncate max-w-[200px]">
                       {demo.href}
                     </Link>
                     {demo.liveUrl && (
@@ -461,7 +488,7 @@ export default function SitemapPage() {
                         href={demo.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs font-sans font-semibold text-[#ffc691] hover:text-white transition-colors"
+                        className="inline-flex items-center gap-1 text-xs font-sans font-bold text-[#D5360C] hover:text-[#101010] transition-colors"
                       >
                         <span>Launch Live</span>
                         <ExternalLink className="h-3 w-3" />
@@ -475,15 +502,15 @@ export default function SitemapPage() {
 
           {/* Section 4: Local SEO & Regional Creative Tech Hubs */}
           <section className="my-16" aria-labelledby="local-hubs-heading">
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/10 border border-orange-500/20 text-[#ef671c]">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-[#101010]/12">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#D5360C]/10 border border-[#D5360C]/20 text-[#D5360C]">
                 <MapPin className="h-4 w-4" />
               </div>
               <div>
-                <h2 id="local-hubs-heading" className="text-xl font-bold text-white">
+                <h2 id="local-hubs-heading" className="text-xl font-bold text-[#101010] uppercase">
                   Regional Tech &amp; Design Hubs (Local SEO)
                 </h2>
-                <p className="text-xs text-neutral-400">
+                <p className="text-xs text-[#101010]/70 font-medium">
                   Specialized regional landing pages tailored for startups, D2C brands, and tech enterprises in Indore and Pune
                 </p>
               </div>
@@ -494,28 +521,28 @@ export default function SitemapPage() {
                 <Link
                   key={localPage.slug}
                   href={`/${localPage.slug}`}
-                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05]"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#101010]/12 bg-[#101010]/[0.03] p-5 transition-all duration-200 hover:border-[#D5360C]/40 hover:bg-[#101010]/[0.05]"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2.5">
-                      <span className="inline-flex items-center rounded-md bg-orange-500/10 px-2 py-0.5 text-[11px] font-medium text-orange-300 border border-orange-500/20">
+                      <span className="inline-flex items-center rounded-md bg-[#D5360C]/10 px-2 py-0.5 text-[11px] font-bold text-[#D5360C] border border-[#D5360C]/20">
                         {localPage.city}, {localPage.state}
                       </span>
-                      <span className="text-[10px] font-mono text-neutral-500">
+                      <span className="text-[10px] font-mono text-[#101010]/50 font-semibold">
                         Priority 0.85
                       </span>
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-orange-400 transition-colors flex items-center justify-between">
+                    <h3 className="text-base font-bold text-[#101010] group-hover:text-[#D5360C] transition-colors flex items-center justify-between">
                       <span>{localPage.title}</span>
-                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-orange-400" />
+                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#D5360C]" />
                     </h3>
-                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                    <p className="text-xs text-[#101010]/75 mt-2 leading-relaxed font-medium">
                       {localPage.tagline}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                  <div className="mt-4 pt-3 border-t border-[#101010]/10 flex items-center justify-between text-[11px] text-[#101010]/60 font-mono font-semibold">
                     <span>/{localPage.slug}</span>
-                    <span className="text-emerald-400 flex items-center gap-1">
+                    <span className="text-emerald-700 font-bold flex items-center gap-1">
                       <CheckCircle2 className="h-3 w-3" /> Indexed
                     </span>
                   </div>
@@ -526,15 +553,15 @@ export default function SitemapPage() {
 
           {/* Section 5: Blog & Engineering Dispatches */}
           <section className="my-16" aria-labelledby="blog-heading">
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-[#101010]/12">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#D5360C]/10 border border-[#D5360C]/20 text-[#D5360C]">
                 <BookOpen className="h-4 w-4" />
               </div>
               <div>
-                <h2 id="blog-heading" className="text-xl font-bold text-white">
+                <h2 id="blog-heading" className="text-xl font-bold text-[#101010] uppercase">
                   Blog &amp; Technical Dispatches (LLM GEO)
                 </h2>
-                <p className="text-xs text-neutral-400">
+                <p className="text-xs text-[#101010]/70 font-medium">
                   Authoritative engineering articles, comparisons, and Generative Engine Optimization guides
                 </p>
               </div>
@@ -545,28 +572,28 @@ export default function SitemapPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05]"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#101010]/12 bg-[#101010]/[0.03] p-5 transition-all duration-200 hover:border-[#D5360C]/40 hover:bg-[#101010]/[0.05]"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2.5">
-                      <span className="inline-flex items-center rounded-md bg-emerald-500/10 px-2 py-0.5 text-[11px] font-medium text-emerald-300 border border-emerald-500/20">
+                      <span className="inline-flex items-center rounded-md bg-[#D5360C]/10 px-2 py-0.5 text-[11px] font-bold text-[#D5360C] border border-[#D5360C]/20">
                         {post.category}
                       </span>
-                      <span className="text-[10px] font-mono text-neutral-500">
+                      <span className="text-[10px] font-mono text-[#101010]/50 font-semibold">
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-emerald-400 transition-colors flex items-center justify-between">
+                    <h3 className="text-base font-bold text-[#101010] group-hover:text-[#D5360C] transition-colors flex items-center justify-between">
                       <span>{post.title}</span>
-                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-emerald-400" />
+                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#D5360C]" />
                     </h3>
-                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                    <p className="text-xs text-[#101010]/75 mt-2 leading-relaxed font-medium">
                       {post.excerpt}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+                  <div className="mt-4 pt-3 border-t border-[#101010]/10 flex items-center justify-between text-[11px] text-[#101010]/60 font-mono font-semibold">
                     <span>/blog/{post.slug}</span>
-                    <span className="text-emerald-400 flex items-center gap-1">
+                    <span className="text-emerald-700 font-bold flex items-center gap-1">
                       <CheckCircle2 className="h-3 w-3" /> Indexed
                     </span>
                   </div>
@@ -577,15 +604,15 @@ export default function SitemapPage() {
 
           {/* Section 6: Official Social Channels & Connect */}
           <section className="my-16" aria-labelledby="social-channels-heading">
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-pink-500/10 border border-pink-500/20 text-pink-400">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-[#101010]/12">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#D5360C]/10 border border-[#D5360C]/20 text-[#D5360C]">
                 <InstagramIcon className="h-4 w-4" />
               </div>
               <div>
-                <h2 id="social-channels-heading" className="text-xl font-bold text-white">
+                <h2 id="social-channels-heading" className="text-xl font-bold text-[#101010] uppercase">
                   Official Channels &amp; Social Network
                 </h2>
-                <p className="text-xs text-neutral-400">
+                <p className="text-xs text-[#101010]/70 font-medium">
                   Verified social profiles, visual showcases, and community dispatches
                 </p>
               </div>
@@ -598,24 +625,24 @@ export default function SitemapPage() {
                   href={ch.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-all duration-200 hover:border-white/25 hover:bg-white/[0.05] hover:shadow-lg"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#101010]/12 bg-[#101010]/[0.03] p-5 transition-all duration-200 hover:border-[#D5360C]/40 hover:bg-[#101010]/[0.05]"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2.5">
-                      <span className="inline-flex items-center rounded-md bg-white/5 px-2 py-0.5 text-[11px] font-medium text-neutral-300 border border-white/10">
+                      <span className="inline-flex items-center rounded-md bg-[#101010]/[0.06] px-2 py-0.5 text-[11px] font-bold text-[#101010] border border-[#101010]/15">
                         {ch.badge}
                       </span>
-                      <ExternalLink className="h-3.5 w-3.5 text-neutral-500 group-hover:text-white transition-colors" />
+                      <ExternalLink className="h-3.5 w-3.5 text-[#101010]/60 group-hover:text-[#D5360C] transition-colors" />
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-pink-400 transition-colors flex items-center justify-between">
+                    <h3 className="text-base font-bold text-[#101010] group-hover:text-[#D5360C] transition-colors flex items-center justify-between">
                       <span>{ch.title}</span>
-                      <span className="text-xs text-neutral-400 font-normal">{ch.handle}</span>
+                      <span className="text-xs text-[#101010]/60 font-semibold">{ch.handle}</span>
                     </h3>
-                    <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+                    <p className="text-xs text-[#101010]/75 mt-2 leading-relaxed font-medium">
                       {ch.desc}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-neutral-500 truncate">
+                  <div className="mt-4 pt-3 border-t border-[#101010]/10 text-[11px] text-[#101010]/60 truncate font-mono font-semibold">
                     {ch.href}
                   </div>
                 </a>
@@ -623,38 +650,38 @@ export default function SitemapPage() {
             </div>
           </section>
 
-          {/* Section 5: Google Search Console Technical Information */}
+          {/* Section 7: Google Search Console Technical Information */}
           <section
-            className="my-16 rounded-2xl border border-blue-500/20 bg-blue-950/10 p-6 md:p-8"
+            className="my-16 rounded-2xl border border-[#101010]/15 bg-[#101010]/[0.04] p-6 md:p-8"
             aria-labelledby="gsc-info-heading"
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D5360C]/10 text-[#D5360C] border border-[#D5360C]/20">
                 <FileCheck2 className="h-5 w-5" />
               </div>
               <div className="space-y-2">
-                <h3 id="gsc-info-heading" className="text-base font-semibold text-white">
+                <h3 id="gsc-info-heading" className="text-base font-bold text-[#101010] uppercase">
                   Google Search Console Indexing Information
                 </h3>
-                <p className="text-xs md:text-sm text-neutral-300 leading-relaxed">
+                <p className="text-xs md:text-sm text-[#101010]/80 leading-relaxed font-medium">
                   The XML Sitemap for Krew / Mesh is generated automatically at{" "}
-                  <code className="rounded bg-white/10 px-1.5 py-0.5 text-blue-300 font-mono">
+                  <code className="rounded bg-[#101010]/[0.08] px-1.5 py-0.5 text-[#D5360C] font-mono font-bold">
                     /sitemap.xml
                   </code>{" "}
                   according to the standard protocol defined at Sitemaps.org and enforced by Google
                   Search Console.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-neutral-400">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-[#101010]/75 font-semibold">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-700" />
                     <span>Auto-updated lastmod timestamps</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-700" />
                     <span>Canonical HTTPS host validation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-700" />
                     <span>Disallow rules mapped in robots.txt</span>
                   </div>
                 </div>

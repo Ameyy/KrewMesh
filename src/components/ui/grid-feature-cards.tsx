@@ -28,11 +28,11 @@ export function FeatureCard({ feature, className, ...props }: FeatureCardProps) 
   const targetHref = feature.href || (feature.slug ? `/services/${feature.slug}` : undefined);
 
   const cardContent = (
-    <GlowingStarsBackgroundCard className={cn("h-full group/card transition-all duration-300 hover:border-white/20", className)} {...props}>
+    <GlowingStarsBackgroundCard className={cn("h-full group/card transition-all duration-300 hover:border-[#D5360C]/50 shadow-md", className)} {...props}>
       <div className="flex items-center justify-between mb-4">
-        <feature.icon className="text-white/80 size-6 group-hover/card:text-white transition-colors" strokeWidth={1.5} aria-hidden />
+        <feature.icon className="text-[#D5360C] size-6 group-hover/card:scale-110 transition-transform" strokeWidth={1.8} aria-hidden />
         {targetHref && (
-          <div className="flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-neutral-500 group-hover/card:text-white transition-colors">
+          <div className="flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-[#E6D5BD] group-hover/card:text-[#D5360C] transition-colors font-semibold">
             <span>Explore</span>
             <ArrowUpRight className="size-3.5 transition-transform duration-300 group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5" />
           </div>

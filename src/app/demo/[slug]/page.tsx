@@ -2,8 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Clock, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
-import Header from "@/components/Header";
-import FooterSection from "@/components/ui/footer-section-4";
 
 interface DemoDetail {
   slug: string;
@@ -221,6 +219,11 @@ const DEMO_DATA: Record<string, DemoDetail> = {
   }
 };
 
+// Aliases for short slug variations to ensure no demo link ever breaks
+DEMO_DATA["inter"] = DEMO_DATA["interior-design"];
+DEMO_DATA["wedtale"] = DEMO_DATA["photography"];
+DEMO_DATA["3dprint"] = DEMO_DATA["3d-print-studio"];
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
 
 export async function generateStaticParams() {
@@ -339,7 +342,6 @@ export default async function DemoComingSoonPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
 
       <main className="relative pt-32 pb-24 px-4 sm:px-6 md:px-8 max-w-5xl mx-auto">
         {/* Ambient background glow */}
@@ -460,8 +462,6 @@ export default async function DemoComingSoonPage({
           </Link>
         </div>
       </main>
-
-      <FooterSection />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
+import EditorialHero from "@/components/EditorialHero";
+import LogoCloudSwap from "@/components/ui/logo-clouds";
 import { GridFeatures } from "@/components/ui/grid-features";
 import { IntegrationsGrid } from "@/components/ui/integrations-4-2";
 import Portfolio from "@/components/Portfolio";
@@ -70,7 +71,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <div style={{ position: 'relative', zIndex: 1 }}>
-        <Hero />
+        <EditorialHero />
         
         {/* Services section */}
         <div id="services" className="scroll-mt-24">
@@ -80,9 +81,13 @@ export default function Home() {
         {/* Replaced old MeshNetwork/Process with IntegrationsGrid */}
         <IntegrationsGrid />
         
+        {/* Demos / Work Section */}
         <div id="work" className="scroll-mt-24">
           <Portfolio />
         </div>
+
+        {/* Clients Section (After Demos, Before Pricing) */}
+        <LogoCloudSwap />
         
         {/* Pricing & Packages Section */}
         <div className="scroll-mt-24">

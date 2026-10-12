@@ -16,32 +16,32 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['cost', 'price', 'pricing', 'packages', 'fastforward', 'deepweb', 'rates', 'how much', 'budget'],
     summaryAnswer: 'Our website builds start at ₹9,999 for the FASTFORWARD package (up to 5 pages, 3–5 days) and ₹19,999 for the DEEPWEB package (up to 10 pages with CMS and animations). Custom web apps and SaaS platforms receive fixed upfront proposals.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
           We offer clear, fixed-price packages tailored to your business scale so you know your exact investment upfront:
         </p>
         <div className="space-y-2.5 pl-2 my-2 text-sm">
           <div>
-            <span className="text-white font-medium">FASTFORWARD Package (Starting ₹9,999 • 3–5 days): </span>
-            <span className="text-neutral-400">
+            <span className="text-[#101010] font-bold font-medium">FASTFORWARD Package (Starting ₹9,999 • 3–5 days): </span>
+            <span className="text-[#101010]/80">
               Up to 5 custom pages, responsive mobile design, WhatsApp &amp; contact inquiry setup, basic SEO, and domain configuration. Perfect for local businesses, consultants, and early startups.
             </span>
           </div>
           <div>
-            <span className="text-white font-medium">DEEPWEB Package (Starting ₹19,999 • 7–10 days): </span>
-            <span className="text-neutral-400">
+            <span className="text-[#101010] font-bold font-medium">DEEPWEB Package (Starting ₹19,999 • 7–10 days): </span>
+            <span className="text-[#101010]/80">
               Up to 10 custom pages, custom kinetic animations, blog or CMS integration, multi-step lead capture funnels, structured schema data, and analytics. Ideal for growing brands and clinics.
             </span>
           </div>
           <div>
-            <span className="text-white font-medium">Custom Web Apps &amp; SaaS (Bespoke scope • 2–4 weeks): </span>
-            <span className="text-neutral-400">
+            <span className="text-[#101010] font-bold font-medium">Custom Web Apps &amp; SaaS (Bespoke scope • 2–4 weeks): </span>
+            <span className="text-[#101010]/80">
               Tailored development for portals, customer dashboards, authentication, database architecture, and payment gateway integrations.
             </span>
           </div>
         </div>
-        <p className="text-sm text-neutral-400">
-          Have unique requirements? <Link href="/contact" className="text-white underline underline-offset-4 hover:text-neutral-300">Request a custom quote</Link> and we will provide an exact breakdown.
+        <p className="text-sm text-[#101010]/80">
+          Have unique requirements? <Link href="/contact" className="text-[#101010] font-bold underline underline-offset-4 hover:text-neutral-300">Request a custom quote</Link> and we will provide an exact breakdown.
         </p>
       </div>
     ),
@@ -52,25 +52,25 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['timeline', 'turnaround', 'how long', 'duration', 'days', 'delivery', 'launch date'],
     summaryAnswer: 'FASTFORWARD projects launch in 3 to 5 business days. DEEPWEB multi-page websites launch in 7 to 10 business days. Custom portals typically take 2 to 4 weeks.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
           Delivery depends on the scope of your build, but we pride ourselves on rapid execution:
         </p>
         <ul className="space-y-1.5 pl-2 my-2 text-sm">
           <li>
-            <span className="text-white font-medium">FASTFORWARD Builds: </span>
+            <span className="text-[#101010] font-bold font-medium">FASTFORWARD Builds: </span>
             <span>Typically completed and launched in 3 to 5 business days.</span>
           </li>
           <li>
-            <span className="text-white font-medium">DEEPWEB Builds: </span>
+            <span className="text-[#101010] font-bold font-medium">DEEPWEB Builds: </span>
             <span>Delivered within 7 to 10 business days.</span>
           </li>
           <li>
-            <span className="text-white font-medium">Custom Web Applications: </span>
+            <span className="text-[#101010] font-bold font-medium">Custom Web Applications: </span>
             <span>Typically range between 2 to 4 weeks depending on features.</span>
           </li>
         </ul>
-        <p className="text-sm text-neutral-400">
+        <p className="text-sm text-[#101010]/80">
           Have an urgent launch date or marketing campaign? Let us know during discovery and we can coordinate an accelerated schedule.
         </p>
       </div>
@@ -82,7 +82,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['requirements', 'what to provide', 'prep', 'content', 'assets', 'start', 'checklist'],
     summaryAnswer: 'All we need to begin is a brief summary of your business, your main goals, and any existing branding assets (logo, colors, or copy). We can assist with missing copy or imagery.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
           Getting started is low-stress. All we need from your side is:
         </p>
@@ -92,7 +92,7 @@ export const FAQ_ITEMS: FAQItem[] = [
           <li>Rough text content or bullet points about your services and company.</li>
           <li>Links to 2–3 reference websites whose aesthetic or functionality you like.</li>
         </ul>
-        <p className="text-sm text-neutral-400">
+        <p className="text-sm text-[#101010]/80">
           Don&apos;t have finished copy or professional photos yet? Don&apos;t worry — we assist you with structuring your content and selecting high-grade commercial imagery.
         </p>
       </div>
@@ -104,9 +104,9 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['mobile', 'responsive', 'iphone', 'android', 'tablet', 'screen sizes', 'speed'],
     summaryAnswer: 'Yes. Over 65% of web visitors browse on mobile. We build mobile-first, ensuring sub-second load times, fluid layouts, and ergonomic touch navigation on all screen sizes.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">Yes, absolutely.</strong> Over 65% of all web traffic originates from mobile devices. We design and test with a strict mobile-first methodology.
+          <strong className="text-[#101010] font-bold">Yes, absolutely.</strong> Over 65% of all web traffic originates from mobile devices. We design and test with a strict mobile-first methodology.
         </p>
         <p>
           Every page is tested across real iPhones, Android smartphones, iPads, laptops, and wide desktop screens. Buttons are touch-friendly (48px+ tap targets), text remains legible without zooming, images load instantly in next-gen formats (WebP/AVIF), and menus open effortlessly on handheld devices.
@@ -120,9 +120,9 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['cms', 'edit text', 'update images', 'blog', 'admin', 'no code', 'self manage'],
     summaryAnswer: 'Yes. For websites requiring regular updates, we integrate an intuitive visual CMS (Sanity, Strapi, or markdown) so your team can edit copy and publish media with zero coding.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">Yes.</strong> If your business requires regular updates — such as publishing new blog posts, adding team bios, updating service pricing, or sharing client case studies — we integrate an intuitive visual Content Management System (CMS).
+          <strong className="text-[#101010] font-bold">Yes.</strong> If your business requires regular updates — such as publishing new blog posts, adding team bios, updating service pricing, or sharing client case studies — we integrate an intuitive visual Content Management System (CMS).
         </p>
         <p>
           You receive a secure admin login where anyone on your team can type new text, swap images, and hit &ldquo;Publish&rdquo; — with instant updates appearing live across your site. No coding knowledge required.
@@ -136,9 +136,9 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['ownership', 'ip rights', 'copyright', 'who owns', 'github', 'source code', 'lock in'],
     summaryAnswer: 'Yes. Upon project completion and final payment, you receive 100% full intellectual property (IP) ownership, complete Git repository code, and Figma design files with zero studio lock-in.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">Yes, 100%.</strong> Unlike agencies that lease websites or lock you into proprietary hosting systems, you own everything we build for you.
+          <strong className="text-[#101010] font-bold">Yes, 100%.</strong> Unlike agencies that lease websites or lock you into proprietary hosting systems, you own everything we build for you.
         </p>
         <p>
           Upon project handover, we transfer complete Git repository ownership (GitHub), production deployment keys, Figma design files, and all vector graphic assets directly to you. You are never locked into our studio and have total freedom.
@@ -152,25 +152,25 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['seo', 'google rank', 'search console', 'meta tags', 'keywords', 'find on google'],
     summaryAnswer: 'Yes. Core SEO is built into our architecture by default, including 90+ PageSpeed scores, semantic HTML5, Schema.org structured JSON-LD microdata, and automatic sitemaps for Google indexing.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">Yes.</strong> Search engine optimization is built directly into our code architecture from day one:
+          <strong className="text-[#101010] font-bold">Yes.</strong> Search engine optimization is built directly into our code architecture from day one:
         </p>
         <ul className="space-y-1.5 pl-2 my-2 text-sm">
           <li>
-            <span className="text-white font-medium">Sub-Second Page Speeds: </span>
+            <span className="text-[#101010] font-bold font-medium">Sub-Second Page Speeds: </span>
             <span>Google ranks fast websites higher; we optimize for 90+ Core Web Vitals performance scores.</span>
           </li>
           <li>
-            <span className="text-white font-medium">Semantic HTML5 &amp; Metadata: </span>
+            <span className="text-[#101010] font-bold font-medium">Semantic HTML5 &amp; Metadata: </span>
             <span>Descriptive title tags, meta descriptions, and clean heading hierarchies on every page.</span>
           </li>
           <li>
-            <span className="text-white font-medium">Schema.org Structured Data: </span>
+            <span className="text-[#101010] font-bold font-medium">Schema.org Structured Data: </span>
             <span>We inject JSON-LD microdata so Google clearly understands your company, products, and FAQs.</span>
           </li>
           <li>
-            <span className="text-white font-medium">XML Sitemaps: </span>
+            <span className="text-[#101010] font-bold font-medium">XML Sitemaps: </span>
             <span>Dynamic XML sitemaps generated automatically for instant Google Search Console indexing.</span>
           </li>
         </ul>
@@ -183,9 +183,9 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['support', 'warranty', 'bugs', 'maintenance', 'help', 'broken', 'after launch'],
     summaryAnswer: 'Every website build includes a complimentary 14 to 30-day post-launch warranty where we fix any browser quirks or formatting issues at zero extra charge.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          Every build includes a <strong className="text-white">14 to 30-day post-launch warranty window</strong> at zero additional charge. During this time, we monitor real user traffic and immediately resolve any unexpected bugs, browser quirks, or formatting issues.
+          Every build includes a <strong className="text-[#101010] font-bold">14 to 30-day post-launch warranty window</strong> at zero additional charge. During this time, we monitor real user traffic and immediately resolve any unexpected bugs, browser quirks, or formatting issues.
         </p>
         <p>
           After the warranty period, we offer flexible on-demand support and affordable monthly maintenance retainers for businesses that want ongoing updates, new feature builds, and continuous performance tuning.
@@ -199,9 +199,9 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['redesign', 'existing website', 'traffic loss', '301 redirect', 'preserve seo', 'migration'],
     summaryAnswer: 'Yes. We audit your existing URLs and traffic, setting up 301 redirects and preserving metadata so your search rankings and backlinks carry over without traffic drop-offs.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">Yes.</strong> When redesigning an active website, preserving your existing organic traffic is our top priority.
+          <strong className="text-[#101010] font-bold">Yes.</strong> When redesigning an active website, preserving your existing organic traffic is our top priority.
         </p>
         <p>
           We map all your existing URL structures, configure permanent 301 server redirects for any modified links, preserve critical keyword metadata, and verify that Google Search Console indexes the new pages cleanly without broken 404 links.
@@ -215,25 +215,25 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['whatsapp', 'payment gateway', 'stripe', 'razorpay', 'calendly', 'booking', 'forms'],
     summaryAnswer: 'Yes. We regularly integrate WhatsApp direct inquiry buttons, payment gateways (Stripe, Razorpay), calendar booking tools (Calendly), and CRM inquiry funnels.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">Yes.</strong> A website should be an active business asset that captures leads and generates revenue. We regularly integrate:
+          <strong className="text-[#101010] font-bold">Yes.</strong> A website should be an active business asset that captures leads and generates revenue. We regularly integrate:
         </p>
         <ul className="space-y-1.5 pl-2 my-2 text-sm">
           <li>
-            <span className="text-white font-medium">WhatsApp &amp; Direct Messaging: </span>
+            <span className="text-[#101010] font-bold font-medium">WhatsApp &amp; Direct Messaging: </span>
             <span>Instant floating contact triggers so customers can chat with you immediately.</span>
           </li>
           <li>
-            <span className="text-white font-medium">Payment Gateways: </span>
+            <span className="text-[#101010] font-bold font-medium">Payment Gateways: </span>
             <span>Seamless credit/debit card, UPI, Stripe, or Razorpay checkout workflows.</span>
           </li>
           <li>
-            <span className="text-white font-medium">Appointment Scheduling: </span>
+            <span className="text-[#101010] font-bold font-medium">Appointment Scheduling: </span>
             <span>Calendly, Google Calendar, or custom intake booking forms.</span>
           </li>
           <li>
-            <span className="text-white font-medium">CRM &amp; Email Marketing: </span>
+            <span className="text-[#101010] font-bold font-medium">CRM &amp; Email Marketing: </span>
             <span>Automatic lead routing to your email, WhatsApp alerts, or CRM dashboard.</span>
           </li>
         </ul>
@@ -246,9 +246,9 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['recurring fees', 'monthly cost', 'retainer', 'hidden charges', 'hosting fees', 'annual fee'],
     summaryAnswer: 'No. Our website build fee is a one-time investment. The only recurring costs are your standard domain registration and cloud hosting, registered directly in your own accounts.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">No.</strong> Our build fee is a one-time project fee. You do not pay our studio any monthly retainer or maintenance charge unless you specifically hire us for continuous monthly updates.
+          <strong className="text-[#101010] font-bold">No.</strong> Our build fee is a one-time project fee. You do not pay our studio any monthly retainer or maintenance charge unless you specifically hire us for continuous monthly updates.
         </p>
         <p>
           Your only recurring expenses are standard third-party infrastructure fees (such as your annual domain name renewal and hosting provider, e.g. Vercel or AWS, which frequently offer free tiers for modern static sites). We set these up under your own accounts so you have total financial control.
@@ -262,7 +262,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['revisions', 'feedback', 'changes', 'satisfaction', 'approval', 'not happy'],
     summaryAnswer: 'Every project includes dedicated collaborative review rounds during both the Figma visual design stage and the private staging build so you are 100% satisfied before launch.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
           We treat client feedback as an open, structured collaboration. You are never kept in the dark:
         </p>
@@ -278,7 +278,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['copywriting', 'photos', 'images', 'content writing', 'stock photos', 'branding'],
     summaryAnswer: 'That is completely normal. We help refine your headlines and text content, and curate high-resolution licensed photography and custom iconography tailored to your brand.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
           That is very common and completely fine. You do not need to have agency-grade copywriting or a professional photoshoot prepared.
         </p>
@@ -294,9 +294,9 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['custom features', '3d', 'animations', 'portals', 'calculators', 'interactive', 'web app'],
     summaryAnswer: 'Yes. We are full-stack software engineers and specialize in building custom interactive tools, 3D WebGL graphics, client portals, and bespoke web apps.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          <strong className="text-white">Yes.</strong> Because we are full-stack software engineers rather than generic template configurators, we build advanced custom features including:
+          <strong className="text-[#101010] font-bold">Yes.</strong> Because we are full-stack software engineers rather than generic template configurators, we build advanced custom features including:
         </p>
         <ul className="space-y-1.5 pl-4 list-disc marker:text-neutral-600 my-2 text-sm">
           <li>Custom pricing and treatment quote calculators.</li>
@@ -313,7 +313,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['security', 'ssl', 'https', 'hackers', 'spam', 'downtime', 'cloudflare', 'protection'],
     summaryAnswer: 'Modern Next.js edge builds eliminate traditional WordPress database vulnerabilities. We configure HTTPS/SSL encryption, security headers, and anti-spam protection by default.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
           Because we build modern server-rendered and static Next.js platforms deployed to global CDN edge networks, your site does not suffer from the common security holes, outdated plugins, and database injection attacks associated with traditional WordPress setups.
         </p>
@@ -329,12 +329,12 @@ export const FAQ_ITEMS: FAQItem[] = [
     keywords: ['how to start', 'payment terms', 'deposit', 'kickoff', 'milestones', 'invoice', 'hire'],
     summaryAnswer: 'Projects typically operate on a standard 50% kickoff deposit and 50% upon final approval and live launch. Get started by contacting us or messaging WhatsApp at +91 920 983 9142.',
     answer: (
-      <div className="space-y-3 text-neutral-400 leading-relaxed">
+      <div className="space-y-3 text-[#101010]/80 leading-relaxed">
         <p>
-          Projects typically follow a clear, fair milestone schedule: <strong className="text-white">50% deposit upon project kickoff</strong> and <strong className="text-white">50% upon your final review and public launch</strong>.
+          Projects typically follow a clear, fair milestone schedule: <strong className="text-[#101010] font-bold">50% deposit upon project kickoff</strong> and <strong className="text-[#101010] font-bold">50% upon your final review and public launch</strong>.
         </p>
         <p>
-          To get started, simply send an inquiry through our <Link href="/contact" className="text-white underline underline-offset-4 hover:text-neutral-300">contact page</Link> or chat with us on WhatsApp at <a href="https://wa.me/919209839142" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-4 hover:text-neutral-300">+91 920 983 9142</a>. We will discuss your goals and send you a formal proposal within 24 hours.
+          To get started, simply send an inquiry through our <Link href="/contact" className="text-[#101010] font-bold underline underline-offset-4 hover:text-neutral-300">contact page</Link> or chat with us on WhatsApp at <a href="https://wa.me/919209839142" target="_blank" rel="noopener noreferrer" className="text-[#101010] font-bold underline underline-offset-4 hover:text-neutral-300">+91 920 983 9142</a>. We will discuss your goals and send you a formal proposal within 24 hours.
         </p>
       </div>
     ),

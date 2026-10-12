@@ -224,38 +224,38 @@ export default function WebBuildsPricing() {
   const activeCurrencyConfig = CURRENCIES[currency] || CURRENCIES.INR;
 
   return (
-    <section id="packages" className="relative py-24 sm:py-32 bg-black text-white overflow-hidden scroll-mt-20">
-      {/* Subtle top ambient gradient - extremely subtle neutral only */}
+    <section id="packages" className="relative py-24 sm:py-32 bg-transparent text-[#101010] overflow-hidden scroll-mt-20">
+      {/* Subtle top ambient gradient */}
       <div 
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] opacity-25 blur-[120px]"
-        style={{ background: 'radial-gradient(ellipse at top, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%)' }}
+        style={{ background: 'radial-gradient(ellipse at top, rgba(213, 54, 12, 0.2) 0%, rgba(230, 213, 189, 0) 70%)' }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/[0.02] text-[11px] font-medium tracking-[0.2em] text-neutral-400 uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#D5360C]/30 bg-[#D5360C]/10 text-[11px] font-medium tracking-[0.2em] text-[#D5360C] uppercase">
             <span>Pricing &amp; Engineering</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white uppercase leading-[1.08]">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#101010] uppercase leading-[1.08]">
             Plans &amp; Pricing.
           </h2>
 
-          <p className="text-neutral-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+          <p className="text-[#101010]/75 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
             Transparent, fixed-scope web engineering. Predictable delivery timelines with zero hidden retainers.
           </p>
 
           {/* Currency Converter Switcher */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-            <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400">
+            <span className="text-[11px] font-mono uppercase tracking-widest text-[#101010]/70">
               Currency:
             </span>
             <div 
               role="radiogroup" 
               aria-label="Select currency for pricing"
-              className="inline-flex p-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md"
+              className="inline-flex p-1 rounded-full bg-[#101010]/5 border border-[#101010]/15 backdrop-blur-md"
             >
               {(Object.keys(CURRENCIES) as CurrencyCode[]).map((code) => {
                 const isSelected = currency === code;
@@ -269,8 +269,8 @@ export default function WebBuildsPricing() {
                     onClick={() => setCurrency(code)}
                     className={`relative px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
                       isSelected
-                        ? 'bg-white text-black shadow-md scale-[1.02]'
-                        : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
+                        ? 'bg-[#D5360C] text-[#E6D5BD] shadow-md shadow-[#D5360C]/25 scale-[1.02]'
+                        : 'text-[#101010]/70 hover:text-[#101010] hover:bg-[#101010]/10'
                     }`}
                   >
                     <span className="text-xs leading-none">{item.flag}</span>
@@ -302,23 +302,25 @@ export default function WebBuildsPricing() {
                 }}
                 className={`group relative rounded-2xl p-6 sm:p-7 flex flex-col transition-all duration-300 cursor-pointer select-none text-left ${
                   isFeatured
-                    ? 'border border-white/25 bg-gradient-to-b from-white/[0.05] to-[#0A0A0A] shadow-[0_12px_40px_rgba(0,0,0,0.7)] hover:border-white/40'
-                    : 'border border-white/[0.08] bg-[#0A0A0A] hover:border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
+                    ? 'border-2 border-[#D5360C] bg-[#D5360C] text-[#E6D5BD] shadow-[0_16px_45px_rgba(213,54,12,0.4)] hover:shadow-[0_20px_55px_rgba(213,54,12,0.5)] scale-[1.02] z-10'
+                    : 'border border-[#E6D5BD]/10 bg-[#101010] text-[#E6D5BD] hover:border-[#E6D5BD]/25 shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
                 }`}
               >
                 {/* Upper Content - Strictly Pixel-Aligned on All 4 Cards */}
                 <div className="flex flex-col space-y-4">
                   {/* 1. Header (Tier number + badge): Exact h-7 */}
                   <div className="flex items-center justify-between gap-2 h-7">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+                    <span className={`text-xs font-semibold uppercase tracking-wider ${
+                      isFeatured ? 'text-[#E6D5BD]' : 'text-[#E6D5BD]/70'
+                    }`}>
                       {pkg.number} // {pkg.name}
                     </span>
 
                     {pkg.badge ? (
-                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-semibold border ${
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-bold border ${
                         isFeatured 
-                          ? 'border-white/30 bg-white/10 text-white' 
-                          : 'border-white/10 bg-white/[0.03] text-neutral-400'
+                          ? 'border-[#101010] bg-[#101010] text-[#E6D5BD] shadow-md' 
+                          : 'border-[#E6D5BD]/15 bg-[#E6D5BD]/[0.05] text-[#E6D5BD]/80'
                       }`}>
                         {pkg.badge}
                       </span>
@@ -330,41 +332,53 @@ export default function WebBuildsPricing() {
                   {/* 2. Price Row: Exact h-[64px] */}
                   <div className="h-[64px] flex flex-col justify-center">
                     <div className="flex items-baseline gap-1.5 leading-none">
-                      <span className="text-3xl sm:text-4xl font-bold tracking-tight text-white tabular-nums">
+                      <span className={`text-3xl sm:text-4xl font-bold tracking-tight tabular-nums ${
+                        isFeatured ? 'text-[#E6D5BD]' : 'text-[#E6D5BD]'
+                      }`}>
                         {activeCurrencyConfig.prices[pkg.id] || pkg.priceINR}
                       </span>
-                      <span className="text-xs text-neutral-500 uppercase tracking-wider">
+                      <span className={`text-xs uppercase tracking-wider ${
+                        isFeatured ? 'text-[#E6D5BD]/85 font-semibold' : 'text-[#E6D5BD]/60'
+                      }`}>
                         / {pkg.priceLabel}
                       </span>
                     </div>
-                    <p className="text-xs text-neutral-300 mt-2 font-medium leading-tight">
+                    <p className={`text-xs mt-2 font-medium leading-tight ${
+                      isFeatured ? 'text-[#E6D5BD] font-semibold' : 'text-[#E6D5BD]/80'
+                    }`}>
                       {pkg.whatItMeans}
                     </p>
                   </div>
 
                   {/* 3. Turnaround Info: Exact h-5 */}
-                  <div className="h-5 text-xs text-neutral-400 font-medium flex items-center gap-1.5">
-                    <span className="text-neutral-500">⏱</span>
+                  <div className={`h-5 text-xs font-semibold flex items-center gap-1.5 ${
+                    isFeatured ? 'text-[#E6D5BD]' : 'text-[#E6D5BD]/70 font-medium'
+                  }`}>
+                    <span className={isFeatured ? 'text-[#101010]' : 'text-[#D5360C]'}>⏱</span>
                     <span>{pkg.turnaround}</span>
                   </div>
 
                   {/* 4. Short Pitch: Exact h-10 */}
                   <div className="h-10 flex items-start">
-                    <p className="text-xs text-neutral-400 leading-relaxed line-clamp-2">
+                    <p className={`text-xs leading-relaxed line-clamp-2 ${
+                      isFeatured ? 'text-[#E6D5BD]/90 font-medium' : 'text-[#E6D5BD]/70'
+                    }`}>
                       {pkg.description}
                     </p>
                   </div>
                 </div>
 
                 {/* Actions: Direct CTA + Polished Deliverables Toggle Button (Laser Aligned) */}
-                <div className="mt-5 pt-5 border-t border-white/[0.08] space-y-2.5">
+                <div className={`mt-5 pt-5 border-t space-y-2.5 ${
+                  isFeatured ? 'border-[#101010]/20' : 'border-[#E6D5BD]/15'
+                }`}>
                   <Link
                     href={`/contact?package=${pkg.id}&currency=${currency}`}
                     onClick={(e) => e.stopPropagation()}
-                    className={`w-full h-11 px-4 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2 ${
+                    className={`w-full h-11 px-4 rounded-full text-xs font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-2 ${
                       isFeatured
-                        ? 'bg-white text-black hover:bg-neutral-200 shadow-md'
-                        : 'bg-white/[0.04] hover:bg-white/[0.09] border border-white/15 text-white hover:border-white/30'
+                        ? 'bg-[#101010] text-[#E6D5BD] hover:bg-[#181818] border border-[#101010] shadow-xl hover:scale-[1.01]'
+                        : 'bg-[#E6D5BD]/10 hover:bg-[#E6D5BD]/20 border border-[#E6D5BD]/20 text-[#E6D5BD] hover:border-[#D5360C]'
                     }`}
                   >
                     <span>Get Started</span>
@@ -378,16 +392,22 @@ export default function WebBuildsPricing() {
                       e.stopPropagation();
                       toggleCard(pkg.id);
                     }}
-                    className={`w-full h-10 px-3.5 rounded-xl text-xs font-medium tracking-wide transition-all flex items-center justify-between cursor-pointer border ${
-                      isExpanded
-                        ? 'bg-white/10 text-white border-white/30 shadow-sm'
-                        : 'bg-white/[0.02] hover:bg-white/[0.06] border-white/10 hover:border-white/20 text-neutral-300 hover:text-white'
+                    className={`w-full h-10 px-3.5 rounded-full text-xs font-semibold tracking-wide transition-all flex items-center justify-between cursor-pointer border ${
+                      isFeatured
+                        ? isExpanded
+                          ? 'bg-[#101010] text-[#E6D5BD] border-[#101010] shadow-md'
+                          : 'bg-[#101010]/20 hover:bg-[#101010]/30 border-[#101010]/30 text-[#E6D5BD]'
+                        : isExpanded
+                          ? 'bg-[#E6D5BD]/15 text-[#E6D5BD] border-[#D5360C]/50 shadow-sm'
+                          : 'bg-[#E6D5BD]/5 hover:bg-[#E6D5BD]/10 border-[#E6D5BD]/15 text-[#E6D5BD]/80 hover:text-[#E6D5BD]'
                     }`}
                   >
                     <span className="flex items-center gap-2">
                       <span 
                         className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                          isExpanded ? 'bg-white' : 'bg-neutral-500'
+                          isExpanded 
+                            ? (isFeatured ? 'bg-[#E6D5BD]' : 'bg-[#D5360C]') 
+                            : (isFeatured ? 'bg-[#E6D5BD]/80' : 'bg-[#E6D5BD]/40')
                         }`} 
                       />
                       <span className="text-[11px] uppercase tracking-wider font-semibold">
@@ -395,8 +415,10 @@ export default function WebBuildsPricing() {
                       </span>
                     </span>
                     <div 
-                      className={`w-6 h-6 rounded-full bg-white/[0.06] flex items-center justify-center transition-transform duration-300 ${
-                        isExpanded ? 'rotate-180 bg-white/15 text-white' : 'text-neutral-400'
+                      className={`w-6 h-6 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                        isFeatured
+                          ? isExpanded ? 'rotate-180 bg-[#101010] text-[#E6D5BD]' : 'bg-[#101010]/30 text-[#E6D5BD]'
+                          : isExpanded ? 'rotate-180 bg-[#D5360C] text-[#E6D5BD]' : 'bg-[#E6D5BD]/10 text-[#E6D5BD]/70'
                       }`}
                     >
                       <ChevronDown size={13} />
@@ -408,40 +430,56 @@ export default function WebBuildsPricing() {
                 <div 
                   className={`grid transition-all duration-400 ease-in-out ${
                     isExpanded 
-                      ? 'grid-rows-[1fr] opacity-100 mt-5 pt-5 border-t border-white/[0.08]' 
+                      ? `grid-rows-[1fr] opacity-100 mt-5 pt-5 border-t ${
+                          isFeatured ? 'border-[#101010]/20' : 'border-[#E6D5BD]/15'
+                        }` 
                       : 'grid-rows-[0fr] opacity-0 mt-0 pt-0 border-t-0'
                   }`}
                 >
                   <div className="overflow-hidden space-y-4">
                     {/* Optional includes note (e.g. for DEEPWEB) */}
                     {pkg.includesNote && (
-                      <div className="text-[11px] text-neutral-300 font-medium">
+                      <div className={`text-[11px] font-semibold ${
+                        isFeatured ? 'text-[#E6D5BD]' : 'text-[#E6D5BD]/90'
+                      }`}>
                         {pkg.includesNote}
                       </div>
                     )}
 
                     {/* Features Checklist */}
                     <div className="space-y-2">
-                      <span className="text-[10px] uppercase tracking-wider text-neutral-500 font-semibold block mb-2">
+                      <span className={`text-[10px] uppercase tracking-wider font-bold block mb-2 ${
+                        isFeatured ? 'text-[#101010]' : 'text-[#E6D5BD]/60'
+                      }`}>
                         Included Deliverables:
                       </span>
-                      <ul className="space-y-2 text-xs text-neutral-300">
+                      <ul className="space-y-2 text-xs">
                         {pkg.features.map((feat, idx) => (
                           <li key={idx} className="flex items-start gap-2.5">
                             <Check 
                               size={14} 
-                              className="mt-0.5 shrink-0 text-white" 
-                              strokeWidth={2}
+                              className={`mt-0.5 shrink-0 ${
+                                isFeatured ? 'text-[#101010]' : 'text-[#D5360C]'
+                              }`} 
+                              strokeWidth={2.5}
                             />
-                            <span className="leading-snug text-neutral-300">{feat}</span>
+                            <span className={`leading-snug ${
+                              isFeatured ? 'text-[#E6D5BD] font-medium' : 'text-[#E6D5BD]/85'
+                            }`}>{feat}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     {/* Best Suited For Box */}
-                    <div className="pt-3 border-t border-white/[0.06] text-[11px] text-neutral-400 leading-relaxed">
-                      <span className="font-semibold text-neutral-200 block mb-0.5">
+                    <div className={`pt-3 border-t text-[11px] leading-relaxed ${
+                      isFeatured 
+                        ? 'border-[#101010]/20 text-[#E6D5BD]' 
+                        : 'border-[#E6D5BD]/10 text-[#E6D5BD]/70'
+                    }`}>
+                      <span className={`font-bold block mb-0.5 ${
+                        isFeatured ? 'text-[#101010]' : 'text-[#E6D5BD]'
+                      }`}>
                         Best Suited For:
                       </span>
                       <span>{pkg.goodFor}</span>
@@ -454,7 +492,9 @@ export default function WebBuildsPricing() {
                         e.stopPropagation();
                         toggleCard(pkg.id);
                       }}
-                      className="w-full text-center text-[10px] uppercase tracking-wider text-neutral-500 hover:text-neutral-300 pt-1 transition-colors cursor-pointer"
+                      className={`w-full text-center text-[10px] uppercase tracking-wider pt-1 transition-colors cursor-pointer ${
+                        isFeatured ? 'text-[#101010] hover:text-[#101010]/80 font-bold' : 'text-[#E6D5BD]/60 hover:text-[#E6D5BD]'
+                      }`}
                     >
                       ↑ Close Deliverables
                     </button>
@@ -470,28 +510,28 @@ export default function WebBuildsPricing() {
         <div className="mt-12 text-center">
           <button
             onClick={() => setShowComparison(!showComparison)}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/[0.02] hover:bg-white/[0.06] hover:border-white/20 text-xs text-neutral-400 hover:text-white transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#101010]/15 bg-[#101010]/5 hover:bg-[#D5360C]/10 hover:border-[#D5360C] text-xs text-[#101010]/80 hover:text-[#D5360C] transition-all cursor-pointer"
           >
             <span>{showComparison ? 'Hide Specifications Matrix' : 'Compare All 4 Packages Side-by-Side'}</span>
             <ChevronDown size={14} className={`transition-transform duration-300 ${showComparison ? 'rotate-180' : ''}`} />
           </button>
         </div>
 
-        {/* Clean Monochrome Feature Comparison Matrix */}
+        {/* Clean Feature Comparison Matrix */}
         {showComparison && (
-          <div className="mt-10 rounded-2xl border border-white/10 bg-neutral-950 p-6 sm:p-10 shadow-2xl animate-fade-in-up">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+          <div className="mt-10 rounded-2xl border border-[#E6D5BD]/15 bg-[#101010] p-6 sm:p-10 shadow-2xl animate-fade-in-up">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#E6D5BD]/15">
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-white">
+                <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-[#E6D5BD]">
                   Package Specifications.
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+                <p className="text-xs sm:text-sm text-[#E6D5BD]/70 mt-1">
                   Side-by-side breakdown of velocities, architecture, and engineering deliverables.
                 </p>
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-xs font-semibold uppercase tracking-wider hover:bg-neutral-200 transition-colors shrink-0"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D5360C] text-[#E6D5BD] text-xs font-semibold uppercase tracking-wider hover:bg-[#b82d09] transition-colors shrink-0"
               >
                 <span>Consult Our Team</span>
                 <ArrowRight size={14} />
@@ -501,46 +541,46 @@ export default function WebBuildsPricing() {
             <div className="overflow-x-auto mt-6">
               <table className="w-full text-left text-xs sm:text-sm">
                 <thead>
-                  <tr className="border-b border-white/10 text-neutral-400 uppercase text-[11px] tracking-wider">
-                    <th className="py-4 pr-4 font-semibold text-white">Scope &amp; Capability</th>
-                    <th className="py-4 px-3 font-semibold text-white">FASTFORWARD</th>
-                    <th className="py-4 px-3 font-semibold text-white">DEEPWEB</th>
-                    <th className="py-4 px-3 font-semibold text-white">ECOM</th>
-                    <th className="py-4 pl-3 font-semibold text-white">FULL SEND</th>
+                  <tr className="border-b border-[#E6D5BD]/15 text-[#E6D5BD]/60 uppercase text-[11px] tracking-wider">
+                    <th className="py-4 pr-4 font-semibold text-[#E6D5BD]">Scope &amp; Capability</th>
+                    <th className="py-4 px-3 font-semibold text-[#E6D5BD]">FASTFORWARD</th>
+                    <th className="py-4 px-3 font-semibold text-[#E6D5BD]">DEEPWEB</th>
+                    <th className="py-4 px-3 font-semibold text-[#E6D5BD]">ECOM</th>
+                    <th className="py-4 pl-3 font-semibold text-[#E6D5BD]">FULL SEND</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/[0.06] text-neutral-300">
+                <tbody className="divide-y divide-[#E6D5BD]/10 text-[#E6D5BD]/80">
                   {COMPARISON_ROWS.map((row, i) => (
-                    <tr key={i} className="hover:bg-white/[0.02] transition-colors">
-                      <td className="py-3.5 pr-4 font-medium text-neutral-200">
+                    <tr key={i} className="hover:bg-[#E6D5BD]/[0.03] transition-colors">
+                      <td className="py-3.5 pr-4 font-medium text-[#E6D5BD]">
                         {row.feature}
                       </td>
                       <td className="py-3.5 px-3">
                         {typeof row.f === 'boolean' ? (
-                          row.f ? <CheckCircle2 size={16} className="text-white" /> : <Minus size={16} className="text-neutral-600" />
+                          row.f ? <CheckCircle2 size={16} className="text-[#D5360C]" /> : <Minus size={16} className="text-[#E6D5BD]/30" />
                         ) : (
-                          <span className="text-neutral-300">{row.f}</span>
+                          <span className="text-[#E6D5BD]/75">{row.f}</span>
                         )}
                       </td>
                       <td className="py-3.5 px-3">
                         {typeof row.d === 'boolean' ? (
-                          row.d ? <CheckCircle2 size={16} className="text-white" /> : <Minus size={16} className="text-neutral-600" />
+                          row.d ? <CheckCircle2 size={16} className="text-[#D5360C]" /> : <Minus size={16} className="text-[#E6D5BD]/30" />
                         ) : (
-                          <span className="font-medium text-white">{row.d}</span>
+                          <span className="font-medium text-[#E6D5BD]">{row.d}</span>
                         )}
                       </td>
                       <td className="py-3.5 px-3">
                         {typeof row.e === 'boolean' ? (
-                          row.e ? <CheckCircle2 size={16} className="text-white" /> : <Minus size={16} className="text-neutral-600" />
+                          row.e ? <CheckCircle2 size={16} className="text-[#D5360C]" /> : <Minus size={16} className="text-[#E6D5BD]/30" />
                         ) : (
-                          <span className="text-neutral-300">{row.e}</span>
+                          <span className="text-[#E6D5BD]/75">{row.e}</span>
                         )}
                       </td>
                       <td className="py-3.5 pl-3">
                         {typeof row.s === 'boolean' ? (
-                          row.s ? <CheckCircle2 size={16} className="text-white" /> : <Minus size={16} className="text-neutral-600" />
+                          row.s ? <CheckCircle2 size={16} className="text-[#D5360C]" /> : <Minus size={16} className="text-[#E6D5BD]/30" />
                         ) : (
-                          <span className="font-medium text-white">{row.s}</span>
+                          <span className="font-medium text-[#E6D5BD]">{row.s}</span>
                         )}
                       </td>
                     </tr>
@@ -551,16 +591,22 @@ export default function WebBuildsPricing() {
           </div>
         )}
 
-        {/* Minimal Studio Manifesto Quote */}
-        <div className="mt-16 sm:mt-24 max-w-2xl mx-auto text-center border-t border-white/[0.08] pt-12 sm:pt-16">
-          <blockquote className="text-base sm:text-lg md:text-xl font-medium tracking-tight text-neutral-300 uppercase leading-snug">
-            &ldquo;We don&apos;t build websites to fill a URL.<br className="hidden sm:inline" />
-            We build digital spaces people actually remember.&rdquo;
-          </blockquote>
+        {/* Studio Manifesto Quote Banner Strip (100% Full-Bleed Screen Width) */}
+        <div className="mt-20 sm:mt-28 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#D5360C] py-14 sm:py-20 px-6 sm:px-12 text-center shadow-2xl border-y border-[#D5360C] select-none overflow-hidden">
+          <div className="max-w-5xl mx-auto space-y-5">
+            <blockquote className="text-xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#E6D5BD] uppercase leading-tight font-sans">
+              &ldquo;We don&apos;t build websites to fill a URL.<br className="hidden sm:inline" />
+              We build digital spaces people actually remember.&rdquo;
+            </blockquote>
 
-          <p className="mt-4 text-[11px] uppercase tracking-[0.2em] text-neutral-500 font-medium">
-            KREW / MESH &mdash; DIGITAL CRAFT MANIFESTO
-          </p>
+            <div className="inline-flex items-center justify-center gap-3 pt-3">
+              <span className="h-px w-12 bg-[#101010]/40" />
+              <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#101010] font-mono font-black">
+                KREW / MESH &mdash; DIGITAL CRAFT MANIFESTO
+              </p>
+              <span className="h-px w-12 bg-[#101010]/40" />
+            </div>
+          </div>
         </div>
 
       </div>

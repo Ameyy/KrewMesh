@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { ContactCard } from "@/components/ui/contact-card";
+import SubpageHeaderBanner from "@/components/SubpageHeaderBanner";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { MapPin, Phone, Mail, CheckCircle2, Loader2 } from "lucide-react";
+import { MapPin, Phone, CheckCircle2, Loader2 } from "lucide-react";
 import { InstagramIcon, LinkedInIcon, XIcon } from "@/components/ui/footer-section-4-utils/social-cloud";
 
 export default function Contact() {
@@ -64,12 +65,6 @@ export default function Contact() {
       label: "Phone",
       value: "+91 92098 39142",
       href: "tel:+919209839142",
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      value: "ameykulkarni1993@gmail.com",
-      href: "mailto:ameykulkarni1993@gmail.com",
     },
     {
       icon: InstagramIcon,
@@ -146,7 +141,7 @@ export default function Contact() {
     <>
       
       <div style={{ position: 'relative', zIndex: 1, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ flex: 1, paddingTop: '150px' }} className="px-6 md:px-12 pb-24">
+        <div style={{ flex: 1, paddingTop: '40px' }} className="px-6 md:px-12 pb-24">
             <div className="max-w-6xl mx-auto">
               <ContactCard 
                 contactInfo={contactInfo} 
@@ -180,7 +175,7 @@ export default function Contact() {
                       </div>
                     )}
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">Name</label>
+                      <label htmlFor="name" className="text-sm font-medium text-[#101010]">Name</label>
                       <input 
                         id="name" 
                         type="text" 
@@ -188,11 +183,11 @@ export default function Contact() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Doe" 
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" 
+                        className="flex h-10 w-full rounded-md border border-[#101010]/20 bg-[#101010]/[0.03] px-3 py-2 text-sm text-[#101010] font-medium placeholder:text-[#101010]/60 placeholder:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5360C] disabled:cursor-not-allowed disabled:opacity-50 transition-colors" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">Email</label>
+                      <label htmlFor="email" className="text-sm font-medium text-[#101010]">Email</label>
                       <input 
                         id="email" 
                         type="email" 
@@ -200,27 +195,27 @@ export default function Contact() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@example.com" 
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" 
+                        className="flex h-10 w-full rounded-md border border-[#101010]/20 bg-[#101010]/[0.03] px-3 py-2 text-sm text-[#101010] font-medium placeholder:text-[#101010]/60 placeholder:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5360C] disabled:cursor-not-allowed disabled:opacity-50 transition-colors" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="service" className="text-sm font-medium">Service Needed</label>
+                      <label htmlFor="service" className="text-sm font-medium text-[#101010]">Service Needed</label>
                       <div className="relative">
                         <select 
                           id="service" 
                           value={formData.service} 
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none"
+                          className={`flex h-10 w-full rounded-md border border-[#101010]/20 bg-[#101010]/[0.03] px-3 py-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5360C] disabled:cursor-not-allowed disabled:opacity-50 appearance-none transition-colors ${formData.service ? "text-[#101010]" : "text-[#101010]/60"}`}
                         >
-                          <option value="" disabled className="text-muted-foreground">What do you need help with?</option>
-                          <option value="branding" className="text-foreground bg-background">Branding</option>
-                          <option value="design" className="text-foreground bg-background">Design</option>
-                          <option value="digital" className="text-foreground bg-background">Digital</option>
-                          <option value="development" className="text-foreground bg-background">Development</option>
-                          <option value="ai" className="text-foreground bg-background">AI</option>
-                          <option value="saas" className="text-foreground bg-background">SaaS</option>
+                          <option value="" disabled className="text-[#101010]/60 bg-[#E6D5BD]">What do you need help with?</option>
+                          <option value="branding" className="text-[#101010] bg-[#E6D5BD]">Branding</option>
+                          <option value="design" className="text-[#101010] bg-[#E6D5BD]">Design</option>
+                          <option value="digital" className="text-[#101010] bg-[#E6D5BD]">Digital</option>
+                          <option value="development" className="text-[#101010] bg-[#E6D5BD]">Development</option>
+                          <option value="ai" className="text-[#101010] bg-[#E6D5BD]">AI</option>
+                          <option value="saas" className="text-[#101010] bg-[#E6D5BD]">SaaS</option>
                         </select>
-                        <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-foreground">
+                        <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-[#101010]">
                           <svg className="h-4 w-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                           </svg>
@@ -228,14 +223,14 @@ export default function Contact() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">Message</label>
+                      <label htmlFor="message" className="text-sm font-medium text-[#101010]">Message</label>
                       <textarea 
                         id="message" 
                         required
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="How can we help you?" 
-                        className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" 
+                        className="flex min-h-[120px] w-full rounded-md border border-[#101010]/20 bg-[#101010]/[0.03] px-3 py-2 text-sm text-[#101010] font-medium placeholder:text-[#101010]/60 placeholder:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5360C] disabled:cursor-not-allowed disabled:opacity-50 transition-colors" 
                       />
                     </div>
                     <div className="pt-2">

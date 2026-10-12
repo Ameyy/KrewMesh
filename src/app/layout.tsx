@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Outfit } from "next/font/google";
+import { Outfit, Funnel_Display } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import CookieSettings from "@/components/CookieSettings";
 import GlobalCanvas from "@/components/GlobalCanvas";
 import Header from "@/components/Header";
+import SubpageHeaderBanner from "@/components/SubpageHeaderBanner";
 import ScrollToTop from "@/components/ScrollToTop";
 import CTAWithVerticalMarquee from "@/components/ui/cta-with-text-marquee";
+import { WakeGlyph } from "@/components/ui/background-ascii-wake";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -15,6 +17,12 @@ const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
 });
+
+const funnelDisplay = Funnel_Display({
+  subsets: ["latin"],
+  variable: "--font-funnel-display",
+});
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krewmesh.agency";
 
 export const metadata: Metadata = {
@@ -139,7 +147,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} dark`} suppressHydrationWarning>
+    <html lang="en" className={`${outfit.variable} ${funnelDisplay.variable} dark`} suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         <script
@@ -160,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={outfit.className}>
+      <body className={outfit.className} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -171,8 +179,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <WakeGlyph
+          cellSize={9}
+          color="#101010"
+          globalPointer={true}
+          className="fixed inset-0 pointer-events-none z-0"
+        />
         <GlobalCanvas />
         <Header />
+        <SubpageHeaderBanner />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-CLVB54FXXP" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`

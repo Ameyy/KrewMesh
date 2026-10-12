@@ -29,8 +29,8 @@ export function ServiceFaqAccordion({ faqs, accentColor }: ServiceFaqAccordionPr
             key={idx}
             className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
               isOpen
-                ? "bg-white/[0.04] border-white/20 shadow-lg"
-                : "bg-white/[0.02] border-white/[0.08] hover:border-white/15"
+                ? "bg-[#101010]/[0.05] border-[#101010]/25 shadow-sm"
+                : "bg-[#101010]/[0.02] border-[#101010]/12 hover:border-[#101010]/20"
             }`}
           >
             <button
@@ -39,19 +39,19 @@ export function ServiceFaqAccordion({ faqs, accentColor }: ServiceFaqAccordionPr
               className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 transition-colors"
               aria-expanded={isOpen}
             >
-              <span className="flex items-center gap-3 text-base md:text-lg font-semibold text-white tracking-tight">
+              <span className="flex items-center gap-3 text-base md:text-lg font-semibold text-[#101010] tracking-tight">
                 <span
                   className="w-2 h-2 rounded-full shrink-0 transition-opacity"
                   style={{
-                    backgroundColor: accentColor,
-                    opacity: isOpen ? 1 : 0.4,
+                    backgroundColor: accentColor || "#D5360C",
+                    opacity: isOpen ? 1 : 0.5,
                   }}
                 />
                 {faq.q}
               </span>
               <div
-                className={`p-1.5 rounded-full border border-white/10 shrink-0 transition-transform duration-300 ${
-                  isOpen ? "rotate-180 bg-white/10 text-white" : "text-neutral-400"
+                className={`p-1.5 rounded-full border border-[#101010]/15 shrink-0 transition-transform duration-300 ${
+                  isOpen ? "rotate-180 bg-[#101010]/10 text-[#101010]" : "text-[#101010]/60"
                 }`}
               >
                 <ChevronDown className="size-4" />
@@ -59,7 +59,7 @@ export function ServiceFaqAccordion({ faqs, accentColor }: ServiceFaqAccordionPr
             </button>
 
             {isOpen && (
-              <div className="px-6 pb-6 pt-1 text-sm md:text-base text-neutral-300 leading-relaxed border-t border-white/[0.06] animate-in fade-in duration-200">
+              <div className="px-6 pb-6 pt-1 text-sm md:text-base text-[#101010]/80 leading-relaxed border-t border-[#101010]/10 animate-in fade-in duration-200 font-medium">
                 {faq.a}
               </div>
             )}

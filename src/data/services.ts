@@ -68,8 +68,8 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: "Create a memorable brand that builds trust and wins more customers.",
     heroDescription:
       "We help businesses build distinctive brands that stand out from the competition. From your primary logo and color palette to matching fonts, business stationery, and social media templates, we deliver a cohesive look that makes your business look professional, trustworthy, and ready to grow.",
-    accentColor: "#FF1493",
-    accentGlow: "rgba(255, 20, 147, 0.4)",
+    accentColor: "#D5360C",
+    accentGlow: "rgba(213, 54, 12, 0.35)",
     iconName: "Target",
     stats: [
       { label: "Turnaround", value: "2 - 3 Weeks" },
@@ -226,8 +226,8 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: "Clean, intuitive websites and apps that your customers love using.",
     heroDescription:
       "Great design isn't just about looking good — it's about how easily your customers can use your product. We design clean, modern websites and apps that guide visitors directly to buying, signing up, or contacting you without confusion or frustration.",
-    accentColor: "#00E5FF",
-    accentGlow: "rgba(0, 229, 255, 0.4)",
+    accentColor: "#D5360C",
+    accentGlow: "rgba(213, 54, 12, 0.35)",
     iconName: "PenTool",
     stats: [
       { label: "Clarity", value: "User-First Flows" },
@@ -384,8 +384,8 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: "Websites that wow your visitors and make your brand unforgettable.",
     heroDescription:
       "Stand out from the crowd with engaging interactive websites, fluid animations, and 3D product views. We create web experiences that captivate attention, keep visitors exploring longer, and leave a lasting impression — all while loading quickly and smoothly on phones and laptops.",
-    accentColor: "#BD00FF",
-    accentGlow: "rgba(189, 0, 255, 0.4)",
+    accentColor: "#D5360C",
+    accentGlow: "rgba(213, 54, 12, 0.35)",
     iconName: "Monitor",
     stats: [
       { label: "Experience", value: "Smooth 60 FPS" },
@@ -542,8 +542,8 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: "Fast, reliable websites and web apps built to grow your business.",
     heroDescription:
       "We build modern, high-speed websites and web applications that never let your business down. Engineered to load in less than a second, rank high on Google, and work flawlessly on every screen, our code is clean, secure, and completely owned by you.",
-    accentColor: "#00FF66",
-    accentGlow: "rgba(0, 255, 102, 0.4)",
+    accentColor: "#D5360C",
+    accentGlow: "rgba(213, 54, 12, 0.35)",
     iconName: "Code",
     stats: [
       { label: "Page Speed", value: "Under 1 Second" },
@@ -700,8 +700,8 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: "Automate repetitive work and power your business with smart AI tools.",
     heroDescription:
       "Unlock the practical power of modern artificial intelligence for your business. We build custom AI assistants that answer customer questions accurately 24/7, automate repetitive data tasks, and integrate smart features directly into your website so your team saves hours every week.",
-    accentColor: "#00B4D8",
-    accentGlow: "rgba(0, 180, 216, 0.4)",
+    accentColor: "#D5360C",
+    accentGlow: "rgba(213, 54, 12, 0.35)",
     iconName: "Sparkles",
     stats: [
       { label: "Availability", value: "24/7 Instant Answers" },
@@ -858,8 +858,8 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: "Turn your software idea into a profitable subscription business.",
     heroDescription:
       "We help entrepreneurs and companies build complete subscription software platforms from scratch. From user signups and team accounts to automated Stripe credit card billing and customer dashboards, we deliver working software ready to attract paying subscribers.",
-    accentColor: "#FF5400",
-    accentGlow: "rgba(255, 84, 0, 0.4)",
+    accentColor: "#D5360C",
+    accentGlow: "rgba(213, 54, 12, 0.35)",
     iconName: "Cloud",
     stats: [
       { label: "Billing", value: "Stripe Recurring Payments" },

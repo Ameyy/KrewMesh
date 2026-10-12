@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import SubpageHeaderBanner from '@/components/SubpageHeaderBanner';
 import { FAQ_ITEMS } from '@/data/faq';
 import FAQContent from './components/FAQContent';
 
@@ -70,7 +71,7 @@ const faqJsonLd = {
 
 export default function FAQPage() {
   return (
-    <div className="relative min-h-screen bg-black text-white pt-32 sm:pt-40 pb-24 overflow-hidden selection:bg-white/20 selection:text-white">
+    <div className="relative min-h-screen bg-background text-[#101010] pt-8 sm:pt-12 pb-24 overflow-hidden selection:bg-[#101010]/10">
       {/* Schema.org FAQPage JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -78,37 +79,27 @@ export default function FAQPage() {
       />
 
       {/* Subtle ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-white/[0.02] blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#D5360C]/[0.03] blur-[140px] pointer-events-none rounded-full" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
-        {/* Back Link / Breadcrumb */}
-        <div className="mb-10">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-400 hover:text-white transition-colors"
-          >
-            <ArrowLeft size={14} />
-            <span>Back to Studio Overview</span>
-          </Link>
-        </div>
 
-        {/* Header (Clean, professional, zero gradient text) */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 text-[11px] sm:text-xs font-mono tracking-widest text-neutral-400 uppercase backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D5360C]/30 bg-[#D5360C]/10 text-[11px] sm:text-xs font-mono tracking-widest text-[#D5360C] uppercase backdrop-blur-md font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D5360C] animate-pulse" />
             <span>KREW / MESH • KNOWLEDGE BASE</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white uppercase leading-[1.1]">
-            Frequently Asked <span className="text-neutral-500">Questions.</span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#101010] uppercase leading-[1.1]">
+            Frequently Asked <span className="text-[#D5360C]">Questions.</span>
           </h1>
 
-          <p className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#101010]/80 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed font-medium">
             Direct, transparent answers about our website packages, transparent pricing, Next.js architecture, and studio workflow.
           </p>
         </div>
 
-        {/* Clean, Non-Boxy FAQ Accordion */}
+        {/* Clean FAQ Accordion */}
         <FAQContent />
       </div>
     </div>

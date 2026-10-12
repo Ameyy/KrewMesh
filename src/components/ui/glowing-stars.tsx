@@ -18,7 +18,7 @@ export const GlowingStarsBackgroundCard = ({
       onMouseEnter={() => setMouseEnter(true)}
       onMouseLeave={() => setMouseEnter(false)}
       className={cn(
-        "bg-[linear-gradient(110deg,#0a0a0a_0.6%,#111113)] p-6 sm:p-7 md:p-8 w-full rounded-2xl border border-white/10 hover:border-white/20 transition-colors duration-300 relative overflow-hidden flex flex-col justify-between group",
+        "bg-[linear-gradient(110deg,#101010_0.6%,#181818)] p-6 sm:p-7 md:p-8 w-full rounded-2xl border border-[#E6D5BD]/15 hover:border-[#D5360C]/40 transition-colors duration-300 relative overflow-hidden flex flex-col justify-between group",
         className
       )}
     >
@@ -40,7 +40,7 @@ export const GlowingStarsTitle = ({
   return (
     <h3
       className={cn(
-        "font-bold text-xl md:text-2xl text-white uppercase tracking-wider",
+        "font-bold text-xl md:text-2xl text-[#E6D5BD] uppercase tracking-wider",
         className
       )}
     >
@@ -59,7 +59,7 @@ export const GlowingStarsDescription = ({
   return (
     <p
       className={cn(
-        "text-sm text-neutral-400 font-light leading-relaxed mt-2",
+        "text-sm text-[#E6D5BD]/75 font-light leading-relaxed mt-2",
         className
       )}
     >
@@ -83,7 +83,7 @@ const Star = ({
   if (!config) {
     return (
       <div className="relative flex items-center justify-center w-6 h-6">
-        <div className="w-[2px] h-[2px] rounded-full bg-neutral-700/60" />
+        <div className="w-[2px] h-[2px] rounded-full bg-[#E6D5BD]/20" />
       </div>
     );
   }
@@ -94,25 +94,25 @@ const Star = ({
         initial={{
           scale: 1,
           opacity: 0.3,
-          backgroundColor: "#525252",
-          boxShadow: "0 0 0px rgba(56, 189, 248, 0)",
+          backgroundColor: "#101010",
+          boxShadow: "0 0 0px rgba(213, 54, 12, 0)",
         }}
         animate={{
           scale: [1, 1, 1.4, 1, 1],
           opacity: [0.3, 0.3, 1, 0.3, 0.3],
           backgroundColor: [
-            "#525252",
-            "#525252",
-            "#bae6fd",
-            "#525252",
-            "#525252",
+            "#101010",
+            "#101010",
+            "#E6D5BD",
+            "#D5360C",
+            "#101010",
           ],
           boxShadow: [
-            "0 0 0px rgba(56, 189, 248, 0)",
-            "0 0 0px rgba(56, 189, 248, 0)",
-            "0 0 5px #38bdf8, 0 0 10px #0284c7",
-            "0 0 0px rgba(56, 189, 248, 0)",
-            "0 0 0px rgba(56, 189, 248, 0)",
+            "0 0 0px rgba(213, 54, 12, 0)",
+            "0 0 0px rgba(213, 54, 12, 0)",
+            "0 0 6px #D5360C, 0 0 12px #D5360C",
+            "0 0 0px rgba(213, 54, 12, 0)",
+            "0 0 0px rgba(213, 54, 12, 0)",
           ],
         }}
         transition={{

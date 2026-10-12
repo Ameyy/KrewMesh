@@ -137,29 +137,29 @@ export default function CookieSettings() {
       {showBanner && !showModal && (
         <aside
           aria-label="Cookie consent banner"
-          className="fixed bottom-5 right-5 z-[9990] max-w-sm sm:max-w-md w-[calc(100vw-2.5rem)] bg-neutral-950/95 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl shadow-black/80 transition-all duration-300"
+          className="fixed bottom-5 right-5 z-[9990] max-w-sm sm:max-w-md w-[calc(100vw-2.5rem)] bg-[#101010] backdrop-blur-xl border border-[#E6D5BD]/20 rounded-2xl p-5 sm:p-6 shadow-2xl shadow-black/80 transition-all duration-300"
         >
           <div className="flex items-start gap-3.5 mb-3">
-            <div className="p-2 rounded-xl bg-white/5 text-neutral-300 shrink-0 mt-0.5">
+            <div className="p-2 rounded-xl bg-[#E6D5BD]/10 text-[#E6D5BD] shrink-0 mt-0.5">
               <Cookie size={18} />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-sm font-semibold text-white tracking-tight">Cookie Preferences</h3>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <h3 className="text-sm font-semibold text-[#E6D5BD] tracking-tight">Cookie Preferences</h3>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D5360C] animate-pulse" />
               </div>
-              <p className="text-xs text-neutral-400 leading-relaxed mt-1">
+              <p className="text-xs text-[#E6D5BD]/75 leading-relaxed mt-1">
                 We use cookies to analyze studio traffic, enhance performance, and personalize your digital experience across our creative builds.
               </p>
             </div>
           </div>
 
-          <div className="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-white/5">
+          <div className="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-[#E6D5BD]/10">
             <button
               type="button"
               onClick={() => setShowModal(true)}
               style={{ border: 'none', outline: 'none', background: 'transparent' }}
-              className="text-xs font-mono text-neutral-400 hover:text-white transition-colors cursor-pointer py-1.5 px-1 underline-offset-4 hover:underline"
+              className="text-xs font-mono text-[#E6D5BD]/70 hover:text-[#D5360C] transition-colors cursor-pointer py-1.5 px-1 underline-offset-4 hover:underline"
             >
               Customize
             </button>
@@ -169,7 +169,7 @@ export default function CookieSettings() {
                 type="button"
                 onClick={handleRejectNonEssential}
                 style={{ border: 'none', outline: 'none' }}
-                className="px-3.5 py-1.5 rounded-full bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition-colors cursor-pointer"
+                className="px-3.5 py-1.5 rounded-full bg-[#E6D5BD]/10 hover:bg-[#E6D5BD]/20 text-[#E6D5BD] text-xs font-medium transition-colors cursor-pointer"
               >
                 Reject Non-Essential
               </button>
@@ -177,7 +177,7 @@ export default function CookieSettings() {
                 type="button"
                 onClick={handleAcceptAll}
                 style={{ border: 'none', outline: 'none' }}
-                className="px-4 py-1.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-semibold transition-colors cursor-pointer"
+                className="px-4 py-1.5 rounded-full bg-[#D5360C] hover:bg-[#b82d09] text-[#E6D5BD] text-xs font-semibold transition-colors cursor-pointer"
               >
                 Accept All
               </button>
@@ -189,7 +189,7 @@ export default function CookieSettings() {
       {/* 2. Detailed Cookie Settings Modal */}
       {showModal && (
         <div 
-          className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+          className="fixed inset-0 z-[9999] bg-[#101010]/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
           role="dialog"
           aria-modal="true"
           aria-labelledby="cookie-modal-title"
@@ -201,18 +201,18 @@ export default function CookieSettings() {
             aria-hidden="true"
           />
 
-          <div className="relative w-full max-w-lg bg-neutral-950 border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black z-10 my-auto">
+          <div className="relative w-full max-w-lg bg-[#101010] border border-[#E6D5BD]/20 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black z-10 my-auto">
             {/* Modal Header */}
-            <div className="flex items-start justify-between gap-4 pb-5 border-b border-white/10">
+            <div className="flex items-start justify-between gap-4 pb-5 border-b border-[#E6D5BD]/15">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-white/5 text-white">
+                <div className="p-2.5 rounded-xl bg-[#E6D5BD]/10 text-[#E6D5BD]">
                   <Cookie size={20} />
                 </div>
                 <div>
-                  <h2 id="cookie-modal-title" className="text-lg font-bold text-white tracking-tight">
+                  <h2 id="cookie-modal-title" className="text-lg font-bold text-[#E6D5BD] tracking-tight">
                     Cookie Settings
                   </h2>
-                  <p className="text-xs text-neutral-400 mt-0.5">
+                  <p className="text-xs text-[#E6D5BD]/70 mt-0.5">
                     Customize your privacy preferences for this browser
                   </p>
                 </div>
@@ -222,7 +222,7 @@ export default function CookieSettings() {
                 type="button"
                 onClick={() => setShowModal(false)}
                 style={{ border: 'none', outline: 'none', background: 'transparent' }}
-                className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
+                className="p-1.5 rounded-lg text-[#E6D5BD]/70 hover:text-[#D5360C] hover:bg-[#E6D5BD]/10 transition-colors cursor-pointer"
                 aria-label="Close cookie settings"
               >
                 <X size={18} />
@@ -232,27 +232,27 @@ export default function CookieSettings() {
             {/* Cookie Categories */}
             <div className="py-6 space-y-4">
               {/* Strictly Necessary */}
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-2">
+              <div className="p-4 rounded-xl bg-[#E6D5BD]/5 border border-[#E6D5BD]/10 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <ShieldCheck size={16} className="text-emerald-400" />
-                    <span className="text-sm font-semibold text-white">Strictly Necessary</span>
+                    <ShieldCheck size={16} className="text-[#D5360C]" />
+                    <span className="text-sm font-semibold text-[#E6D5BD]">Strictly Necessary</span>
                   </div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#D5360C]/20 text-[#D5360C] border border-[#D5360C]/40">
                     Always Active
                   </span>
                 </div>
-                <p className="text-xs text-neutral-400 leading-relaxed">
+                <p className="text-xs text-[#E6D5BD]/70 leading-relaxed">
                   Required for site security, navigation flow, and essential functions like remembering your cookie preferences. Cannot be deactivated.
                 </p>
               </div>
 
               {/* Analytics & Performance */}
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-2">
+              <div className="p-4 rounded-xl bg-[#E6D5BD]/5 border border-[#E6D5BD]/10 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <BarChart3 size={16} className="text-blue-400" />
-                    <span className="text-sm font-semibold text-white">Analytics & Performance</span>
+                    <BarChart3 size={16} className="text-[#D5360C]" />
+                    <span className="text-sm font-semibold text-[#E6D5BD]">Analytics & Performance</span>
                   </div>
                   <button
                     type="button"
@@ -263,29 +263,29 @@ export default function CookieSettings() {
                     }
                     style={{ border: 'none', outline: 'none' }}
                     className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full transition-colors duration-200 ease-in-out p-0.5 ${
-                      preferences.analytics ? 'bg-white' : 'bg-neutral-800'
+                      preferences.analytics ? 'bg-[#D5360C]' : 'bg-[#E6D5BD]/20'
                     }`}
                   >
                     <span
                       className={`pointer-events-none inline-block h-4 w-4 transform rounded-full transition duration-200 ease-in-out shadow-sm ${
                         preferences.analytics
-                          ? 'translate-x-4 bg-black'
-                          : 'translate-x-0 bg-neutral-400'
+                          ? 'translate-x-4 bg-[#E6D5BD]'
+                          : 'translate-x-0 bg-[#E6D5BD]/60'
                       }`}
                     />
                   </button>
                 </div>
-                <p className="text-xs text-neutral-400 leading-relaxed">
+                <p className="text-xs text-[#E6D5BD]/70 leading-relaxed">
                   Collects anonymous interaction metrics via Google Analytics and Vercel Analytics so we can optimize load times, responsive behavior, and layout stability.
                 </p>
               </div>
 
               {/* Experience & Personalization */}
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-2">
+              <div className="p-4 rounded-xl bg-[#E6D5BD]/5 border border-[#E6D5BD]/10 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <Sliders size={16} className="text-purple-400" />
-                    <span className="text-sm font-semibold text-white">Experience & Personalization</span>
+                    <Sliders size={16} className="text-[#D5360C]" />
+                    <span className="text-sm font-semibold text-[#E6D5BD]">Experience & Personalization</span>
                   </div>
                   <button
                     type="button"
@@ -296,31 +296,31 @@ export default function CookieSettings() {
                     }
                     style={{ border: 'none', outline: 'none' }}
                     className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full transition-colors duration-200 ease-in-out p-0.5 ${
-                      preferences.preferences ? 'bg-white' : 'bg-neutral-800'
+                      preferences.preferences ? 'bg-[#D5360C]' : 'bg-[#E6D5BD]/20'
                     }`}
                   >
                     <span
                       className={`pointer-events-none inline-block h-4 w-4 transform rounded-full transition duration-200 ease-in-out shadow-sm ${
                         preferences.preferences
-                          ? 'translate-x-4 bg-black'
-                          : 'translate-x-0 bg-neutral-400'
+                          ? 'translate-x-4 bg-[#E6D5BD]'
+                          : 'translate-x-0 bg-[#E6D5BD]/60'
                       }`}
                     />
                   </button>
                 </div>
-                <p className="text-xs text-neutral-400 leading-relaxed">
+                <p className="text-xs text-[#E6D5BD]/70 leading-relaxed">
                   Remembers your UI settings, interaction history, and inquiry state for seamless continuity across different sessions and pages.
                 </p>
               </div>
             </div>
 
             {/* Modal Actions */}
-            <div className="pt-5 border-t border-white/10 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
+            <div className="pt-5 border-t border-[#E6D5BD]/15 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
               <button
                 type="button"
                 onClick={handleRejectNonEssential}
                 style={{ border: 'none', outline: 'none', background: 'transparent' }}
-                className="w-full sm:w-auto text-xs text-neutral-400 hover:text-white transition-colors cursor-pointer py-2 px-3 text-center"
+                className="w-full sm:w-auto text-xs text-[#E6D5BD]/70 hover:text-[#E6D5BD] transition-colors cursor-pointer py-2 px-3 text-center"
               >
                 Reject Non-Essential
               </button>
@@ -330,7 +330,7 @@ export default function CookieSettings() {
                   type="button"
                   onClick={handleSaveCustom}
                   style={{ border: 'none', outline: 'none' }}
-                  className="flex-1 sm:flex-none px-4 py-2.5 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold transition-colors cursor-pointer text-center"
+                  className="flex-1 sm:flex-none px-4 py-2.5 rounded-full bg-[#E6D5BD]/10 hover:bg-[#E6D5BD]/20 text-[#E6D5BD] text-xs font-semibold transition-colors cursor-pointer text-center"
                 >
                   Save Preferences
                 </button>
@@ -338,7 +338,7 @@ export default function CookieSettings() {
                   type="button"
                   onClick={handleAcceptAll}
                   style={{ border: 'none', outline: 'none' }}
-                  className="flex-1 sm:flex-none px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-semibold transition-colors cursor-pointer text-center"
+                  className="flex-1 sm:flex-none px-5 py-2.5 rounded-full bg-[#D5360C] hover:bg-[#b82d09] text-[#E6D5BD] text-xs font-semibold transition-colors cursor-pointer text-center"
                 >
                   Accept All
                 </button>

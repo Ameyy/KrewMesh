@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&display=swap');
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 6.5rem 1rem 3.5rem;
+  overflow: hidden;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .heroSection {
+    padding: 7.5rem 1.5rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 8rem 2rem 5rem;
+  }
+}
+
+.typographyWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.titleRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: clamp(0.35rem, 1.2vw, 1.5rem);
+  width: 100%;
+  line-height: 0.88;
+}
+
+.heroWord {
+  font-family: var(--font-funnel-display), 'Funnel Display', sans-serif !important;
+  font-size: clamp(3.2rem, 9.6vw, 12rem);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: #101010;
+  line-height: 0.88;
+  margin: 0;
+  display: inline-block;
+}
+
+.heroWordOrange {
+  color: #D5360C;
+}
+
+/* Floating micro-service labels */
+.serviceTag {
+  position: absolute;
+  font-family: var(--font-outfit), sans-serif !important;
+  font-size: clamp(0.55rem, 0.75vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(16, 16, 16, 0.55);
+  line-height: 1.25;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 10;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.serviceTag:hover {
+  color: #D5360C;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .serviceTag {
+    display: none;
+  }
+}
+
+.tagTopLeft {
+  top: -2.6rem;
+  left: 2%;
+  text-align: left;
+}
+
+.tagTopRight {
+  top: -2.6rem;
+  right: 2%;
+  text-align: right;
+}
+
+.tagBottomLeft {
+  bottom: -2.6rem;
+  left: 3%;
+  text-align: left;
+}
+
+.tagBottomRight {
+  bottom: -2.6rem;
+  right: 3%;
+  text-align: right;
+}
+
+/* Badge common styles */
+.badgeSquare {
+  width: clamp(2.8rem, 7.5vw, 9rem);
+  height: clamp(2.8rem, 7.5vw, 9rem);
+  background-color: #D5360C;
+  border-radius: clamp(0.6rem, 1.6vw, 1.75rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px -5px rgba(213, 54, 12, 0.3);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.badgeSquare:hover {
+  transform: scale(1.06) rotate(3deg);
+  box-shadow: 0 16px 35px -5px rgba(213, 54, 12, 0.45);
+}
+
+.badgeMesh {
+  width: clamp(2.8rem, 7.5vw, 9rem);
+  height: clamp(2.8rem, 7.5vw, 9rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.badgeMesh:hover {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.badgeCircle {
+  width: clamp(2.8rem, 7.5vw, 9rem);
+  height: clamp(2.8rem, 7.5vw, 9rem);
+  background-color: #101010;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px -5px rgba(16, 16, 16, 0.25);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.badgeCircle:hover {
+  transform: scale(1.08) rotate(12deg);
+  background-color: #D5360C;
+}
+
+/* CTA Pill Button */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #101010;
+  color: #E6D5BD;
+  padding: clamp(0.55rem, 1.1vw, 1rem) clamp(1rem, 2vw, 2rem);
+  border-radius: 9999px;
+  font-family: var(--font-outfit), sans-serif !important;
+  font-size: clamp(0.75rem, 1vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px -4px rgba(16, 16, 16, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-left: clamp(0.25rem, 1vw, 1.25rem);
+  align-self: center;
+}
+
+.ctaButton:hover {
+  background-color: #D5360C;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(213, 54, 12, 0.4);
+  color: #E6D5BD;
+}
+
+.ctaButton:active {
+  transform: scale(0.98);
+}

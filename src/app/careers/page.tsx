@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import SubpageHeaderBanner from "@/components/SubpageHeaderBanner";
 import { 
   Briefcase, 
   MapPin, 
@@ -212,38 +213,38 @@ export default function CareersPage() {
       <div style={{ position: "relative", zIndex: 1, minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         
         {/* Main Content Area */}
-        <main className="flex-1 pt-32 sm:pt-40 md:pt-44 pb-20 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <main className="flex-1 pt-8 sm:pt-12 md:pt-16 pb-20 px-6 md:px-12 max-w-7xl mx-auto w-full">
           
           {/* Hero Section */}
           <section className="text-center max-w-3xl mx-auto space-y-6 mb-20 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs font-medium uppercase tracking-widest text-foreground/90">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D5360C]/30 bg-[#D5360C]/10 text-xs font-mono tracking-widest text-[#D5360C] uppercase font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#D5360C] animate-pulse"></span>
               We Are Hiring &bull; Join The Krew
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.08]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#101010] leading-[1.08] uppercase">
               Build the Future of <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-neutral-500">
+              <span className="text-[#D5360C]">
                 Creative Tech.
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-neutral-400 font-normal leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#101010]/80 font-medium leading-relaxed max-w-2xl mx-auto">
               We are an interdisciplinary creative technology studio combining branding, UI/UX, 3D experiences, web engineering, and AI products. We are looking for relentless craftspeople who care deeply about aesthetics, speed, and pushing boundaries.
             </p>
 
             <div className="pt-2 flex items-center justify-center gap-4">
               <a
                 href="#open-positions"
-                className="px-7 py-3.5 rounded-full bg-white text-black font-bold text-sm hover:bg-neutral-200 transition-all duration-300 flex items-center gap-2 shadow-lg"
+                className="px-7 py-3.5 rounded-full bg-[#101010] text-[#E6D5BD] font-bold text-sm hover:bg-[#D5360C] transition-all duration-300 flex items-center gap-2 shadow-md"
               >
-                <span className="text-black">View Open Roles</span>
-                <ChevronRight size={17} className="text-black stroke-[3]" />
+                <span>View Open Roles</span>
+                <ChevronRight size={17} className="stroke-[3]" />
               </a>
               <button
                 type="button"
                 onClick={() => handleOpenApply("General Application")}
-                className="px-7 py-3.5 rounded-full bg-transparent border border-white/30 text-white font-semibold text-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+                className="px-7 py-3.5 rounded-full bg-[#101010]/[0.05] border border-[#101010]/20 text-[#101010] font-bold text-sm hover:bg-[#101010] hover:text-[#E6D5BD] transition-all duration-300"
               >
                 General Application
               </button>
@@ -253,10 +254,10 @@ export default function CareersPage() {
           {/* Perks & Studio Culture Section */}
           <section className="mb-24">
             <div className="text-center max-w-xl mx-auto mb-12 space-y-2">
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#101010] tracking-tight uppercase">
                 Why Build With KREW / MESH?
               </h2>
-              <p className="text-sm sm:text-base text-neutral-400">
+              <p className="text-sm sm:text-base text-[#101010]/75 font-medium">
                 A culture built for autonomous creators who take pride in high-tier execution.
               </p>
             </div>
@@ -267,13 +268,13 @@ export default function CareersPage() {
                 return (
                   <div
                     key={index}
-                    className="p-6 rounded-2xl bg-neutral-950/60 border border-neutral-800/80 backdrop-blur-md hover:border-neutral-700 transition-all duration-300 group hover:-translate-y-1"
+                    className="p-6 rounded-2xl bg-[#101010]/[0.04] border border-[#101010]/12 backdrop-blur-md hover:border-[#D5360C]/40 transition-all duration-300 group hover:-translate-y-1"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-xl bg-[#101010]/[0.06] border border-[#101010]/15 flex items-center justify-center mb-4 text-[#D5360C] group-hover:scale-110 transition-transform">
                       <Icon size={22} />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{perk.title}</h3>
-                    <p className="text-sm text-neutral-400 leading-relaxed">{perk.description}</p>
+                    <h3 className="text-lg font-bold text-[#101010] mb-2">{perk.title}</h3>
+                    <p className="text-sm text-[#101010]/75 leading-relaxed font-medium">{perk.description}</p>
                   </div>
                 );
               })}
@@ -284,25 +285,25 @@ export default function CareersPage() {
           <section id="open-positions" className="scroll-mt-28 mb-24">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
               <div>
-                <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">
+                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D5360C] mb-2">
                   <Briefcase size={14} />
                   <span>Opportunities</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#101010] tracking-tight uppercase">
                   Open Positions ({filteredJobs.length})
                 </h2>
               </div>
 
               {/* Department Filter Tabs */}
-              <div className="flex flex-wrap items-center gap-2 bg-neutral-950/80 p-1.5 rounded-full border border-neutral-800">
+              <div className="flex flex-wrap items-center gap-2 bg-[#101010]/[0.05] p-1.5 rounded-full border border-[#101010]/15">
                 {departments.map(dept => (
                   <button
                     key={dept}
                     onClick={() => setSelectedDept(dept)}
-                    className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 ${
                       selectedDept === dept
-                        ? "bg-white text-black shadow-md font-bold"
-                        : "text-neutral-400 hover:text-white"
+                        ? "bg-[#101010] text-[#E6D5BD] shadow-md"
+                        : "text-[#101010]/70 hover:text-[#D5360C]"
                     }`}
                   >
                     {dept}
@@ -321,8 +322,8 @@ export default function CareersPage() {
                     key={job.id}
                     className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                       isExpanded
-                        ? "bg-neutral-900/95 border-white/40 shadow-2xl"
-                        : "bg-neutral-950/60 border-neutral-800/80 hover:border-neutral-700 hover:bg-neutral-900/50"
+                        ? "bg-[#101010]/[0.06] border-[#101010]/30 shadow-md"
+                        : "bg-[#101010]/[0.03] border-[#101010]/12 hover:border-[#D5360C]/30 hover:bg-[#101010]/[0.05]"
                     }`}
                   >
                     {/* Job Card Header */}
@@ -332,30 +333,30 @@ export default function CareersPage() {
                     >
                       <div className="space-y-3 flex-1">
                         <div className="flex flex-wrap items-center gap-2.5">
-                          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wide uppercase bg-white/10 text-white border border-white/20">
+                          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold tracking-wide uppercase bg-[#101010]/[0.08] text-[#101010] border border-[#101010]/20">
                             {job.department}
                           </span>
                           {job.openings && (
-                            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wide uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold tracking-wide uppercase bg-[#D5360C]/10 text-[#D5360C] border border-[#D5360C]/20">
                               <Users size={12} /> {job.openings}
                             </span>
                           )}
-                          <span className="inline-flex items-center gap-1 text-xs text-neutral-300">
+                          <span className="inline-flex items-center gap-1 text-xs text-[#101010]/75 font-semibold">
                             <Clock size={13} /> {job.type}
                           </span>
-                          <span className="inline-flex items-center gap-1 text-xs text-neutral-300">
+                          <span className="inline-flex items-center gap-1 text-xs text-[#101010]/75 font-semibold">
                             <MapPin size={13} /> {job.location}
                           </span>
-                          <span className="text-xs text-neutral-400">
+                          <span className="text-xs text-[#101010]/60 font-semibold">
                             &bull; {job.experience}
                           </span>
                         </div>
 
-                        <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-neutral-200 transition-colors">
+                        <h3 className="text-xl sm:text-2xl font-bold text-[#101010] group-hover:text-[#D5360C] transition-colors">
                           {job.title}
                         </h3>
 
-                        <p className="text-sm text-neutral-400 line-clamp-2 max-w-3xl">
+                        <p className="text-sm text-[#101010]/75 line-clamp-2 max-w-3xl font-medium">
                           {job.description}
                         </p>
                       </div>
@@ -374,12 +375,12 @@ export default function CareersPage() {
                         <button
                           type="button"
                           onClick={() => setActiveJob(isExpanded ? null : job)}
-                          className="p-2.5 rounded-full bg-white/10 border border-white/25 text-white hover:bg-white/20 hover:border-white/50 transition-colors cursor-pointer"
+                          className="p-2.5 rounded-full bg-[#101010]/10 border border-[#101010]/20 text-[#101010] hover:bg-[#101010] hover:text-[#E6D5BD] transition-colors cursor-pointer"
                           aria-label={isExpanded ? "Collapse job details" : "Expand job details"}
                         >
                           <ChevronRight
                             size={18}
-                            className={`text-white stroke-[2.5] transform transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`}
+                            className={`stroke-[2.5] transform transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`}
                           />
                         </button>
                       </div>
@@ -387,17 +388,17 @@ export default function CareersPage() {
 
                     {/* Expandable Job Details */}
                     {isExpanded && (
-                      <div className="px-6 sm:px-7 pb-8 pt-2 border-t border-neutral-800/80 space-y-6 animate-fade-in-up">
+                      <div className="px-6 sm:px-7 pb-8 pt-2 border-t border-[#101010]/12 space-y-6 animate-fade-in-up">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                           {/* Responsibilities */}
                           <div>
-                            <h4 className="text-sm font-bold uppercase tracking-wider text-neutral-200 mb-3 flex items-center gap-2">
-                              <Code2 size={16} className="text-neutral-300" /> What You'll Do
+                            <h4 className="text-sm font-bold uppercase tracking-wider text-[#101010] mb-3 flex items-center gap-2">
+                              <Code2 size={16} className="text-[#D5360C]" /> What You'll Do
                             </h4>
                             <ul className="space-y-2.5">
                               {job.responsibilities.map((resp, i) => (
-                                <li key={i} className="text-sm text-neutral-300 flex items-start gap-2.5">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-white mt-1.5 shrink-0" />
+                                <li key={i} className="text-sm text-[#101010]/80 flex items-start gap-2.5 font-medium">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#D5360C] mt-1.5 shrink-0" />
                                   <span>{resp}</span>
                                 </li>
                               ))}
@@ -406,13 +407,13 @@ export default function CareersPage() {
 
                           {/* Requirements */}
                           <div>
-                            <h4 className="text-sm font-bold uppercase tracking-wider text-neutral-200 mb-3 flex items-center gap-2">
-                              <Palette size={16} className="text-neutral-300" /> What We Look For
+                            <h4 className="text-sm font-bold uppercase tracking-wider text-[#101010] mb-3 flex items-center gap-2">
+                              <Palette size={16} className="text-[#D5360C]" /> What We Look For
                             </h4>
                             <ul className="space-y-2.5">
                               {job.requirements.map((req, i) => (
-                                <li key={i} className="text-sm text-neutral-300 flex items-start gap-2.5">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-white mt-1.5 shrink-0" />
+                                <li key={i} className="text-sm text-[#101010]/80 flex items-start gap-2.5 font-medium">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#D5360C] mt-1.5 shrink-0" />
                                   <span>{req}</span>
                                 </li>
                               ))}
@@ -421,13 +422,13 @@ export default function CareersPage() {
                         </div>
 
                         {/* Skills Pills & Apply Button */}
-                        <div className="pt-4 border-t border-neutral-800/60 flex flex-wrap items-center justify-between gap-4">
+                        <div className="pt-4 border-t border-[#101010]/10 flex flex-wrap items-center justify-between gap-4">
                           <div className="flex flex-wrap items-center gap-2">
-                            <span className="text-xs text-neutral-400 mr-1">Skills & Tools:</span>
+                            <span className="text-xs text-[#101010]/60 mr-1 font-semibold">Skills & Tools:</span>
                             {job.skills.map((skill, i) => (
                               <span
                                 key={i}
-                                className="px-2.5 py-1 rounded-md text-xs font-mono bg-white/10 border border-white/15 text-neutral-200"
+                                className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#101010]/[0.08] border border-[#101010]/15 text-[#101010] font-semibold"
                               >
                                 {skill}
                               </span>
@@ -437,10 +438,10 @@ export default function CareersPage() {
                           <button
                             type="button"
                             onClick={() => handleOpenApply(job.title)}
-                            className="px-6 py-2.5 rounded-full bg-white text-black font-bold text-xs sm:text-sm hover:bg-neutral-200 transition-all flex items-center gap-2 shadow-md hover:scale-105 cursor-pointer"
+                            className="px-6 py-2.5 rounded-full bg-[#101010] text-[#E6D5BD] font-bold text-xs sm:text-sm hover:bg-[#D5360C] transition-all flex items-center gap-2 shadow-md hover:scale-105 cursor-pointer"
                           >
-                            <span className="text-black font-bold">Apply for {job.title}</span>
-                            <ArrowUpRight size={17} className="text-black stroke-[3]" />
+                            <span className="font-bold">Apply for {job.title}</span>
+                            <ArrowUpRight size={17} className="stroke-[3]" />
                           </button>
                         </div>
                       </div>
@@ -452,15 +453,15 @@ export default function CareersPage() {
           </section>
 
           {/* Spontaneous Application Banner */}
-          <section className="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-neutral-900/80 to-neutral-950/80 border border-neutral-800 text-center space-y-5">
-            <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mx-auto text-white">
+          <section className="p-8 sm:p-10 rounded-3xl bg-[#101010]/[0.04] border border-[#101010]/15 text-center space-y-5">
+            <div className="w-12 h-12 rounded-full bg-[#101010]/[0.08] border border-[#101010]/15 flex items-center justify-center mx-auto text-[#D5360C]">
               <Mail size={22} />
             </div>
             <div className="space-y-2 max-w-xl mx-auto">
-              <h3 className="text-2xl font-bold text-white tracking-tight">
+              <h3 className="text-2xl font-bold text-[#101010] tracking-tight uppercase">
                 Don't See Your Ideal Role?
               </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed">
+              <p className="text-sm text-[#101010]/80 leading-relaxed font-medium">
                 We are always excited to collaborate with extraordinary thinkers, sales pros, designers, and coders. Send us your portfolio, github, or resume and tell us how you can contribute.
               </p>
             </div>
@@ -468,7 +469,7 @@ export default function CareersPage() {
               <button
                 type="button"
                 onClick={() => handleOpenApply("Open / Custom Application")}
-                className="px-8 py-3.5 rounded-full bg-white text-black font-bold text-sm hover:bg-neutral-200 transition-all shadow-lg hover:scale-105 cursor-pointer"
+                className="px-8 py-3.5 rounded-full bg-[#101010] text-[#E6D5BD] font-bold text-sm hover:bg-[#D5360C] transition-all shadow-md hover:scale-105 cursor-pointer"
               >
                 Send General Application
               </button>
@@ -482,23 +483,23 @@ export default function CareersPage() {
       {isApplyModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
           <div 
-            className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity"
+            className="fixed inset-0 bg-[#101010]/60 backdrop-blur-md transition-opacity"
             onClick={handleResetForm}
           />
 
-          <div className="relative w-full max-w-xl rounded-3xl bg-neutral-950 border border-neutral-800 p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-xl rounded-3xl bg-background border border-[#101010]/20 p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
             <div className="flex items-start justify-between gap-4 mb-6">
               <div>
-                <span className="text-xs uppercase tracking-widest text-neutral-400 font-semibold">
+                <span className="text-xs uppercase tracking-widest text-[#D5360C] font-semibold">
                   Job Application
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mt-1">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#101010] mt-1">
                   {applyingForRole || "Join KREW / MESH"}
                 </h3>
               </div>
               <button
                 onClick={handleResetForm}
-                className="p-2 rounded-full border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
+                className="p-2 rounded-full border border-[#101010]/15 text-[#101010]/60 hover:text-[#101010] hover:border-[#101010]/30 transition-colors"
               >
                 <X size={18} />
               </button>
@@ -506,19 +507,19 @@ export default function CareersPage() {
 
             {isSubmitted ? (
               <div className="py-8 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center mx-auto">
                   <CheckCircle2 size={36} />
                 </div>
                 <div className="space-y-2">
-                  <h4 className="text-xl font-bold text-white">Application Received!</h4>
-                  <p className="text-sm text-neutral-400 max-w-md mx-auto">
+                  <h4 className="text-xl font-bold text-[#101010]">Application Received!</h4>
+                  <p className="text-sm text-[#101010]/80 max-w-md mx-auto font-medium">
                     Thank you, {formData.name}. We will review your application and get back to you shortly.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={handleResetForm}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-white text-black text-sm font-bold hover:bg-neutral-200 transition-opacity"
+                  className="mt-4 px-6 py-2.5 rounded-full bg-[#101010] text-[#E6D5BD] text-sm font-bold hover:bg-[#D5360C] transition-opacity"
                 >
                   Close
                 </button>
@@ -526,20 +527,20 @@ export default function CareersPage() {
             ) : (
               <form onSubmit={handleApplySubmit} className="space-y-4">
                 {errorMessage && (
-                  <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-xs">
+                  <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-600 text-xs font-semibold">
                     {errorMessage}
                   </div>
                 )}
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-neutral-300">Position</label>
+                  <label className="text-xs font-bold text-[#101010]">Position</label>
                   <select
                     value={formData.role || applyingForRole}
                     onChange={(e) => {
                       setFormData({ ...formData, role: e.target.value });
                       setApplyingForRole(e.target.value);
                     }}
-                    className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-white transition-colors"
+                    className="w-full rounded-xl border border-[#101010]/15 bg-[#101010]/[0.04] px-3.5 py-2.5 text-sm text-[#101010] font-medium focus:outline-none focus:border-[#D5360C] transition-colors"
                   >
                     <option value="General Application">General / Spontaneous Application</option>
                     {jobPositions.map(j => (
@@ -552,49 +553,49 @@ export default function CareersPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-medium text-neutral-300">Full Name *</label>
+                    <label className="text-xs font-bold text-[#101010]">Full Name *</label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Jane Doe"
-                      className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2.5 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-white transition-colors"
+                      className="w-full rounded-xl border border-[#101010]/15 bg-[#101010]/[0.04] px-3.5 py-2.5 text-sm text-[#101010] font-medium placeholder:text-[#101010]/40 focus:outline-none focus:border-[#D5360C] transition-colors"
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-xs font-medium text-neutral-300">Email Address *</label>
+                    <label className="text-xs font-bold text-[#101010]">Email Address *</label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="jane@example.com"
-                      className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2.5 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-white transition-colors"
+                      className="w-full rounded-xl border border-[#101010]/15 bg-[#101010]/[0.04] px-3.5 py-2.5 text-sm text-[#101010] font-medium placeholder:text-[#101010]/40 focus:outline-none focus:border-[#D5360C] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-neutral-300">Portfolio / Profile / Resume Link *</label>
+                  <label className="text-xs font-bold text-[#101010]">Portfolio / Profile / Resume Link *</label>
                   <input
                     type="url"
                     required
                     value={formData.portfolio}
                     onChange={(e) => setFormData({ ...formData, portfolio: e.target.value })}
                     placeholder="https://yourportfolio.com or drive/linkedin link"
-                    className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2.5 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-white transition-colors"
+                    className="w-full rounded-xl border border-[#101010]/15 bg-[#101010]/[0.04] px-3.5 py-2.5 text-sm text-[#101010] font-medium placeholder:text-[#101010]/40 focus:outline-none focus:border-[#D5360C] transition-colors"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-neutral-300">Phone Number (Optional)</label>
+                  <label className="text-xs font-bold text-[#101010]">Phone Number (Optional)</label>
                   <input
                     type="tel"
                     value={formData.resume}
                     onChange={(e) => setFormData({ ...formData, resume: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2.5 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-white transition-colors"
+                    className="w-full rounded-xl border border-[#101010]/15 bg-[#101010]/[0.04] px-3.5 py-2.5 text-sm text-[#101010] font-medium placeholder:text-[#101010]/40 focus:outline-none focus:border-[#D5360C] transition-colors"
                   />
                 </div>
 

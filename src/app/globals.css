@@ -1,27 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Anton&family=Oswald:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/horizon');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #000000;
-  /* Pitch black */
-  --foreground: #FFFFFF;
-  /* White for all texts */
-  --primary: #FFFFFF;
-  /* White for headings */
-  --primary-foreground: #FFFFFF;
-  --secondary: #222222;
-  /* Very dark grey */
-  --accent: #444444;
-  /* Dark grey */
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.08);
+@font-face {
+  font-family: 'Horizon';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Horizon.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/19372/Horizon-PersonalUse.woff') format('woff');
+  font-display: swap;
+}
 
-  --color-1: 0 100% 63%;
-  --color-2: 270 100% 63%;
-  --color-3: 210 100% 63%;
-  --color-4: 195 100% 63%;
-  --color-5: 90 100% 63%;
+:root {
+  --background: #E6D5BD;
+  /* Warm Ivory main background */
+  --foreground: #101010;
+  /* Soft Black text */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --primary: #101010;
+  /* Soft Black for headings */
+  --primary-foreground: #E6D5BD;
+  /* Warm Ivory */
+  --secondary: #D5360C;
+  /* Burnt Orange background */
+  --secondary-foreground: #E6D5BD;
+  /* Warm Ivory on Burnt Orange */
+  --accent: #101010;
+  /* Soft Black accent */
+  --accent-hover: #222222;
+  --accent-orange: #D5360C;
+  /* Burnt Orange accent */
+  --surface: rgba(16, 16, 16, 0.05);
+  --surface-hover: rgba(16, 16, 16, 0.1);
+  --surface-ivory: #E6D5BD;
+  --surface-orange: #D5360C;
+  --surface-black: #101010;
+
+  --muted: rgba(16, 16, 16, 0.08);
+  --muted-foreground: rgba(16, 16, 16, 0.6);
+  --border: rgba(16, 16, 16, 0.2);
+  --input: rgba(16, 16, 16, 0.2);
+  --card: #E6D5BD;
+
+  --color-1: 13 89% 44%; /* Burnt Orange #D5360C */
+  --color-2: 36 45% 82%; /* Warm Ivory #E6D5BD */
+  --color-3: 0 0% 6%;    /* Soft Black #101010 */
+  --color-4: 13 89% 44%; /* Burnt Orange */
+  --color-5: 36 45% 82%; /* Warm Ivory */
 }
 
 h1,
@@ -33,19 +61,15 @@ h6 {
   color: var(--primary);
 }
 
-/* Remove .dark entirely to force light mode */
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: var(--font-outfit), sans-serif !important;
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -74,7 +98,7 @@ kbd,
 samp {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-outfit), sans-serif !important;
+  font-family: var(--font-outfit), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -114,16 +138,35 @@ a {
   text-decoration: none;
 }
 
+/* All headings and titles use Funnel Display font */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-.display-font {
-  font-family: var(--font-outfit), sans-serif !important;
+.display-font,
+.font-horizon,
+.title-font,
+[class*="heroWord"] {
+  font-family: var(--font-funnel-display), 'Funnel Display', sans-serif !important;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+}
+
+/* Global Input Placeholder Contrast Rules */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(16, 16, 16, 0.6) !important;
+  opacity: 1 !important;
+}
+
+/* Footer & Dark Container Input Placeholder Rules */
+.bg-\[\#101010\] input::placeholder,
+.bg-soft-black input::placeholder,
+footer input::placeholder {
+  color: rgba(230, 213, 189, 0.85) !important;
+  opacity: 1 !important;
 }
 
 /* Base utility classes */
