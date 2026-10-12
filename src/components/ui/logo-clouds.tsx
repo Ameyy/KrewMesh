@@ -24,11 +24,19 @@ const WIPE_DURATION = 0.92;
 const WIPE_TIMES = [0, 0.4, 1];
 
 const DEFAULT_LOGOS: LogoEntry[] = LOGOS.map((l) => ({
-  icon: (
-    <l.Icon className="h-7 w-7 sm:h-8 sm:w-8" style={{ color: l.color }} aria-hidden="true" />
-  ),
+  icon: l.imageSrc ? (
+    <img
+      src={l.imageSrc}
+      srcSet={`${l.imageSrc} 1x, ${l.imageSrc2x || l.imageSrc} 2x`}
+      alt={l.name}
+      className="h-11 sm:h-13 md:h-14 lg:h-16 w-auto object-contain select-none transition-all duration-300 opacity-90 hover:opacity-100"
+      loading="lazy"
+    />
+  ) : l.Icon ? (
+    <l.Icon className="h-11 w-11 sm:h-13 sm:w-13 md:h-14 md:w-14 opacity-90 hover:opacity-100 transition-opacity" style={{ color: l.color }} aria-hidden="true" />
+  ) : null,
   name: l.name,
-  id: l.name,
+  id: l.id,
 }));
 
 function LogoItem({
@@ -97,21 +105,14 @@ function LogoItem({
         if (isWaving && index === totalCount - 1) onDone();
       }}
       whileHover={{
-        scale: 1.07,
-        opacity: 1,
-        filter: "blur(0px)",
+        scale: 1.08,
         transition: { type: "spring", stiffness: 340, damping: 24 },
       }}
-      className="flex w-20 sm:w-28 shrink-0 cursor-default flex-col items-center gap-2 p-3 rounded-2xl hover:bg-[#101010]/[0.03] transition-colors"
+      className="flex items-center justify-center p-2 sm:p-3 cursor-default select-none"
     >
-      <span className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#101010]/[0.04] border border-[#101010]/10 shadow-sm backdrop-blur-sm transition-transform group-hover:scale-105">
+      <div className="flex items-center justify-center">
         {logo.icon}
-      </span>
-      {logo.name && (
-        <span className="select-none whitespace-nowrap text-[11px] font-mono uppercase tracking-wider font-semibold text-[#101010]/70 sm:text-xs">
-          {logo.name}
-        </span>
-      )}
+      </div>
     </motion.div>
   );
 }
@@ -148,6 +149,7 @@ export default function LogoCloudSwap({
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#101010] uppercase">
           {title}
         </h2>
+
         {subtitle && (
           <p className="text-xs sm:text-sm md:text-base text-[#101010]/70 max-w-xl mx-auto leading-relaxed font-medium">
             {subtitle}
@@ -155,24 +157,8 @@ export default function LogoCloudSwap({
         )}
       </div>
 
-      <div className="relative z-10 mx-auto mt-8 max-w-6xl sm:mt-12">
-        {/* Desktop / Tablet layout */}
-        <div className="hidden items-center justify-center gap-4 sm:flex sm:flex-wrap sm:gap-6 md:gap-8 lg:gap-10">
-          {logos.map((logo, i) => (
-            <LogoItem
-              key={logo.id ?? i}
-              logo={logo}
-              index={i}
-              isWaving={waving}
-              stagger={stagger}
-              totalCount={logos.length}
-              onDone={() => setWaving(false)}
-            />
-          ))}
-        </div>
-
-        {/* Mobile grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 place-items-center gap-4 sm:hidden">
+      <div className="relative z-10 mx-auto mt-8 max-w-6xl sm:mt-12 px-2">
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-12 lg:gap-14">
           {logos.map((logo, i) => (
             <LogoItem
               key={logo.id ?? i}

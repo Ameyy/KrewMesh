@@ -1,116 +1,211 @@
 import React from "react";
 
 export interface LogoDefinition {
+  id: string;
   name: string;
-  Icon: React.ComponentType<{
+  imageSrc: string;
+  imageSrc2x?: string;
+  heightClass?: string;
+  color?: string;
+  Icon?: React.ComponentType<{
     className?: string;
     style?: React.CSSProperties;
     "aria-hidden"?: boolean | "true" | "false";
   }>;
-  color?: string;
 }
 
-// 01: Nexus Labs (Geometric interconnected nodes)
-const NexusIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+// Custom brand vector SVG definitions
+const MuscletechIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 100 45" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <g fill="currentColor">
+      <polygon points="12,42 28,6 38,6 23,42" />
+      <polygon points="28,6 38,28 44,28 54,6 44,6 39,18 38,6" />
+      <polygon points="44,28 54,6 64,6 52,42 43,42" />
+    </g>
     <path
-      d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z"
-      stroke="currentColor"
+      d="M12,42 L28,6 M16,28 L34,28 M20,16 L32,36 M24,10 L30,42"
+      stroke="var(--bg-contrast, #E6D5BD)"
+      strokeWidth="1.2"
+      opacity="0.75"
+    />
+  </svg>
+);
+
+const VegaIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <text
+      x="50"
+      y="24"
+      textAnchor="middle"
+      fontFamily="system-ui, -apple-system, sans-serif"
+      fontWeight="800"
+      fontSize="26"
+      letterSpacing="4"
+      fill="currentColor"
+    >
+      VEGA
+    </text>
+  </svg>
+);
+
+const MicroscanIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 100 35" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <circle cx="18" cy="18" r="14" fill="currentColor" />
+    <path
+      d="M10 26 C12 18, 18 12, 26 10 M13 29 C16 20, 22 15, 29 14 M7 21 C10 14, 15 10, 22 8"
+      stroke="#ffffff"
       strokeWidth="2"
-      strokeLinejoin="round"
-    />
-    <circle cx="16" cy="16" r="4" fill="currentColor" />
-    <path d="M16 3V12M27.2583 22.5L19.4641 18M4.74167 22.5L12.5359 18" stroke="currentColor" strokeWidth="1.8" />
-  </svg>
-);
-
-// 02: Vortex AI (Dual curved cyclone blades)
-const VortexIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path
-      d="M16 4C9.37258 4 4 9.37258 4 16C4 20.4183 6.3817 24.2807 9.9 26.35"
-      stroke="currentColor"
-      strokeWidth="2.4"
       strokeLinecap="round"
+      fill="none"
     />
+    <text
+      x="40"
+      y="22"
+      fontFamily="system-ui, -apple-system, sans-serif"
+      fontWeight="700"
+      fontSize="16"
+      fill="currentColor"
+    >
+      microscan
+    </text>
+  </svg>
+);
+
+const SolaraIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <circle cx="15" cy="15" r="10" stroke="currentColor" strokeWidth="2.2" fill="none" />
+    <line x1="4" y1="15" x2="26" y2="15" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <text
+      x="36"
+      y="21"
+      fontFamily="system-ui, -apple-system, sans-serif"
+      fontWeight="700"
+      fontSize="16"
+      letterSpacing="4"
+      fill="currentColor"
+    >
+      SOLARA
+    </text>
+  </svg>
+);
+
+const MaccareIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <circle cx="16" cy="10" r="3.5" fill="currentColor" />
     <path
-      d="M16 28C22.6274 28 28 22.6274 28 16C28 11.5817 25.6183 7.7193 22.1 5.65"
-      stroke="currentColor"
-      strokeWidth="2.4"
-      strokeLinecap="round"
-    />
-    <circle cx="16" cy="16" r="3" fill="currentColor" />
-  </svg>
-);
-
-// 03: Prism Studio (Geometric optical refraction triangle)
-const PrismIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M16 5L27 24H5L16 5Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-    <path d="M16 5V24M5 24L20 15" stroke="currentColor" strokeWidth="1.8" />
-  </svg>
-);
-
-// 04: Aura Health (Concentric organic arches)
-const AuraIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="16" cy="16" r="11" stroke="currentColor" strokeWidth="2" strokeDasharray="3 3" />
-    <circle cx="16" cy="16" r="6" stroke="currentColor" strokeWidth="2" />
-    <circle cx="16" cy="16" r="2" fill="currentColor" />
-  </svg>
-);
-
-// 05: Krypton (Isometric cube stack)
-const KryptonIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M16 4L26 9.8V21.4L16 27.2L6 21.4V9.8L16 4Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-    <path d="M16 4V15.5M26 9.8L16 15.5M6 9.8L16 15.5M16 15.5V27.2" stroke="currentColor" strokeWidth="1.8" />
-  </svg>
-);
-
-// 06: Pulse Robotics (High-frequency signal wave)
-const PulseIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <rect x="4" y="4" width="24" height="24" rx="6" stroke="currentColor" strokeWidth="2" />
-    <path
-      d="M7 16H11L13.5 10L18.5 22L21 16H25"
+      d="M9 19 C13 15, 19 15, 23 19 M7 24 C13 18, 19 18, 25 24"
       stroke="currentColor"
       strokeWidth="2.2"
       strokeLinecap="round"
-      strokeLinejoin="round"
+      fill="none"
     />
+    <text
+      x="34"
+      y="22"
+      fontFamily="system-ui, -apple-system, sans-serif"
+      fontWeight="800"
+      fontSize="17"
+      fill="currentColor"
+    >
+      maccare
+    </text>
   </svg>
 );
 
-// 07: Hyperion Cloud (Modern minimalist loop)
-const HyperionIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+const SalesmonkIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <circle cx="14" cy="11" r="5" stroke="currentColor" strokeWidth="2.2" fill="none" />
     <path
-      d="M10 20C7.79086 20 6 18.2091 6 16C6 13.9099 7.60444 12.1947 9.65487 12.0205C10.4286 8.58882 13.5042 6 17.2 6C21.4526 6 24.9 9.44741 24.9 13.7C25.5492 13.9189 26 14.5348 26 15.25C26 16.2165 25.2165 17 24.25 17"
+      d="M7 21 C7 16, 21 16, 21 21"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="2.2"
       strokeLinecap="round"
+      fill="none"
     />
-    <path d="M12 24L20 24" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <text
+      x="30"
+      y="21"
+      fontFamily="system-ui, -apple-system, sans-serif"
+      fontWeight="800"
+      fontSize="16"
+      fill="currentColor"
+    >
+      salesmonk
+    </text>
   </svg>
 );
 
-// 08: Solace Space (Modern architectural emblem)
-const SolaceIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="16" cy="16" r="11" stroke="currentColor" strokeWidth="2" />
-    <path d="M16 5V27M5 16H27" stroke="currentColor" strokeWidth="1.5" />
-    <circle cx="16" cy="16" r="4" fill="currentColor" />
+const RelataIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <text
+      x="50"
+      y="22"
+      textAnchor="middle"
+      fontFamily="system-ui, -apple-system, sans-serif"
+      fontWeight="800"
+      fontSize="22"
+      fill="currentColor"
+    >
+      relata
+    </text>
   </svg>
 );
 
 export const LOGOS: LogoDefinition[] = [
-  { name: "Nexus Labs", Icon: NexusIcon, color: "#101010" },
-  { name: "Vortex AI", Icon: VortexIcon, color: "#D5360C" },
-  { name: "Prism Studio", Icon: PrismIcon, color: "#101010" },
-  { name: "Aura Health", Icon: AuraIcon, color: "#101010" },
-  { name: "Krypton SaaS", Icon: KryptonIcon, color: "#D5360C" },
-  { name: "Pulse Robotics", Icon: PulseIcon, color: "#101010" },
-  { name: "Hyperion Cloud", Icon: HyperionIcon, color: "#101010" },
-  { name: "Solace Living", Icon: SolaceIcon, color: "#D5360C" },
+  {
+    id: "muscletech",
+    name: "Muscletech",
+    imageSrc: "/images/clients/muscletech-v2.png",
+    imageSrc2x: "/images/clients/muscletech-v2@2x.png",
+    Icon: MuscletechIcon,
+    color: "#101010",
+  },
+  {
+    id: "vega",
+    name: "Vega beauty",
+    imageSrc: "/images/clients/vega-v2.png",
+    imageSrc2x: "/images/clients/vega-v2@2x.png",
+    Icon: VegaIcon,
+    color: "#D5360C",
+  },
+  {
+    id: "microscan",
+    name: "Microscan",
+    imageSrc: "/images/clients/microscan-v2.png",
+    imageSrc2x: "/images/clients/microscan-v2@2x.png",
+    Icon: MicroscanIcon,
+    color: "#101010",
+  },
+  {
+    id: "solara",
+    name: "Solara",
+    imageSrc: "/images/clients/solara-v2.png",
+    imageSrc2x: "/images/clients/solara-v2@2x.png",
+    Icon: SolaraIcon,
+    color: "#101010",
+  },
+  {
+    id: "maccare",
+    name: "Maccare Hospital",
+    imageSrc: "/images/clients/maccare-v2.png",
+    imageSrc2x: "/images/clients/maccare-v2@2x.png",
+    Icon: MaccareIcon,
+    color: "#101010",
+  },
+  {
+    id: "salesmonk",
+    name: "Salesmonk",
+    imageSrc: "/images/clients/salesmonk-v2.png",
+    imageSrc2x: "/images/clients/salesmonk-v2@2x.png",
+    Icon: SalesmonkIcon,
+    color: "#D5360C",
+  },
+  {
+    id: "relata",
+    name: "Relata",
+    imageSrc: "/images/clients/relata-v2.png",
+    imageSrc2x: "/images/clients/relata-v2@2x.png",
+    Icon: RelataIcon,
+    color: "#101010",
+  },
 ];
