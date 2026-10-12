@@ -14,6 +14,13 @@
   user-select: none;
 }
 
+@media (max-width: 639px) {
+  .heroSection {
+    padding: 5.25rem 0.5rem 2.5rem;
+    min-height: 100svh;
+  }
+}
+
 @media (min-width: 640px) {
   .heroSection {
     padding: 7.5rem 1.5rem 4rem;
@@ -28,6 +35,7 @@
 
 .typographyWrapper {
   position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,14 +51,14 @@
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: clamp(0.35rem, 1.2vw, 1.5rem);
+  gap: clamp(0.2rem, 1.2vw, 1.5rem);
   width: 100%;
   line-height: 0.88;
 }
 
 .heroWord {
   font-family: var(--font-funnel-display), 'Funnel Display', sans-serif !important;
-  font-size: clamp(3.2rem, 9.6vw, 12rem);
+  font-size: clamp(1.6rem, 8.2vw, 12rem);
   font-weight: 900;
   letter-spacing: -0.015em;
   text-transform: uppercase;
@@ -58,6 +66,7 @@
   line-height: 0.88;
   margin: 0;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .heroWordOrange {
@@ -118,10 +127,10 @@
 
 /* Badge common styles */
 .badgeSquare {
-  width: clamp(2.8rem, 7.5vw, 9rem);
-  height: clamp(2.8rem, 7.5vw, 9rem);
+  width: clamp(1.4rem, 6.8vw, 9rem);
+  height: clamp(1.4rem, 6.8vw, 9rem);
   background-color: #D5360C;
-  border-radius: clamp(0.6rem, 1.6vw, 1.75rem);
+  border-radius: clamp(0.35rem, 1.6vw, 1.75rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,8 +146,8 @@
 }
 
 .badgeMesh {
-  width: clamp(2.8rem, 7.5vw, 9rem);
-  height: clamp(2.8rem, 7.5vw, 9rem);
+  width: clamp(1.4rem, 6.8vw, 9rem);
+  height: clamp(1.4rem, 6.8vw, 9rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,8 +161,8 @@
 }
 
 .badgeCircle {
-  width: clamp(2.8rem, 7.5vw, 9rem);
-  height: clamp(2.8rem, 7.5vw, 9rem);
+  width: clamp(1.4rem, 6.8vw, 9rem);
+  height: clamp(1.4rem, 6.8vw, 9rem);
   background-color: #101010;
   border-radius: 50%;
   display: flex;
@@ -174,20 +183,20 @@
 .ctaButton {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: clamp(0.25rem, 0.5vw, 0.5rem);
   background-color: #101010;
   color: #E6D5BD;
-  padding: clamp(0.55rem, 1.1vw, 1rem) clamp(1rem, 2vw, 2rem);
+  padding: clamp(0.35rem, 0.8vw, 1rem) clamp(0.6rem, 1.6vw, 2rem);
   border-radius: 9999px;
   font-family: var(--font-outfit), sans-serif !important;
-  font-size: clamp(0.75rem, 1vw, 1.05rem);
+  font-size: clamp(0.65rem, 0.9vw, 1.05rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   text-decoration: none;
   white-space: nowrap;
   box-shadow: 0 8px 20px -4px rgba(16, 16, 16, 0.3);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  margin-left: clamp(0.25rem, 1vw, 1.25rem);
+  margin-left: clamp(0.2rem, 0.8vw, 1.25rem);
   align-self: center;
 }
 

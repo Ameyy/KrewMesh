@@ -126,7 +126,7 @@ export function IntegrationsGrid() {
         animate={controls}
         variants={{ visible: { opacity: 1, scale: 1, y: 0, transition: { delay: item.delay, duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }}
         className={cn(
-          "group relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl border cursor-pointer transition-all duration-300 overflow-hidden bg-[#E6D5BD]",
+          "group relative flex items-center justify-center w-12 h-12 min-[420px]:w-16 min-[420px]:h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-xl min-[420px]:rounded-2xl border cursor-pointer transition-all duration-300 overflow-hidden bg-[#E6D5BD]",
           item.borderDefault,
           item.shadowDefault,
           "hover:border-[#D5360C] hover:scale-95"
@@ -141,7 +141,7 @@ export function IntegrationsGrid() {
         {/* Icon: colored by default, accent on hover */}
         <Icon 
           className={cn(
-            "relative z-10 w-6 h-6 sm:w-8 sm:h-8 transition-all duration-300",
+            "relative z-10 w-5 h-5 min-[420px]:w-6 min-[420px]:h-6 sm:w-8 sm:h-8 transition-all duration-300",
             item.iconColor,
             "group-hover:text-[#D5360C] group-hover:scale-110"
           )} 
@@ -192,30 +192,30 @@ export function IntegrationsGrid() {
             ref={containerRef}
             className="relative h-full w-full flex items-center justify-center lg:justify-end"
           >
-            <div className="flex justify-center items-center gap-3 sm:gap-4 lg:gap-5 [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] py-12">
+            <div className="flex justify-center items-center gap-2 min-[420px]:gap-3 sm:gap-4 lg:gap-5 [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)] py-12">
               
               {/* Column 1 (2 items) */}
-              <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5 mt-16 sm:mt-24">
+              <div className="flex flex-col gap-2 min-[420px]:gap-3 sm:gap-4 lg:gap-5 mt-16 sm:mt-24">
                 {[0, 1].map(renderItem)}
               </div>
 
               {/* Column 2 (3 items) */}
-              <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+              <div className="flex flex-col gap-2 min-[420px]:gap-3 sm:gap-4 lg:gap-5">
                 {[2, 3, 4].map(renderItem)}
               </div>
 
               {/* Column 3 (2 items) */}
-              <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5 mt-16 sm:mt-24">
+              <div className="flex flex-col gap-2 min-[420px]:gap-3 sm:gap-4 lg:gap-5 mt-16 sm:mt-24">
                 {[5, 6].map(renderItem)}
               </div>
 
               {/* Column 4 (3 items) */}
-              <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+              <div className="flex flex-col gap-2 min-[420px]:gap-3 sm:gap-4 lg:gap-5">
                 {[7, 8, 9].map(renderItem)}
               </div>
 
               {/* Column 5 (2 items) */}
-              <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5 mt-16 sm:mt-24">
+              <div className="flex flex-col gap-2 min-[420px]:gap-3 sm:gap-4 lg:gap-5 mt-16 sm:mt-24">
                 {[10, 11].map(renderItem)}
               </div>
 

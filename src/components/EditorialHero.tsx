@@ -4,11 +4,24 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { SonarGrid } from '@/components/ui/sonar-grid';
 import styles from './EditorialHero.module.css';
 
 export default function EditorialHero() {
   return (
-    <section className={styles.heroSection} aria-label="Hero Introduction">
+    <SonarGrid
+      id="hero-sonar-grid"
+      ringWidth={90}
+      speed={260}
+      amplitude={2.2}
+      pingEvery={2.4}
+      interactive={true}
+      spacing={26}
+      baseOpacity={0.25}
+      color="#101010"
+      pingArea={[0.22, 0.18, 0.78, 0.82]}
+      className={styles.heroSection}
+    >
       <div className={styles.typographyWrapper}>
 
         {/* ================= ROW 1: TRANS [BADGE] FORMING ================= */}
@@ -154,6 +167,6 @@ export default function EditorialHero() {
         </motion.div>
 
       </div>
-    </section>
+    </SonarGrid>
   );
 }

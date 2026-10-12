@@ -551,6 +551,12 @@
 
 /* Responsive Rules */
 @media (max-width: 960px) {
+  .whatsappButton {
+    top: auto;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  }
   .navIsland {
     min-width: unset;
     width: calc(100vw - 2.5rem);
