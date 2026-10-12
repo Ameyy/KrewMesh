@@ -1,366 +1,174 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import AdmitOneTicket, {
-  TICKET_STYLE,
-  TICKET_TEXTURE,
-  TICKET_GRADIENT,
-  TICKET_LAYOUT
-} from "@/components/ui/admit-one-ticket";
+import { ArrowUpRight, ExternalLink, Sparkles } from "lucide-react";
+import { GradientMesh } from "@/components/ui/gradient-mesh";
 
 interface DemoItem {
   id: number;
   label: string;
-  name: string;
-  presenter: string;
-  event: string;
-  venue: string;
-  dates: string;
-  stubText: string;
-  watermark: string;
+  category: string;
   url: string;
-  isLive: boolean;
-  texture: typeof TICKET_TEXTURE;
-  gradient: typeof TICKET_GRADIENT;
-  layout: typeof TICKET_LAYOUT;
+  description: string;
+  year: string;
 }
 
 const DEMOS: DemoItem[] = [
   {
     id: 1,
     label: "Ecomm Website",
-    name: "DEMO WEBSITE IS LIVE NOW",
-    presenter: "KREW / MESH • ECOMM WEBSITE",
-    event: "WATCH ANYTIME",
-    venue: "LIVE ONLINE STORE",
-    dates: "WATCH ANYTIME",
-    stubText: "LIVE NOW",
-    watermark: "ECOMM",
+    category: "Storefront & Retail",
     url: "https://ecomm.krewmesh.agency/",
-    isLive: true,
-    texture: {
-      ...TICKET_TEXTURE,
-      shape: "warp",
-      colorBack: "#ef671c",
-      colorFront: "#ffc691",
-      colorHighlight: "#fe9046",
-      speed: 0.4
-    },
-    gradient: {
-      ...TICKET_GRADIENT,
-      colorLight: "#ffc691",
-      colorMid: "#fe9046",
-      colorDark: "#ef671c"
-    },
-    layout: {
-      ...TICKET_LAYOUT,
-      inkColor: "#5a3520",
-      watermarkColor: "#ffdcbe"
-    }
+    description: "Next.js headless e-commerce store with real-time cart and fluid product transitions.",
+    year: "2026",
   },
   {
     id: 2,
     label: "Clinic Website",
-    name: "DEMO WEBSITE IS LIVE NOW",
-    presenter: "KREW / MESH • CLINIC WEBSITE",
-    event: "WATCH ANYTIME",
-    venue: "PATIENT APPOINTMENTS",
-    dates: "WATCH ANYTIME",
-    stubText: "LIVE NOW",
-    watermark: "CLINIC",
+    category: "Healthcare & Booking",
     url: "https://clinic.krewmesh.agency",
-    isLive: true,
-    texture: {
-      ...TICKET_TEXTURE,
-      shape: "wave",
-      colorBack: "#3bbad4",
-      colorFront: "#a8ecfa",
-      colorHighlight: "#e0faff",
-      speed: 0.45
-    },
-    gradient: {
-      ...TICKET_GRADIENT,
-      colorLight: "#e0faff",
-      colorMid: "#a8ecfa",
-      colorDark: "#3bbad4"
-    },
-    layout: {
-      ...TICKET_LAYOUT,
-      inkColor: "#06313d",
-      watermarkColor: "#cbf7ff"
-    }
+    description: "Ultra-clean clinical patient portal, automated scheduling and doctor profiles.",
+    year: "2026",
   },
   {
     id: 3,
     label: "Cafe Landing Page",
-    name: "DEMO WEBSITE IS LIVE NOW",
-    presenter: "KREW / MESH • CAFE LANDING",
-    event: "WATCH ANYTIME",
-    venue: "ARTISAN COFFEE & MENU",
-    dates: "WATCH ANYTIME",
-    stubText: "LIVE NOW",
-    watermark: "CAFE",
+    category: "Hospitality & Food",
     url: "https://cafe.krewmesh.agency",
-    isLive: true,
-    texture: {
-      ...TICKET_TEXTURE,
-      shape: "dots",
-      colorBack: "#36ad64",
-      colorFront: "#9ef2bd",
-      colorHighlight: "#d5fbe3",
-      speed: 0.35
-    },
-    gradient: {
-      ...TICKET_GRADIENT,
-      colorLight: "#d5fbe3",
-      colorMid: "#9ef2bd",
-      colorDark: "#36ad64"
-    },
-    layout: {
-      ...TICKET_LAYOUT,
-      inkColor: "#0b3319",
-      watermarkColor: "#e6fdf0"
-    }
+    description: "Artisan coffee roastery interactive menu, spatial imagery and booking flow.",
+    year: "2026",
   },
   {
     id: 4,
     label: "Interior Design Website",
-    name: "DEMO WEBSITE IS LIVE NOW",
-    presenter: "KREW / MESH • INTERIOR DESIGN",
-    event: "WATCH ANYTIME",
-    venue: "SPATIAL ARCHITECTURE",
-    dates: "WATCH ANYTIME",
-    stubText: "LIVE NOW",
-    watermark: "DESIGN",
+    category: "Architecture & Studio",
     url: "https://inter.krewmesh.agency/",
-    isLive: true,
-    texture: {
-      ...TICKET_TEXTURE,
-      shape: "swirl",
-      colorBack: "#db7a21",
-      colorFront: "#ffca7a",
-      colorHighlight: "#ffebb8",
-      speed: 0.5
-    },
-    gradient: {
-      ...TICKET_GRADIENT,
-      colorLight: "#ffebb8",
-      colorMid: "#ffca7a",
-      colorDark: "#db7a21"
-    },
-    layout: {
-      ...TICKET_LAYOUT,
-      inkColor: "#3d1c05",
-      watermarkColor: "#fff4d4"
-    }
+    description: "Spatial architecture portfolio featuring horizontal gallery and materials showcase.",
+    year: "2026",
   },
   {
     id: 5,
     label: "Photography Portfolio",
-    name: "DEMO WEBSITE IS LIVE NOW",
-    presenter: "KREW / MESH • PHOTOGRAPHY",
-    event: "WATCH ANYTIME",
-    venue: "EDITORIAL & VISUAL ARCHIVE",
-    dates: "WATCH ANYTIME",
-    stubText: "LIVE NOW",
-    watermark: "PHOTO",
+    category: "Editorial & Film",
     url: "https://wedtale.krewmesh.agency/",
-    isLive: true,
-    texture: {
-      ...TICKET_TEXTURE,
-      shape: "wave",
-      colorBack: "#e07a5f",
-      colorFront: "#f4a261",
-      colorHighlight: "#fef3c7",
-      speed: 0.35
-    },
-    gradient: {
-      ...TICKET_GRADIENT,
-      colorLight: "#fef3c7",
-      colorMid: "#fcd34d",
-      colorDark: "#e07a5f"
-    },
-    layout: {
-      ...TICKET_LAYOUT,
-      inkColor: "#260e04",
-      watermarkColor: "#fff7ed"
-    }
+    description: "High-contrast editorial photography archive with cinematic lightbox experiences.",
+    year: "2026",
   },
   {
     id: 6,
     label: "3D Print Studio",
-    name: "DEMO WEBSITE IS LIVE NOW",
-    presenter: "KREW / MESH • 3D PRINT STUDIO",
-    event: "WATCH ANYTIME",
-    venue: "PROTOTYPING & ADDITIVE MFG",
-    dates: "WATCH ANYTIME",
-    stubText: "LIVE NOW",
-    watermark: "3D PRINT",
+    category: "Prototyping & Tech",
     url: "https://3dprint.krewmesh.agency/",
-    isLive: true,
-    texture: {
-      ...TICKET_TEXTURE,
-      shape: "ripple",
-      colorBack: "#4338ca",
-      colorFront: "#818cf8",
-      colorHighlight: "#c7d2fe",
-      speed: 0.4
-    },
-    gradient: {
-      ...TICKET_GRADIENT,
-      colorLight: "#c7d2fe",
-      colorMid: "#818cf8",
-      colorDark: "#4338ca"
-    },
-    layout: {
-      ...TICKET_LAYOUT,
-      inkColor: "#1e1b4b",
-      watermarkColor: "#e0e7ff"
-    }
+    description: "Additive manufacturing studio showcase with interactive parametric configurators.",
+    year: "2026",
   },
   {
     id: 7,
     label: "Gym & Fitness",
-    name: "DEMO WEBSITE IS LIVE NOW",
-    presenter: "KREW / MESH • GYM & FITNESS",
-    event: "WATCH ANYTIME",
-    venue: "TRAINING & CLUB SCHEDULE",
-    dates: "WATCH ANYTIME",
-    stubText: "LIVE NOW",
-    watermark: "FITNESS",
+    category: "Athletics & Club",
     url: "https://gym.krewmesh.agency",
-    isLive: true,
-    texture: {
-      ...TICKET_TEXTURE,
-      shape: "dots",
-      colorBack: "#dc2626",
-      colorFront: "#f87171",
-      colorHighlight: "#fecaca",
-      speed: 0.45
-    },
-    gradient: {
-      ...TICKET_GRADIENT,
-      colorLight: "#fecaca",
-      colorMid: "#f87171",
-      colorDark: "#dc2626"
-    },
-    layout: {
-      ...TICKET_LAYOUT,
-      inkColor: "#450a0a",
-      watermarkColor: "#fee2e2"
-    }
-  }
+    description: "High-energy training schedule, membership checkout and club facility tours.",
+    year: "2026",
+  },
 ];
 
 export default function AdmitOneTicketDemo() {
-  const [ticketWidth, setTicketWidth] = useState(741);
-  const [activeDemoIndex, setActiveDemoIndex] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (typeof window === "undefined") return;
-      // Keep 741px maximum on desktop, scale gracefully on mobile/tablet
-      const padding = window.innerWidth < 640 ? 32 : 48;
-      const available = window.innerWidth - padding;
-      setTicketWidth(Math.min(741, Math.max(300, available)));
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const currentDemo = DEMOS[activeDemoIndex] || DEMOS[0];
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full flex flex-col items-center justify-center bg-[#281d14] py-12 sm:py-16 px-4 sm:px-6 md:px-8 overflow-hidden border-y border-white/5">
-      {/* Background ambient lighting */}
+    <section className="relative w-full flex flex-col items-center justify-center bg-transparent py-20 sm:py-28 px-4 sm:px-6 md:px-8 overflow-hidden border-y border-[#101010]/10">
+      {/* Dynamic Novatrix / Water Wave Gradient Mesh Background */}
+      <div className="absolute inset-0 pointer-events-none opacity-40">
+        <GradientMesh 
+          colors={["#E6D5BD", "#D5360C", "#101010"]}
+          distortion={4.5}
+          swirl={0.4}
+          speed={0.8}
+          scale={1.1}
+          waveAmp={0.08}
+          grain={0.05}
+        />
+      </div>
+
+      {/* Subtle overlay to preserve high text contrast */}
       <div 
-        className="pointer-events-none absolute inset-0 opacity-50"
+        className="pointer-events-none absolute inset-0 opacity-45"
         style={{
-          background: "radial-gradient(circle at 50% 45%, rgba(239, 103, 28, 0.18) 0%, rgba(40, 29, 20, 0.6) 60%, #281d14 100%)"
+          background: "radial-gradient(circle at 50% 50%, rgba(230, 213, 189, 0.4) 0%, rgba(230, 213, 189, 0.85) 75%, #E6D5BD 100%)"
         }}
       />
 
-      {/* Header section: Watch Demo Live on this Ticket */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center mb-8 max-w-5xl px-4">
-        {/* Animated Live Pill Badge */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#ef671c]/40 bg-[#ef671c]/15 text-[#ffc691] text-xs font-semibold uppercase tracking-widest mb-4 shadow-lg backdrop-blur-md">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffc691] opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ef671c]"></span>
-          </span>
-          Watch Live Demo On This Ticket
+      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
+        {/* Header Section */}
+        <div className="flex flex-col items-center justify-center text-center mb-12 sm:mb-16 max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D5360C]/40 bg-[#D5360C]/15 text-[#D5360C] text-xs font-semibold uppercase tracking-widest mb-4 backdrop-blur-md">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D5360C] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D5360C]"></span>
+            </span>
+            <span>LIVE PRODUCTION DEMOS</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#101010] uppercase display-font leading-tight">
+            EXPLORE LIVE DEMOS
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-[#101010]/75 max-w-xl">
+            Click any project below to test performance, interactions, and design systems in real-time.
+          </p>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#ffc691] uppercase display-font leading-tight">
-          Watch Live Demo On This Ticket
-        </h2>
-
-        {/* Demo selector buttons */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        {/* Clean Editorial Text-Only Link Directory */}
+        <div className="w-full divide-y divide-[#101010]/15 border-y border-[#101010]/15">
           {DEMOS.map((demo, index) => {
-            const isActive = index === activeDemoIndex;
+            const isHovered = hoveredIndex === index;
             return (
-              <button
+              <Link
                 key={demo.id}
-                onClick={() => setActiveDemoIndex(index)}
-                className={`px-4 sm:px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
-                  isActive
-                    ? "bg-[#ffc691] text-[#281d14] shadow-lg shadow-[#ffc691]/20 scale-105"
-                    : "bg-black/35 text-[#ffc691]/75 border border-[#ffc691]/20 hover:border-[#ffc691]/50 hover:text-[#ffc691] hover:bg-black/50"
-                }`}
-                aria-label={`Switch to ${demo.label}`}
+                href={demo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className="group relative flex flex-col sm:flex-row sm:items-center justify-between py-5 sm:py-6 px-3 sm:px-6 transition-all duration-300 hover:bg-[#101010]/[0.04] cursor-pointer"
               >
-                {demo.label}
-              </button>
+                {/* Left: Number + Title */}
+                <div className="flex items-start sm:items-center gap-4 sm:gap-6">
+                  <span className="font-mono text-xs font-semibold text-[#D5360C] tracking-widest pt-1 sm:pt-0">
+                    0{demo.id}
+                  </span>
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#101010] group-hover:text-[#D5360C] transition-colors duration-200">
+                        {demo.label}
+                      </h3>
+                      <span className="hidden md:inline-flex items-center text-[11px] font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-[#101010]/15 bg-[#101010]/5 text-[#101010]/70 group-hover:border-[#D5360C]/30 group-hover:text-[#D5360C] transition-colors">
+                        {demo.category}
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-[#101010]/65 mt-1 sm:mt-1.5 max-w-lg line-clamp-1 group-hover:text-[#101010]/85 transition-colors">
+                      {demo.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right: Launch Action Link */}
+                <div className="mt-3 sm:mt-0 flex items-center justify-end gap-2 text-xs font-semibold uppercase tracking-wider text-[#101010]/60 group-hover:text-[#D5360C] transition-colors">
+                  <span className="group-hover:translate-x-0.5 transition-transform">Launch Live Site</span>
+                  <ArrowUpRight 
+                    size={16} 
+                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 text-[#101010]/50 group-hover:text-[#D5360C]" 
+                  />
+                </div>
+              </Link>
             );
           })}
         </div>
-      </div>
 
-      {/* Ticket Container wrapped with Link for seamless navigation */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full">
-        <Link
-          href={currentDemo.url}
-          target={currentDemo.url.startsWith("http") ? "_blank" : undefined}
-          rel={currentDemo.url.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="group block relative focus:outline-none transition-transform duration-300 hover:scale-[1.015] cursor-pointer"
-          aria-label={`Open ${currentDemo.label} - ${currentDemo.isLive ? "Live Demo" : "Coming Soon"}`}
-          title={`Click to open ${currentDemo.label}`}
-        >
-          <AdmitOneTicket
-            key={currentDemo.id}
-            name={currentDemo.name}
-            presenter={currentDemo.presenter}
-            event={currentDemo.event}
-            venue={currentDemo.venue}
-            dates={currentDemo.dates}
-            stubText={currentDemo.stubText}
-            watermark={currentDemo.watermark}
-            width={ticketWidth}
-            texture={currentDemo.texture}
-            gradient={currentDemo.gradient}
-            layout={currentDemo.layout}
-          />
-        </Link>
-
-        {/* Visual action button below the ticket */}
-        <div className="mt-8 flex items-center justify-center">
-          <Link
-            href={currentDemo.url}
-            target={currentDemo.url.startsWith("http") ? "_blank" : undefined}
-            rel={currentDemo.url.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#ffc691]/40 bg-black/40 hover:bg-[#ffc691] text-[#ffc691] hover:text-[#281d14] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-[#ffc691]/25 hover:scale-105"
-          >
-            <span>
-              {currentDemo.isLive
-                ? `Launch Live ${currentDemo.label} Demo`
-                : `Explore ${currentDemo.label} Architecture`}
-            </span>
-            <ArrowUpRight size={14} />
-          </Link>
+        {/* Bottom Helper Info */}
+        <div className="mt-8 flex items-center justify-center gap-2 text-xs font-mono uppercase tracking-wider text-[#101010]/60">
+          <Sparkles size={14} className="text-[#D5360C]" />
+          <span>All 7 demo websites are live and running on high-speed Next.js infrastructure</span>
         </div>
       </div>
     </section>
